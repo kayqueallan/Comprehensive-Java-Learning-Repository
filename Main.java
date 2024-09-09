@@ -617,7 +617,7 @@ Sintaxe --> e colocado o identificador e depois o nome de referencia da variavel
             --> esse return e como se fosse um break, tem a mesma funcionalidade(poderimos utilizar um else, mas podemos melhorar o codigo deixando mais fino o codigo);
 
 
-        COMO AS VARIAVEIS PRIMITIVAS SE COMPORTAM EM UM METODO 
+COMO AS VARIAVEIS PRIMITIVAS SE COMPORTAM EM UM METODO 
 
             --> 
 
@@ -666,24 +666,545 @@ public class Teste {
 
     -> classe de execucao
 
-    public class Main(){
-        public static void main(String[] args){
-            Estudante estudante01 = new Estudante;
+    import dominio.Estudante;
 
+    public class Main {
+    public static void main(String[] args) {
+        Estudante aluno = new Estudante();
 
-        }
+        System.out.println(aluno.nome = "Kayque");
+        System.out.println(aluno.idade = 19);
+        System.out.println(aluno.sexo = 'M');
+
+        System.out.println("-------------------------------");
+
+        aluno.imprimir(aluno);
+        
+        --> fizemos aqui a impressao de dois modos
     }
+}
+
 
     -> classe Estudante
 
-        public class Estudante{
-            String nome;
-            int idade;
-            char sexo;
-        
-        --> podemos criar outra classe ou fazer aqui mesmo a impressao em um metodo;
+        package dominio;
 
-        public void imprimir(){
-            System.ou.println(estudante.nome);
+        public class Estudante {
+            public String nome;
+            public int idade;
+            public char sexo;
+
+            --> podemos criar outra classe ou fazer aqui mesmo
+
+        public void imprimir(Estudante estudante) {
+            System.out.println(estudante.nome);
+            System.out.println(estudante.idade);
+            System.out.println(estudante.sexo);
+    }
+
+}
+
+O QUE ACONTECEU AQUI
+    Estamos passando para o metodo uma referencia de um objeto, onde la esta alocado as informacoes, dentro do metodo passamos o objeto e a variavel de referencia, e na classe principal passamos o atributo que e a variavel de referencia do objeto da classe Estudante.
+
+    ou seja no momento de execucao do codigo temos duas variaveis de referencia fazendo referencia para o mesmo objeto. 
+
+
+
+    //THIS 
+
+    -> Qundo temos um metodo dentro de uma classe podemos nos referenciar ele utilizando o THIS
+
+    public class Estudante{
+        String nome;
+        char sexo;
+        int idade;
+
+        public void imprimirEstudantes(){
+            System.out.println(this.nome);
+            System.out.println(this.idade);
+            System.out.println(this.sexo);
         }
-        }
+    }
+
+    porque disso? pois estamos o metodo dentro da classe
+
+
+    //METODOS COM ARRAY
+
+    ex: 
+    import dominio.Array;
+
+    public class Main {
+    public static void main(String[] args) {
+        Array vetores = new Array();
+
+        int[] array = {1,2,3,4,5};
+
+        vetores.somaArray(array);
+
+    }
+}
+
+
+    package dominio;
+
+    public class Array {
+        public void somaArray(int[] array){
+         int soma = 0;
+            for(int i = 0; i < array.length; i++){
+            soma += array[i];
+             }
+    }
+}
+
+Outro tipo que podemos passar seria 
+
+
+
+//MODIFICADORES DE ACESSO  
+
+    -->  variaveis de refencia de objeto nao consegue acessar atributos privados por isso utilizamos metodos como set & get;
+
+    acoplamento e quao a classe esta conectada a outra do mundo real, ou seja colocamos para voce adicionar sua idade caso coloque uma idade negativa, isso nao corresponde ao mundo real... por isso podemos bloquear isso, pois isso pode afetar nossas classes, entao podemos utilizar modificadores de acesso privado.
+
+    private --> Esses atributos so vao poder ser acessados pelo objeto; se eu tentar acessar esse atributo em outra classe eu nao consigo utilizando o modificador de acesso privado dando erro;
+
+    ex:
+
+    package dominio;
+
+    public class Pessoa {   
+        private String nome;
+        private int idade;
+
+        public void imprimirResultado(){
+            System.out.println(this.nome);
+            System.out.println(this.idade);
+    }
+}
+
+--> quando criamos atributos privados precisamos criar um metodo publico, porque quando queremos que alguem atribua algo esse atributo necessitamos de um metodo publico;
+
+ex: 
+    package dominio;
+
+    public class Pessoa {   
+        private String nome;
+        private int idade;
+
+        public void imprimirResultado(){
+            System.out.println(this.nome);
+            System.out.println(this.idade);
+    }        
+    
+    -->  REGRA: QUANDO CRIAMOS UM METODO PARA COLOCAR UM VALOR DENTRO DE UM ATRIBUTO PRECISAMOS ADICIONAR A PALAVRA SET + REFERENCIA DA VARIAVEL
+
+    public void setNome(String nome){
+        //(String nome) -> estamos dizendo que vamos setar e o que queremos colocar entre o nome por isso string;
+        !! QUANDO UTILIZAMOS COMO PARAMETRO O MESMO NOME DE QUANTO TEMOS DENTRO DO METODO UTILIZAMOS O THIS PARA DIFERENCIAR 
+         this.nome = nome;
+    }
+}
+
+
+import dominio.Pessoa;
+
+public class Main {
+    public static void main(String[] args) {
+        Pessoa humano = new Pessoa();
+            humano.setNome("Kayque");
+    }
+}
+
+
+--> estamos modificando um atributo privado; como isso e um metodo estamos passando um atributo para ser alocado em this.nome e ser modificado;  ou seja la na classe pessoa criamos um metodo onde o parametro e uma String nome; por isso utilizamos o this.nome --> porque isso se referencia ao atributo da classe; e se this.nome = nome ("kayque"); resultado em private String nome = "kayque";
+
+
+//GET
+
+--> como conseguir pegar o que esta alocado em memoria temos que criar um metodo onde return ; porque estamos querendo pegar o nome que digitamos ou seja tem que retornar algo e no caso e string; e depois colocamos get+nome variavel; e precisa de parametro? nao pois queremos pegar o valor que esta em memoria;
+
+public String getNome(){
+    return this.nome;
+}
+
+e agora no main podemos imprimir, porque nao utilizamos void? porque nao conseguimos imprimir um metodo sendo ele void pois o que ele retorna e vazio, ja com return podemos utilizar dentro de um sout; e tambem porque queremos que se retorne algum valor;
+
+import dominio.Pessoa;
+
+public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa();
+
+        pessoa.setNome("Kayque");
+        pessoa.setIdade(-2);
+
+        System.out.println(pessoa.getNome()); --> Kayque
+    }
+}
+
+
+
+//SOBRECARGA DE METODOS 
+
+import dominio.Pessoa;
+
+public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa();
+
+        pessoa.init("Kayque", 19, 'M');
+        pessoa.imprimir();
+    }
+}
+
+--> CLASSE PESSOA 
+
+package dominio;
+
+public class Pessoa {
+    private String nome;
+    private int idade;
+    private char sexo;
+
+    public void init(String nome, int idade, char sexo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+    }
+
+    -> aqui seria o set de cada atributo podemos colocar isso em somente um metodo fazendo com que diminua o codigo e fique muito mais organizado;
+
+    public String getNome() {
+        return this.nome;
+    }
+    public int getIdade() {
+        return this.idade;
+    }
+    public char getSexo() {
+        return this.sexo;
+    }
+
+
+    public void imprimir(){
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Idade: " + this.idade);
+        System.out.println("Sexo: " + this.sexo);
+    }
+}
+
+
+//CONSTRUTORES
+
+
+    -> em todos os metodos temos parenteses; no caso do objeto criado temos o que e chamado de contrutor:
+            --> Pessoa pessoa = new Pessoa(- construtor -);
+    
+    o contrutor nao temos nenhum tipo de retorno para se criar temos um modificador de acesso + nome da classe + parenteses e chaves;
+
+
+    ex: public class Pessoa {
+
+    public Pessoa(){
+        ISSO E UM CONSTRUTOR 
+    } 
+
+    -->  O java tem uma regra mesmo que nao colocamos um construtor na hora da compilacao e colocado um automaticamente; porque precisamos desse contrutor para se criar um objeto;
+
+
+    os contrutores te força  a seguir algumas regras, como por exemplos para nos cadrastramos uma novo usuario necessitamos obrigatoriamente de um nome, idade e sexo
+
+
+    public class Pessoa {
+
+    public String nome;
+    public int idade;
+    public char sexo;
+
+    public Pessoa(String nome, int idade, char sexo){
+        System.out.println(nome + idade + sexo);
+     }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("Kayque", 19, 'M');
+    }
+}
+
+
+--> o contrutor e executado antes mesmo de qualquer metodo, ou seja acaba que vira uma obrigacao;
+
+
+em contrutores podemos trabalhar tambem com sobrecarga, ou seja podemos criar mais de um contrutor seguindo os padroes de ter um modificador de acesso + Nome da classe + () + {} ; podemos deixar isso em branco e fazer um novo contrutor assim como abaixo;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("Kayque", 19, 'M');
+        Pessoa pessoa2 = new Pessoa("Lyvia", 11, 'F');
+    }
+}
+
+public class Pessoa {
+
+    public String nome;
+    public int idade;
+    public char sexo;
+
+     
+
+     public Pessoa(){
+        //CONSTRUTOR pessoa2 
+        //Lyvia11F
+     }
+}
+
+
+--> SOBRECARGA DE CONTRUTORES  
+
+vamos supor qu8e temos agora que introduzir um novo atributo que seja "estudio", se apenas adicionarmos pode ser que quebramos o codigo inteiro, e tambem dar muito mais trabalho para alterar, o que podemos fazer e sobrecarga;
+
+em metodos podemos utilizar o this.nomeDoMetodo, para chamar quando estiver dentro da mesma classe; ja em contrutores colocamos this();
+
+
+public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("Kayque",12,"Visual Studio");
+        --> isso faz refenrencia ao contrutor 
+    }
+}
+
+public class Pessoa {
+    public String nome;
+    public int episodio;
+    public String estudio;
+
+    public Pessoa(String nome, int episodio, String estudio) {
+        --> quando executamos essa primeira linha sera executada e ira chamar o contrutor debaixo; obrigatoriamente a referencia para outro contrutor deve se conter na primeira linha; ou seja o this(); deve estar na primeira linha;
+        System.out.println(nome + episodio + estudio);
+    }
+
+    public Pessoa(){
+        --> o constutor de cima ira chamar essa linha e executar e depois ira voltar e executar o resto
+        System.out.println("Hello World");
+    }
+}
+
+
+PODEMOS TER MAIS DE DOIS CONTRUTORES 
+
+
+public class Main {
+    public static void main(String[] args) {
+        Pessoa pessoa = new Pessoa("Kayque",12,"Visual Studio", "Masculino");
+    }
+}
+
+
+o que acontece e o seguinte quando executarmos o codigo o objeto Pessoa("Kayque",12,"Visual Studio", "Masculino");
+
+a primeira linha que ira ser executada e onde possui o numero um com isso quando essa primira linha for executada logo ira levar ao dois porque ela faz uma referencia; this(nome, episodio, estudio); que ira levar para o numero 2; this(); que quando ser executada vai levar ao terceiro contrutor que ira imprimir hello world e depois ira imprimir em linha normalmente como mostra abaixo, isso serve para quando queremos ter uma sobregarga, vamos supor que temos 4 atributos ja defenidos e agora vamos passar a ter 5, se modificarmos diretamente no contrutor principal pode ser que de quebra entre as classes, com isso podemos criar um outro contrutor que ira adicionar a informacoesm sem interfirir.
+
+ou seja podemos chamar outros contrutores com a palavra this, porem temos duas regras, se formos chamar outro construtor o this precisa ser a primeira linha executavel; e o this(); desse modo dentro de um metodo nao funciona somente em um construtor
+
+
+public class Pessoa {
+    public String nome;
+    public int episodio;
+    public String estudio;
+    public String genero;
+
+     public Pessoa(String nome, int episodio, String estudio) {
+  2 -   this();
+   4 System.out.println(nome + episodio + estudio);
+    }
+
+    public Pessoa(String nome, int episodio, String estudio, String genero) {
+1 -  this(nome, episodio, estudio);
+    5 System.out.println(genero);
+    }
+
+        public Pessoa(){
+3-   System.out.println("Hello World");
+    }
+}
+
+
+
+// MODIFICADORES ESTATICOS 
+
+public class CarroTeste01 {
+    public static void main(String[] args) {
+        Carro c1 = new Carro("BMW", 280);
+        Carro c2 = new Carro("Mercedes", 275);
+        Carro c3 = new Carro("Passat", 290);
+
+        c1.imprime();
+        c2.imprime();
+        c3.imprime();
+    }
+}
+
+public class Carro {
+    private String nome;
+    private double velocidadeMaxima;
+    private double velocidadeLimite = 250;
+
+    public Carro(String nome, double velocidadeMaxima) {
+        this.nome = nome;
+        this.velocidadeMaxima = velocidadeMaxima;
+    }
+
+    public void imprime(){
+        System.out.println("--------------------------------");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Velociade Maxima: " + this.velocidadeMaxima);
+        System.out.println("Velociade Limite: " + this.velocidadeLimite );
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getVelocidadeMaxima() {
+        return velocidadeMaxima;
+    }
+
+    public void setVelocidadeMaxima(double velocidadeMaxima) {
+        this.velocidadeMaxima = velocidadeMaxima;
+    }
+
+    public double getVelocidadeLimite() {
+        return velocidadeLimite;
+    }
+
+    public void setVelocidadeLimite(double velocidadeLimite) {
+        this.velocidadeLimite = velocidadeLimite;
+    }
+}
+
+
+
+--> explicacao: criamos uma classe carro onde possui atributos como nome, valocidade maxima, e velocidade limite de trafego em rua, pois na alemanha a partir de uma categoria de carros tem que ter um limitador de sua velociade mesmo que ela seja maior, ou seja o carro pode chegar a 300 km/h , mas existe um limitador que deixa ele chgar a somente 250;
+
+
+--> acima cada objeto e independente ou seja podemos colocar c1.getVelocidadeMaxima(300); e somente no objeto c1 sera modificado a velocidadeMaxima, isso fica meio ruim pois e uma regra os carros obdecerem; e os outros irao permanecer 250;
+
+--> o que queremos fazer e uma propriedade que seja idenpendente do objeto, afete a classe carro em si, o que precisamos e criar um modificador estatico;
+
+ex: private double static velocidadeMaxima = 250;
+
+o modificador estatico agora pertence a classe carro em si e nao a instancia da classe carro, ou seja basicamente isso "deixa de ficar dentro da classe carro = ser um atributo comum", comeca a ficar fora como um todo juntamente com a classe, comeca a passar ser uma instancia juntamente com a classe carro; nao pertence mais ao objeto e sim a classe em si;
+
+agora se colocarmos: 
+
+c1.setVelocidadeMaxima(180);
+
+--> todos os serao modificados ou seja : c1, c2, c3 e modificado e todos os outros objetos que criarmos a partir daqui irao ser afetados passando a ser 180
+
+
+
+
+--> e a partir de agora fica muito "feio" utilizamos c1.velocidadeMaxima(180); porque para quem le parecemos que estamos modificando o seu espaco em memoria que c1 esta fazendo referencia; mas na verdade nao estamos fazendo alterecao em c1 e sim a todas as instancias de classe carro pois e um modificador static que pertence a classe carro, e nao mais a uma instancia em particular de um objeto; temos que acessar atraves da propria classe;
+
+
+public class Carro {
+    private String nome;
+    private double velocidadeMaxima;
+    public static double velocidadeLimite = 250;
+
+    public Carro(String nome, double velocidadeMaxima) {
+        this.nome = nome;
+        this.velocidadeMaxima = velocidadeMaxima;
+    }
+
+    public void imprime(){
+        System.out.println("--------------------------------");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Velociade Maxima: " + this.velocidadeMaxima);
+        System.out.println("Velociade Limite: " + this.velocidadeLimite );
+    }
+
+
+    --> quando utilizamos this.velocidadeLimite, estamos falando que this se refere a instancia daquele objeto; fica um pouco incoerente dessa forma, nao e aconselhavel
+
+    certo: System.out.println("Velociade Limite: " + Carro.velocidadeLimite );
+
+    alteracao do atributo estatico: 
+
+    public class CarroTeste01 {
+    public static void main(String[] args) {
+        Carro c1 = new Carro("BMW", 280);
+        Carro c2 = new Carro("Mercedes", 275);
+        Carro c3 = new Carro("Passat", 290);
+
+        --> Carro.velocidadeLimite = 180;
+
+        c1.imprime();
+        c2.imprime();
+        c3.imprime();
+    }
+}
+
+
+--> nao estamos acessando mais atraves de uma variavel de referencia, agora fica claro que a modificao que estamos fazendo esta afetando toda a classe;
+
+
+
+METODOS STATICOS RESUMO: faz com que o atributo agora pertenca a classe e todos os objetos agora partilham o mesmo valor;
+
+
+
+// MODIFICADORES STATICOS - METODOS
+    -> como podemos utilizar com metodos getters and setters
+
+    comecamos com metodo de acesso + static + metodo + nome + () + {};
+
+    public static void setVelocidadeLimite(double velocidadeLimite){
+        Carro.velocidadeLimite = velocidadeLimite;
+    }
+
+    and 
+
+    public static double getVelocidadeLimite(){
+        return Carro.velocidadeLimite;  ou simplismente velocidadeLimite (Pois nao estamos utlizando o mesmo nome como atributo do metodo)
+    }
+
+    agora podemos colocar um metodo static sendo ele private;
+
+    -> Set: Carro.setVelocidadeLimite;
+
+    -> Get: System.out.println(Carro.getVelocidadeLimite());
+
+
+
+    QUANDO DEVEMOS UTILIZAR OS METODOS ESTATICOS: quando nao tiver acessando atributos da instancia 
+
+
+    public void imprime(){
+        System.out.println("--------------------------------");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Velociade Maxima: " + this.velocidadeMaxima);
+        System.out.println("Velociade Limite: " + this.velocidadeLimite );
+    }
+
+    --> aqui nao poderiamos pois acessa atributos como this.nome e this.velocidadeMaxima
+
+    public void calculadoraTeste(){
+                System.out.println(10 + 10);
+            }
+
+    --> nesse exemplo poderiamos usar pois nao esta sendo utilizado nenhum atributo da instancia calculadora.
+
+
+
+
+
+
