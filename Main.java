@@ -1610,3 +1610,155 @@ definicao protected :
 
 
     CONSTRUTORES EM HERANCA
+
+    -->  para criarmos uma pessoa precisamos passar onome que no caso pode ser passado pelo construtor, e quando criamos um construtor em uma classe mae , por exemplo se para criar uma Pessoa precisamos de um nome, quem for um funcionario tambem ira precisar de um nome, entao precisamos chamar o contrutor da superclasse, na classe filha;
+
+    ex: 
+
+    
+public class Pessoa{
+    private String nome;
+    private String cpf;
+    private int idade
+
+    public Pessoa(String nome){
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, String cpf){
+        this(nome);
+        this.cpf = cpf;
+    }
+
+    public void imprimir(){
+        System.out.println(this.nome);
+        System.out.println(this.cpf);
+        System.out.println(this.idade);
+    }
+}
+
+
+public class Funcionario extends Pessoa{
+    private int matricula
+    private double salario
+
+    public Funcionario(String nome){
+        super(nome);
+
+        // super(nome,cpf);
+
+        --> aqui podemos chamar de dois construtores da outra classe, duas opcoes, e temos que definir acima em funcionario o string nome caso passamos a primeira opcao, ou string nome e string cpf para a segunda opcao ;
+    }
+
+    public void imprimir(){
+        super.imprir();
+        System.out.println(this.salario);
+    }
+}
+
+
+agora estamos dizendo que para criar um funcionario obrigatoriamente precisamos passar um nome;
+
+
+resum: quando criamos um construtor na classe mae e esse constrtutor agora tem argumento, precisamos modificar os construtores classe filha.
+
+
+
+BLOCOS DE INICIALIZACAO
+
+
+Os blocos de inicialização são usados em programação, especialmente em linguagens como Java, para executar código automaticamente quando uma classe é carregada ou uma instância dela é criada, sem a necessidade de chamadas diretas em métodos construtores ou estáticos. Eles são divididos em dois tipos:
+
+Bloco de inicialização estático: Executa uma única vez, quando a classe é carregada pela JVM (Java Virtual Machine), e é útil para inicializar variáveis estáticas ou realizar configurações gerais da classe que só precisam ser feitas uma vez.
+
+static {
+    // Código executado ao carregar a classe
+}
+Bloco de inicialização de instância: Executa sempre que uma nova instância da classe é criada, antes do construtor, permitindo inicializar variáveis de instância de forma centralizada, evitando a duplicação de código em construtores.
+
+{
+    // Código executado a cada nova instância
+}
+Esses blocos ajudam a organizar o código de inicialização, especialmente em classes complexas, evitando redundância e mantendo as inicializações em locais específicos, o que facilita a manutenção.
+
+
+SEQUENCIA DE INICIALIZACAO
+
+--> Aqui veremos a sequencia de inicializacao de quando existir blocos staticos e heranca;
+
+public class Pessoa{
+    private String nome;
+    private String cpf;
+    private int idade
+
+    static{
+        System.out.println("Dentro do bloco de inicializacao estatico de Pessoa");
+    }
+
+    {
+        System.out.println("Dentro do bloco de inicializacao de Pessoa 1");
+    }
+
+    {
+        
+        System.out.println("Dentro do bloco de inicializacao de Pessoa 2");
+    }
+
+
+    public Pessoa(String nome){
+        this.nome = nome;
+        System.out.println("Deentro do construtor da classe Pessoa");
+    }
+}
+
+
+public class Funcionario extends Pessoa{
+    private double Salario;
+
+    static{
+        System.out.println("Dentro do bloco de inicializacao estatico de funcionario");
+    }
+
+    {
+        System.out.println("Dentro do bloco de inicializacao de Funcionario 1");
+    }
+
+    {
+        
+        System.out.println("Dentro do bloco de inicializacao de Funcionario 2");
+    }
+
+    public Funcionario(String nome){
+        super(nome);
+        System.out.println("Dentro do construtor de funcionario");
+    }
+}
+
+
+public class Main{
+    public static void main(String[] args){
+        Funcionario funcionario = new Funcionario("Kayque");
+    }
+}
+
+--> quando temos herancao,  a super classe sempre sera inicializado primeiro que a filha;
+
+
+/ resultado no console /
+
+Dentro do bloco de inicializacao estatico de Pessoa    
+Dentro do bloco de inicializacao estatico de Funcionario
+
+Dentro do bloco de inicializacao de Pessoa 1
+Dentro do bloco de inicializacao de Pessoa 2
+Dentro do construtor de Pessoa
+
+Dentro do bloco de inicializacao de Funcionario 1
+Dentro do bloco de inicializacao de funcionario 2
+Dentro do construtor de Funcionario
+
+
+0 - Bloco de inicializacao estatico da super classe e executado quando a JVM carregar a classe pai;
+1 - Bloco de inicializacao estatico da super classe e executado quando a JVM carregar a classe filha;
+2 - Alocar o espaco em memoria para o objeto pai
+3
