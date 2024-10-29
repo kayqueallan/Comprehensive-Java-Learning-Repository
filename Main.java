@@ -1,3 +1,6 @@
+!! REVER ASSOCIACOES
+
+
 O QUE E PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)?
 
 Objetivo: Aproximar o mundo digital do mundo real. 
@@ -138,6 +141,137 @@ public class DevDojo{
     }
 }
 
+POO{
+    foi criada para mapear o mundo real para o mundo computacional, parte de principio que as coisas podem ser agrupadas.
+
+    a diferencia entre as variaveis primitivas para variaveis de referencia do tipo objeto
+
+    ex: 
+
+    String nome --> Kayque
+    int idade --> 18
+    char sexo --> 'M'
+
+    --> agrupamos tudo isso dentro de uma objeto por exemplo "pessoa" onde esses dados estao sendo guardados dentro de um objeto, um espaco em memoria;
+
+    o que é uma classe? 
+        - classe e o que nos temos em java para representar o mundo real com funcionalidades em comum, ex: classe carro -> que tem dados do tipo, marca, modelo, ano de fabricação etc...
+        //Agrupamento de coisas reais que dao origem a objetos
+
+
+    ex: 
+
+    Classe pessoa 
+        vai ter atributos do tipo: 
+            nome;
+            idade;
+            sexo;
+        --> esses atributos vao dar origem aos objetos 
+
+    Classes de dominio nao possui o metodo main, classe e um templete que vai dar origem a objetos;
+
+
+    ex: para se criar uma classe
+
+        public class Pessoa{
+            public String nome;
+            public int idade;
+            public char sexo;
+        }
+
+
+        import dominio.Estudante;
+
+public class Main {
+    public static void main(String[] args) {
+        Estudante estudante = new Estudante();
+        --> isso e o que estamos criando uma instancias no metodo main para nos "referenciar para a classe Pessoa"
+
+        -- > para criar objetos sempre utilizamos a palavra new e em seguida o nome de uma variavel de referencia para acessar esse objeto
+
+        //Variavel de referencia do tipo estudante e temos um objeto do tipo Estudante,
+
+        /**
+         * EXPLICACÃO:
+         * TEMOS UMA VARIAVEL Estudante que esta fazendo uma referencia para um objeto do tipo Estudante;
+         *  vamos supor que iremos querer introduzir valores aos atributos que estao no objeto estudante
+         *
+         *  ex:
+         *  estudante.nome;
+         *
+         * --> ai iremos acessar o espaco em memoria de nome e podemos adicionar valores ou modificar;
+         *
+         */
+    }
+}
+
+--> package dominio; pacote onde esta alocada essa classe;
+
+public class Estudante {
+    public String nome;
+    public int idade;
+    public char sexo;
+
+    --> Isso aqui e nossa classe com atributos: nome, idade, sexo;
+
+}
+
+public class Main{
+    public static void main(String[] args){
+        Estudante estudante = new Estudante();
+
+        estudante.nome; 
+
+        --> aqui acessamos o espaco em memoria da variavel por tipo de referencia 
+    }
+}
+
+ATENÇÃO 
+    --> 
+        Estudante estudante --> e uma variavel de referencia ;
+        = new Estudante --> e um objeto do tipo estudante ;
+
+        e atraves do nome variavel de referencia fazemos referencia a um objeto e conseguimos acessar as variaveis dentro de uma classe;
+
+                Estudante estudante = new Estudante();
+                --> aqui se cria um objeto da classe estudante;
+
+
+        A variável de referência é usada para armazenar a referência (ou endereço de memória) de um objeto criado a partir de uma classe. 
+}
+
+
+
+EXEMPLO PARA ENTEDER BEM:
+
+public class Carro {
+    public String marca;
+    public String modelo;
+    public int ano;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Criando três objetos da classe Carro
+        Carro carro1 = new Carro();
+        Carro carro2 = new Carro();
+        Carro carro3 = new Carro();
+
+        // Atribuindo valores aos atributos de cada objeto
+        carro1.marca = "Toyota";
+        carro1.modelo = "Corolla";
+        carro1.ano = 2021;
+
+        carro2.marca = "Honda";
+        carro2.modelo = "Civic";
+        carro2.ano = 2022;
+
+        carro3.marca = "Ford";
+        carro3.modelo = "Focus";
+        carro3.ano = 2020;
+
+    }
+}
 
 //TIPOS PRIMITIVOS 
 
@@ -149,7 +283,7 @@ para criar uma variavel colocamos o tipo dela e depois o nome sendo letra minusc
 
 ex: 
 
-int idadeDoPai;
+int idadeDoPai; 
 
 idadeDePai = 10;
 
@@ -174,7 +308,7 @@ boolean -> retorna valores false ou true;
 //CASTING 
 
 double idade = 10.0;
-float idade2 = 12.0;
+float idade2 = 12.0F;
 
 --> ocorrre um erro pois o compilador nao consegue indentificar o tamanho de espaco ocupado na memoria entao quando for declarar uma variavel float com depois um ponto ao final devemos colocar um 'F';
 
@@ -202,12 +336,12 @@ ex:
 String nome = "Kayque Allan";
 
 
-
+ 
 //OPERADORES
 
 ELEMENTOS QUE PERMITEM FAZER OPERACOES 
 
-ARITIMETICOS: 
+ARITIMETICOS:
 
 SOMA  = +;
 MENOS = -;
@@ -246,9 +380,7 @@ System.out.println(isDezMaiorQueVinte);
 OPERADORES LOGICOS
 
 && (AND); --> IGUAL A C
-|| (OU);  --> MESMO QUE C TAMBEM
-
-
+|| (OUR);  --> MESMO QUE C TAMBEM
 
 
 
@@ -327,7 +459,7 @@ ex:
             System.out.println(nomes[i]);
         }
 
-        --> vamos que supor que nesse codigo adicionamos mais um espaco no array ou seja colocar de tamanho 4, teriamos que trocar toda estrutura do for, para isso existe uma propriedade que diz seu tamanho chamada de langth ou seja podemos fazer assim.
+        --> vamos que supor que nesse codigo adicionamos mais um espaco no array ou seja colocar de tamanho 4, teriamos que trocar toda estrutura do for, para isso existe uma propriedade que diz seu tamanho chamada de length ou seja podemos fazer assim.
 
         for (int i = 0; i <= nomes.length; i++) {
             System.out.println(nomes[i]);
@@ -349,142 +481,6 @@ int[] num3 = new int[]{1,2,3,4}; --> array de 4 posicoes;
 declaracao: 
 
 int[][] matriz = new int[3][3]; 
-
-
-
-POO{
-    foi criada para mapear o mundo real para o mundo computacional, parte de principio que as coisas podem ser agrupadas.
-
-    a diferencia entre as variaveis primitivas para variaveis de referencia do tipo objeto
-
-    ex: 
-
-    String nome --> Kayque
-    int idade --> 18
-    char sexo --> 'M'
-
-    --> agrupamos tudo isso dentro de uma objeto por exemplo "pessoa" onde esses dados estao sendo guardados dentro de um objeto, um espaco em memoria;
-
-    o que é uma classe? 
-        - classe e o que nos temos em java para representar o mundo real com funcionalidades em comum, ex: classe carro -> que tem dados do tipo, marca, modelo, ano de fabricação etc...
-        //Agrupamento de coisas reais que dao origem a objetos
-
-
-    ex: 
-
-    Classe pessoa 
-        vai ter atributos do tipo: 
-            nome;
-            idade;
-            sexo;
-        --> esses atributos vao dar origem aos objetos 
-
-    Classes de dominio nao possui o metodo main, classe e um templete que vai dar origem a objetos;
-
-
-    ex: para se criar uma classe
-
-        public class Pessoa{
-            public String nome;
-            public int idade;
-            public char sexo;
-        }
-
-
-        import dominio.Estudante;
-
-public class Main {
-    public static void main(String[] args) {
-        Estudante estudante = new Estudante();
-        --> isso e o que estamos criando uma instancias no metodo main para nos "referenciar para a classe Pessoa"
-
-        -- > para criar objetos sempre utilizamos a palavra new e em seguida o nome do objeto que voce quer criar
-
-        //Variavel de referencia do tipo estudante e temos um objeto do tipo estudante,
-
-        /**
-         * EXPLICACÃO:
-         * TEMOS UMA VARIAVEL Estudante que esta fazendo uma referencia para um objeto do tipo Estudante;
-         *  vamos supor que iremos querer introduzir valores aos atributos que estao no objeto estudante
-         *
-         *  ex:
-         *  estudante.nome;
-         *
-         * --> ai iremos acessar o espaco em memoria de nome e podemos adicionar valores ou modificar;
-         *
-         */
-    }
-}
-
---> package dominio; pacote onde esta alocada essa classe;
-
-public class Estudante {
-    public String nome;
-    public int idade;
-    public char sexo;
-
-    --> Isso aqui e nossa classe com atributos: nome, idade, sexo;
-
-}
-
-public class Main{
-    public static void main(Strinf[] args){
-        Estudante estudante = new Estudante();
-
-        estudante.nome; 
-
-        --> aqui acessamos o espaco em memoria da variavel por tipo de referencia 
-    }
-}
-
-ATENÇÃO 
-    --> 
-        Estudante estudante --> e uma variavel de referencia ;
-        = new Estudante --> e um objeto do tipo estudante ;
-
-        e atraves do nome variavel de referencia fazemos referencia a um objeto e conseguimos acessar as variaveis dentro de uma classe;
-
-                Estudante estudante = new Estudante();
-                --> aqui se cria um objeto da classe estudante;
-
-
-        A variável de referência é usada para armazenar a referência (ou endereço de memória) de um objeto criado a partir de uma classe. 
-}
-
-
-
-EXEMPLO PARA ENTEDER BEM:
-
-public class Carro {
-    public String marca;
-    public String modelo;
-    public int ano;
-}
-
-public class Main {
-    public static void main(String[] args) {
-        // Criando três objetos da classe Carro
-        Carro carro1 = new Carro();
-        Carro carro2 = new Carro();
-        Carro carro3 = new Carro();
-
-        // Atribuindo valores aos atributos de cada objeto
-        carro1.marca = "Toyota";
-        carro1.modelo = "Corolla";
-        carro1.ano = 2021;
-
-        carro2.marca = "Honda";
-        carro2.modelo = "Civic";
-        carro2.ano = 2022;
-
-        carro3.marca = "Ford";
-        carro3.modelo = "Focus";
-        carro3.ano = 2020;
-
-    }
-}
-
-
 
 
 
@@ -958,7 +954,7 @@ public class Pessoa {
 
      public Pessoa(){
         //CONSTRUTOR pessoa2 
-        //Lyvia11F
+        //Lyvia11F 
      }
 }
 
@@ -1203,8 +1199,414 @@ METODOS STATICOS RESUMO: faz com que o atributo agora pertenca a classe e todos 
 
     --> nesse exemplo poderiamos usar pois nao esta sendo utilizado nenhum atributo da instancia calculadora.
 
+    
+    ASSOCIACAO
+
+    -> 
+
+    EX: 
+
+   public class Main {
+    public static void main(String[] args) {
+        Jogador jogador01 = new Jogador("Pele");
+        Jogador jogador02 = new Jogador("Bebeto");
+        Jogador jogador03 = new Jogador("Romario");
+
+        Jogador[] jogadores = {jogador01, jogador02, jogador03};
+
+        for(Jogador jogador : jogadores) {
+            jogador.imprimir();
+
+            Explicação de cada parte: 
+            1- Jogador é o tipo de elemento que o loop vai iterar, ou seja, objetos do tipo Jogador.
+
+            2- jogador é a variável que vai armazenar, a cada iteração, uma referência ao elemento atual do array.
+
+            3- jogadores é o array que contém os objetos Jogador que serão percorridos.
+        }
+
+        Iteração e Acesso Direto:
+
+        - Em cada iteração, a variável jogador faz referência a um dos objetos Jogador armazenados no array jogadores.
+
+        - Como jogador aponta diretamente para o objeto, você pode chamar métodos diretamente usando jogador.imprimir(), sem precisar de um índice para acessar o elemento no array.
+    }
+}
+
+        --> estamos guardando jogadores em um array, um array (Jogadores) faz referencia a tres posicoes de memoria, e cada jogador0... faz referencia ha um objeto em memoria, ou seja um array jogadores que esta fazendo referencia a tres objetos de posicoes independentes,
+
+        ou seja as posicoes so guardam referencia para outros objetos, ou seja, Pele ele tem duas referencia uma sendo posicao 0 do aarray e outra jogador01
+
+public class Jogador {
+    private String nome;
+
+    public Jogador(String nome) {
+        this.nome = nome;
+    }
+
+    public void imprimir(){
+        System.out.println("Nome jogador: " + nome);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+}
+
+
+
+--> ASSOCIACAO E PARECIDA COM A IDEIA DE BANCO DE DADOS: 
+
+
+1. JOGADOR 1 -- 1 PERSONAGEM;
+2. TIME 1 -- N JOGADORES;
+3. JOGADOR N -- 1 TIME;
+4. ESTUDANTE N -- N CURSO;
+
+Associacao --> relacionamento entre objetos.
 
 
 
 
+/ -> ASSOCIACAO UNIDIRECIONAL MUITOS PARA UM
 
+associacao de um jogador e um time
+
+public class Jogador {
+    private String nome;
+    private Time time;
+
+    --> um jogador possui um time, aqui fazemos a referencia entre duas classes que depois irmos fazer a associacao;
+
+    public Jogador(String nome) {
+        this.nome = nome;
+    }
+
+    public void imprimir(){
+        System.out.println("Nome jogador: " + nome);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+}
+
+public class Time{
+    private String nome;
+
+    public Time(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+}
+
+
+public class Main{
+public static void main(String[], args){
+
+        Jogador jogador01 = new Jogador("Neymar");
+        Time time01 = new Time("Selecao Brasileira");
+
+        --> aqui ainda nao ha asssociacao entre eles, apenas temos dois objetos distintos , dizemos que jogador tem um time, porque existe um espaco criado no objeto private Time time; na classe jogador vamos criar a relacao atraves do set
+
+        jogado01.setTime(time01);
+
+        agora precisamos arrumar o metodo imprimir 
+
+        ! metodo imprimir vai na classe jogador
+
+        public void imprimir(){
+        System.out.println("Nome jogador: " + nome);
+        if(time != null){
+            System.out.println(time.getNome());
+
+            --> fazemos isso pois agora time e um objeto entrao precisamos utilizar o metodo get para acessar a informacao 
+
+            --> precisamos fazer essa checagem para verificar se realmente existe um objeto em memoria para que seja buscado o getNome, se nao da um erro de null pointer, porque o que acontece no contrutor e passado as obrigatoriedades que tera que ser feito, quando isso nao e ainda o objeto em memoria nao e criado nao podemos nem existe, entao podemos chamar apos setar o time o metodo imprimir: 
+
+
+            public static void main(String[], args){
+
+            Jogador jogador01 = new Jogador("Neymar");
+
+            jogador01.imprimir(); --> aqui vai dar erro pois, caso nao tenha a verificacao de nulo que foi feita acima, pois nao podemos imprimir, uma coisa que nem existe ainda na memoria;
+
+            Time time01 = new Time("Selecao Brasileira");
+            jogador01.setTime(time01);
+
+        }
+
+        --> FORMA CORRETA
+
+        public static void main(String[], args){
+
+            Jogador jogador01 = new Jogador("Neymar");
+            Time time01 = new Time("Selecao Brasileira");
+
+            jogador01.setTime(time01);
+            jogador01.imprimir();
+
+            --> agora certo criamos o objeto em memoria e depois executamos ele e podemos ver o resultado: 
+
+            PELE 
+            SELECAO BRASILEIRA
+
+        }
+    }
+}
+
+
+
+LEITURA DE DADOS DO TECLADO
+
+primeiro deve se chamar uma classe que e responsavel dessa funcao, no caso e so chamar o 
+
+Scanner nomeVariavel = new (System.in);  --> objeto 
+
+ex: 
+
+public class Main{
+    public static void main(String[], args){
+        Scanner imput = new Scanner(System.in);
+    }
+}
+
+entao para lermos agora: 
+
+imput.next --> lebrando que next tem varios tipos;
+
+imput.next --> le apenas a primeira letra ou palavra antes do espaco 
+
+imput.nextLine --> le toda linha 
+
+
+ex: 
+
+import java.util.Scanner; --> import da classe java.util que contem a funcao que leitura do teclado
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner imput = new Scanner(System.in);
+
+        String name = imput.nextLine();
+
+        System.out.println(name);
+    }
+}
+
+
+tambem temos entradas especificas: 
+
+entrada.nextByte()  --> que so vai aceitar entradas numeros de -128 a 127; 
+
+entrada.hasNextByte() --> retornará false, indicando que a entrada não pode ser lida como um byte
+
+para isso existe varios outros como int, byte, long etc..
+
+!! nao temos isso para char entao o que podemos utilizar: 
+
+
+imput.next --> que so isso ira ler a primeira palavra, mas podemos especificar mais
+
+imput.next().charAt(0); --> ou seja ler a primeira palavra, e dessa palavra somente o primeiro caracter que se contem na posicao 0 da string.
+
+
+ex: 
+
+public static void main(String[] args) {
+        Scanner imput = new Scanner(System.in);
+
+        System.out.println("Digite seu nome: ");
+        String nome = imput.nextLine(); --> ler toda linha;
+
+        System.out.println("Digite sua idade: ");
+        int idade = imput.nextInt();  --> para ler somente numeros inteiros;
+
+        System.out.println("Digite M ou F para seu sexo: ");
+        char sexo = imput.next().charAt(0); --> somente o primeiro caracter;
+
+        System.out.println("Nome: " + nome + "\nIdade: "+idade + "\NSexo: "+sexo);
+    }
+}
+
+
+
+HERANÇA
+
+-> o sistema esta mapeando o mundo real para o mundo digital, vamos supor que criamos uma classe pessoa, onde contem: nome, cpf e idade; agora pela necessidade do sistema temos que criar a classe funcionario onde necessita dos memos atributos citatos so que mais um adicional de matricula, salario; nao e necessario criar uma outra classe e digitar os mesmos atributos, podemos utilizar o conceito de heranca; ou seja porque na vida real um funcionario e uma pessoa, o termo "tem" significa que voce tem um relacionamento entre eles por exemplo pesssoa tem um endereco, ja na heranca utiliza o "e", ou seja, o funcionario e uma pessoa; entao o funcionario e tudo que pessoa é , so que mais alguma coisa; uma extesao de funcionalidades de uma classe; e algo que extende as funcionalidades de uma pessoa sendo algo mais especializado
+
+
+
+--> classe Pessoa 
+
+public class Pessoa{
+    private String nome;
+    private String cpf;
+    private int idade
+
+    {
+        geters and seters
+    }
+}
+
+--> classe funcionario 
+
+
+public class Funcionario extends Pessoa{
+    private int matricula
+    private double salario
+
+
+    {
+        geters and seters 
+    }
+
+}
+
+    e como acessamos na main? 
+
+    public class Main{
+        public static void main(String[] , args){
+            -> aqui declaramos da mesma forma um objeto;
+
+            Funcionario funcionario = new Funcionario();
+
+            -> e como acessamos os atributos da classe Pessoa? 
+
+            funcionario.setNome("Kayque");
+            funcionario.setCpf("167.578.836-78")
+        }
+    }
+
+        / -> Entao quando usamos heranca: quando queremos extender funcionalidades dela, e extender o relacionamento entre elas; 
+
+        !!! temos que tomar bastante cuidado na utilizacao de heranca, porque quando utilizamos estamos acomplando altamente o codig, e o melhor a se fazer e baio acoplamento e alta coesao;
+
+    
+
+SOBRESCRICAO DE METODOS SUPER
+
+--> Basicamente escrever na classe filha o metodo sendo do mesmo nome, por exemplo na classe Pessoa tem um metodo imprime, e na classe Funcionario vai ter imprime tambem:
+
+
+public class Pessoa{
+    private String nome;
+    private String cpf;
+    private int idade
+
+    public void imprimir(){
+        System.out.println(this.nome);
+        System.out.println(this.cpf);
+        System.out.println(this.idade);
+    }
+
+    { geters and seters }
+}
+
+
+public class Funcionario extends Pessoa{
+    private int matricula
+    private double salario
+
+    public void imprimir(){
+        System.out.println(this.salario);
+    }
+
+
+    --> quando fizemos isso a IDE entende que estamos sobrescrevendo os metodos, que no classe a classe filha esta sobrescrevendo a super-classe;
+}
+
+
+--> no caso se executar esse codigo acima o resultado ira dar somente o salario que no caso esta contido na classe filha, porque agora esta mudado o comportamento do metodoque no caso esta contido na classe mais especifica, mas podemos executar os dois metodos sendo eles tendo o mesmo nome; 
+
+
+ex: 
+
+public class Pessoa{
+    private String nome;
+    private String cpf;
+    private int idade
+
+    public void imprimir(){
+        System.out.println(this.nome);
+        System.out.println(this.cpf);
+        System.out.println(this.idade);
+    }
+}
+
+
+public class Funcionario extends Pessoa{
+    private int matricula
+    private double salario
+
+    public void imprimir(){
+        super.imprir();
+        System.out.println(this.salario);
+    }
+}
+
+
+--> ou seja ai estamos especificando que queremos que seja impresso todo resultado primeiro da classe pessoa e apos e executado a classe funcionario, ou seja execute primeiro o metodo da super classe e depois execute o metodo da classe filha, para isso utilizamos a palavra super,, que no caso estamos referindo ao objeto superclasse Pessoa, ai colocamos super.atributos_que_esta_sendo_importado;
+
+
+->ex: super.imprime();
+
+
+assim o resultado no console sera: 
+
+- nome
+- cpf
+- idade
+- salario
+
+
+
+PROTECT 
+
+-> E um modificador de acesso, por exemplo: 
+
+public class Pessoa{
+    private String nome;
+}
+
+
+public class Funcionario extends Pessoa{
+    private double salario
+
+
+    public void relatorioPagamento(){
+        System.out.println("Eu " + this.nome);
+
+
+        Nesse caso o certo seria: 
+
+        System.out.println("Eu " + this.getNome());  -> pois o get nome e public, mas isso nao seria o ideal 
+
+
+        No caso como o metodo da classe mae e privado nao podemos acessar diretamente, precisariamos de um metodo get para acessar a informacao, mas isso fica muito ruim, pois pensamos o seguinte se a super classe e a mae e possui a filha e uma compartilha atributos com a outra entao nao e necessario que seja privado por isso temos o medificador de acesso protected 
+
+    }
+}
+
+definicao protected : 
+    -> qualquer sub-classe em qualquer pacote teria acesso direto aos atributos, ou seja vai dar acesso a todas as subclasses independende de onde elas estiverem, porem todas as classes que estiverem no mesmo pacote terao acesso;
+
+
+
+
+    CONSTRUTORES EM HERANCA
