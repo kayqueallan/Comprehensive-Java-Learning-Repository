@@ -1758,7 +1758,29 @@ Dentro do bloco de inicializacao de funcionario 2
 Dentro do construtor de Funcionario
 
 
+Ordem de execucao: 
+
 0 - Bloco de inicializacao estatico da super classe e executado quando a JVM carregar a classe pai;
+
 1 - Bloco de inicializacao estatico da super classe e executado quando a JVM carregar a classe filha;
-2 - Alocar o espaco em memoria para o objeto pai
-3
+
+2 - Alocado o espaco em memoria para o objeto pai
+
+3 - Cada atributo da classe pai e criado e inicializado com valores default ou o quer for passado da classe pai
+
+4 - Bloco de inicializacao da superclasse e executado
+
+5 - Construtor e executado
+
+6 - Alocado o espaco em memoria para o objeto da subclasse
+
+7 - Cada atributo da subclasse pai e criado e inicializado com valores default ou o quer for passado
+
+8 - Bloco de inicializacao da subclasse e executado
+
+9 - Construtor e executado subclasse 
+
+
+
+
+SOBRESCRITA 
