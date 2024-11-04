@@ -1,5 +1,9 @@
 !! REVER ASSOCIACOES
 
+!! Rever Modificador Final
+
+!! rever toString
+
 
 O QUE E PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)?
 
@@ -1783,4 +1787,997 @@ Ordem de execucao:
 
 
 
-SOBRESCRITA 
+MODIFICADOR FINAL - TIPO PRIMITIVO 
+
+    constantes 
+
+    public class Carro{
+        private String nome;
+        private static double velociadeLimite = 250;
+
+        --> velociadade limite era estatica e privada, a velocidade limite e algo que querememos que nao mude de forma alguma, existem certos tipos de atributos que voce nao quer que seja modificados e chamados de constantes, uma vez criado e permanecido daquele jeito ate parar o codigo e modificar novamente, e devinido pela palavra final.
+
+        ex: 
+
+        private static final double velocidadeLimeite --> quando colocamos apenas dessa forma e dado um erro pois, uma vez criado e necessario que seja passado um valor, e esse codigo compilado nao poderemos mais modificar, constantes no java temos uma convensao propria que e tudo em UperCase separado por undescor
+
+        o certo seria: 
+
+        private static final double VELOCIDADE_LIMITE = 250;
+
+        --> dessa forma esta correto;
+    }
+
+
+    public class CarroTeste{
+        public static void main(String[] args){
+            Carro carro = new Carro;
+
+            Carro.VELOCIDADE_LIMITE = 180;
+
+            --> se tentarmos associar algum valor como o exemplo acima ira dar erro pois ja asociamos
+        }
+    }
+
+    --> podemos inicializar o valor de outra forma atraves de blocos estaticos e nao estaticos e construtores;
+
+    public class Carro{
+        private String nome;
+        public static final double VELOCIDADE_LIMITE;
+
+        static{
+            VELOCIDADE_LIMITE = 250;
+
+            --> podemos fazer isso pois sempre que a classe for executada o bloco static tambem sera;
+        }
+
+        --> ou podemos tambem:
+
+        public final double VELOCIDADE_LIMITE;
+
+        {
+            VELOCIDADE_LIMITE = 250;
+        }
+
+        -> ai na classe main utilizariamos para referenciar a velocidade limite a variavel de referencia 
+
+
+        carro.VELOCIDADE_LIMITE;
+
+
+        --> ou podemos tambem inicializar atraves de um construtor;
+
+        public Carro(){
+            VELOCIDADE_LIMITE = 250;
+        }
+    }
+
+
+
+    ENUMERACAO 
+
+    public class Main{
+        public static void main(String[] args){
+            Cliente cliente1 = new Carro("Kayque", "Pessoa_Fisica");
+            Cliente cliente2 = new Carro("davi", "Pessoa_Juridica");
+            Cliente cliente3 = new Carro("joao", "PESSOA FISICA");
+            Cliente cliente4 = new Carro("jose", "PESSOA JURIDICA");
+        }
+        System.out.println(cliente1); --> nao executa;
+        System.out.println(cliente2); --> nao executa;
+        System.out.println(cliente3); --> executa;
+        System.out.println(cliente4); --> executa;
+    }
+
+    --> ao fizer dessa forma e totalmente prejudicial ao sistema, quando pensarmos em relacionar com banco de dados, pois ira ter a mesma informacao sendo salvas de formas diferentes;
+
+
+    public class Cliente{
+        private String nome;
+        private String tipo;
+        private static final String PESSOA_FISICA = "PESSOA FISICA";
+        private static final String PESSOA_JURIDICA = "PESSOA JURIDICA";
+
+        public Cliente(String nome,String tipo){
+
+            if(!tipo.equals(PESSOA_FISICA) || !tipo.equals(PESSOA_JURIDICA)){
+                return;
+
+                //equals e usado para comparacao de strings 
+            }
+            this.nome = nome;
+            this.tipo = tipo
+        }
+    }
+
+        --> se executarmos essas duas classe o cliente 1,2 nao ira aparacer pois fizemos uma comparacao onde o modo que escrevemos nao e validado ;
+
+
+    como podemos ver limitamos essas opcoes, mas queremos forcar o usuario passar essas duas opcoes dessa forma  fortemente tipado, o java possui a classe de enumeracao;
+
+
+    todos atributos que criarmos dentro serao constantes 
+
+    public enum TipoCliente{
+        PESSOA_FISICA,
+        PESSOA_JURIDICA
+    }
+
+
+    --> mas porque nao existe algum tipo? ex: tipo String ou tipo Int, nao existe porque a PESSOA_FISICA e PESSOA_JURIDICA ela e do TipoCliente, e esses dois valores fazem parte da enumeracao do TipoCLiente, como ficaria agora? e como se fosse uma relacao;
+
+
+    public class Cliente{
+        private String nome;
+        private TipoCliente tipoCliente;
+
+        --> e uma relacao, porque um Cliente tem um TipoCliente;
+
+        public Cliente(String nome,TipoCliente tipoCliente){
+            this.nome = nome;
+            this.tipo = tipo
+        }
+
+        {getters e setters}
+    }
+
+
+
+    agora na classe main;
+
+
+    public class Main{
+        public static void main(String[] args){
+            Cliente cliente1 = new Carro("Kayque", "Pessoa_Fisica");
+            Cliente cliente2 = new Carro("davi", "Pessoa_Juridica");
+            Cliente cliente3 = new Carro("joao", "PESSOA FISICA");
+            Cliente cliente4 = new Carro("jose", "PESSOA JURIDICA");
+        }
+        System.out.println(cliente1); --> nao executa;
+        System.out.println(cliente2); --> nao executa;
+        System.out.println(cliente3); --> executa;
+        System.out.println(cliente4); --> executa;
+    }
+
+    --> agora na classe main nao podemos mais passar as informacoes do tipo sendo elas do tipo STRING , porque ela nao e mais uma variavel, agora ela e um tipoCliente, agora os atributos que temos dentro da classe enum, sao constantes(Static e Final) da classe TipoCliente
+
+    temos que fazer dessa forma 
+
+
+    public class Main{
+        public static void main(String[] args){
+            Cliente cliente1 = new Carro("Kayque", tipoCliente.PESSOA_FISICA);
+            Cliente cliente2 = new Carro("davi", tipoCliente.PESSOA_JURIDICA);
+            Cliente cliente3 = new Carro("joao", tipoCliente.PESSOA_FISICA);
+            Cliente cliente4 = new Carro("jose",tipoCliente.PESSOA_JURIDICA);
+        }
+        System.out.println(cliente1); 
+        System.out.println(cliente2); 
+        System.out.println(cliente3); 
+        System.out.println(cliente4); 
+    }
+
+    --> precisa ser passado dessa forma, agora caso criamos o cliente 5 e pensamos em passar o tipo de outra forma, infelizmente nao tem como, para fazer isso e necessario adicionar algum novo tipo na classe de enumeracao
+
+
+
+    --> estamos forcando a pessoa a passar algum desses dois tipos, fazendo com que diminua os erros.
+
+
+    -/-> O certo de se utilizar a numeracao e quando temos uma escolha dentro de uma quantidade limitada de opcoes, e voce precisa forcar o tipo a ser utilizado.
+
+
+
+    ENUMERACOA PT2 - CONSTRUTORES E ATRIBUTOS;
+
+    na classe enum e aonde definir atributos que vao representar aquela enumeracao, esses atributos nao podem ser alterados como PESSOA_FISICA sera sempre PESSOA_FISICA... 
+
+    dentro da enumeracao podemos trabalhar com construtores e atributos;
+
+    --> enum pode ser usado dentro de outra classe
+
+    public class Cliente {
+        public enum TipoPagamento{
+            DEBITO,CRETIDO
+        }
+        private String nome;
+        private TipoCliente tipoCliente;
+        private TipoPagamento tipoPagamento;
+    }
+
+
+    -> nos temos a enumeracao dentro da classe e uma relacao que cliente tem um tipo de pagamento e tem um tipoCliente;
+
+    relembrando podemos utilizar atributos ou a classe enum sem nenhum modificador de acesso
+
+    ex: 
+
+    enum TipoPagamento{
+            DEBITO,CRETIDO
+        }
+         String nome;
+         TipoCliente tipoCliente;
+         TipoPagamento tipoPagamento;
+    }
+
+    sem nada e chamado de modificador de acesso pacote, significa que qualquer classe dentro do mesmo pacote podera acessar esse atributo, significa que qualquer um pode acessar se estiver dentro do mesmo pacote;
+    
+    
+    podemos criar um atributo dentro de uma numeracao;
+
+    por exemplo pessoa fisica tera um numero 1 e pessoa juridica numero 2;
+
+    ex: 
+
+    public enum TipoCliente{
+        PESSOA_FISICA(1),
+        PESSOA_JURIDICA(2)
+
+        private TipoCliente(){
+
+        }
+    }
+
+    mesmo que nao criamos, toda vez em que executamos enum e criado um construtor, quando colocamos dois valores inteiro dentro de pess-fisica e juridica, quando colocamos esses valores automaticamente estamos passando eles para o construtor
+
+
+    public enum TipoCliente{
+        PESSOA_FISICA(1),
+        PESSOA_JURIDICA(2)
+
+        private int valor;
+
+        -> aqui podemos colocar de duas formas sendo final ou nao, e tambem sendo publico ou naol, caso seja publico nao necessitamos de um get
+
+        --> podemos armazenar o valor dentro de uma variavel, e como regra nao podemos nao podemos colocar uma variavel antes da enumeracao;
+
+        TipoCliente(int valor){
+            this.valor = valor;
+        }
+
+        --> quando for inicialido a classe enumeracao, caso a pessoa passe um dos dois tipos ira passarr um valor, sendo 1 ou 2, quando os valores forem passado como iremos pegar ele? 
+
+        - atraves de um getter, e faz sentido nos adicionarmos um set? nao pois o valor nao sera modificado entao nao faz sentido... 
+
+        public int getValor(){
+            return valor;
+        }
+
+    }
+
+
+
+    public class Main{
+        public static void main(String[] args){
+            Cliente cliente1 = new Carro("Kayque", tipoCliente.PESSOA_FISICA);
+            Cliente cliente2 = new Carro("davi", tipoCliente.PESSOA_JURIDICA);
+            Cliente cliente3 = new Carro("joao", tipoCliente.PESSOA_FISICA, );
+            Cliente cliente4 = new Carro("jose",tipoCliente.PESSOA_JURIDICA, );
+        }
+        System.out.println(cliente1);
+        System.out.println(cliente2); 
+        System.out.println(cliente3); 
+        System.out.println(cliente4); 
+
+    }
+
+
+    no caso para nos entedermos bem: o metodo toString podemos utilizar para entender melhor
+
+    public String toString(){
+        return "Cliente {" +
+        "nome" + nome + "\" + 
+        ...
+        ", tipoClienteInt =" + tipoCliente.valor +"
+
+        --> aqui veremos o valor baseado ao atributo que estamos passando sendo ele ou pessoa fisica ou pessoa juridica ou seja, ou 1 ou 2, veremos que o valor ira mudar de acordo com atributo que formos passar, desse modo temos certeza de um valor numerico que ira ser passado para o banco de dados, valores inteiros representando pessoa fisica ou juridica;
+
+
+        '}';
+    }
+
+    --> se executarmos dessa forma utilizando o metodo toString, veremos que ira aparecer no resultado o nome, o tipo de cliente sendo pessoa fisica ou pessoa juridica, e tambem um valor associado a ele referente ao atributo que criamos;
+
+        ex:
+
+        Cliente{nome = 'kayque', tipoCliente = PESSOA_FISICA, tipoClienteInt = 1}
+
+-->< e outro ex: nao precisamos nos limitar ao valor passado de rempresentacao, podemos colocar tabem do tipo String 
+    
+public enum TipoCliente{
+        PESSOA_FISICA(1, "Pessoa Fisica"),
+        PESSOA_JURIDICA(2, "Pessoa Juridica")
+
+        private int valor;
+        private String nomeRelatorio
+
+        TipoCliente(int valor, String nomeRelatorio){
+            this.valor = valor;
+            this.nomeRelatorio = nomeRelatorio;
+        }
+
+        public int getValor(){
+            return valor;
+        }
+
+        public int getNomeRelatorio(){
+            return nomeRelatorio;
+        }
+
+        agora na classe Cliente para exibir do modo que desejamos sem ser e UperCase mudamos apenas para tipoCliente.getNomeRelatorio;
+
+    }
+
+     public String toString(){
+        return "Cliente {" +
+        "nome" + nome + "\" + 
+        ...
+        ", tipoClienteInt =" + tipoCliente.getValor() +"
+
+        ", tipoCliente =" + tipoCliente.getNomeRelatorio() +" "
+        }
+     }
+
+
+
+
+     -> ENUMERACAO - SOBRESCRIATA DE METODOS 
+
+     --> Seguinte problema: imaginamos que temos duas oopcoes credito e debito mas precisamos dar descontos especificos em ambos, mas nao queremos fazer if dentro do codigo ;
+
+     public enum TipoPagamento{
+        DEBITO, 
+        CREDITO;
+
+        public double calcularDesconto(double valor){
+            return 0;
+
+            --> quem chamar esse metodo sem nada o valor retornado sera 0;
+        }
+     }
+
+
+     agora na main{
+
+        public class Main{
+            public static void main(String[] args){
+                Cliente cliente1 = new Cliente("Kayque", TipoCliente.PESSOA_FISICA, TipoPagamento.CREDITO);
+
+                System.out.println(TipoPagamento.DEBITO.calcularDesconto(100));
+
+                --> caso executarmos isso o valor retornado sera 0; pois nao estamos passando comportamento ainda para se calcular o desconto;
+            }
+        }
+     }
+
+
+     agora vamos fazer o comportamento na classe enum:
+
+
+     public enum TipoPagamento{
+        DEBITO{
+            aqui criamos a chave para demonstrar o comportamento, e atraves de ctrl + o para sobrescrever algum metodo;
+
+            @Override
+            public double calcularDesconto(double valor){
+                return valor * 0.1;
+            }
+        }, 
+        CREDITO{
+            @Override
+            public double calcularDesconto(double valor){
+                return valor * 0.05;
+            }
+        };
+
+        public double calcularDesconto(double valor){
+            return 0;
+        }
+
+        -->  agora o 0 aqui nao esta sendo utilizado, porque independe se usarmos debito ou credito, o valor 0 nao sera retornado;
+     }
+
+
+     --> se executarmos agora o metodo na main System.out.println(TipoPagamento.DEBITO.calcularDesconto(100)); ira da um resuldado dependendo do tipo de pagamento que foi chamado;
+
+
+     --> melhor forma de se utilizar;
+
+     public enum TipoPagamento{
+        DEBITO{
+            @Override
+            public double calcularDesconto(double valor){
+                return valor * 0.1;
+            }
+        }, 
+        CREDITO{
+            @Override
+            public double calcularDesconto(double valor){
+                return valor * 0.05;
+            }
+        };
+
+        public double calcularDesconto(double valor){
+            return 0;
+        }
+            podemos criar o metodo dessa forma mas existe uma melhor forma:
+
+
+            porque esse metodo calcular desconto embaixo nao esta sendo utilizado, ou seja nao possui nenhum comportamento;
+
+            --> O certo a criar um metodo que o metodo em si nao vai ter comportamento, so tera comportamento sera decidido araves de sobrescritas em outras classes ou enumeracoes, nesse caso esse corpo e inutil {} (as aspaas do metodo), o que temos que fazer e retirar e colocar ";";
+
+            public double calcularDesconto(double valor);
+
+            --> mas para isso precisamos colocar ele de forma abstrata, porque um metodo abstrato nao pode ter corpo, ou seja, e um metodo que foi criado somente para ser sobrescrito 
+
+            entao o correto:
+
+            public abstract double calcularDesconto(double valor);
+
+
+
+            resutado final:
+
+            public enum TipoPagamento{
+                DEBITO {
+                    @Override
+                    public double calcularDesconto(double valor){
+                        return valor * 0.10;
+                    }
+                },
+                CREDITO{
+                    @Override
+                    public double calcularDesconto(double valor){
+                        return valor * 0.05;
+                    }
+                };
+
+                public abstract double calcularDesconto(double valor);
+            }
+     }
+
+
+     CLASSES ABSTRATAS PT1
+
+     --> criada para resolver um problema de designer de codigo,
+     
+     public class Funcionario{
+        protected String nome;
+        protected double salario;
+
+        public Funcionario(String nome, double Salario){
+            this.nome = nome;
+            this.salario = salario;
+        }
+
+        @Override
+        public String toString(){
+            return "Funcionario{" + '\'' + 
+            "nome = '" + nome + '\' + 
+            ",salario =" + salario '+ 
+            '}';
+        }
+     }
+
+     classe gerente -> herdada de funcionario 
+
+     public class Gerente extends Funcionario{
+        public Gerente (String nome, double salario){
+            super(nome, salario);
+        }
+     }
+
+     public classFuncionarioteste{
+        public static void main(String[] args){
+            Funcionario funcionario = new Funcionario("Zoro", 2000);
+
+            --> aqui criamos um objeto da classe funcionario, sendo chamado de zoro, mas quem e zoro? ele e um gerente, desenvolvedor, vendedor?? ... na verdade nao deveria existir, so um funcionario, podemos evitar a criacao de funcionario, e deixar somente a criacao das classes que extendem funcionario; ai entra o abstract  
+
+            Gerente gerente = new Gerente("Kayque", 5000);
+
+            System.out.println(funcionario);
+            System.out.println(gerente);
+        }
+     }
+
+
+     --> abstract : quando colocamos isso na classe significa que agora ela vai ser como um templete, ou seja, nao podemos mais criar algo como concreto, normalmente quando trabalhamos com abstract definiminos o que nao for abstrato de concreto, no nosso caso agora funcionario e e abstrato, entao nao podemos mais instanciar a classe funcionario, nao podemos mais ter um objeto do tipo funciario, teremos que criar agora somente objetos que extendem a classe funcionario
+
+     ex: 
+
+     public abstract class Funcionario{
+        protected String nome;
+        protected double salario;
+
+        public Funcionario(String nome, double Salario){
+            this.nome = nome;
+            this.salario = salario;
+        }
+            porque temos um construtor aqui? pois estamos trabalhando com heranca, para poder criar um gerente tendo nome, e salario precisamos que esse construtor esteja contido em funcionario.
+        
+        }
+     }
+
+     --> uma classe que foi criada para ser extendida, uma classe que foi criada para ser uma superclasse.
+
+
+     public final abstract class Funcionario{}
+
+     nao podemos misturar final e abstract porque? porque criamos uma classe abstract para ser extendida, ja uma classe final quando criada e para nao ser extendida. ou seja, pode ser somente final ou abstract.
+
+
+     -->resumo:  classes podem ser abstratas, na qual a funcionalidade de uma classe abstrata e ser extendida, e nao podemos instanciar uma classe abstrata, nao podemos tambem misturar final e abstract pois tem funcionalidades extendidas;
+
+
+     METODOS ABSTRATOS 
+        -> metodos abstratos nao possui corpo, foi feito apenas para ser sobescrito;
+        
+        public abstract class Funcionario{
+            protected String nome;
+            protected double salario;
+
+            public Funcionario(String nome, double salario){
+                this.nome = nome;
+                this.salario = salario;
+            }
+
+            public void calcularBonus(){
+                this.salario = salario + salario * 0.1
+            }
+        }
+
+        -->  no caso criamos o metodo dentro da classe abstrata, onde aqui criamos um calculo de bonus, mas como criamos dentro da classe funcionario entao isso se aplica para todos os outros herdados, podemos entao utilizar esse metodo dentro da classe desenvolverdor ou gerente sendo de forma propria para isso utilizamos o Metodo:
+
+        -> public abstract void calcularBonus();
+
+
+        public class Gerente extends Funcionario{
+            public Funcionario(String nome, double salario){
+                super(nome,salario);
+            }
+
+            @Override
+            public void calcularBonus(){
+                this.salario = this.salario + this.salario * 0.05; 
+            }
+
+            --> podemos fazer o mesmo para desenvolvedor
+        }
+
+
+        !! quando extendemos de uma classe abstrata, precisamos obrigatoriamente prover uma implementacao mesma que seja vazia, ex: casso extendemos a class funcionario para a classe desenvolvedor, precisamos obrigatoriamente sobrescrever o metodo calculaBonus(); mesmo que seja vazio;
+
+        @Override
+        public void calculaBonus(){
+            //nao importa se teremos implementacao aqui ou nao, o que temos que cumprir com o trato de sobrescrever um metodo
+        }
+
+    
+        ///METODOS ABSTRATOS REGRAS
+
+    Vamos supor que criamos uma classe avo sendo ela a classe pessoa , sendo ela pai de funcionario, e o mesmo tendo desenvolvedor e gerente como filhos, sera que podemos fazer isso? claro que sim
+
+    public abstract class Pessoa{
+        public abstract void imprimir();
+    }
+
+    //
+
+    public abstract class Funcionario extends Pessoa{
+        protected String nome;
+        protected double salario;
+
+        public Funcionario(String nome, double salario){
+            this.nome = nome;
+            this.salario = salario;
+            calcularBonus();
+        }
+    }
+
+    public abstract calcularBonus();
+
+    // --> se tivermos uma classe abstrata e uma  outra classe abstrata extendendo ela, no caso funcionario extendendo uma pessoa que tambem e abstrata, voce nao e obrigado ha implementar os metodos abstratos, mas caso deseja implementar e necessario implementar somente uma vez, por exemplo se colocarmos o metodo sobrescrito do metodo imprime, dentro da classe funcionario nao e necessario sobrescrever novamente nas classes filhas como: desenvolvedor e gerente.
+
+    @Override
+    public void imprimir(){
+        System.out.println("Imprimindo...!!");
+    }
+
+    // --> como funcionario implementou o metodo imprime todas as classes filhas de funcionario vao pegar essa implementacao... ou seja nao  havera mais erros
+
+    /*
+     * caso deseja implementar o metodo para gerente ou desenvolvedor podemos chamar:
+     * 
+     * gerente.imprimir();
+     * desenvolvedor.imprimir();
+     * 
+     */
+
+    @Override
+    public String toString...
+
+
+    classes filhas ---> 
+
+    public class Gerente extends Funcionario{
+    }
+
+    public class Desenvolvedor extends Funcionario{
+
+    }
+
+
+    !! -> regra: nao podemos ter multiplas herancas no java, mas podemos ter uma hierarquia maior, como pai, avo, tataravo ....
+
+
+
+    INTERFACE 
+
+    --> Bem parecido com classes abstratas, a diferenca que podemos falas e que intertaface e interace e classe e classe!
+
+    --> interfaces tinha o intuito de servir como um contrato, porque classes abstratas se pararmos para pensar nos metodos abstratos eles sao contratos que as classes concretas que extenderem precisa implementar os metodos abstratos.
+
+    public interface DataLoader{
+        // agora estamos utilizando interface, e como interface e tipo um contrato nao podemos colocar a palavra final, pois um contrato foi feito para ser implementado
+    }
+
+    quando criamos uma interface podemos criar metodos, somente com o tipo de retorno e o nome, nao e necessario colocar public abstract, pois isso se torna redundante
+
+
+    public interface DataLoader{
+        void load();
+
+        --> como vimos nao e necessario adicionar o modificador de acesso + abstract 
+    }
+
+
+    public class DatabaseLoader implements DataLoader{
+        // essa classe vai carregar dados do banco de dados, fara mais sentido quenfdo for ligado ao polimorfismo
+
+        -> quando utilizamos interface, nao utilizamos mais o extends e sim o implements + nome da interface. e como load e um metodo abstrato e necessario implementar ele.
+
+        @Override
+        public void load(){
+            System.out.println("Carregando dados do banco de dados");
+        }
+    }
+
+
+    public class FileLoader implements DataLoader{
+        @Override
+        public void load(){
+            System.out.println("Carregando dados de um arquivo");
+        }
+    }
+
+
+    public class TesteDataLoader{
+        public static void main(String[] args){
+            DatabaseLoader databaseLoader = new DatabaseLoader();
+            FileLoader fileLoader = new FileLoader();
+
+            databaseLoader.load();  
+            fileLoader.load();
+        }
+    }
+
+
+    resumo: quando trabalhamos com interface nao se utiliza mais o public class, mas sim public interface, todos os metodos nao sao necessarios adicionar o public abstract antes pois isso se torna redundante , quando queremos implementar a inteface em outra classe utilizamos o implements + nome_da_interface;
+
+    
+    IMPLEMENTANDO MULTIPLAS INTERFACES : CASOS ESPECIAIS 
+
+    seguindo o raciocinio e utilizando as classes copiadas antes, imaginamos que seja criado uma nova interface chamada;
+
+    public interface DataRemover{
+        void remove();
+    }
+
+    nao queremos criar uma nova classe so para implementar na DatabaseLoader, queremos que o remove tambem seja implementado, uma das vantagens da interface e que voce pode prover a implementacao para multiplas interfaces de uma mesma classe, entao podemos fazer:
+
+    public class DatabaseLoader implements DataLoader, DataRemover{
+
+        @Override  --> // metodo sobrescrito de DataLoader
+
+        public void load(){
+            System.out.println("Carregando dados do banco de dados");
+        }
+
+        
+        @Override  --> // metodo sobrescrito de DataRemover
+
+        public void remove(){
+            System.out.println("Removendo do banco de dados");
+        }
+
+        --> nao existe limite para adicionar, podemos fazer a implementaao de multiplas interfaces, ja nas classes nao;
+    }
+
+
+    outra diferenca: o fato da interface ter metodos com implementacao, ja nas classes abstratas nao e possivel, porque eles fizeram isso, imagina que temos o DataLoader, onde tem o metodo load,  agora fazendo o carregamento queremos que tenha o metodo para checar a permissao entao colocamos: 
+
+    public abstract void checkPermission();
+
+    -> o problema e quando colocamos um metodo abstrato onde ele outras classes estiverem extendendo isso, todas obrigatoriamente precisa sobrescrever esse metodo, @Override. e isso e muito ruim para grandes projetos onde se adicionar alguma funcionalidade seja necessario modificar muita coisa, os metodos default sao metodos que possui implementacao, entao podemos fazer a implementacao, nos estamos definindo na interface o comportamento daquele metodo
+
+    ex: 
+
+    public interface DataLoader{
+        void load();    
+
+        default void checkPermission(){
+            System.out.println("Fazendo checagem de permissoes");
+
+            --> com isso as outras classes que implemtentam essa interface, nao irao dar erro, pois nao e mais obrigatorio ter a sobrescrita desse metodo.
+        }
+    }
+
+
+    nao ha necessidade de colocar public default... , pois isso se torna redundante;
+
+
+    --> agora utilizando o metodo na main;
+
+
+     public class TesteDataLoader{
+        public static void main(String[] args){
+            DatabaseLoader databaseLoader = new DatabaseLoader();
+            FileLoader fileLoader = new FileLoader();
+
+            databaseLoader.checkPermission();  
+            fileLoader.checkPermission();
+
+            --> veremos os system out printn que foi disposto na interface, sem mesmo sobrescrever, porem essas checagem de permissoes estao acontecendo no nivel da interface, podemos sobrescrever e prover a implementacao na classe
+        }
+    }
+
+
+
+    --> ex: 
+
+
+    public class DatabaseLoader implements DataLoader, DataRemover{
+
+        @Override  --> 
+
+        public void load(){
+            System.out.println("Carregando dados do banco de dados");
+        }
+
+        @Override  --> 
+        public void remove(){
+            System.out.println("Removendo do banco de dados");
+        }
+
+
+
+        !!
+
+        @Override
+        
+        public void checkPermission(){
+            System.out.println("Checando permissoes no bando de dados");
+
+            --> agora estamos sobrescrevendo o metodo disposto na interface, mas estamos provendo aqui mesmo a implementacao, ou seja o system out println da interface nao tera mais nenhum resultado, o que tera agora sera esse resultado disposto acima
+        }
+        
+    }
+
+
+    INTERFACE ATRIBUTOS E METODOS ESTATICOS
+
+    --> Resumo de interface: interface e como se fosse um contrato, onde todos os metodos por padrao serao publicos e abstratos , se nao criamos abstratos precisamos obrigatoriamente criar ele default , e precisamos prover uma implementacao quando ele for default e por padrao ele vai ser public , nao podemos criar objetos de interface.
+
+
+    // private -> default ou de pacote --> protect -> public 
+
+
+    precisamos tomar cuidado quanto ao uso de modificadores de acesso de sobrescrita, quando estamos sobrescrevendo nao podemos utilizar modificador de acesso mais restritivo, por padrao os metodos de uma interface sao publicos.
+
+    
+     public interface DataLoader{
+        --> no caso aqui public como e padrao da interface 
+
+        void load();    
+    }
+
+    --> exemplo se removermos o public no metodo load da interface e fazemos o mesmo com a classe onde tem a interface implementada, teremos um erro: porque ? nao podemos ter um modificador de acesso mais restritivo do que o que esta na superclasse: 
+
+
+    public class DatabaseLoader implements DataLoader, DataRemover{
+
+        @Override 
+
+        --> e aqui default ou de pacote pois nao estamos -> como o padrao de classe
+
+         void load(){
+            System.out.println("Carregando dados do banco de dados");
+        }
+        
+    }
+
+
+    --> // private -> default ou de pacote --> protected -> public 
+
+
+    --> para enterdemos melhor se criarmos um metodo public a sobrescrita te forca a ter um metodo public, pois todos que estao na esquerda serao mais restritivos do que ele, mas se no caso em uma classe abstrata colocarmos um modificador de acesso private, podemos utilizar na sobrescrita todos os modificadores de acesso menos restritos, como: default, public, protected.
+
+
+    //ATRIBUTOS EM UMA INTERFACE? 
+
+        Podemos criar um atributo em uma interface? sim, podemos, por padrao sao todos atributo sao constantes;
+
+        public static final ...
+
+
+        ex: 
+
+        public static final int MAX_DATE_SIZE = 10;
+
+        E por padrao nao e necessario utilizar o public static final, pois se torna redundante;
+
+
+        podemos tambem adicionar metodos staticos, e relembrando metodos statics nao podem ser sobrescritos pois ele pertence a classe ou nesse caso a interface;
+
+
+        ex dentro da interface : 
+
+        public static void retriveMaxDateSize(){
+            Systetem.out.println("Dentro de retriveMaxDateSize na interface");
+        }
+
+
+
+
+        POLIMORFISMO 
+
+        public abstract class Produto{
+            private String nome;
+            private double valor;
+
+            //-> faz sentido ter somente um produto? nao por isso colocamos ele como abstract e tambem colocamos um construtor que para se criar um produto obrigatoriamente seja necessario passar um nome e um valor:
+
+
+            public Produto(String nome, double valor){
+                this.nome = nome;
+                this.valor = valor;
+            }
+        }
+
+
+        public class Computador extends Produto{
+            public Computador(String nome, double valor){
+                super(nome, valor);
+            }
+        }
+
+
+        public class Tomate extends Produto{
+            public Tomate(String nome, double valor){
+                super(nome, valor);
+            }
+        }
+
+
+        --> explicacao de todas as classes: entao temos uma classe produto onde ela e abstrata, tambem criamos duas extensoes de produto sendo tomate e computador, e para isso nossos produtos precisam ser taxados(impostos), precisamos de um metodo para calcular os impostos, temos algumas opcoes, podemos criar um metodo abstrato em produto e forcas a implementacao nas classes extendidas, ou criar uma interface e fazer o uso declaramos:
+
+        public interface Taxavel{
+            double calcular imposto();
+
+            --> aqui na interface nao fazemos idea de como o calculo ira ser feito, sera responsabilidade das subclasses, entao agora implementamos a interface em produto 
+        }
+
+        --> Classe produto agora: 
+
+        public abstract class Produto implements Taxavel{
+            protected String nome;
+            protected double valor;
+
+            public Produto(String nome, double valor){
+                this.nome = nome;
+                this.valor = valor;
+            }
+
+            --> entao porque nao sobrescrevemos o metodo aqui? porque nao faz sentido calcular a taxa em cima da classe produto precisamos especificamente calcular para tomate e computador, para isso precisaremos entao sobrescrever o metodo imposto em ambas as classes;
+        }
+
+        ATUALIZACOES DE TODAS AS CLASSES -> OPEN 
+
+
+        public class Computador extends Produto{
+            public static final IMPOSTO_POR_CENTO = 0.20;
+
+            public Computador(String nome, double valor){
+                super(nome, valor);
+            }
+
+            @Override
+            public double calcularImposto(){
+                System.out.println("Calculando o imposto de computador");
+                return this.valor * IMPOSTO_POR_CENTO;
+            }
+
+            // -->  O que fizemos aqui: sobrescrevemos o metodo de caculo de imposto criamos uma taxa constante para o imposto em cima de computador, onde o calulo e feito pelo valor * imposto, retornado ao resultado desejado; isso tambem para tomate 
+        }
+
+
+        public class Tomate extends Produto{
+            public static final IMPOSTO_POR_CENTO = 0.06;
+
+            public Tomate(String nome, double valor){
+                super(nome, valor);
+            }
+
+            @Override
+            public double calcular imposto(){
+                System.out.println("Calculando o imposto de tomate");
+                return this.valor = IMPOSTO_POR_CENTO;
+            }
+        }
+
+
+         public abstract class Produto implements Taxavel{
+            protected String nome;
+            protected double valor;
+
+            public Produto(String nome, double valor){
+                this.nome = nome;
+                this.valor = valor;
+            }
+
+            public String getNome(){
+                return nome;
+            }
+
+            public double getValor(){
+                return valor;
+            }
+        }
+
+
+        --> AGORA EM OUTRO PACKGE, PORQUE? ( Quando estamos trabalhando com o tipo de arquitetura MVC, voce separa o modelo(que e o dominio(que representa o banco de dados)), das regra de negocio, e do que voce vai visualizar )
+
+
+
+        public class CalculadoraImposto{
+            public static void calcularImpostoComputador(Computador computador){
+                double imposto = computador.calcularImposto();
+                
+                System.out.println("Relatorio de imposto do computador");
+                System.out.println("Computador: " + computador.getNome());
+                System.out.println("Valor: " + computador.getValor());
+                System.out.println("Imposto a ser pago: " + imposto);
+
+            }
+
+            public static void calcularImpostoTomate(Tomate tomate){
+                double imposto = tomate.calcularImposto();
+                
+                System.out.println("Relatorio de imposto do computador");
+                System.out.println("Tomate: " + tomate.getNome());
+                System.out.println("Valor: " + tomate.getValor());
+                System.out.println("Imposto a ser pago: " + imposto);
+
+            }
+        }
+
+        //EXECUTAVEL
+
+        public class ProdutoTeste{
+            public static void main(String[] args){
+                Computador computador = new Computador("NUC10I7", 11000);
+                Tomate tomate = new Tomate("Tomate Siciliano", 10);
+
+                //--> agora vem o X da questao, temos a classe CalculadoraImposto precisamos instanciar essa classe para pegarmos os resultados, sera que precisamos criar um objeto dessa classe imposto para executar os metodos dentro dela, ai relembramos da aula onde de static, onde se nao estivermos acessando nenhum atributo de classe podemos transformas os metodos em static, quando transformamos o metodo em static nao precisamos mais colocar new CalculadoraImposto, podemos chamar: 
+
+                CalculadoraImposto.calcularImpostoComputador(computador);
+                CalculadoraImposto.calcularImpostoTomate(tomate);
+            }
+        }
+
+        -> RESUMO DE TUDO QUE CRIAMOS E ACONTECEU: 
+        
+        Criamos primeiramente uma classe abstrata produto, porque o produto em si nao deve existir entao nao podemos instanciar, apenas as subclasses derivadas de produtos, criamos depois duas classes Computador e tomate que extendem produto que consequentemente precisa utilizar o mesmo construtor, ai nos criamos a interface taxavel onde tem um unico metodo que se chama calcular imposto, quando chegamos agora na classe produto e vermos que Produto implements Taxavel estamos falando que agora produto e taxavel, consequentemente ele precisa implementar o metodo calcularImposto();, entao demos Override no metodo dentro da classe computador e tomate, em seguida criamos um pacote de servico onde fica as regras de negocio e colocamos dois metodos para calcular o imposto de computador e tomate, recebendo como argumento computador e tomate respectivamente e criamos nosso teste. 
+
+    --> CLOSE 
