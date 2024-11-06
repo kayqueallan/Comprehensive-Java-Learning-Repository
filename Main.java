@@ -291,44 +291,44 @@ public class Main {
 
 
 
-//TIPOS PRIMITIVOS 
+TIPOS PRIMITIVOS 
 
 
-int, double, float, char, byte, short, long, boolean 
+    int, double, float, char, byte, short, long, boolean 
 
---> SINTAXE JAVA 
+    --> SINTAXE JAVA 
 
-para criar uma variavel colocamos o tipo dela e depois o nome sendo letra minuscula a primeira letra em minuscula 
+    para criar uma variavel colocamos o tipo dela e depois o nome sendo letra minuscula a primeira letra em minuscula 
 
-ex: 
+    ex: 
 
-int idadeDoPai; 
+    int idadeDoPai; 
 
-idadeDePai = 10;
+    idadeDePai = 10;
 
-System.out.println(idadeDePai); --> Isso mostra o resulado 10 no console
+    System.out.println(idadeDePai); --> Isso mostra o resulado 10 no console
 
-texto mais variavel;
+    texto mais variavel;
 
---> System.out.println("A idade e: " + idadeDePai); --> isso mostra o texto mais a valor da variavel;
+    --> System.out.println("A idade e: " + idadeDePai); --> isso mostra o texto mais a valor da variavel;
 
-1 byte = 8 bits 
+    1 byte = 8 bits 
 
-tamanhos das variaveis: 
+    tamanhos das variaveis: 
 
---> byte = 1 byte -128 a 127
---> short = 2 bytes vai ate 32.000 mil
+    --> byte = 1 byte -128 a 127
+    --> short = 2 bytes vai ate 32.000 mil
 
-int e long -> numeros inteiros
-double e float -> numeros decimais 
-boolean -> retorna valores false ou true;
-
-
-
+    int e long -> numeros inteiros
+    double e float -> numeros decimais 
+    boolean -> retorna valores false ou true;
 
 
 
-//CASTING 
+
+
+
+CASTING 
 
 
 double idade = 10.0;
@@ -347,7 +347,7 @@ long salarioNeymar = 100000000L;
 
 int salarioCris = (int) 1000000000L;
 
-ou seja eu forço esse numero a entrar na outra variavel cabendo ou nao e pode ser que o compilador corte alguns bits fazendo com que crie numeros estranhos, mais se realmente o tamanho na meio aceitar vai aparecer o numero normalmente.
+ou seja eu forço esse numero a entrar na outra variavel cabendo ou nao e pode ser que o compilador corte alguns bits fazendo com que crie numeros estranhos, mais se realmente o tamanho couber o compilador vai aceitar e vai aparecer o numero normalmente.
 
 
 
@@ -368,93 +368,107 @@ String nome = "Kayque Allan";
 
 
 
-//OPERADORES
+OPERADORES
 
 
-ELEMENTOS QUE PERMITEM FAZER OPERACOES 
+//ELEMENTOS QUE PERMITEM FAZER OPERACOES 
 
-ARITIMETICOS:
+    ARITIMETICOS:
 
-SOMA  = +;
-MENOS = -;
-DIVISAO = /;
-MULTIPLICACAO = *; 
+    SOMA  = +;
+    MENOS = -;
+    DIVISAO = /;
+    MULTIPLICACAO = *; 
 
 
 OPREDORES RELACIONAIS 
 
-resto = % ; 
+    resto = % ; 
 
-o porcetagem utilizamos para saber o resto da operacao
+    a porcetagem utilizamos para saber o resto da operacao
 
-ex: 
+    ex: 
 
-int resto =  20 % 2;
+    int resto =  20 % 2;
 
-isso resultara que o resto de operacao e 0;
+    isso resultara que o resto de operacao e 0;
+
+
+
+
 
 OPERADORES BOOLEANOS
 
-// <, > , <=, >=, !=, ==
 
-retorna valores boleanos, verdadeiros ou falso
+     <, > , <=, >=, !=, ==
 
-ex: 
+    retorna valores boleanos, verdadeiros ou falso
 
-boolean isDezMaiorQueVinte = 10 > 20;  
-// --> para declarar uma variavel boolean e comum utilizar o is como a primeira palavra;
+    ex: 
 
-System.out.println(isDezMaiorQueVinte);
+    boolean isDezMaiorQueVinte = 10 > 20;  
+    // --> para declarar uma variavel boolean e comum utilizar o is como a primeira palavra;
 
---> isso ira retornar false;
+    System.out.println(isDezMaiorQueVinte);
+
+    --> isso ira retornar false;
+
+
+
+
 
 
 OPERADORES LOGICOS
 
-&& (AND); --> IGUAL A C
-|| (OUR);  --> MESMO QUE C TAMBEM
+
+    && (AND); --> IGUAL A C
+    || (OUR); --> MESMO QUE C TAMBEM
+
+
+
 
 
 
 ESTRUTURAS CONDICIONAIS
 
-if = se;
 
-ex: 
+    if = se;
 
-int idade = 15;
-boolean isAutorizadoBeber = idade >= 18;
+    ex: 
 
-if(isAutorizadoBeber){
-    System.out.println("Autorizado a beber");
-}
+    int idade = 15;
+    boolean isAutorizadoBeber = idade >= 18;
 
-if(!isAutorizadoBeber){
-    System.out.println("Não autorizado a beber!");
+    if(isAutorizadoBeber){
+        System.out.println("Autorizado a beber");
+    }
 
-    // podemos utilizar exclamacao para negar e ficar tipo um else
-}
+    if(!isAutorizadoBeber){
+        System.out.println("Não autorizado a beber!");
+
+        // podemos utilizar exclamacao para negar e ficar tipo um else
+    }
 
 
-else = senão
+    else = senão
 
-ex:
+    ex:
 
-if(isAutorizadoBeber){
-    System.out.println("Autorizado a beber");
-}
+    if(isAutorizadoBeber){
+        System.out.println("Autorizado a beber");
+    }
 
-else{
-    System.out.println("Não autorizado a beber!");
+    else{
+        System.out.println("Não autorizado a beber!");
 
-    // podemos utilizar exclamacao para negar e ficar tipo um else
-}
+        // podemos utilizar exclamacao para negar e ficar tipo um else
+    }
 
 
 SWITCH                                        
 
-// podemos colocar variaveis do tipo: 
---> char, int, byte, short, enum, String.
+    // podemos colocar variaveis do tipo: 
+    --> char, int, byte, short, enum, String.
 
 
 
@@ -464,30 +478,30 @@ SWITCH
 ARRAYS (VETORES)
 
 
---> para declarar um array em java precisar referenciar objeto em memoria e declarar o tamanho dos espacos:
+    --> para declarar um array em java precisar referenciar objeto em memoria e declarar o tamanho dos espacos:
 
-int[] idades = new int[3];
-
-
-a inicializao se nao conter nenhum valor dentro da string e de :
-
-//byte, short, int , long, float e double = 0
-//char '\n0000' = ' '
-//boolean = false
-//String = null
+    int[] idades = new int[3];
 
 
---> isso quer dizer que os espacos em memoria nao esta sendo utilizados para nada
+    a inicializao se nao conter nenhum valor dentro  e de :
+
+    //byte, short, int , long, float e double = 0
+    //char '\n0000' = ' '
+    //boolean = false
+    //String = null
 
 
-ex:     
-    public class Main {
-    public static void main(String[] args) {
-        String[] nomes = new String[3];
+    --> isso quer dizer que os espacos em memoria nao esta sendo utilizados para nada
 
-        nomes[0] = "kayque";
-        nomes[1] = "Liliane";
-        nomes[2] = "Lyvia";
+
+    ex:     
+        public class Main {
+            public static void main(String[] args) {
+                String[] nomes = new String[3];
+
+                    nomes[0] = "kayque";
+                    nomes[1] = "Liliane";
+                    nomes[2] = "Lyvia";
 
         for (int i = 0; i <= 2; i++) {
             System.out.println(nomes[i]);
@@ -495,35 +509,35 @@ ex:
 
         --> vamos que supor que nesse codigo adicionamos mais um espaco no array ou seja colocar de tamanho 4, teriamos que trocar toda estrutura do for, para isso existe uma propriedade que diz seu tamanho chamada de length ou seja podemos fazer assim.
 
-        for (int i = 0; i <= nomes.length; i++) {
-            System.out.println(nomes[i]);
+            for (int i = 0; i <= nomes.length; i++) {
+                System.out.println(nomes[i]);
+            }
         }
     }
-}
  
 
-formas de declarar os arrays:
+    formas de declarar os arrays:
 
-int[] num1 = new int[3]; 
-int[] num2 = {1,2,3,4,5}; --> array de 5 posicoes ;
-int[] num3 = new int[]{1,2,3,4}; --> array de 4 posicoes;
+    int[] num1 = new int[3]; 
+    int[] num2 = {1,2,3,4,5}; --> array de 5 posicoes ;
+    int[] num3 = new int[]{1,2,3,4}; --> array de 4 posicoes;
 
 
 //ARRAYS MULTIDIMENSIONAIS  // MATRIZES 
 
-declaracao: 
+    declaracao: 
 
-int[][] matriz = new int[3][3]; 
-
-
+    int[][] matriz = new int[3][3]; 
 
 
 
 
-//METODOS
 
 
-SemRetorno --> 
+METODOS
+
+
+    SemRetorno --> 
 
     --> Metodos sao parecidos com atributos, voce precisa de um IDENTIFICADOR de acesso que e o public e depois o metodo de retorno.
 
@@ -692,7 +706,13 @@ public class Teste {
 --> nao importa o que esta acontecendo dentro do metodo a variavel original nunca sera alterada!!
 
 
-//PASSAGEM DE PARAMETRO DO TIPO REFERENCIA
+
+
+
+
+PASSAGEM DE PARAMETRO DO TIPO REFERENCIA
+
+
     --> podemos passar a variavel de referencia de um objeto para um metodo e assim utilizar esse parametro do tipo referencia;
 
     ex: 
@@ -747,7 +767,7 @@ O QUE ACONTECEU AQUI
 
 
 
-//THIS 
+THIS 
 
 
     -> Qundo temos um metodo dentro de uma classe podemos nos referenciar ele utilizando o THIS
@@ -771,7 +791,7 @@ O QUE ACONTECEU AQUI
 
 
 
-//METODOS COM ARRAY
+METODOS COM ARRAY
 
 
     ex: 
@@ -800,14 +820,13 @@ O QUE ACONTECEU AQUI
     }
 }
 
-Outro tipo que podemos passar seria 
 
 
 
 
 
 
-//MODIFICADORES DE ACESSO  
+MODIFICADORES DE ACESSO  
 
 
     -->  variaveis de refencia de objeto nao consegue acessar atributos privados por isso utilizamos metodos como set & get;
@@ -871,7 +890,7 @@ public class Main {
 
 
 
-//GET
+GET
 
 
 --> como conseguir pegar o que esta alocado em memoria temos que criar um metodo onde return ; porque estamos querendo pegar o nome que digitamos ou seja tem que retornar algo e no caso e string; e depois colocamos get+nome variavel; e precisa de parametro? nao pois queremos pegar o valor que esta em memoria;
@@ -900,7 +919,7 @@ public class Main {
 
 
 
-//SOBRECARGA DE METODOS 
+SOBRECARGA DE METODOS 
 
 
 import dominio.Pessoa;
@@ -954,7 +973,7 @@ public class Pessoa {
 
 
 
-//CONSTRUTORES
+CONSTRUTORES
 
 
     -> em todos os metodos temos parenteses; no caso do objeto criado temos o que e chamado de contrutor:
@@ -1024,7 +1043,7 @@ public class Pessoa {
 
 --> SOBRECARGA DE CONTRUTORES  
 
-vamos supor qu8e temos agora que introduzir um novo atributo que seja "estudio", se apenas adicionarmos pode ser que quebramos o codigo inteiro, e tambem dar muito mais trabalho para alterar, o que podemos fazer e sobrecarga;
+vamos supor que temos agora que introduzir um novo atributo que seja "estudio", se apenas adicionarmos pode ser que quebramos o codigo inteiro, e tambem dar muito mais trabalho para alterar, o que podemos fazer e sobrecarga;
 
 em metodos podemos utilizar o this.nomeDoMetodo, para chamar quando estiver dentro da mesma classe; ja em contrutores colocamos this();
 
@@ -1155,7 +1174,7 @@ MODIFICADORES ESTATICOS
 
 
 
-    --> explicacao: criamos uma classe carro onde possui atributos como nome, valocidade maxima, e velocidade limite de trafego em rua, pois na alemanha a partir de uma categoria de carros tem que ter um limitador de sua velociade mesmo que ela seja maior, ou seja o carro pode chegar a 300 km/h , mas existe um limitador que deixa ele chgar a somente 250;
+    --> explicacao: criamos uma classe carro onde possui atributos como nome, velocidade maxima, e velocidade limite de trafego em rua, pois na alemanha a partir de uma categoria de carros tem que ter um limitador de sua velociade mesmo que ela seja maior, ou seja o carro pode chegar a 300 km/h , mas existe um limitador que deixa ele chgar a somente 250;
 
 
     --> acima cada objeto e independente ou seja podemos colocar c1.getVelocidadeMaxima(300); e somente no objeto c1 sera modificado a velocidadeMaxima, isso fica meio ruim pois e uma regra os carros obdecerem; e os outros irao permanecer 250;
@@ -1227,6 +1246,7 @@ MODIFICADORES ESTATICOS
 
 MODIFICADORES STATICOS  METODOS
 
+    Métodos static em programação são utilizados para criar métodos que pertencem à classe e não a instâncias específicas da classe. Isso significa que você pode chamar esses métodos sem criar um objeto da classe. Eles são úteis quando você deseja que a funcionalidade seja compartilhada entre todas as instâncias da classe ou quando a lógica não depende do estado de um objeto específico.
 
     -> como podemos utilizar com metodos getters and setters
 
@@ -1250,7 +1270,7 @@ MODIFICADORES STATICOS  METODOS
 
 
 
-    QUANDO DEVEMOS UTILIZAR OS METODOS ESTATICOS: quando nao tiver acessando atributos da instancia 
+    QUANDO DEVEMOS UTILIZAR OS METODOS ESTATICOS: quando nao tiver acessando atributos da instancia;
 
 
     public void imprime(){
@@ -1534,7 +1554,7 @@ LEITURA DE DADOS DO TECLADO
 HERANÇA
 
 
-    -> o sistema esta mapeando o mundo real para o mundo digital, vamos supor que criamos uma classe pessoa, onde contem: nome, cpf e idade; agora pela necessidade do sistema temos que criar a classe funcionario onde necessita dos memos atributos citatos so que mais um adicional de matricula, salario; nao e necessario criar uma outra classe e digitar os mesmos atributos, podemos utilizar o conceito de heranca; ou seja porque na vida real um funcionario e uma pessoa, o termo "tem" significa que voce tem um relacionamento entre eles por exemplo pesssoa tem um endereco, ja na heranca utiliza o "e", ou seja, o funcionario e uma pessoa; entao o funcionario e tudo que pessoa é , so que mais alguma coisa; uma extesao de funcionalidades de uma classe; e algo que extende as funcionalidades de uma pessoa sendo algo mais especializado
+    -> o sistema esta mapeando o mundo real para o mundo digital, vamos supor que criamos uma classe pessoa, onde contem: nome, cpf e idade; agora pela necessidade do sistema temos que criar a classe funcionario onde necessita dos mesmos atributos citatos so que mais um adicional de matricula, salario; nao e necessario criar uma outra classe e digitar os mesmos atributos, podemos utilizar o conceito de heranca; ou seja porque na vida real um funcionario e uma pessoa, o termo "tem" significa que voce tem um relacionamento entre eles por exemplo pesssoa tem um endereco, ja na heranca utiliza o "e", ou seja, o funcionario e uma pessoa; entao o funcionario e tudo que pessoa é , so que mais alguma coisa; uma extesao de funcionalidades de uma classe; e algo que extende as funcionalidades de uma pessoa sendo algo mais especializado
 
 
 
@@ -1581,7 +1601,7 @@ HERANÇA
 
         / -> Entao quando usamos heranca: quando queremos extender funcionalidades dela, e extender o relacionamento entre elas; 
 
-        !!! temos que tomar bastante cuidado na utilizacao de heranca, porque quando utilizamos estamos acomplando altamente o codig, e o melhor a se fazer e baio acoplamento e alta coesao;
+        !!! temos que tomar bastante cuidado na utilizacao de heranca, porque quando utilizamos estamos acomplando altamente o codigo, e o melhor a se fazer e baio acoplamento e alta coesao;
 
 
 
@@ -1618,11 +1638,11 @@ SOBRESCRICAO DE METODOS SUPER
         }
 
 
-        --> quando fizemos isso a IDE entende que estamos sobrescrevendo os metodos, que no     classe a classe filha esta sobrescrevendo a super-classe;
+        --> quando fizemos isso a IDE entende que estamos sobrescrevendo os metodos, que na classe a classe filha esta sobrescrevendo a super-classe;
     }
 
 
-    --> no caso se executar esse codigo acima o resultado ira dar somente o salario que no caso esta contido na classe filha, porque agora esta mudado o comportamento do metodoque no caso esta contido na classe mais especifica, mas podemos executar os dois metodos sendo eles tendo o mesmo nome; 
+    --> no caso se executar esse codigo acima o resultado ira dar somente o salario que no caso esta contido na classe filha, porque agora esta mudado o comportamento do metodo que no caso esta contido na classe mais especifica, mas podemos executar os dois metodos sendo eles tendo o mesmo nome; 
 
 
     ex: 
@@ -1645,13 +1665,14 @@ SOBRESCRICAO DE METODOS SUPER
         private double salario
 
         public void imprimir(){
-            super.imprir();
+            super.imprimir();
             System.out.println(this.salario);
+            System.out.println(this.matricula);
         }
     }
 
 
-    --> ou seja ai estamos especificando que queremos que seja impresso todo resultado primeiro da classe pessoa e apos e executado a classe funcionario, ou seja execute primeiro o metodo da super classe e depois execute o metodo da classe filha, para isso utilizamos a palavra super,, que no caso estamos referindo ao objeto superclasse Pessoa, ai colocamos super.atributos_que_esta_sendo_importado;
+    --> ou seja ai estamos especificando que queremos que seja impresso todo resultado primeiro da classe pessoa e apos e executado a classe funcionario, ou seja execute primeiro o metodo da super classe e depois execute o metodo da classe filha, para isso utilizamos a palavra super, que no caso estamos referindo ao objeto superclasse Pessoa, ai colocamos super.atributos_que_esta_sendo_importado;
 
 
     ->ex: super.imprime();
@@ -1663,6 +1684,7 @@ SOBRESCRICAO DE METODOS SUPER
     - cpf
     - idade
     - salario
+    - matricula
 
 
 
@@ -1903,7 +1925,7 @@ MODIFICADOR FINAL TIPO PRIMITIVO
 
         ex: 
 
-        private static final double velocidadeLimeite --> quando colocamos apenas dessa forma e dado um erro pois, uma vez criado e necessario que seja passado um valor, e esse codigo compilado nao poderemos mais modificar, constantes no java temos uma convensao propria que e tudo em UperCase separado por undescor
+        private static final double velocidadeLimite --> quando colocamos apenas dessa forma e dado um erro pois, uma vez criado e necessario que seja passado um valor, e esse codigo compilado nao poderemos mais modificar, constantes no java temos uma convensao propria que e tudo em UperCase separado por undescor
 
         o certo seria: 
 
@@ -2079,7 +2101,7 @@ ENUMERACAO
 
 
 
-ENUMERACOA  CONSTRUTORES E ATRIBUTOS
+ENUMERACAO  CONSTRUTORES E ATRIBUTOS
 
 
     na classe enum e aonde definir atributos que vao representar aquela enumeracao, esses atributos nao podem ser alterados como PESSOA_FISICA sera sempre PESSOA_FISICA... 
@@ -2427,7 +2449,7 @@ CLASSES ABSTRATAS PT1
      nao podemos misturar final e abstract porque? porque criamos uma classe abstract para ser extendida, ja uma classe final quando criada e para nao ser extendida. ou seja, pode ser somente final ou abstract.
 
 
-     -->resumo:  classes podem ser abstratas, na qual a funcionalidade de uma classe abstrata e ser extendida, e nao podemos instanciar uma classe abstrata, nao podemos tambem misturar final e abstract pois tem funcionalidades extendidas;
+     -->resumo:  classes podem ser abstratas, na qual a funcionalidade de uma classe abstrata e ser extendida, e nao podemos instanciar uma classe abstrata, nao podemos tambem misturar final e abstract pois tem funcionalidades diferentes;
 
 
 
@@ -2471,7 +2493,7 @@ METODOS ABSTRATOS
         }
 
 
-        !! quando extendemos de uma classe abstrata, precisamos obrigatoriamente prover uma implementacao mesma que seja vazia, ex: casso extendemos a class funcionario para a classe desenvolvedor, precisamos obrigatoriamente sobrescrever o metodo calculaBonus(); mesmo que seja vazio;
+        !! quando extendemos de uma classe abstrata, precisamos obrigatoriamente prover uma implementacao mesma que seja vazia, ex: caso extendemos a class funcionario para a classe desenvolvedor, precisamos obrigatoriamente sobrescrever o metodo calculaBonus(); mesmo que seja vazio;
 
         @Override
         public void calculaBonus(){
@@ -2774,7 +2796,7 @@ INTERFACE ATRIBUTOS E METODOS ESTATICOS
 POLIMORFISMO  CURSO EM VIDEO
     
 
-    -> temos dois tipos de polimorfismo sendo eles o de sobrebosicao -> que e substituir um metodo que veio da classe mae para classe filha, e temos tambem o outro tipo de polimorfismo chamado de sobrecarga:
+    -> temos dois tipos de polimorfismo sendo eles o de sobreposicao -> que e substituir um metodo que veio da classe mae para classe filha, e temos tambem o outro tipo de polimorfismo chamado de sobrecarga:
 
 
     POLIMORFISMO sobreposicao: um exemplo para melhor entendimento, imagina que tenhamos uma classe mamifero: 
@@ -2877,7 +2899,7 @@ POLIMORFISMO  CURSO EM VIDEO
 
         -> caso colocamos a mesma assinatura(mesma quantidade e tipo de atributo, independente do tipo de retorno) teremos um erro;
 
-        public void reagir(boolean comer){
+        public boolean reagir(boolean comer){
 
         }
     }
@@ -3433,8 +3455,6 @@ POLIMORFISMO PROGRAMACAO ORIENTADA A INTERFACE
 
 
         programar em interface --> aumenta a manutenabilidade do codigo!!
-
-
 
 
     
