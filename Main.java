@@ -291,7 +291,7 @@ public class Main {
 
 
 
-TIPOS PRIMITIVOS 
+//TIPOS PRIMITIVOS 
 
 
     int, double, float, char, byte, short, long, boolean 
@@ -668,7 +668,1546 @@ COMO AS VARIAVEIS PRIMITIVAS SE COMPORTAM EM UM METODO
 
             --> 
 
-            import dominio.Teste;
+
+            public pacote getOnde() {
+                return onde;
+            }
+            public void setOnde(pacote onde) {
+                this.onde = onde;
+            }
+            public esta getAlocada() {
+                return alocada;
+            }
+            public void setAlocada(esta alocada) {
+                this.alocada = alocada;
+            }
+            public essa getClasse() {
+                return classe;
+            }
+            public void setClasse(essa classe) {
+                this.classe = classe;
+            }
+            public Estudante getEstudante() {
+                return estudante;
+            }
+            public void setEstudante(Estudante estudante) {
+                this.estudante = estudante;
+            }
+            public e getUma() {
+                return uma;
+            }
+            public void setUma(e uma) {
+                this.uma = uma;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public e getUm() {
+                return um;
+            }
+            public void setUm(e um) {
+                this.um = um;
+            }
+            public Estudante getEstudante() {
+                return estudante;
+            }
+            public void setEstudante(Estudante estudante) {
+                this.estudante = estudante;
+            }
+            public e getAtraves() {
+                return atraves;
+            }
+            public void setAtraves(e atraves) {
+                this.atraves = atraves;
+            }
+            public nome getVariavel() {
+                return variavel;
+            }
+            public void setVariavel(nome variavel) {
+                this.variavel = variavel;
+            }
+            public de getReferencia() {
+                return referencia;
+            }
+            public void setReferencia(de referencia) {
+                this.referencia = referencia;
+            }
+            public de getReferencia() {
+                return referencia;
+            }
+            public void setReferencia(de referencia) {
+                this.referencia = referencia;
+            }
+            public e getUm() {
+                return um;
+            }
+            public void setUm(e um) {
+                this.um = um;
+            }
+            public objeto getE() {
+                return e;
+            }
+            public void setE(objeto e) {
+                this.e = e;
+            }
+            public conseguimos getAcessar() {
+                return acessar;
+            }
+            public void setAcessar(conseguimos acessar) {
+                this.acessar = acessar;
+            }
+            public as getVariaveis() {
+                return variaveis;
+            }
+            public void setVariaveis(as variaveis) {
+                this.variaveis = variaveis;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public essa getClasse() {
+                return classe;
+            }
+            public void setClasse(essa classe) {
+                this.classe = classe;
+            }
+            public Estudante getEstudante() {
+                return estudante;
+            }
+            public void setEstudante(Estudante estudante) {
+                this.estudante = estudante;
+            }
+            public aqui getSe() {
+                return se;
+            }
+            public void setSe(aqui se) {
+                this.se = se;
+            }
+            public e getUm() {
+                return um;
+            }
+            public void setUm(e um) {
+                this.um = um;
+            }
+            public objeto getDa() {
+                return da;
+            }
+            public void setDa(objeto da) {
+                this.da = da;
+            }
+            public Estudante getEstudante() {
+                return estudante;
+            }
+            public void setEstudante(Estudante estudante) {
+                this.estudante = estudante;
+            }
+            public A getVariável() {
+                return variável;
+            }
+            public void setVariável(A variável) {
+                this.variável = variável;
+            }
+            public de getReferência() {
+                return referência;
+            }
+            public void setReferência(de referência) {
+                this.referência = referência;
+            }
+            public é getUsada() {
+                return usada;
+            }
+            public void setUsada(é usada) {
+                this.usada = usada;
+            }
+            public para getArmazenar() {
+                return armazenar;
+            }
+            public void setArmazenar(para armazenar) {
+                this.armazenar = armazenar;
+            }
+            public EXEMPLO getPARA() {
+                return PARA;
+            }
+            public void setPARA(EXEMPLO pARA) {
+                PARA = pARA;
+            }
+            public ENTEDER getBEM() {
+                return BEM;
+            }
+            public void setBEM(ENTEDER bEM) {
+                BEM = bEM;
+            }
+            public TIPOS getPRIMITIVOS() {
+                return PRIMITIVOS;
+            }
+            public void setPRIMITIVOS(TIPOS pRIMITIVOS) {
+                PRIMITIVOS = pRIMITIVOS;
+            }
+            public SINTAXE getJAVA() {
+                return JAVA;
+            }
+            public void setJAVA(SINTAXE jAVA) {
+                JAVA = jAVA;
+            }
+            public para getCriar() {
+                return criar;
+            }
+            public void setCriar(para criar) {
+                this.criar = criar;
+            }
+            public nome getVariavel() {
+                return variavel;
+            }
+            public void setVariavel(nome variavel) {
+                this.variavel = variavel;
+            }
+            public colocamos getO() {
+                return o;
+            }
+            public void setO(colocamos o) {
+                this.o = o;
+            }
+            public tipo getDela() {
+                return dela;
+            }
+            public void setDela(tipo dela) {
+                this.dela = dela;
+            }
+            public e getDepois() {
+                return depois;
+            }
+            public void setDepois(e depois) {
+                this.depois = depois;
+            }
+            public o getNome() {
+                return nome;
+            }
+            public void setNome(o nome) {
+                this.nome = nome;
+            }
+            public sendo getLetra() {
+                return letra;
+            }
+            public void setLetra(sendo letra) {
+                this.letra = letra;
+            }
+            public minuscula getA() {
+                return a;
+            }
+            public void setA(minuscula a) {
+                this.a = a;
+            }
+            public sendo getLetra() {
+                return letra;
+            }
+            public void setLetra(sendo letra) {
+                this.letra = letra;
+            }
+            public em getMinuscula() {
+                return minuscula;
+            }
+            public void setMinuscula(em minuscula) {
+                this.minuscula = minuscula;
+            }
+            public int getIdadeDoPai() {
+                return idadeDoPai;
+            }
+            public void setIdadeDoPai(int idadeDoPai) {
+                this.idadeDoPai = idadeDoPai;
+            }
+            public Isso getMostra() {
+                return mostra;
+            }
+            public void setMostra(Isso mostra) {
+                this.mostra = mostra;
+            }
+            public o getResulado() {
+                return resulado;
+            }
+            public void setResulado(o resulado) {
+                this.resulado = resulado;
+            }
+            public no getConsole() {
+                return console;
+            }
+            public void setConsole(no console) {
+                this.console = console;
+            }
+            public texto getMais() {
+                return mais;
+            }
+            public void setMais(texto mais) {
+                this.mais = mais;
+            }
+            public Isso getMostra() {
+                return mostra;
+            }
+            public void setMostra(Isso mostra) {
+                this.mostra = mostra;
+            }
+            public o getTexto() {
+                return texto;
+            }
+            public void setTexto(o texto) {
+                this.texto = texto;
+            }
+            public minuscula getA() {
+                return a;
+            }
+            public void setA(minuscula a) {
+                this.a = a;
+            }
+            public objeto getDa() {
+                return da;
+            }
+            public void setDa(objeto da) {
+                this.da = da;
+            }
+            public bits getTamanhos() {
+                return tamanhos;
+            }
+            public void setTamanhos(bits tamanhos) {
+                this.tamanhos = tamanhos;
+            }
+            public as getVariaveis() {
+                return variaveis;
+            }
+            public void setVariaveis(as variaveis) {
+                this.variaveis = variaveis;
+            }
+            public bytes getVai() {
+                return vai;
+            }
+            public void setVai(bytes vai) {
+                this.vai = vai;
+            }
+            public objeto getE() {
+                return e;
+            }
+            public void setE(objeto e) {
+                this.e = e;
+            }
+            public numeros getInteiros() {
+                return inteiros;
+            }
+            public void setInteiros(numeros inteiros) {
+                this.inteiros = inteiros;
+            }
+            public objeto getE() {
+                return e;
+            }
+            public void setE(objeto e) {
+                this.e = e;
+            }
+            public numeros getDecimais() {
+                return decimais;
+            }
+            public void setDecimais(numeros decimais) {
+                this.decimais = decimais;
+            }
+            public retorna getValores() {
+                return valores;
+            }
+            public void setValores(retorna valores) {
+                this.valores = valores;
+            }
+            public double getIdade() {
+                return idade;
+            }
+            public void setIdade(double idade) {
+                this.idade = idade;
+            }
+            public float getIdade2() {
+                return idade2;
+            }
+            public void setIdade2(float idade2) {
+                this.idade2 = idade2;
+            }
+            public e getUm() {
+                return um;
+            }
+            public void setUm(e um) {
+                this.um = um;
+            }
+            public erro getPois() {
+                return pois;
+            }
+            public void setPois(erro pois) {
+                this.pois = pois;
+            }
+            public o getCompilador() {
+                return compilador;
+            }
+            public void setCompilador(o compilador) {
+                this.compilador = compilador;
+            }
+            public nao getConsegue() {
+                return consegue;
+            }
+            public void setConsegue(nao consegue) {
+                this.consegue = consegue;
+            }
+            public colocamos getO() {
+                return o;
+            }
+            public void setO(colocamos o) {
+                this.o = o;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public espaco getOcupado() {
+                return ocupado;
+            }
+            public void setOcupado(espaco ocupado) {
+                this.ocupado = ocupado;
+            }
+            public na getMemoria() {
+                return memoria;
+            }
+            public void setMemoria(na memoria) {
+                this.memoria = memoria;
+            }
+            public entao getQuando() {
+                return quando;
+            }
+            public void setQuando(entao quando) {
+                this.quando = quando;
+            }
+            public e getUma() {
+                return uma;
+            }
+            public void setUma(e uma) {
+                this.uma = uma;
+            }
+            public float getCom() {
+                return com;
+            }
+            public void setCom(float com) {
+                this.com = com;
+            }
+            public e getUm() {
+                return um;
+            }
+            public void setUm(e um) {
+                this.um = um;
+            }
+            public ponto getAo() {
+                return ao;
+            }
+            public void setAo(ponto ao) {
+                this.ao = ao;
+            }
+            public devemos getColocar() {
+                return colocar;
+            }
+            public float getIdade2() {
+                return idade2;
+            }
+            public void setIdade2(float idade2) {
+                this.idade2 = idade2;
+            }
+            public o getCASTING() {
+                return CASTING;
+            }
+            public void setCASTING(o cASTING) {
+                CASTING = cASTING;
+            }
+            public e getVoce() {
+                return voce;
+            }
+            public void setVoce(e voce) {
+                this.voce = voce;
+            }
+            public e getUm() {
+                return um;
+            }
+            public void setUm(e um) {
+                this.um = um;
+            }
+            public minuscula getA() {
+                return a;
+            }
+            public void setA(minuscula a) {
+                this.a = a;
+            }
+            public entrar getNa() {
+                return na;
+            }
+            public void setNa(entrar na) {
+                this.na = na;
+            }
+            public outra getExemplo() {
+                return exemplo;
+            }
+            public void setExemplo(outra exemplo) {
+                this.exemplo = exemplo;
+            }
+            public long getSalarioNeymar() {
+                return salarioNeymar;
+            }
+            public void setSalarioNeymar(long salarioNeymar) {
+                this.salarioNeymar = salarioNeymar;
+            }
+            public int getSalarioCris() {
+                return salarioCris;
+            }
+            public void setSalarioCris(int salarioCris) {
+                this.salarioCris = salarioCris;
+            }
+            public ou getSeja() {
+                return seja;
+            }
+            public void setSeja(ou seja) {
+                this.seja = seja;
+            }
+            public eu getForço() {
+                return forço;
+            }
+            public void setForço(eu forço) {
+                this.forço = forço;
+            }
+            public esse getNumero() {
+                return numero;
+            }
+            public void setNumero(esse numero) {
+                this.numero = numero;
+            }
+            public a getEntrar() {
+                return entrar;
+            }
+            public void setEntrar(a entrar) {
+                this.entrar = entrar;
+            }
+            public na getOutra() {
+                return outra;
+            }
+            public void setOutra(na outra) {
+                this.outra = outra;
+            }
+            public variavel getCabendo() {
+                return cabendo;
+            }
+            public void setCabendo(variavel cabendo) {
+                this.cabendo = cabendo;
+            }
+            public ou getNao() {
+                return nao;
+            }
+            public void setNao(ou nao) {
+                this.nao = nao;
+            }
+            public e getPode() {
+                return pode;
+            }
+            public void setPode(e pode) {
+                this.pode = pode;
+            }
+            public ser getQue() {
+                return que;
+            }
+            public void setQue(ser que) {
+                this.que = que;
+            }
+            public o getCompilador() {
+                return compilador;
+            }
+            public void setCompilador(o compilador) {
+                this.compilador = compilador;
+            }
+            public corte getAlguns() {
+                return alguns;
+            }
+            public void setAlguns(corte alguns) {
+                this.alguns = alguns;
+            }
+            public bits getFazendo() {
+                return fazendo;
+            }
+            public void setFazendo(bits fazendo) {
+                this.fazendo = fazendo;
+            }
+            public ser getQue() {
+                return que;
+            }
+            public void setQue(ser que) {
+                this.que = que;
+            }
+            public crie getNumeros() {
+                return numeros;
+            }
+            public void setNumeros(crie numeros) {
+                this.numeros = numeros;
+            }
+            public aqui getSe() {
+                return se;
+            }
+            public void setSe(aqui se) {
+                this.se = se;
+            }
+            public colocamos getO() {
+                return o;
+            }
+            public void setO(colocamos o) {
+                this.o = o;
+            }
+            public tamanho getCouber() {
+                return couber;
+            }
+            public void setCouber(tamanho couber) {
+                this.couber = couber;
+            }
+            public o getCompilador() {
+                return compilador;
+            }
+            public void setCompilador(o compilador) {
+                this.compilador = compilador;
+            }
+            public vai getAceitar() {
+                return aceitar;
+            }
+            public void setAceitar(vai aceitar) {
+                this.aceitar = aceitar;
+            }
+            public bytes getVai() {
+                return vai;
+            }
+            public void setVai(bytes vai) {
+                this.vai = vai;
+            }
+            public colocamos getO() {
+                return o;
+            }
+            public void setO(colocamos o) {
+                this.o = o;
+            }
+            public numero getNormalmente() {
+                return normalmente;
+            }
+            public void setNormalmente(numero normalmente) {
+                this.normalmente = normalmente;
+            }
+            public COMECA getCOM() {
+                return COM;
+            }
+            public void setCOM(COMECA cOM) {
+                COM = cOM;
+            }
+            public LETRA getMAIUSCULA() {
+                return MAIUSCULA;
+            }
+            public void setMAIUSCULA(LETRA mAIUSCULA) {
+                MAIUSCULA = mAIUSCULA;
+            }
+            public PORQUE getELA() {
+                return ELA;
+            }
+            public void setELA(PORQUE eLA) {
+                ELA = eLA;
+            }
+            public PRECISA getDE() {
+                return DE;
+            }
+            public void setDE(PRECISA dE) {
+                DE = dE;
+            }
+            public UM getIDENTIFICADOR() {
+                return IDENTIFICADOR;
+            }
+            public void setIDENTIFICADOR(UM iDENTIFICADOR) {
+                IDENTIFICADOR = iDENTIFICADOR;
+            }
+            public objeto getE() {
+                return e;
+            }
+            public void setE(objeto e) {
+                this.e = e;
+            }
+            public se getInicia() {
+                return inicia;
+            }
+            public void setInicia(se inicia) {
+                this.inicia = inicia;
+            }
+            public de getAspas() {
+                return aspas;
+            }
+            public void setAspas(de aspas) {
+                this.aspas = aspas;
+            }
+            public o getNome() {
+                return nome;
+            }
+            public void setNome(o nome) {
+                this.nome = nome;
+            }
+            public OPERADORES getARITIMETICOS() {
+                return ARITIMETICOS;
+            }
+            public void setARITIMETICOS(OPERADORES aRITIMETICOS) {
+                ARITIMETICOS = aRITIMETICOS;
+            }
+            public OPREDORES getRELACIONAIS() {
+                return RELACIONAIS;
+            }
+            public void setRELACIONAIS(OPREDORES rELACIONAIS) {
+                RELACIONAIS = rELACIONAIS;
+            }
+            public a getPorcetagem() {
+                return porcetagem;
+            }
+            public void setPorcetagem(a porcetagem) {
+                this.porcetagem = porcetagem;
+            }
+            public utilizamos getPara() {
+                return para;
+            }
+            public void setPara(utilizamos para) {
+                this.para = para;
+            }
+            public colocamos getO() {
+                return o;
+            }
+            public void setO(colocamos o) {
+                this.o = o;
+            }
+            public objeto getDa() {
+                return da;
+            }
+            public void setDa(objeto da) {
+                this.da = da;
+            }
+            public operacao getEx() {
+                return ex;
+            }
+            public void setEx(operacao ex) {
+                this.ex = ex;
+            }
+            public int getResto() {
+                return resto;
+            }
+            public void setResto(int resto) {
+                this.resto = resto;
+            }
+            public isso getResultara() {
+                return resultara;
+            }
+            public void setResultara(isso resultara) {
+                this.resultara = resultara;
+            }
+            public colocamos getO() {
+                return o;
+            }
+            public void setO(colocamos o) {
+                this.o = o;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public objeto getE() {
+                return e;
+            }
+            public void setE(objeto e) {
+                this.e = e;
+            }
+            public OPERADORES getBOOLEANOS() {
+                return BOOLEANOS;
+            }
+            public void setBOOLEANOS(OPERADORES bOOLEANOS) {
+                BOOLEANOS = bOOLEANOS;
+            }
+            public retorna getValores() {
+                return valores;
+            }
+            public void setValores(retorna valores) {
+                this.valores = valores;
+            }
+            public verdadeiros getOu() {
+                return ou;
+            }
+            public void setOu(verdadeiros ou) {
+                this.ou = ou;
+            }
+            public operacao getEx() {
+                return ex;
+            }
+            public void setEx(operacao ex) {
+                this.ex = ex;
+            }
+            public boolean isDezMaiorQueVinte() {
+                return isDezMaiorQueVinte;
+            }
+            public void setDezMaiorQueVinte(boolean isDezMaiorQueVinte) {
+                this.isDezMaiorQueVinte = isDezMaiorQueVinte;
+            }
+            public isso getIra() {
+                return ira;
+            }
+            public void setIra(isso ira) {
+                this.ira = ira;
+            }
+            public OPERADORES getLOGICOS() {
+                return LOGICOS;
+            }
+            public void setLOGICOS(OPERADORES lOGICOS) {
+                LOGICOS = lOGICOS;
+            }
+            public IGUAL getA() {
+                return A;
+            }
+            public void setA(IGUAL a) {
+                A = a;
+            }
+            public MESMO getQUE() {
+                return QUE;
+            }
+            public void setQUE(MESMO qUE) {
+                QUE = qUE;
+            }
+            public C getTAMBEM() {
+                return TAMBEM;
+            }
+            public void setTAMBEM(C tAMBEM) {
+                TAMBEM = tAMBEM;
+            }
+            public ESTRUTURAS getCONDICIONAIS() {
+                return CONDICIONAIS;
+            }
+            public void setCONDICIONAIS(ESTRUTURAS cONDICIONAIS) {
+                CONDICIONAIS = cONDICIONAIS;
+            }
+            public double getIdade() {
+                return idade;
+            }
+            public void setIdade(double idade) {
+                this.idade = idade;
+            }
+            public boolean isAutorizadoBeber() {
+                return isAutorizadoBeber;
+            }
+            public void setAutorizadoBeber(boolean isAutorizadoBeber) {
+                this.isAutorizadoBeber = isAutorizadoBeber;
+            }
+            public operacao getEx() {
+                return ex;
+            }
+            public void setEx(operacao ex) {
+                this.ex = ex;
+            }
+            public para getDeclarar() {
+                return declarar;
+            }
+            public void setDeclarar(para declarar) {
+                this.declarar = declarar;
+            }
+            public um getArray() {
+                return array;
+            }
+            public void setArray(um array) {
+                this.array = array;
+            }
+            public em getJava() {
+                return java;
+            }
+            public void setJava(em java) {
+                this.java = java;
+            }
+            public precisar getReferenciar() {
+                return referenciar;
+            }
+            public void setReferenciar(precisar referenciar) {
+                this.referenciar = referenciar;
+            }
+            public objeto getEm() {
+                return em;
+            }
+            public void setEm(objeto em) {
+                this.em = em;
+            }
+            public objeto getE() {
+                return e;
+            }
+            public void setE(objeto e) {
+                this.e = e;
+            }
+            public colocamos getO() {
+                return o;
+            }
+            public void setO(colocamos o) {
+                this.o = o;
+            }
+            public tamanho getDos() {
+                return dos;
+            }
+            public void setDos(tamanho dos) {
+                this.dos = dos;
+            }
+            public int[] getIdades() {
+                return idades;
+            }
+            public void setIdades(int[] idades) {
+                this.idades = idades;
+            }
+            public a getInicializao() {
+                return inicializao;
+            }
+            public void setInicializao(a inicializao) {
+                this.inicializao = inicializao;
+            }
+            public ou getNao() {
+                return nao;
+            }
+            public void setNao(ou nao) {
+                this.nao = nao;
+            }
+            public conter getNenhum() {
+                return nenhum;
+            }
+            public void setNenhum(conter nenhum) {
+                this.nenhum = nenhum;
+            }
+            public valor getDentro() {
+                return dentro;
+            }
+            public void setDentro(valor dentro) {
+                this.dentro = dentro;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public isso getQuer() {
+                return quer;
+            }
+            public void setQuer(isso quer) {
+                this.quer = quer;
+            }
+            public ser getQue() {
+                return que;
+            }
+            public void setQue(ser que) {
+                this.que = que;
+            }
+            public os getEspacos() {
+                return espacos;
+            }
+            public void setEspacos(os espacos) {
+                this.espacos = espacos;
+            }
+            public na getMemoria() {
+                return memoria;
+            }
+            public void setMemoria(na memoria) {
+                this.memoria = memoria;
+            }
+            public nao getEsta() {
+                return esta;
+            }
+            public void setEsta(nao esta) {
+                this.esta = esta;
+            }
+            public sendo getUtilizados() {
+                return utilizados;
+            }
+            public void setUtilizados(sendo utilizados) {
+                this.utilizados = utilizados;
+            }
+            public para getNada() {
+                return nada;
+            }
+            public void setNada(para nada) {
+                this.nada = nada;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public declarar getOs() {
+                return os;
+            }
+            public void setOs(declarar os) {
+                this.os = os;
+            }
+            public int[] getNum1() {
+                return num1;
+            }
+            public void setNum1(int[] num1) {
+                this.num1 = num1;
+            }
+            public int[] getNum2() {
+                return num2;
+            }
+            public void setNum2(int[] num2) {
+                this.num2 = num2;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public int[] getNum3() {
+                return num3;
+            }
+            public void setNum3(int[] num3) {
+                this.num3 = num3;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public int[][] getMatriz() {
+                return matriz;
+            }
+            public void setMatriz(int[][] matriz) {
+                this.matriz = matriz;
+            }
+            public METODOS getSemRetorno() {
+                return SemRetorno;
+            }
+            public void setSemRetorno(METODOS semRetorno) {
+                SemRetorno = semRetorno;
+            }
+            public Metodos getSao() {
+                return sao;
+            }
+            public void setSao(Metodos sao) {
+                this.sao = sao;
+            }
+            public float getCom() {
+                return com;
+            }
+            public void setCom(float com) {
+                this.com = com;
+            }
+            public voce getPrecisa() {
+                return precisa;
+            }
+            public void setPrecisa(voce precisa) {
+                this.precisa = precisa;
+            }
+            public e getUm() {
+                return um;
+            }
+            public void setUm(e um) {
+                this.um = um;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public ser getQue() {
+                return que;
+            }
+            public void setQue(ser que) {
+                this.que = que;
+            }
+            public colocamos getO() {
+                return o;
+            }
+            public void setO(colocamos o) {
+                this.o = o;
+            }
+            public e getDepois() {
+                return depois;
+            }
+            public void setDepois(e depois) {
+                this.depois = depois;
+            }
+            public o getMetodo() {
+                return metodo;
+            }
+            public void setMetodo(o metodo) {
+                this.metodo = metodo;
+            }
+            public de getRetorno() {
+                return retorno;
+            }
+            public void setRetorno(de retorno) {
+                this.retorno = retorno;
+            }
+            public de getRetorno() {
+                return retorno;
+            }
+            public void setRetorno(de retorno) {
+                this.retorno = retorno;
+            }
+            public ou getSeja() {
+                return seja;
+            }
+            public void setSeja(ou seja) {
+                this.seja = seja;
+            }
+            public nao getRetorna() {
+                return retorna;
+            }
+            public void setRetorna(nao retorna) {
+                this.retorna = retorna;
+            }
+            public para getExecutar() {
+                return executar;
+            }
+            public void setExecutar(para executar) {
+                this.executar = executar;
+            }
+            public metodo getPrecisamos() {
+                return precisamos;
+            }
+            public void setPrecisamos(metodo precisamos) {
+                this.precisamos = precisamos;
+            }
+            public para getCriar() {
+                return criar;
+            }
+            public void setCriar(para criar) {
+                this.criar = criar;
+            }
+            public nome getVariavel() {
+                return variavel;
+            }
+            public void setVariavel(nome variavel) {
+                this.variavel = variavel;
+            }
+            public de getReferencia() {
+                return referencia;
+            }
+            public void setReferencia(de referencia) {
+                this.referencia = referencia;
+            }
+            public e getDepois() {
+                return depois;
+            }
+            public void setDepois(e depois) {
+                this.depois = depois;
+            }
+            public as getVariaveis() {
+                return variaveis;
+            }
+            public void setVariaveis(as variaveis) {
+                this.variaveis = variaveis;
+            }
+            public ser getQue() {
+                return que;
+            }
+            public void setQue(ser que) {
+                this.que = que;
+            }
+            public vao getEstar() {
+                return estar;
+            }
+            public void setEstar(vao estar) {
+                this.estar = estar;
+            }
+            public viva getDurante() {
+                return durante;
+            }
+            public void setDurante(viva durante) {
+                this.durante = durante;
+            }
+            public o getContexto() {
+                return contexto;
+            }
+            public void setContexto(o contexto) {
+                this.contexto = contexto;
+            }
+            public verdadeiros getOu() {
+                return ou;
+            }
+            public void setOu(verdadeiros ou) {
+                this.ou = ou;
+            }
+            public metodo getSintaxe() {
+                return Sintaxe;
+            }
+            public void setSintaxe(metodo sintaxe) {
+                Sintaxe = sintaxe;
+            }
+            public e getColocado() {
+                return colocado;
+            }
+            public void setColocado(e colocado) {
+                this.colocado = colocado;
+            }
+            public o getIdentificador() {
+                return identificador;
+            }
+            public void setIdentificador(o identificador) {
+                this.identificador = identificador;
+            }
+            public e getDepois() {
+                return depois;
+            }
+            public void setDepois(e depois) {
+                this.depois = depois;
+            }
+            public o getNome() {
+                return nome;
+            }
+            public void setNome(o nome) {
+                this.nome = nome;
+            }
+            public de getReferencia() {
+                return referencia;
+            }
+            public void setReferencia(de referencia) {
+                this.referencia = referencia;
+            }
+            public nome getVariavel() {
+                return variavel;
+            }
+            public void setVariavel(nome variavel) {
+                this.variavel = variavel;
+            }
+            public essa getClasse() {
+                return classe;
+            }
+            public void setClasse(essa classe) {
+                this.classe = classe;
+            }
+            public aqui getSe() {
+                return se;
+            }
+            public void setSe(aqui se) {
+                this.se = se;
+            }
+            public como getMostrar() {
+                return mostrar;
+            }
+            public void setMostrar(como mostrar) {
+                this.mostrar = mostrar;
+            }
+            public o getResultado() {
+                return resultado;
+            }
+            public void setResultado(o resultado) {
+                this.resultado = resultado;
+            }
+            public Teste getCalcular() {
+                return calcular;
+            }
+            public void setCalcular(Teste calcular) {
+                this.calcular = calcular;
+            }
+            public o getResultado() {
+                return resultado;
+            }
+            public void setResultado(o resultado) {
+                this.resultado = resultado;
+            }
+            public atribuindo getDois() {
+                return dois;
+            }
+            public void setDois(atribuindo dois) {
+                this.dois = dois;
+            }
+            public minuscula getA() {
+                return a;
+            }
+            public void setA(minuscula a) {
+                this.a = a;
+            }
+            public nome getVariavel() {
+                return variavel;
+            }
+            public void setVariavel(nome variavel) {
+                this.variavel = variavel;
+            }
+            public na getHora() {
+                return hora;
+            }
+            public void setHora(na hora) {
+                this.hora = hora;
+            }
+            public de getAtribuir() {
+                return atribuir;
+            }
+            public void setAtribuir(de atribuir) {
+                this.atribuir = atribuir;
+            }
+            public o getMetodo() {
+                return metodo;
+            }
+            public void setMetodo(o metodo) {
+                this.metodo = metodo;
+            }
+            public e getUma() {
+                return uma;
+            }
+            public void setUma(e uma) {
+                this.uma = uma;
+            }
+            public ser getQue() {
+                return que;
+            }
+            public void setQue(ser que) {
+                this.que = que;
+            }
+            public variavel getDe() {
+                return de;
+            }
+            public void setDe(variavel de) {
+                this.de = de;
+            }
+            public outro getTipo() {
+                return tipo;
+            }
+            public void setTipo(outro tipo) {
+                this.tipo = tipo;
+            }
+            public vamos getSupor() {
+                return supor;
+            }
+            public void setSupor(vamos supor) {
+                this.supor = supor;
+            }
+            public o getMetodo() {
+                return metodo;
+            }
+            public void setMetodo(o metodo) {
+                this.metodo = metodo;
+            }
+            public objeto getE() {
+                return e;
+            }
+            public void setE(objeto e) {
+                this.e = e;
+            }
+            public nome getVariavel() {
+                return variavel;
+            }
+            public void setVariavel(nome variavel) {
+                this.variavel = variavel;
+            }
+            public int getTeremos() {
+                return teremos;
+            }
+            public void setTeremos(int teremos) {
+                this.teremos = teremos;
+            }
+            public que getFazer() {
+                return fazer;
+            }
+            public void setFazer(que fazer) {
+                this.fazer = fazer;
+            }
+            public um getCasting() {
+                return casting;
+            }
+            public void setCasting(um casting) {
+                this.casting = casting;
+            }
+            public ou getSeja() {
+                return seja;
+            }
+            public void setSeja(ou seja) {
+                this.seja = seja;
+            }
+            public e getUma() {
+                return uma;
+            }
+            public void setUma(e uma) {
+                this.uma = uma;
+            }
+            public minuscula getA() {
+                return a;
+            }
+            public void setA(minuscula a) {
+                this.a = a;
+            }
+            public e getUma() {
+                return uma;
+            }
+            public void setUma(e uma) {
+                this.uma = uma;
+            }
+            public passamos getParametros() {
+                return parametros;
+            }
+            public void setParametros(passamos parametros) {
+                this.parametros = parametros;
+            }
+            public objeto getE() {
+                return e;
+            }
+            public void setE(objeto e) {
+                this.e = e;
+            }
+            public e getUm() {
+                return um;
+            }
+            public void setUm(e um) {
+                this.um = um;
+            }
+            public tipo getInteiro() {
+                return inteiro;
+            }
+            public void setInteiro(tipo inteiro) {
+                this.inteiro = inteiro;
+            }
+            public tipo getQueremos() {
+                return queremos;
+            }
+            public void setQueremos(tipo queremos) {
+                this.queremos = queremos;
+            }
+            public que getRetorne() {
+                return retorne;
+            }
+            public void setRetorne(que retorne) {
+                this.retorne = retorne;
+            }
+            public um getValor() {
+                return valor;
+            }
+            public void setValor(um valor) {
+                this.valor = valor;
+            }
+            public inteiro getEntao() {
+                return entao;
+            }
+            public void setEntao(inteiro entao) {
+                this.entao = entao;
+            }
+            public e getUm() {
+                return um;
+            }
+            public void setUm(e um) {
+                this.um = um;
+            }
+            public utilizamos getPara() {
+                return para;
+            }
+            public void setPara(utilizamos para) {
+                this.para = para;
+            }
+            public minuscula getA() {
+                return a;
+            }
+            public void setA(minuscula a) {
+                this.a = a;
+            }
+            public minuscula getA() {
+                return a;
+            }
+            public void setA(minuscula a) {
+                this.a = a;
+            }
+            public entrar getNa() {
+                return na;
+            }
+            public void setNa(entrar na) {
+                this.na = na;
+            }
+            public inteira.FORMAS getDIFERENTES() {
+                return DIFERENTES;
+            }
+            public void setDIFERENTES(inteira.FORMAS dIFERENTES) {
+                DIFERENTES = dIFERENTES;
+            }
+            public DE getSE() {
+                return SE;
+            }
+            public void setSE(DE sE) {
+                SE = sE;
+            }
+            public UTILIZAR getOS() {
+                return OS;
+            }
+            public void setOS(UTILIZAR oS) {
+                OS = oS;
+            }
+            public COMECA getCOM() {
+                return COM;
+            }
+            public void setCOM(COMECA cOM) {
+                COM = cOM;
+            }
+            public RETORNO getOU() {
+                return OU;
+            }
+            public void setOU(RETORNO oU) {
+                OU = oU;
+            }
+            public EXEMPLO getPARA() {
+                return PARA;
+            }
+            public void setPARA(EXEMPLO pARA) {
+                PARA = pARA;
+            }
+            public O getMESMO() {
+                return MESMO;
+            }
+            public void setMESMO(O mESMO) {
+                MESMO = mESMO;
+            }
+            public COMO getUTILIZAR() {
+                return UTILIZAR;
+            }
+            public void setUTILIZAR(COMO uTILIZAR) {
+                UTILIZAR = uTILIZAR;
+            }
+            public O getRETURN() {
+                return RETURN;
+            }
+            public void setRETURN(O rETURN) {
+                RETURN = rETURN;
+            }
+            public EM getUM() {
+                return UM;
+            }
+            public void setUM(EM uM) {
+                UM = uM;
+            }
+            public METODO getVOID() {
+                return VOID;
+            }
+            public void setVOID(METODO vOID) {
+                VOID = vOID;
+            }
+            public aqui getSe() {
+                return se;
+            }
+            public void setSe(aqui se) {
+                this.se = se;
+            }
+            public e getComo() {
+                return como;
+            }
+            public void setComo(e como) {
+                this.como = como;
+            }
+            public se getFosse() {
+                return fosse;
+            }
+            public void setFosse(se fosse) {
+                this.fosse = fosse;
+            }
+            public minuscula getA() {
+                return a;
+            }
+            public void setA(minuscula a) {
+                this.a = a;
+            }            import dominio.Teste;
 
     public class Main {
     public static void main(String[] args) {
@@ -1601,7 +3140,7 @@ HERANÇA
 
         / -> Entao quando usamos heranca: quando queremos extender funcionalidades dela, e extender o relacionamento entre elas; 
 
-        !!! temos que tomar bastante cuidado na utilizacao de heranca, porque quando utilizamos estamos acomplando altamente o codigo, e o melhor a se fazer e baio acoplamento e alta coesao;
+        !!! temos que tomar bastante cuidado na utilizacao de heranca, porque quando utilizamos estamos acomplando altamente o codigo, e o melhor a se fazer e baixo acoplamento e alta coesao;
 
 
 
@@ -1730,7 +3269,7 @@ PROTECT
 CONSTRUTORES EM HERANCA
 
 
-    -->  para criarmos uma pessoa precisamos passar onome que no caso pode ser passado pelo construtor, e quando criamos um construtor em uma classe mae , por exemplo se para criar uma Pessoa precisamos de um nome, quem for um funcionario tambem ira precisar de um nome, entao precisamos chamar o contrutor da superclasse, na classe filha;
+    -->  para criarmos uma pessoa precisamos passar o nome que no caso pode ser passado pelo construtor, e quando criamos um construtor em uma classe mae , por exemplo se para criar uma Pessoa precisamos de um nome, quem for um funcionario tambem ira precisar de um nome, entao precisamos chamar o contrutor da superclasse, na classe filha;
 
         ex: 
 
@@ -1770,7 +3309,7 @@ CONSTRUTORES EM HERANCA
         }
 
         public void imprimir(){
-            super.imprir();
+            super.imprimir();
             System.out.println(this.salario);
         }
     }
@@ -1779,7 +3318,7 @@ CONSTRUTORES EM HERANCA
     agora estamos dizendo que para criar um funcionario obrigatoriamente precisamos passar um nome;
 
 
-    resum: quando criamos um construtor na classe mae e esse constrtutor agora tem argumento, precisamos modificar os construtores classe filha.
+    resumo: quando criamos um construtor na classe mae e esse construtor agora tem argumento, precisamos modificar os construtores classe filha.
 
 
 
@@ -1921,7 +3460,7 @@ MODIFICADOR FINAL TIPO PRIMITIVO
         private String nome;
         private static double velociadeLimite = 250;
 
-        --> velociadade limite era estatica e privada, a velocidade limite e algo que querememos que nao mude de forma alguma, existem certos tipos de atributos que voce nao quer que seja modificados e chamados de constantes, uma vez criado e permanecido daquele jeito ate parar o codigo e modificar novamente, e devinido pela palavra final.
+        --> velocidade limite era estatica e privada, a velocidade limite e algo que querememos que nao mude de forma alguma, existem certos tipos de atributos que voce nao quer que seja modificados e chamados de constantes, uma vez criado e permanecido daquele jeito ate parar o codigo e modificar novamente, e devinido pela palavra final.
 
         ex: 
 
@@ -1941,7 +3480,7 @@ MODIFICADOR FINAL TIPO PRIMITIVO
 
             Carro.VELOCIDADE_LIMITE = 180;
 
-            --> se tentarmos associar algum valor como o exemplo acima ira dar erro pois ja asociamos
+            --> se tentarmos associar algum valor como o exemplo acima ira dar erro pois ja associamos
         }
     }
 
@@ -2045,7 +3584,7 @@ ENUMERACAO
 
         public Cliente(String nome,TipoCliente tipoCliente){
             this.nome = nome;
-            this.tipo = tipo
+            this.tipoCliente = tipoCliente
         }
 
         {getters e setters}
@@ -2152,7 +3691,7 @@ ENUMERACAO  CONSTRUTORES E ATRIBUTOS
         }
     }
 
-    mesmo que nao criamos, toda vez em que executamos enum e criado um construtor, quando colocamos dois valores inteiro dentro de pess-fisica e juridica, quando colocamos esses valores automaticamente estamos passando eles para o construtor
+    mesmo que nao criamos, toda vez em que executamos enum e criado um construtor, quando colocamos dois valores inteiro dentro de pessoa-fisica e juridica, quando colocamos esses valores automaticamente estamos passando eles para o construtor
 
 
     public enum TipoCliente{
@@ -2161,7 +3700,7 @@ ENUMERACAO  CONSTRUTORES E ATRIBUTOS
 
         private int valor;
 
-        -> aqui podemos colocar de duas formas sendo final ou nao, e tambem sendo publico ou naol, caso seja publico nao necessitamos de um get
+        -> aqui podemos colocar de duas formas sendo final ou nao, e tambem sendo publico ou nao, caso seja publico nao necessitamos de um get
 
         --> podemos armazenar o valor dentro de uma variavel, e como regra nao podemos nao podemos colocar uma variavel antes da enumeracao;
 
@@ -2169,7 +3708,7 @@ ENUMERACAO  CONSTRUTORES E ATRIBUTOS
             this.valor = valor;
         }
 
-        --> quando for inicialido a classe enumeracao, caso a pessoa passe um dos dois tipos ira passarr um valor, sendo 1 ou 2, quando os valores forem passado como iremos pegar ele? 
+        --> quando for inicialido a classe enumeracao, caso a pessoa passe um dos dois tipos ira passar um valor, sendo 1 ou 2, quando os valores forem passado como iremos pegar ele? 
 
         - atraves de um getter, e faz sentido nos adicionarmos um set? nao pois o valor nao sera modificado entao nao faz sentido... 
 
@@ -2216,7 +3755,7 @@ ENUMERACAO  CONSTRUTORES E ATRIBUTOS
 
         Cliente{nome = 'kayque', tipoCliente = PESSOA_FISICA, tipoClienteInt = 1}
 
---> e outro ex: nao precisamos nos limitar ao valor passado de rempresentacao, podemos colocar tabem do tipo String 
+--> e outro ex: nao precisamos nos limitar ao valor passado de rempresentacao, podemos colocar tambem do tipo String 
     
 public enum TipoCliente{
         PESSOA_FISICA(1, "Pessoa Fisica"),
@@ -2260,7 +3799,7 @@ public enum TipoCliente{
 ENUMERACAO  SOBRESCRIATA DE METODOS 
 
 
-    -> Seguinte problema: imaginamos que temos duas oopcoes credito e debito mas precisamos dar descontos especificos em ambos, mas nao queremos fazer if dentro do codigo ;
+    -> Seguinte problema: imaginamos que temos duas opcoes credito e debito mas precisamos dar descontos especificos em ambos, mas nao queremos fazer if dentro do codigo ;
 
      public enum TipoPagamento{
         DEBITO, 
@@ -2338,7 +3877,6 @@ ENUMERACAO  SOBRESCRIATA DE METODOS
             return 0;
         }
             podemos criar o metodo dessa forma mas existe uma melhor forma:
-
 
             porque esse metodo calcular desconto embaixo nao esta sendo utilizado, ou seja nao possui nenhum comportamento;
 
@@ -2424,7 +3962,7 @@ CLASSES ABSTRATAS PT1
      }
 
 
-     --> abstract : quando colocamos isso na classe significa que agora ela vai ser como um templete, ou seja, nao podemos mais criar algo como concreto, normalmente quando trabalhamos com abstract definiminos o que nao for abstrato de concreto, no nosso caso agora funcionario e e abstrato, entao nao podemos mais instanciar a classe funcionario, nao podemos mais ter um objeto do tipo funciario, teremos que criar agora somente objetos que extendem a classe funcionario
+     --> abstract : quando colocamos isso na classe significa que agora ela vai ser como um templete, ou seja, nao podemos mais criar algo como concreto, normalmente quando trabalhamos com abstract definiminos o que nao for abstrato de concreto, no nosso caso agora funcionario e e abstrato, entao nao podemos mais instanciar a classe funcionario, nao podemos mais ter um objeto do tipo funcionario, teremos que criar agora somente objetos que extendem a classe funcionario
 
      ex: 
 
@@ -2925,7 +4463,7 @@ POLIMORFISMO  CURSO EM VIDEO
     
     
     
-POLIMORFISMO 
+POLIMORFISMO DevDojo
 
 
         public abstract class Produto{
@@ -3074,7 +4612,7 @@ POLIMORFISMO
 
         -> RESUMO DE TUDO QUE CRIAMOS E ACONTECEU: 
         
-        Criamos primeiramente uma classe abstrata produto, porque o produto em si nao deve existir entao nao podemos instanciar, apenas as subclasses derivadas de produtos, criamos depois duas classes Computador e tomate que extendem produto que consequentemente precisa utilizar o mesmo construtor, ai nos criamos a interface taxavel onde tem um unico metodo que se chama calcular imposto, quando chegamos agora na classe produto e vermos que Produto implements Taxavel estamos falando que agora produto e taxavel, consequentemente ele precisa implementar o metodo calcularImposto();, entao demos Override no metodo dentro da classe computador e tomate, em seguida criamos um pacote de servico onde fica as regras de negocio e colocamos dois metodos para calcular o imposto de computador e tomate, recebendo como argumento computador e tomate respectivamente e criamos nosso teste. 
+        Criamos primeiramente uma classe abstrata produto, porque o produto em si nao deve existir entao nao podemos instanciar, apenas as subclasses derivadas de produtos, criamos depois duas classes Computador e Tomate que extendem produto que consequentemente precisa utilizar o mesmo construtor, ai nos criamos a interface taxavel onde tem um unico metodo que se chama calcular imposto, quando chegamos agora na classe produto e vermos que Produto implements Taxavel estamos falando que agora produto e taxavel, consequentemente ele precisa implementar o metodo calcularImposto();, entao demos Override no metodo dentro da classe computador e tomate, em seguida criamos um pacote de servico onde fica as regras de negocio e colocamos dois metodos para calcular o imposto de computador e tomate, recebendo como argumento computador e tomate respectivamente e criamos nosso teste. 
 
     --> CLOSE 
 
@@ -3086,15 +4624,15 @@ POLIMORFISMO
 POLIMORFISMO --> VIRADO NO JIRAYA  -> SEQUENCIA DA ANALOGIA 
 
         
-        para explicar vamos imaginar a analogia do controle remoto, vamos imaginar um controle da sansung criado em 2019 onde possui funcionalidade -> botao da netiflix e prime video, o controle remoto da samsung vai trabalhar com uma televisao da samsung, onde teremos a televisao com netiflix e prime video, temos nosso controle onde vai mandar o sinal para televisao, ou seja clicamos no botao e a televisao ira executar a acao, entao  no caso o controle e a variavel de referencia e o objeto e a televisao. 
+        para explicar vamos imaginar a analogia do controle remoto, vamos imaginar um controle da sansung criado em 2019 onde possui funcionalidade -> botao da netiflix e prime video, o controle remoto da samsung vai trabalhar com uma televisao da samsung, onde teremos a televisao com netflix e prime video, temos nosso controle onde vai mandar o sinal para televisao, ou seja clicamos no botao e a televisao ira executar a acao, entao  no caso o controle e a variavel de referencia e o objeto e a televisao. 
 
         ex: Computador c = new Computador();
                 variavel  = objeto 
 
-        o que significa polimorfismo? significa que podemos trocar o tipo da variavel de refencia mas ainda ficar utilizando outros objetosm, isso so e aplicado na heranca.
+        o que significa polimorfismo? significa que podemos trocar o tipo da variavel de refencia mas ainda ficar utilizando outros objetos, isso so e aplicado na heranca.
 
 
-        ex: do que temos acima, um controle criado em 2019 com dois botoes netflix e primeVideo, quando acionado se executa em uma televisao que possui netflix e primeVideo, mas porem saiu um novo modelo de televisao da samsung porem mais moderno, ou seja uma extensao, onde temos a netflix o prime mas tambem o youtube, porem ainda estamos utilizando o controle de 2019, entao o controle da sansung de 2019, pode fazer referencia ao objeto(televisao de 2020), vamo supor que estamos no objeto de televisao 2020, se clicarmos no botao do controle (netiflix) - > quem ira executar sera objeto televisao 2020, o mesmo acontecera para prime, ou seja o controle e responsavel por mandar o sinal e quem executa e o objeto televisao 2020, 
+        ex: do que temos acima, um controle criado em 2019 com dois botoes netflix e primeVideo, quando acionado se executa em uma televisao que possui netflix e primeVideo, mas porem saiu um novo modelo de televisao da samsung porem mais moderno, ou seja uma extensao, onde temos a netflix o prime mas tambem o youtube, porem ainda estamos utilizando o controle de 2019, entao o controle da sansung de 2019, pode fazer referencia ao objeto(televisao de 2020), vamo supor que estamos no objeto de televisao 2020, se clicarmos no botao do controle (netflix) - > quem ira executar sera objeto televisao 2020, o mesmo acontecera para prime, ou seja o controle e responsavel por mandar o sinal e quem executa e o objeto televisao 2020, 
         
         -> baseado na variavel de referencia, e possivel acessar o youtube 2020? porque nao tem como chamar porque nao existe esse botao. 
         
@@ -3104,7 +4642,7 @@ POLIMORFISMO --> VIRADO NO JIRAYA  -> SEQUENCIA DA ANALOGIA
 
         public class ProdutoTeste02{
             public static void main(String[] args){
-                Prodotuto produto = new Computador("Ryzen 9", 3000);
+                Produto produto = new Computador("Ryzen 9", 3000);
 
                 // -> agora minha variavel de referencia vai ser a superclasse produto, e meu objeto sera uma das subclasses que extendeu as funcinalidades de produto;
 
@@ -3147,7 +4685,7 @@ POLIMORFISMO --> VIRADO NO JIRAYA  -> SEQUENCIA DA ANALOGIA
             @Override
             public double calcular imposto(){
                 System.out.println("Calculando o imposto de tomate");
-                return this.valor = IMPOSTO_POR_CENTO;
+                return this.valor =* IMPOSTO_POR_CENTO;
             }
 
             public String getDadaValidade(){
@@ -3457,4 +4995,536 @@ POLIMORFISMO PROGRAMACAO ORIENTADA A INTERFACE
         programar em interface --> aumenta a manutenabilidade do codigo!!
 
 
+
+
     
+
+EXECECOES ERROS 
+
+        --> sao condicoes anormais do programa, existem diversos tipos de excecoes que estao dentro do controle e outras estao fora de controle, por exemplo se criamos um atributo onde ele nao possa receber um numero negativo, ex: data, sao fluxos onde temos comos esperar, esta dentro do nosso controle, mas existem outros que estao fora do nosso controle, imaginamos que estamos tentando ler um arquivo onde este arquivo nao tem permissao para leitura... o java oferece para gente diversas classes e oportunidades para poder trabalhar com essas formas anormais.
+
+            - todas as excecoes do java sao da classe Throwable, praticamente a mae de tudo que acontece de ruim em um sistema onde possui dois tipos: sendo eles erros, e exception 
+
+                ERROS : Sao situacoes onde nao podemos recuperar, se temos um erro de memoria o que podemos fazer que a JVM ja nao tenha tentado, erros que aparece no programa onde sao impossiveis de recuperar em tempos de execucao, precisamos parar o programa, resolver o problema e depois iniciar novamente. Quando temos um erro, a JVM provavelmente para de funcionar...
+
+
+
+
+    
+
+RUNTIME EXCEPTION 
+
+        -> Como filha da Throwable, nos temos errors e exception, quando falamos que ocorreu uma excecao nos estamos referindo que ocorreu uma excecao no sentido que o fluxo normal aconteceu, mas para certificacao e forma mais tecnica errors e excecao sao coisas diferentes, o erro que foi lancado e uma subclasse de error, quando se referimos a excecao , ou seja aquilo que foi lancado uma dessas classes ou qualquer outra que podemos criar e filho de exception: 
+
+
+            RUNTIME EXEPTION: Conceitos que precisamos saber, que existem excecoes checadas e excecoes nao checadas
+
+                //CHECKED: 
+                    - excecoes que sao checadas sao filhas da classe "exception" diretamente e essas excecoes nao tratadas elas vao lancar um erro em tempo de compilacao, ou seja, nem conseguimos compilar o codigo, pois o compilador vai reclamar que voce nao tratou
+
+                //UNCHECKED:
+                    - execoes que sao filhas ou incluindo a classe "exception", essas excecoes que quando lancadas pelo programa quase 100% das vezes o problema e voce mesmo, ou seja voce nao tratou, ou voce nao fez uma verificacao.
+        
+        RESUMO: RuntimeException e uma excecao, error nao e uma excecao pois nao e filha de "exception", error e um Throwable e exception tambem e um Throwable, onde RuntimeException e uma excecao do tipo UNCHECKED, ou seja, voce nao precisa fazer a validacao para seu codigo compilar, ou seja, quando acontece, e um erro de desenvolvimento e nao de execucao.
+
+        o qual a diferenca entre IOException E RuntimeException? 
+
+            - IOException e uma excecao do tipo CHECKED, ou seja, voce e obrigado a tratar, e RuntimeException e uma excecao do tipo UNCHECKED, ou seja, voce nao e obrigado a tratar, mas pode tratar se quiser, e a diferenca entre elas e que a IOException e uma excecao que pode acontecer em tempo de execucao, e a RuntimeException e uma excecao que pode acontecer em tempo de compilacao, ou seja, se voce nao tratar a excecao do tipo IOException, o seu codigo nao ira compilar, e se voce nao tratar a excecao do tipo RuntimeException, o seu codigo ira compilar, mas pode dar erro em tempo de execucao.
+
+
+
+
+
+
+EXEPTION
+
+        O QUE E UMA STACK? 
+
+            - Uma stack e uma pilha de execucao, onde temos um metodo que chama outro metodo, que chama outro metodo, que chama outro metodo, e assim por diante, e quando um metodo e chamado ele e colocado no topo da pilha, e quando ele termina ele e removido da pilha, e quando temos um erro de execucao, o erro e lancado na pilha, e a pilha e percorrida de baixo para cima, e quando o erro e lancado ele vai percorrer a pilha de execucao, e quando ele nao encontra um tratamento
+
+        CHECKED:  
+
+            - Sao excecoes que sao filhas da classe "exception" diretamente e essas excecoes nao tratadas elas vao lancar um erro em tempo de compilacao, ou seja, nem conseguimos compilar o codigo, pois o compilador vai reclamar que voce nao tratou
+
+
+        Podemos utilizar como exemplo uma classe onde quase sempre ira pedir para realizar um tratamento, que e a parte de arquivos: 
+
+        ex: se voltarmos a documentacao do java e pesquisar pela classe java.io.File, bom veremos varios metodos onde o que importa agora e o metodo createFile que retorna um boolean, podemos ver a assinatura do metodo que esta descrito como: "Throws IOException" esta falando que existe a possibilidade desse metodo lancar essa excecao IOException, se clicarmos veremos que IOException e filha da classe Exception, sendo uma excecao do tipo checkage, ou seja, precisamos oferecer um tratamento para ela, e se tiver algum problema na entrada ou saida ira retornar um erro, vamos ver na pratica...
+
+            public class ExceptionTeste{
+                public static void main(String[] args){
+
+                }
+                private static void criarNovoArquivo(){
+                    File file = new File("arquivo\\teste.txt");  
+                    --> aqui estamos criando apenas um objeto de um arquivo e nao um novo arquivo.
+
+
+                }
+
+                // aqui criarmos um novo pasta onde iremos salvar os arquivos, quando trabalhamos com java ele na hora da compilacao que qualquer caminho que voce esteja passando aqui no arquivo ele vai comecar do root do projeto, ou seja, se colocarmos um arquivo.txt, ele ira criar somente um arquivo, e no caso queremos utilizar um diretorio, entao precisamos colocar o caminho completo, ou seja, o caminho completo do arquivo que queremos criar
+            }
+
+        passo 2, vamos criar o arquivo: 
+
+            public class ExceptionTeste{
+                public static void main(String[] args){
+
+                }
+                private static void criarNovoArquivo(){
+                    File file = new File("arquivo\\teste.txt");  
+                    
+                    file.createFile();
+
+                    --> ao fazermos isso ira criar um erro de compilacao, pois esta falando que temos uma excecao do tipo checkage que nao esta sendo tratada, uma camada de seguranca que o java oferece, pois nao temos total controle do que esta acontecendo na criacao de um arquivo, entao o java te forca a fazer um tratativa, para caso isso aconteca, caso voce nao faca a JVM nao ira deixar voce compilar e executar seu programa. 
+                }
+            }
+            
+
+        passo 3, tratativas: 
+
+
+                --> Entao precisamos falar para o java, tenta executar esse pedaco de codigo, e se voce lancar alguma excecao, pega essa excecao. 
+
+                ou seja> 
+                
+                try> tenta fazer alguma coisa e se der algum problema, voce ...
+                catch > pega, e voce precisa falar para o java o que voce esta querendo pegar que no caso e a IOException, que seria como se fosse um metodo, o java quando criar uma excecao ele vai criar um objeto para voce e vai referenciar o objeto aqui " IOException " .  
+
+            public class ExceptionTeste{
+                public static void main(String[] args){
+
+                }
+                private static void criarNovoArquivo(){
+                    File file = new File("arquivo\\teste.txt");  
+                    try {
+                        // tenta 
+                    } catch (IOException e){
+                        // pega 
+                        --> se colocarmos dessa forma ira dar erro, pois todas as vezes que estivermos trabalhando com alguma das subclasses de exception que nao e runtime, precisa ter um codigo que ta falando que existe a possibilidade de lancar, a unica opcao que temos para que isso nao ocorre e utilizar catch (Exception e), que no caso nao e o mais indicado, essa classe e mais generica e as boas praticas dizem que voce deve tentar capturar as excecoes mais especificas porque voce pode oferecer um tratamento melhor. ele nao da um erro de compilacao porque tambem pode ser do tipo RUNTIME.
+                    }
+                    file.createFile();
+                }          
+            }
+            
+        
+        passo 4, tratativas mais especificas:
+            
+            --> se colocarmos algo dentro do corpo try, nao teremos mais erros, porque estamos oferecendo um tratamento, ou seja tenta executar o file.createFile();, caso de algum problema nessa linha pule para a linha do corpo dentro de catch
+
+             public class ExceptionTeste{
+                public static void main(String[] args){
+
+                }
+                private static void criarNovoArquivo(){
+                    File file = new File("arquivo\\teste.txt");  
+                    try {
+                      boolean isCriado = file.createFile();
+                      System.out.println("Arquivo criado" + isCriado);
+
+                      --> o que ocorre aqui e, tenta criar o arquivo , se executar perfeitamente ele vai pular para o sout e depois para a linha 18, o catch nunca vai ser executado, agora se tiver um problema na criacao do arquivo ele vai pular direto para o catch.
+
+                    } catch (IOException e){
+                       
+                        --> e quando fazemos quanto temos um catch? primeiramente nunca podemos deixar este bloco em branco, porque deixando esse bloco em branco estamos ignorando completamente essa excecao e avisando para completamente ninguem que essa excecao esta acontecendo,sempre temos que avisar o que esta acontecendo aqui uma forma e: 
+                        
+                        e.printStackTrace();
+
+                        --> o que e o printStackTrace? e um metodo que vai imprimir a pilha de execucao, ou seja, temos a stack que no caso a metodo inferior do topo vai chamando as superiores, exemplo a main chama x e x chama y ... , se der um excecao em "y", o que ira acontecer, a excecao ira voltar para o metodo que chamou(x), e se tiver um tratamento em "x" ele ira tratar e o codigo ira continuar a ser executado, caso nao seja executado ele ira jogar de volta para o metodo main, e se o metodo main nao tratar ai a JVM ira parar de funcionar: e ai colocando esse comando "e.printStackTrace();" ele vai imprimir a pilha de execucao para tentar ver tudo que aconteceu, mas o programa nao ira parar de funcionar pois estamos fazendo uma tratativa, apesar de nao esta sendo colocado as regras de negocio,que segundo ponto e evitar colocar as regras de negocio no catch nao deve ser colocadas dentro do catch, ele e simplismente lidar com excecoes, se colocarmos regras de excecoes dentro do catch, o codigo vai estar muito mal desenvolvido. 
+                    }
+        18...        
+                }
+             }
+
+
+        passo 5, resultado final:
+        
+
+             public class ExceptionTeste{
+                public static void main(String[] args){
+                    criarNovoArquivo();
+                }
+                private static void criarNovoArquivo(){
+                    File file = new File("arquivo\\teste.txt");  
+                    try {
+                      boolean isCriado = file.createFile();
+                      System.out.println("Arquivo criado" + isCriado);
+
+                    } catch (IOException e){
+                        e.printStackTrace();
+                    }       
+                }
+             }
+
+             -> agora caso de algum erro sera imprimido a pilha de execucao, a stacktrace.
+
+
+
+
+
+
+LANCANDO EXCECAO UNCHECKED
+
+            --> EX: 
+
+            public class RuntimeException{
+                public static void main(String[] args){
+                    divisao(10, 0);   
+                }
+                private static int divisao(int a, int b){
+                    return a / b;
+                }
+            }
+
+                --> caso executarmos isso ira dar uma ArithmeticException que e uma runtime exception, ou seja, nao precisamos tratar, mas caso queiramos tratar, podemos fazer da seguinte forma:
+
+
+
+
+
+
+                public class RuntimeException{
+                    public static void main(String[] args){
+                        divisao(10, 0); 
+                    }
+                        public static int divisao(int a, int b){
+                            try{
+                                return a / b;
+                            }
+                            catch(RuntimeException e){}
+                                e.printStackTrace();
+                    }
+                    System.out.println("Chegou aqui");
+                }
+
+                    --> Quando falamos que um metodo precisa ter um retorno, ele tem esse retorno de try e se der tudo certo ele retorna a/b, se der tudo errado ele faz o printstacktrace, lembrando que o try and catch ele nao parar o codigo, se colocarmos aquela mensagem "chegou aqui", ela ira ser executada, e significa que o metodo vai acabar sem ter dado um retorno.
+
+
+
+                
+                o que fazer: 
+                
+                public class RuntimeException{
+                    public static void main(String[] args){
+                        divisao(10, 0); 
+                    }
+                        public static int divisao(int a, int b){
+                            try{
+                                return a / b;
+                            }
+                            catch(RuntimeException e){}
+                                e.printStackTrace();
+                    }
+                    return 0;
+                }
+
+                    --> colocando um return no final, vai acontecer no cenario onde o catch e executado entao voce tenta executar a linha "return a/b", opa ... se der problema ele vai executar o catch e depois retornar zero, isso significa que a JVM nao vai dar um crash, nao ira parar de funcionar, mas tera um stacktrace mesmo assim, podemos tambem trabalhar de uma forma diferente...
+
+
+
+
+                public class RuntimeException{
+                    public static void main(String[] args){
+                        System.out.println(divisao(10, 0)); 
+                    }
+                        public static int divisao(int a, int b){
+                            if(b == 0){
+                                throw new RuntimeException("Argumento ilegal, nao pode ocorrer uma divisao por zero");
+                            }
+                            try{
+                                return a / b;
+                            }
+                            catch(RuntimeException e){}
+                                e.printStackTrace();
+                    }
+                    return 0;
+                }   
+
+                    --> o que fizemos aqui foi lancar uma excecao, sabemos que nao podemos ter uma divisao por zero, se uma pessoa mandar uma divisao por zero, a gente tem que mandar uma excecaom, dizendo: "olha voce esta mandando uma argumento errado", entao podemos utilizar o if, dizendo olha se o b for == a zero... antigamente colocariamos return 0; porque nao sabia se utilizar excecao , agora podemos colocar o seguinte: olha se voce esta mandando b == 0 lanca throw o que? uma nova(new) excecao, e o x da questao vem ai, porque devemos pensar em colocar qual tipo qual excecao, no caso ai colocamos a RuntimeException.
+
+                        --> quando fizemos isso o codigo abaixo do if nao sera executado, a nao ser que o if seja falso, se b == 0 o codigo ira executar a linha throw new RuntimeException... e vai voltar para quem chamou que no caso e System.out.println(divisao(10, 0)); ... 
+
+
+
+
+                    -> e no caso poderiamos melhorar ainda mais 
+
+                    public class RuntimeException{
+                        public static void main(String[] args){
+                            System.out.println(divisao(10, 0)); 
+                        }
+                        public static int divisao(int a, int b){
+                                if(b == 0){
+                                    throw new IllegalArgumentException("Argumento ilegal, nao pode ocorrer uma divisao por zero");
+                                }
+                            return a / b;
+                        }
+                    }
+
+
+                    --> nesse caso nao e necessario mais fazer o try catch, aqui podemos apenas retornar a/b, agora caso executarmos nao teremos mais aparecendo o zero no console caso de erro, o que ira apararecer sera, a mensagem dita acima.
+
+                        -> existem varios tipos de excecoes neste caso existe uma propria chamada IllegalArgumentException, se formos dentro dela poderemos ver que e a mesma e uma filha de RuntimeException, essa excecao significa que o metodo recebeu um argumento inapropriado, o melhor a se utilizar sao as expressoes mais especificas possiveis, que quando uma outra pessoa tiver utilizando seu codigo ela ira entender o que esta acontecendo. 
+
+
+                    podemos tratar uma metodo ainda mais como o exemplo abaixo: 
+
+                    public class RuntimeException{
+                        public static void main(String[] args){
+                            try{
+                                divisao(10, 0);
+                            }
+                            catch(IllegalArgumentException e){
+                                e.printStackTrace();
+                            }
+                            system.out.println("Codigo finalizado");
+                        }
+
+                        public static int divisao(int a, int b){
+                                if(b == 0){
+                                    throw new IllegalArgumentException("Argumento ilegal, nao pode ocorrer uma divisao por zero");
+                                }
+                            return a / b;
+                        }
+                    }
+
+                        --> com este exemplo fica totalmente claro o que queremos expressar, estamos trabalhando com a stack , entao o main faz uma chamada para o metodo divisao, se caso o main chamar o metodo divisao passando um b == 0, ele ira dar uma excecao throw new IllegalArgumentException, e essa excecao ira ser propagada para baixo, ou seja ela ira retornar para o main, o main se nao fizer nenhum tipo de tratamento o codigo simplismente ira parar de funcionar, entao nesse caso como fizemos o tratamento, podemos ver embaixo que ira aparecer a mensagem de codigo finalizado, 
+
+                            -> porque? porque temos um tratamento  para excecao imprimindo o mensagem, mas caso retiramos esse tratamento essa mensagem nunca sera impressa.
+
+
+
+
+                    -> caso queiramos avisar para outras pessoas que estao utilizando nosso codigo que esse metodo pode lancar uma excecao, podemos fazer da seguinte forma:
+
+                    public static int divisao(int a, int b) throws IllegalArgumentException{
+                                if(b == 0){
+                                    throw new IllegalArgumentException("Argumento ilegal, nao pode ocorrer uma divisao por zero");
+                                }
+                            return a / b;
+                    }   
+
+                            --> aqui estamos avisando para outras pessoas que estao utilizando o codigo, que este metodo tem a possibilidade de lancar uma excecao desse tipo, e apenas adicionar Throws + o tipo de excecao que pode ser lancada, logo apos a assinatura do metodo , lembrando que excecoes do tipo RuntimeException o tratamento e opcional, se o metodo que esta chamando nao quer tratar nada vai acontecer, nao significa que o programa nao ira compilar. em geral nao e de muito costume utilizar isso, o que se utiliza mais e colocar um comentario abaixo como: 
+
+
+                     public class RuntimeException{
+                        public static void main(String[] args){
+                            divisao(10, 0);
+
+                            system.out.println("Codigo finalizado");
+                        }
+
+                        //** 
+                        *
+                        * @param a
+                        * @param b nao pode ser zero
+                        * @return
+                        */
+
+                        public static int divisao(int a, int b){
+                                if(b == 0){
+                                    throw new IllegalArgumentException("Argumento ilegal, nao pode ocorrer uma divisao por zero");
+                                }
+                            return a / b;
+                        }
+                    }
+
+
+
+
+
+
+LANCADO EXCECAO CHECKED
+
+    -> so um resumo do porque se utiliza excecoes, isso e feito para proteger o codigo, quando trabalhamos com back e front , voce vai retornar para pessoa do outro lado da tela, alguma mensagem de erro, ou seja uma programacao defensiva.
+
+    
+    vamos utilizar isso como exemplo: 
+
+    public class ExceptionTeste{
+                public static void main(String[] args){
+                    criarNovoArquivo();
+                }
+                private static void criarNovoArquivo(){
+                    File file = new File("arquivo\\teste.txt");  
+                    try {
+                      boolean isCriado = file.createFile();
+                      System.out.println("Arquivo criado" + isCriado);
+
+                    } catch (IOException e){
+                        e.printStackTrace();
+                    }       
+                }
+        }
+
+    --> existe pros e contras utilizando o tratamento de excecao utilizando try e catch, o pro disso e que voce faz com que o codigo nao pare de funcionar, contra seria a pessoa que esta chamando seu metodo, nao tem a opcao de fazer o tratamento do jeito dele, vamos supor no metodo criacao de arquivo onde chamamos o createFile do java, e o que aconteceria se a galera do java fizesse o tratamento de excecao dentro desse metodo, nesse caso quando eles fazem o tratamento dentro da biblioteca ou API, nos mesmos nao temos muito o que fazer... por isso poderiamos fazer esse criarNovoArquivo de outra forma... ou seja nao queremos fazer o tratamento dele, queremos enviar a responsabilidade para quem esta chamando, e para isso podemos fazer da seguinte forma:
+
+        public class ExceptionTeste{
+            public static void main(String[] args){
+                criarNovoArquivo();
+            }
+            private static void criarNovoArquivo() throws IOException{
+                File file = new File("arquivo\\teste.txt");  
+                    try {
+                      boolean isCriado = file.createFile();
+                      System.out.println("Arquivo criado" + isCriado);
+
+                    } catch (IOException e){
+                        e.printStackTrace();
+                    }       
+                }
+
+                --> ao adicionar throws IOException, quem quer que esteja chamando esse novo arquivo e obrigado a tratar essa excecao, como? utilizando try e catch ou jogando o trabalho para outra metodo que esteja chamando, mas nesse caso quem esta chamando e o metodo main por ultimo entao nao tem muito o que fazer.
+
+                    --> quando voce deve utilizar throws e quando deve se utilizar try catch, quando temos um metodo privado temos que utilizar try e catch, porque ninguem fora dessa classe vai poder chamar o metodo e tratar ele em outra classe. agora se criar o metodo como public voce nao faz ideia de quem pode tratar ele, em qual parte do projeto pode ser chamado entao e mais interessante utilizar o Throws. 
+            }
+
+
+
+            --> outro exemplo:
+
+            public static void main(String[] args) throws IOException{
+                    criarNovoArquivo();
+            }
+            private static void criarNovoArquivo() throws IOException{
+                File file = new File("arquivo\\teste.txt");  
+                    try {
+                      boolean isCriado = file.createFile();
+                      System.out.println("Arquivo criado" + isCriado);
+
+                    } catch (IOException e){
+                        e.printStackTrace();
+                        throw e;
+                    }       
+                
+
+                --> temos uma opcao de fazer algo hibrido, voce captura a excecao e relanca a excecao. quando isso e util? imagina que temos um carrinho de compra, e tenta efetuar um pagamento. o pagamento pode falhar, quando o pagamento falha, voce quer ver no seu console que realmente falhou e quer dar a opcao para o cliente de uma nova tentativa. entao voce quer capturar a excecao quer mostrar no console, e ainda quer retornar para quem esta chamando seu metodo.
+                
+                    - como voce faz isso? 
+                        entao quando createFile lanca uma excecao um objeto e criado, e esse objeto e referenciado aqui(IOException e), ai nos estamos imprimindo a pilha de execucao, e tratando a excecao, mas o deu merda, entao colocamos throw e; porque? quando colocamos isso dizemos "joga novamente", no exemplo que demos da divisao nos colocamos throw new, porque nos nao temos uma excecao , nos estamos criando uma excecao, mas nesse caso do catch nos temos uma excecao !! objeto esta sendo referenciado pela variavel e , estamos falando primeiro imprime no console depois lanca , quando voce lanca uma excecao do tipo IOException, voce e obrigado a colocar throws IOException na assinatura, porque se voce esta lancado uma excecao do tipo CHECKED voce e obrigado a dizer para os outros metodos que estao chamando que eles tem que tratar essa execao;
+
+                            - o que e essa relancar excecao? e quando voce captura uma excecao e relanca ela para quem esta chamando. 
+
+                            -> Entao tratamos a excecao, exibimos no console atraves do e.printStackTrace();, mas nao sabemos o que o metodo criarNovoArquivo(); quer fazer, por exemplo no metodo main poderiamos fazer um tratamento diferente, do tipo enviar um email dizendo que nao foi possivel criar o novo arquivo, isso e responsabilidade do metodo main, o que eu queria no metodo criarNovoArquivo(); era trabalhar na impressao do console e relancar essa excecao.
+
+                                --> isso nao se encaixa as regras de negocio e simplismente uma forma alternativa de trabalhar com excecoes, por exemplo em um sistema de pagamento, se caso nao der certo, voce nao ira tentar fazer o pagamento novamente dentro do catch voce ira mandar para outro metodo responsavel pela chamada de uma nova tentativa de pagamento.  
+                }
+
+
+
+
+
+EXCECOES BLOCO FINALLY 
+
+        --> esse caso e quando voce precisa que algum pedaco de codigo seja executado independente da condicao que esteja acontecendo dentro do try catch 
+{           
+
+        -> quando estamos trabalhando com arquivos, temos que fechar o arquivo, ou seja, quando voce abre um arquivo voce tem que fechar, e se voce nao fechar o arquivo, ele vai ficar aberto, e se voce ficar abrindo e fechando arquivos, o sistema operacional vai ficar sem memoria, entao e muito importante fechar o arquivo, e o finally e um bloco que e executado independente do que aconteca, se der certo ou errado, o finally vai ser executado, e e muito util para fechar arquivos, conexao com banco de dados, ou seja, qualquer coisa que voce precisa fechar, e muito util para isso.
+
+        --> exemplo:
+
+                public class RuntimeException{
+                    public static void main(String[] args){
+                        try{
+
+                            System.out.println("Abrindo arquivo");
+                            System.out.println("Escrevendo no arquivo");
+            8 -             System.out.println("Fechar arquivo");
+
+                        }catch (Exception e){
+                            e.printStackTrace();
+                    }
+
+                    --> vamos supor que no momento que voce esteja escrevendo os daods no arquivo voce tenha uma excecao, a linha 8 nunca sera executada, aconteceu uma vez entao o problema persiste, e voce tem a sua aplicacao rodando em producao para milhares de pessoas acessando, e todas as vezes que voce tentar abrir e tentar escrever um recurso continuara aberto, em algum momento a memoria ira estourar e o processamento do programa ira parar de funcionar.
+                    
+                        --> Entao em casos especificos estamos trabalhando onde os recursos precisam ser fechados, a melhor parte para fazermos isso e durante o finaly, ele sempre sera executado independente de qualquer coisa
+                }    
+            }
+
+
+            -> atualizando o codigo:
+
+                public class RuntimeException{
+                    public static void main(String[] args){
+                        try{
+
+                            System.out.println("Abrindo arquivo");
+                            throw new RuntimeException(); 
+
+                        }catch (Exception e){
+                            e.printStackTrace();
+
+                        }finally{
+                            System.out.println("Fechar arquivo");
+                        }
+                    }
+
+                    --> o que acontece? vamos supor que abrimos o arquivo e tivemos uma excecao, ai essa excecao foi capturada e foi impressa no console, mas mesmo com a excecao acontecendo no catch o finally sera imprimido.
+                }
+
+            
+
+            resumo: o bloco finally e utilizado quando trabalhado com recursos precisam ser liberados por outras aplicacoes, que precisam ser fechados apos seu uso, e durante a criacao do try, voce nunca pode criar um try sozinho, ou try catch ou try finally(nao e tao utilizado no dia dia);
+            
+
+
+
+
+
+EXCECOES CAPTURANDO MULTIPLAS EXCECOES 
+
+    -> existem casos aonde um metodo vai lancar mais de uma excecao;
+        
+        public class RuntimeException{
+            public static void main(String[] args){
+                try{
+                    throw new IllegalArgumentException();
+                }
+                catch (ArrayIndexOutOfBoundsException){
+                    System.out.println("Dentro do ArrayIndexOutOfBoundsException");
+                }
+                catch (IllegalArgumentException){
+                    System.out.println("Dentro do IllegalArgumentException"); --> ira aparecer essa mensagem no console;
+                }
+                catch (ArithmeticException){
+                    System.out.println("Dentro do ArithmeticException");
+                }
+                catch (RuntimeException){
+                    System.out.println("Dentro do RuntimeException");
+                }
+            }
+
+            --> como podemos ver, temos a possibilidade de tratar varias excecoes dentro de um metodo, e apenas adicionar catch, mas existem algumas regras,a primeira regra e que nao podemos colocar um tipo mais generico a frente dos outros catchs;
+            
+            {
+                porque? quando temos a RuntimeException, nos temos o tipos mais generico, todas essas outras como ArithmeticException, IllegalArgumentException ... sao filhas da RuntimeException, significa entao que qualquer uma dessas excecoes podem ser referenciadas por um objeto da classe RuntimeException, pela regra do polimorfismo;
+        }       
+
+               public class RuntimeException{
+                     public static void main(String[] args){
+                try{
+                    throw new RuntimeException();
+                }
+                catch (RuntimeException){
+                    System.out.println("Dentro do RuntimeException");
+                }
+                catch (ArrayIndexOutOfBoundsException){
+                    System.out.println("Dentro do ArrayIndexOutOfBoundsException");
+                }
+                catch (IllegalArgumentException){
+                    System.out.println("Dentro do IllegalArgumentException"); --> ira aparecer essa mensagem no console;
+                }
+                catch (ArithmeticException){
+                    System.out.println("Dentro do ArithmeticException");
+                }
+
+                ou seja, se colocarmos o catch sendo ele RuntimeException acima de todos os outros nenhum que esta abaixo podera ser executado, independente da excecao do tipo RuntimeException que sera lancada nenhum dos catch abaixo ira capturar, pois quem vai capturar sera o catch mais generico acima que no caso e o RuntimeException, entao lembrando excecoes mais genericas sempre tara que vir ao final, porque se nao a referencia do objeto ira direto para ela e essas catchs abaixo nunca serao executados.
+            }
+
+
+
+
+
+
+EXCECOES MULTI CATCH 
+                
