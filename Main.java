@@ -1,8 +1,8 @@
 !! REVER ASSOCIACOES
 
-!! Rever Modificador Final
-
 !! rever toString
+
+!! rever TRY Try With Resouurces
 
 
 O QUE E PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)?
@@ -5526,5 +5526,286 @@ EXCECOES CAPTURANDO MULTIPLAS EXCECOES
 
 
 
-EXCECOES MULTI CATCH 
+EXCECOES MULTI CATCH EM LINHAS
+    
+    -> podemos ter multiplos catch mas temos uma sintaxe para melhorar o codigo, e o que essa sintaxe fala? diz que voce pode colocar excecoes que nao estao na mesma linha de heranca dentro do mesmo catch separados via pipe "|"{
+
+        --> por exemplo:  se voce tem uma excecao que e filha de RuntimeException e outra que e filha de IOException, essas excecoes nao seguem a mesma linha de heranca, entao voce pode colocar essas excecoes dentro do mesmo catch separados por pipe "|", e isso e muito util para diminuir a quantidade de codigo que voce tem que escrever, e tambem para melhorar a legibilidade do codigo.
+
+            ex: 
+
+            public class Teste{
+                public class void main[String[] args]{
+                    try{
+                        talvezLanceException();
+                    }
+                    catch (SQLException | FileNotFoundException e){
+                        e.printStackTrace();
+
+                        // -> aqui diz que voce pode capturar uma excecao do tipo SQLException | FileNotFoundException e, pode colocar as duas pois elas seguem o mesmo raciocionio de heranca
+                    }
+                    catch(SQLException | FileNotFoundException | IOException e){
+                        e.printStackTrace();
+
+                        //-> se caso colocarmos uma excecao que nao segue a mesma linha de heranca, ira dar erro , pois a IOException nao segue a mesma linha de heranca que a SQLException e FileNotFoundException
+                    }
+                }
+
+                public static void talvezLanceException() throws SQLException, FileNotFoundException{
+                    
+                }
+            }
+
+
+
+            -->  poderiamos fazer da seguinte forma : 
+    }   
+
+        public class Teste{
+                public class void main[String[] args]{
+                    try{
+                        talvezLanceException();
+                    }
+                    catch (ArrayIndexOutOfBoundsException | IllegalArgumentException | ArithmeticExceptione){
+                        e.printStackTrace();
+
+                    }
+                    catch(RuntimeException e){
+                        e.printStackTrace();
+                    }
+
+                    --> Podemos colocar dessa forma, que seria um catch que pega as excecoes mais especificas, e caso aconteca alguma coisa fora dessas excecoes nos temos um catch mais generico que no caso e o RuntimeException, e isso e muito util para diminuir a quantidade de codigo que voce tem que escrever, e tambem para melhorar a legibilidade do codigo.
+                }
+
+                public static void talvezLanceException() throws SQLException, FileNotFoundException{
+                    
+                }
+            }
+
+
+
+
+
+
+EXCECOES TRY WITH RESOURCES
+
+    --> ver esse conteudo 
+
+
+
+
+
+
+EXCECAO CUSTOMIZADA
+
+    -> Podemos criar nossas proprias excecoes, por exemplo: vamos supor que queremos lancar uma excecao caso o login e a senha estejam incorretos, uma excecao que varia de sistema para sistema. 
+
+        --> para criar uma exceceo customizada, basta criar uma classe e colocar um nome com final exception, exemplo: 
+            -> LoginException
+        
+        --> depois escolhemos qual excecao desejamos extender, uma excecao do tipo CHECKED ou do tipo UNCHECKED 
+
+            ex: 
+                public class LoginInvalidoException extends Exception{
+                    public LoginInvalidoException(){
+                        super("Login invalido!!");
+                    }
+                    public LoginInvalidoException(String message){
+                        super(message);
+                    }
+
+                    --> nos lancamos esse dois construtores porque? podemos ou nao passar uma mensagem especifica dentro da execao quando utilizarmos, caso nao passarmos isso tera uma mensagem padrao!!
+                }
+
+                --> Aqui lancamos uma excao customizada !! 
+
+
+            EXEMPLO PRATICO UTILIZANDO EXCECOES CUSTOMIZADAS: 
+
+                public class Main{
+                    public static void main(String[] args){
+                        try{
+                            logar();
+                        }
+                        catch(LoginInvalidoException e){
+                            e.printStackTrace();
+                        }
+
+                        // -> como lancamos uma excecao do tipo checkage, temos que tratar ela aqui ou se nao enviar para quem esta chamando, como no caso essa e a ultima classe que chama pois ela e uma psvm entao tratamos aqui ela dessa forma, onde ela tentar executar o metodo logar, caso contrario ela vai capturar a excecao e imprimir a pilha de execucao.
+                    }
+
+                    public static void logar() throws LoginInvalidoException{
+                        Scanner imput = new Scanner(System.in);
+
+                        String usuarioBD = "Kayque";
+                        String SenhaBD = "123456";
+                        
+                        System.out.println("Digite o usuario: ");
+                        String usuario = imput.nextLine();
+                        System.out.println("Digite o Senha: ");
+                        String senha = imput.nextLine();
+
+                        if(!usuario.equals(usuarioBD) || !senha.equals(SenhaBD)){
+                            throw new LoginInvalidoException("Usuario e senha invalidos");
+                        }
+
+                        System.out.println("Logado com sucesso");
+                    }
+
+                        --> o que fizemos aqui foi criar um metodo logar, onde ele vai pedir para o usuario digitar o usuario e a senha, e caso o usuario e a senha nao sejam iguais ao usuario e senha do banco de dados, ele vai lancar uma excecao do tipo LoginInvalidoException, e essa excecao vai ser capturada no metodo main, e vai ser impressa a pilha de execucao, e caso o usuario e a senha sejam iguais ao usuario e senha do banco de dados, ele vai imprimir "Logado com sucesso", e isso e uma excecao customizada, e muito util para trabalhar com excecoes que sao especificas do seu sistema, e que nao existem no java, e que voce quer que quem esteja utilizando seu sistema saiba que essa excecao pode acontecer, e que ele pode tratar ela da forma que ele quiser, e isso e muito util para trabalhar com excecoes customizadas.
+                }
+
+
+
+
+
+
+EXCECOES E REGRAS DE SOBRESCRITA
+
+    ->
+
+        
+        public class Pessoa{
+            public void salvar() throws LoginInvalidoException, FileNotFoundException{
+                System.out.println("Salvando pessoa");
+            }
+        }
+
+        -> na classe pessoa estamos declarando um metodo, onde o metodo salvar(), pode-se lancar duas excecoes.
+
+
+            public class Funcionario extends Pessoa{
+                public void salvar(){
+                    System.out.println("Salvando funcionario");
+                }
+        }
+
+
+        -> quando voce esta sobrescrevendo um metodo, voce nao e obrigado a declarar as mesma excecoes que aquele metodo esta declarando, porque a funcinalidade da sobrescrita que voce esta lancando pode ter funcionalidade totalmente diferente, pode ser que ela nao lance excecao, mas tambem voce pode tambem lancar somente uma excecao, ou tamebem pode colocar as duas excecoes na sobrescrita exemplo: 
+
+            public class Funcionario extends Pessoa{
+                public void salvar() throws LoginInvalidoException{
+                    System.out.println("Salvando funcionario");
+                }
+            }
+
+        
+            --> tambem temos outra opcao, que seria lancar uma excecao do tipo Runtime tambem, na sobrescrita, e nesse caso nao seriamos obrigado a tratar a quem esteja chamando.
+
+            public class Funcionario extends Pessoa{
+                public void salvar() throws LoginInvalidoException, ArithmeticException{
+                    System.out.println("Salvando funcionario");
+                }
+            }
+
+            public class Main{
+                public static void main(String[] args){
+                    Pessoa pessoa = new Pessoa();
+                    Funcionario funcionario = new Funcionario();
+
+                    try{
+                        funcionario.salvar();
+                    } 
+                    catch(LoginInvalidoException e){
+                        e.printStackTrace();
+                    }
+
+                    --> nesse caso aqui como estamos falando que aquele metodo pode lancar tanto uma excecao checkage, tanto uma uncheckage, entao quem esta chamando esse metodo nao e obrigado a tratar essa excecao, entao podemos simplesmente tratar somente a checkage, que ira dar certo na compilacao.
+                }
+            }
+
+
+            --> RESUMO DAS REGRAS: quando voce esta sobrescrevendo voce pode nao lancar nenhuma excecao, voce pode lancar uma ou todas as excecoes que tem la, e voce pode lancar qualquer excecao UNCHECKED, filhas de RuntimeException ou voce nao pode lancar excecoes do tipo mais genericas, e tambem nao podemos declarar excecoes do tipo CHECKED que nao foi declarada no metodo original.
+
+
+
+
+
+
+CLASSES UTILITARIAS WRAPPERS 
+
+    -> sao classes que vao melhorar o desempenho de nossas aplicacoes, melhorar o codigo, sao coisas que esta la para gente utiliziar.
+
+            o que são Wrappers? Objetos que vao encapsular os tipos primitivos, que sao eles;
+
+                - byte
+                - short
+                - int 
+                - long
+                - float
+                - double
+                - char
+                - boolean
+
+                --> aqui trabalhamos com a regra de bits, tamanho do espaco em memoria que voce esta alocando.
                 
+        public class Wrapper{
+            public static void main(String[] args){
+                Byte byteW = 1;
+                Short shortW = 1;
+                Integer intW = 1;
+                Long longW = 10L;
+                Float floatW = 10F;
+                Double doubleW = 10D;
+                Character charW = 'a';
+                Boolean booleanW = true;
+
+                --> para se criar um Wrapper basta pegar o nome do tipo primitivo e comecar com letra maiuscula, com duas excecoes sendo eles o int e o char.
+            }   
+
+                --> quando trabalhamos com classes Wrappers, eles valores estao relacionados ao polimorfismo, nao mais aos valores dos tipos primitivos relacionado ao tamanho que voce pode colocar em memoria.
+
+                --> esses caras sao objetos, quando voce esta trabalhando com a passagem de parametros voce esta passando atraves de referencia. 
+
+                porque o java criou isso? um dos motivos e voce poder passar os valores numericos por referecia nao mais por valor, para caso queiramos fazer alguma alteracao dentro do metodo, o segundo motivo e quando trabalharmos com estrutura de dados do pacote de colecoes, com arrayLists, vetores, collections nao trabalham com tipos primitivos, nao podemos trabalhar com tipos primitivos pois dentro de colecoes guardamos por referencia. Quando trabalharmos com threds precisamos de objetos para trabalhar na parte de sincronizacao.
+        }
+
+
+        AUTOBOXING 
+            -> E quando temos um tipo primitivo, mas fazemos o java transformar esse tipo primitivo em Wapper.
+
+            EX: Integer intW = 1;
+
+        UNBOXING
+            -> E quando temos uma variavel primitiva mas queremos pegar o Wapper, entao o java esta se encarregando de transformar esse tipo Wapper em primitivo.
+
+            EX: int i = intW;
+
+
+        
+
+        --> temos a obcao, ja que estamos trabalhando com obj de agora utilizar metodos.
+
+            ex: int i = intW.intValue();
+
+                -> basicamente o que o java vai fazer com esse metodo e um cast
+                
+
+            ex2: Integer intW2 = Integer.parseInt("10");
+
+                -> o que esse metodo faz? ele pega uma string e transforma em um inteiro, e isso e muito util quando estamos trabalhando com entrada de dados, quando estamos trabalhando com arquivos, quando estamos trabalhando com banco de dados, e muito util para transformar uma string em um inteiro, e isso e muito util para trabalhar com Wrappers.
+                
+
+            PARA CARACTER TEMOS METODOS: 
+
+            Caracter.isDigit('a'); // retorna false, aceita valores numericos
+
+            Caracter.isLetter('a'); // retorna true, aceita valores de letras
+
+            Caracter.isLetterOrDigit('a'); // retorna true, aceita valores de letras e numeros, caso passe um valor '!@#$%¨&*' ele ira retornar false.
+
+            Caracter.isLowerCase('a'); // retorna true, aceita valores de letras minusculas
+
+            Caracter.isUpperCase('a'); // retorna false, aceita valores de letras maiusculas
+
+            Caracter.toUpperCase('a'); // retorna 'A', transforma a letra minuscula em maiuscula
+
+            Caracter.toLowerCase('A'); // retorna 'a', transforma a letra maiuscula em minuscula
+
+            Caracter.isWhitespace(' '); // retorna true, aceita valores de espacos em branco
+
+            Caracter.isWhitespace('\t'); // retorna true, aceita valores de tabulacao
+
+            Caracter.isWhitespace('\n'); // retorna true, aceita valores de quebra de linha
+
+             
