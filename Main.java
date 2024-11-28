@@ -4,6 +4,8 @@
 
 !! rever TRY Try With Resouurces
 
+!! Calendar e Date -> Vistas breviamente 
+
 
 O QUE E PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)?
 
@@ -5808,4 +5810,382 @@ CLASSES UTILITARIAS WRAPPERS
 
             Caracter.isWhitespace('\n'); // retorna true, aceita valores de quebra de linha
 
-             
+            
+
+
+
+
+
+CLASSES UTILITARIAS STRINGS
+
+    -> Strings no java sao imutaveis 
+
+    ex: 
+        public class StringTeste{
+            public static void main(Strings[] args){
+
+                String nome = "Kayque"; // String constant pool
+
+            }
+        }
+        {
+            --> isso significa que uma piscina constante de strings, se tivessimos que desenhar esse cara, e como se tivesse um quadrado grande, que e o Heap(Onde todos os objetos moram), e dentro dessa parte o java cria um espaco especialmente para as Strings, e esse espaco e chamado String pool.
+
+            --> O java utiliza essa parte de String pool, porque existe um conceito da Ciencia da Computacao chamado (String Interning), que basicamente e quando voce utiliza as Strings de forma imutavel, ou seja, no Java toda String que voce esta criando, se criar ela pela primeira vez ela ira ser alocada no pool de String, mas se voce cria pela segunda vez o java nao ira duplicar. 
+
+            --> Entao quando colocamos a String nome = "Kayque", temos uma variavel de referencia onde faz refencia para o nome dentro da pool de String, e como sabemos que isso e verdade ? podemos fazer o seguinte: 
+
+            String nome = "Kayque";
+            String nome2 = "Kayque";
+
+            System.out.println(nome == nome2);
+                
+                -> quando quisemos comparar a referencia do objeto utilizamos o ==, e nesse caso ele ira retornar true, ou seja, isso significa que esses dois valores estao fazendo referencia para o mesmo objeto em memoria que e o "Kayque", e isso e muito util para economizar memoria, e tambem para melhorar o desempenho da aplicacao, e isso e muito util para trabalhar com Strings.
+
+                    -> E importante perceber que como String e imutavel, nao e possivel voce alterar esse valor, como veremos: 
+
+                    public class StringTeste{
+                        public static void main(Strings[] args){
+
+                            String nome = "Kayque";
+                            String nome2 = "Kayque";
+
+                            nome.concat(" Allan"); --> metodo para concatenar Strings
+
+                            System.out.println(nome); // ira retornar somente Kayque, e nao Kayque Allan
+
+                            System.out.println(nome == nome2); --> ira retornar true 
+
+
+                            --> agora vamos entender, como isso deu true sempre que concatenamos isso, e ta concatenando com um sobrenome, e ai que vem a imutabilidade das Strings, a nao ser que fazemos uma nova associacao, nao podemos trocar o valor que existe.
+            }               
+        }   
+
+        -->  Entao o que esta acontecendo ai, e que tem mais uma String sendo criada na pool de Strings, sendo " Allan", e existe ainda a String concatenada("Kayque Allan"), mas o problema e que nao existe uma variavel de referencia para elas, o que poderiamos fazer e o seguinte:
+
+        public class StringTeste{
+            public static void main(Strings[] args){
+                    String nome = "Kayque";
+                    String nome2 = "Kayque";
+
+                    nome = nome.concat(" Allan"); 
+                    
+                    // -> Agora a variavel nome esta fazendo referencia para a nova String que foi criada, sendo ela "Kayque Allan".
+
+                    System.out.println(nome); // ira retornar "Kayque Allan"
+
+                    System.out.println(nome == nome2); --> ira retornar false 
+
+                }
+
+                --> Agora quando for impresso ira imprimir "Kayque Allan", e tambem quando tenta comparar as duas ira retorar false, pois agora a variavel nome -> aponta para uma nova String que foi criada.
+
+            }
+
+
+            
+            --> agora o que acontece se criarmos uma Strig como se fosse objeto? E possivel criar...
+
+            ex: 
+                String nome3 = new String ("Kayque");
+
+
+            ex em codigo:
+                public class StringTeste{
+                    public static void main(Strings[] args){
+                        String nome2 = "Kayque";
+                        String nome3 = new String ("Kayque");
+
+                    System.out.println(nomeI == nomeO); --> ira retornar false 
+
+                }
+
+                --> Veremos que ira retornar falso, pois o que esta acontecendo e que temos uma variavel nomeO, fazendo referencia a um objeto, quando criamos dessa forma, esta criando a String em outro lugar, o que esta acontecendo e que estamos criando a String dentro do Heap de memoria(nao no pool de String), entao o nome3 esta fazendo referencia para um objeto que esta no Heap, onde seu conteudo continua sendo o mesmo "Kayque", ou seja, nome3 esta fazendo referencia para um OBJETO que encapsula a String.
+
+                {
+                    se quisessemos pegar o valor(conteudo dentro do objeto poderiamos) fazer o seguinte:
+
+                    System.out.println(nome2 == nome3.intern()); --> ira retornar true
+ 
+                }
+
+
+                    String nome3 = new String ("Kayque");
+
+                        -> isso entao cria uma variavel de referencia, tambem um objeto do tipo String, e tambe uma String na pool de String caso nao tenha sido criada.
+
+
+            }
+
+
+
+            - resumo: Strings sao imutaveis, e quando criamos Strings da forma literal no codigo ele cria diretamente na pool de String, e quando utilizamos somente nome.concat(); ele cria essa String la no pool, e tambem o resultado, e se nos nao associamos a variavel de referencia para essa nova String o valor e perdirdo, vimos tambem que '==' pode ser feito para comparar referencias, nao o valor em si do objeto que estao referenciando.
+
+
+
+
+
+
+CLASSES UTILITARIAS STRINGS PT2
+
+    metodos de auxilio para Strings:
+
+    public class StringTeste{
+        public static void main(String[] args){
+            String nome = "Kayque";
+
+            System.out.println(nome.charAt(0)); 
+            // retorna K, retorna o caracter que esta na posicao 0
+
+            System.out.println(nome.length()); 
+            // retorna 6, retorna o tamanho da String
+
+            System.out.println(nome.replace('K', 'C'));
+            // retorna Cayque, substitui o caracter K por C
+
+            System.out.println(nome.toLowerCase());
+            // retorna kayque, transforma a String em minuscula
+
+            System.out.println(nome.toUpperCase());
+            // retorna KAYQUE, transforma a String em maiuscula
+
+            System.out.println(nome.substring(0, 3));
+            // retorna Kay, retorna a String que esta entre a posicao 0 e 3, ou seja sempre sera menor que o segundo parametro.
+
+            System.out.println(nome.trim());
+            // retorna Kayque, remove os espacos em branco no inicio e no final da String
+        }
+    }
+
+
+
+
+
+
+CLASSES UTILITARIAS STRINGS PT3
+
+    public class PerformaceTeste{
+        public static void main(String[] args){
+            long inicio = System.currentTimeMillis();
+
+            concatString(10_000);
+
+            long fim = System.currentTimeMillis();
+
+            System.out.println("Tempo gasto: " + (fim - inicio) + "ms");
+        }
+        
+        private static void concatString(int tamanho){
+            String texto = "";
+
+            for(int i = 0; i < tamanho; i++){
+                texto += i; // 0,01, 012, 0123 ...
+            }
+        }
+
+        --> esse programa calcula o tempo da operacao do for, que conforme se utiliza String o tempo vai aumentando, pois a cada iteracao do for ele cria uma nova String, e isso e muito custoso para o processamento, e isso e muito util para mostrar a diferenca de performance entre a utilizacao de Strings.
+    }
+
+
+        --> para isso o java criou uma classe chamada StringBuilder que melhora bastante a performace !!
+
+
+        --> tambem existe a classe StringBuffer que basicamente e a mesma coisa que StringBuilder, a diferenca e que o StringBuffer e para um ambiente onde tem multiplas threads acessando o mesmo recurso. 
+
+
+            -> agora vem o X da questao, quando utiliar cada um(String, StringBuffer ou StringBuilder)? entao quando trabalhamos com o sistema voce esta fazendo o mapeamento das regras de negocio que voce tem no mundo real, essas regras de negocio do mundo real e o que realmente vai te dizer se voce vai utilizar String, StringBuilder ou StringBuffer, na maioria das vezes sempre vamos utilizar Strings, mas quando voce tem um metodo que e chamado muitas vezes, e que voce tem que concatenar muitas Strings, e muito util utilizar o StringBuilder, e quando voce tem um ambiente onde tem multiplas threads acessando o mesmo recurso, e muito util utilizar o StringBuffer, e isso e muito util para melhorar a performace da sua aplicacao, e isso e muito util para trabalhar com Strings.
+            
+            
+
+
+
+
+CLASSES UTILITARIAS STRINGBUILDER
+
+    -> nos vimos que as Strings sao imutaveis e por causa disso que temos aquele ritimo de desempenho baixo, quando concatenamos varias Strings, 
+
+    public class StringBuilderTeste{
+        public static void main(String[] args){
+            String nome = "Kayque";
+            nome.concat(" Allan");
+
+            System.out.println(nome); // ira retornar Kayque
+
+
+            --> isso nos ja vimos e sabemos como funciona, mas ai temos agora a StringBuilder, quando trabalhamos com StringBuilder, ele e mutavel, porque StringBuilder nao e uma String, ele e uma Classe que no final das contas vai trabalhar com as Strings.
+
+            ex: StringBuilder sb = new StringBuilder();
+
+                -> quando criamos esse objeto, podemos passar tres opcoes, ou passar uma String,  ou uma sequencia de caracteres ou int capacidade, se nao passarmos nada ele ira criar uma StringBuilder para capacidade de 16 caracteres, caso passamos dos 16 caracteres ele ira dobrar a capacidade.
+
+                -> como eles nao sao a mesma coisa nao podemos mais associar diretamente como: sb = nome; , isso ira dar erro, nao podemos tambem adicionar dessa forma sb = "kayque", isso tambem ira dar erro.
+
+                    -> Adicionamos atraves do metodo append, ele e sobrecarregado para todos os tipos primitivos, podemos passar boolean, char, int... que ira retornar um StringBuilder
+
+                        ex: sb.append("Kayque");
+        }
+
+        --> agora vamos ver um exemplo pratico:
+
+        public class StringBuilderTeste{
+            public static void main(String[] args){
+            StringBuilder sb = new StringBuilder("Kayque");
+
+            System.out.println(sb); 
+                // -> se colocarmos aqui ira imprimir, porque? porque ele tem o metodo to.String dentro do StringBuilder que ira retornar o valor que esta dentro do String.
+            
+            sb.append(" Allan"); --> Funciona como um concat 
+
+
+            System.out.println(sb); // ira retornar Kayque Allan, pois ele esta concatenando o valor dentro do StringBuilder.
+
+
+                ---> Uma das razoes na qual a performace StringBuilder e bem maior que a da String e pela capacidade que a StringBuilder te oferece em fazer a mudanca da String sem precisar ficar alocando um novo espaco no pool de Strings, mas de certa isso aumenta um pouco a complexidade do codigo, porque? 
+
+
+            sb.append(" Allan").append (" Ribeiro"); // Teremos sempre que adicionar .append para se adicionar uma nova String, caso se coloque mutio, a visualizacao acaba ficando um pouco dificil.
+
+            }
+    }
+
+            --> Cuidados a se tomar: 
+
+            sb.substring(0, 3); 
+                // ira retornar ainda "Kayque Allan Ribeiro", porque o retorno que o metodo substring da e do tipo String e nao StringBuilder.
+
+            para isso teriamos que fazer: 
+
+            String nome = sb.substring(0, 3); 
+                // ira retornar "Kay", pois estamos pegando a substring do StringBuilder e passando para uma String.
+
+
+            
+            --> Metodos que funcionam com StringBuilder:
+
+            sb.reverse(); // inverte a String
+
+            sb.delete(0, 3); // deleta a String que esta entre 0 e 3
+
+            sb.insert(0, "Kayque"); // insere a String "Kayque" na posicao 0
+
+            sb.replace(0, 3, "Kay"); // substitui a String que esta entre 0 e 3 por "Kay"
+
+            sb.length(); // retorna o tamanho da String
+
+
+
+
+
+
+
+CLASSES UTILITARIAS DATE
+
+    --> para se utilizar date, e so criar um novom objeto dessa classe, hoje em dia e pouco utilizado, a maioria dos metodos estao em depreciacao;
+
+    public class DateTeste{
+        public static void main(String[] args){
+
+            Date data = new Date(1_0000L); 
+
+            --> date trabalha em ms, ele tem dentro um Long, que representa os segundos de desde janeiro de 1970
+
+            System.out.println(data); // ira retornar Thu Jan 01 01:00:10 GMT 1970, pois conta a partir desta data em milisegundos;
+
+            Date data2 = new Date();
+
+            System.out.println(data2); // ira retornar a data atual do sistema.
+
+        }
+    }
+            
+
+
+
+
+
+
+CLASSES UTILITARIAS CALENDAR
+
+    -> Foi a segunda classe criada para resolver os problemas da classe DATE;
+
+        obs: a classe calendar e uma classe abstrata, ou seja, nao podemos criar uma instancia dela;
+
+        classes date e classes calendar, sao utilizadas em sistemas legado; hoje em dia se usa coisas melhores;
+
+        // O Singleton é um padrão de projeto criacional que tem como objetivo garantir que uma classe tenha apenas uma única instância em toda a aplicação e fornecer um ponto de acesso global a essa instância. Ele é frequentemente usado quando é necessário um controle centralizado sobre algum recurso ou funcionalidade, como um gerenciador de configuração, cache, registro de logs, ou um gerenciador de conexão com o banco de dados.
+
+        public class CalendarTeste{
+            public static void man(String[] args){
+                Calendar calendar = Calendar.getInstance();
+
+                    --> Assim que pegamos a instancia de Calendar;   
+        }
+}
+
+
+
+
+
+
+
+CLASSES UTILITARIAS DateFormat
+
+    -> E uma classe utilizada para formatacao de datas, uma classe que oferece metodos pre-definidos para formatar;
+
+        --> ! Uma classe abstrata onde nao pode ser instanciada
+
+        public class DateFormat{
+            public static void main(String[] args){
+                Calendar  calendar = Calendar.getInstance();
+
+                DateFormat[] df = new DateFormat[7];
+
+                df[0] = DateFormat.getInstance();  --> Traz de acordo com a localizacao do sistema
+
+                df[1] = DateFormat.getDateInstance(); --> Traz somente a data
+
+                df[2] = DateFormat.getDateTimInstance(); --> Traz a data e a hora
+
+                df[3] = DateFormat.getDateInstance(DateFormat.SHORT);  --> Traz a data no formato curto
+
+                df[4] = DateFormat.getDateInstance(DateFormat.MEDIUM); --> Traz a data no formato medio
+
+                df[5] = DateFormat.getDateInstance(DateFormat.LONG); --> Traz a data no formato longo
+
+                df[6] = DateFormat.getDateInstance(DateFormat.FULL); --> Traz a data no formato completo
+
+                for(DateFormat dateFormat : df){
+                    System.out.println(dateFormat.format(calendar.getTime()));
+
+                    // Imprime a data de acordo com o formato que foi passado
+                }
+            
+            }
+        }
+
+
+
+
+
+
+
+CLASSES UTILITARIAS INTERCIONALIZACAO DATAS COM LOCALE
+
+    -> Classe criada para trabalhar com intercionalizacao, feita para formatar tanto datas como moedas, numeros, baseado na preferencia do usuario ou de acordo com a localizacao da JVM dele;
+
+        public class LocaleTeste{
+            public static void main(String[] args){
+
+                Calendar calendar = Calendar.getInstance();
+                Locale localePT = new Locale("pt", "BR");
+
+                --> Essa classe podemos criar objetos dela, e tem a possibilidade de trabalhar com diversos tipos dela, ela segue a formatacao, entao ela segue o padrao da ISOS, uma para definir a lingua e outra para definir o pais. 
+
+
+                DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, localePT);
+
+                System.out.println(df.format(calendar.getTime()));
+            }
+        }
+
+            
