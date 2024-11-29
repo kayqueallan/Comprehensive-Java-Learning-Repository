@@ -6118,8 +6118,70 @@ CLASSES UTILITARIAS CALENDAR
             public static void man(String[] args){
                 Calendar calendar = Calendar.getInstance();
 
-                    --> Assim que pegamos a instancia de Calendar;   
+                    --> Assim que pegamos a instancia de Calendar; 
+                    
+                System.out.println(calendar); // ira retornar a data atual do sistema, mas em um formato diferente do que o Date retorna.
+
+                para resolver isso podemos pegar, e fazer um hackzinho utilizando a classe Date.
+
+                Date date = calendar.getTime();
+
+                System.out.println(date); // ira retornar a data atual do sistema, mas em um formato diferente do que o Date retorna.
+
+                    --> Sendo assim podemos utilizar a data de acordo com o que precisamos.
         }
+
+        Metodos de utilizacao nessa classe: 
+
+            calendar.getFirstDayOfWeek(); // retorna o primeiro dia da semana, dependendo da localizacao do seu sistema
+
+                -> nos podemos fazer uma pequena logica nesse programa, sendo que dependendo de alguns paises temos o primeiro dia da semana como domingo e outros dias como segunda, podemos fazer o seguinte;
+
+                if(calendar.getFirstDayOfWeek() == Calendar.SUNDAY){
+                    //se compara as constantes que a classe calendar tem;
+
+                    System.out.println("Domingao e o primeiro dia ")
+                }
+
+
+
+
+                Tendo essas constantes podemos trabalhar com varias formasm, como por exemplo:
+
+                calendar.get(Calendar.DAY_OF_MONTH); // retorna o dia do mes
+                calendar.get(Calendar.DAY_OF_WEEK); // retorna o dia da semana
+                calendar.get(Calendar.DAY_OF_YEAR); // retorna o dia do ano
+                calendar.get(Calendar.MONTH); // retorna o mes
+                calendar.get(Calendar.YEAR); // retorna o ano
+                calendar.get(Calendar.HOUR); // retorna a hora
+                calendar.get(Calendar.MINUTE); // retorna os minutos
+                calendar.get(Calendar.SECOND); // retorna os segundos
+                calendar.get(Calendar.MILLISECOND); // retorna os milisegundo
+
+
+                -> Adicao de horas, minutos , dias ...: 
+
+                    calendar.add(Calendar.DAT_OF_MONTH, 1); // adiciona um dia
+                    
+                    calendar.add(Calendar.HOUR, 1); // adiciona uma hora
+
+                
+                -> Setando valores:
+
+                    calendar.set(Calendar.DAY_OF_MONTH, 1); // seta o dia do mes para 1
+
+                    calendar.set(Calendar.MONTH, 1); // seta o mes para 1
+
+                    calendar.set(Calendar.YEAR, 2021); // seta o ano para 2021
+
+                    calendar.set(Calendar.HOUR, 1); // seta a hora para 1
+
+                    calendar.set(Calendar.MINUTE, 1); // seta os minutos para 1
+
+                    calendar.set(Calendar.SECOND, 1); // seta os segundos para 1
+
+                    calendar.set(Calendar.MILLISECOND, 1); // seta os milisegundos para 1
+
 }
 
 
@@ -6184,8 +6246,71 @@ CLASSES UTILITARIAS INTERCIONALIZACAO DATAS COM LOCALE
 
                 DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, localePT);
 
-                System.out.println(df.format(calendar.getTime()));
+                    --> Isso faz com que a data seja formada de acordo com a localizacao, coloca a formato que seria FULL, e depois o locale que seria o localePT.
+
+                System.out.println("Brazil " + df.format(calendar.getTime()));
+
+                    --> para printarmos fazemos o seguinte, pegamos a variavel de referencia para o objeto DataFormat, e chamamos o metodo format, passando o objeto calendar.getTime(), que ira retornar a data de acordo com a localizacao do sistema.
+            }  
+
+                System.out.println(localePT.getDisplayCountry()); 
+                // ira retornar Brazil, ou seja esta exibindo o pais de acordo com essa locale, mas esta exibindo de acordo com a lingua do sistema operacional padrao.      
+
+                --> mas caso criamos uma instancia de Locale em Japao por exemplo, e fazer:
+
+                    System.out.println(localePT.getDisplayCountry(localeJP));
+                    // ira retornar Brasil, na lingua japonesa, ou seja ele ira retornar o pais de acordo com a lingua que foi passada no localeJP.
+
+
+                System.out.println(Locale.getDefault()); 
+                // ira retornar a localizacao do sistema operacional
+        }  
+
+
+
+
+
+
+CLASSES UTILITARIAS INTERCIONALIZACAO NUMEROS COM LOCALE
+
+        -> A classe NumberFormat ela e uma classe abstrata;
+            ex: NumberFormat nf = Number.getInstance();
+        
+        public class NumberFormat{
+            public static void main(String[] args){
+                Locale localeBR = new Locale("pt", "BR");
+                Locale localeIT = new Locale("it", "IT");
+                Locale localeJP = new Locale("jp", "JP");
+                Locale localeUS = new Locale("us", "US");
+
+                NumberFormat[] nf = new NumberFormat[4];
+                //--> como iremos trabalhar com array utilizaos esse acima: 
+
+                nf[0] = NumberFormat.getInstance(localeBR);
+                nf[1] = NumberFormat.getInstance(localeJP);
+                nf[2] = NumberFormat.getInstance(localeIT);
+                nf[3] = NumberFormat.getInstance(localeUS);
+
+                double valor = 10_000.2130;
+
+                for(NumberFormat numberFormat : nf){
+                    System.out.println(numberFormat.format(valor));
+                }
+
+                    -> podemos ver a formatacao de numeros de acordo com paises, utilizando Locale;
+                
             }
         }
 
-            
+
+
+
+
+
+CLASSES UTILITARIAS INTERCIONALIZACAO DE MOEDA COM LOCALE
+
+    -
+
+        
+
+       
