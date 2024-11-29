@@ -6309,8 +6309,36 @@ CLASSES UTILITARIAS INTERCIONALIZACAO NUMEROS COM LOCALE
 
 CLASSES UTILITARIAS INTERCIONALIZACAO DE MOEDA COM LOCALE
 
-    -
+    --> E praticamente a mesma coisa que utilizamos antes,  a diferenca pr que antes utilizavamos getInstance() e agora utilizamos get.CurrencyInstance().
 
+    public class Money{
+        public static void main(String[] args){
+            Locale localePT = new Locale("pt, BR");
+            Locale localeUS = new Locale("en, US");
+            
+
+            NumberFormat[] nf = new NumberFormat[4];
+
+            nf[0] = NumberFormat.getCurrencyInstance(localePT);
+            nf[0] = NumberFormat.getCurrencyInstance(localeUS);
+            //aqui poderiamos colocar outros locale, em outras formatacoes, para que seja exibido de acordo com o pais
+
+            double valor = 1_000;
+
+            for(NumberFormat moneyFormat : nf){
+                System.out.println(moneyFormat.format(valor));
+
+            }            
+        }
+    }
+
+
+
+
+
+
+
+CLASSES UTILITARIAS SIMPLE DATE FORMAT
         
 
        
