@@ -6,6 +6,7 @@
 
 !! Calendar e Date -> Vistas breviamente 
 
+!! AULA 128 REVER QUANDO PUDER
 
 O QUE E PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)?
 
@@ -668,1548 +669,7 @@ Sintaxe --> e colocado o identificador e depois o nome de referencia da variavel
 
 COMO AS VARIAVEIS PRIMITIVAS SE COMPORTAM EM UM METODO 
 
-            --> 
-
-
-            public pacote getOnde() {
-                return onde;
-            }
-            public void setOnde(pacote onde) {
-                this.onde = onde;
-            }
-            public esta getAlocada() {
-                return alocada;
-            }
-            public void setAlocada(esta alocada) {
-                this.alocada = alocada;
-            }
-            public essa getClasse() {
-                return classe;
-            }
-            public void setClasse(essa classe) {
-                this.classe = classe;
-            }
-            public Estudante getEstudante() {
-                return estudante;
-            }
-            public void setEstudante(Estudante estudante) {
-                this.estudante = estudante;
-            }
-            public e getUma() {
-                return uma;
-            }
-            public void setUma(e uma) {
-                this.uma = uma;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public e getUm() {
-                return um;
-            }
-            public void setUm(e um) {
-                this.um = um;
-            }
-            public Estudante getEstudante() {
-                return estudante;
-            }
-            public void setEstudante(Estudante estudante) {
-                this.estudante = estudante;
-            }
-            public e getAtraves() {
-                return atraves;
-            }
-            public void setAtraves(e atraves) {
-                this.atraves = atraves;
-            }
-            public nome getVariavel() {
-                return variavel;
-            }
-            public void setVariavel(nome variavel) {
-                this.variavel = variavel;
-            }
-            public de getReferencia() {
-                return referencia;
-            }
-            public void setReferencia(de referencia) {
-                this.referencia = referencia;
-            }
-            public de getReferencia() {
-                return referencia;
-            }
-            public void setReferencia(de referencia) {
-                this.referencia = referencia;
-            }
-            public e getUm() {
-                return um;
-            }
-            public void setUm(e um) {
-                this.um = um;
-            }
-            public objeto getE() {
-                return e;
-            }
-            public void setE(objeto e) {
-                this.e = e;
-            }
-            public conseguimos getAcessar() {
-                return acessar;
-            }
-            public void setAcessar(conseguimos acessar) {
-                this.acessar = acessar;
-            }
-            public as getVariaveis() {
-                return variaveis;
-            }
-            public void setVariaveis(as variaveis) {
-                this.variaveis = variaveis;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public essa getClasse() {
-                return classe;
-            }
-            public void setClasse(essa classe) {
-                this.classe = classe;
-            }
-            public Estudante getEstudante() {
-                return estudante;
-            }
-            public void setEstudante(Estudante estudante) {
-                this.estudante = estudante;
-            }
-            public aqui getSe() {
-                return se;
-            }
-            public void setSe(aqui se) {
-                this.se = se;
-            }
-            public e getUm() {
-                return um;
-            }
-            public void setUm(e um) {
-                this.um = um;
-            }
-            public objeto getDa() {
-                return da;
-            }
-            public void setDa(objeto da) {
-                this.da = da;
-            }
-            public Estudante getEstudante() {
-                return estudante;
-            }
-            public void setEstudante(Estudante estudante) {
-                this.estudante = estudante;
-            }
-            public A getVariável() {
-                return variável;
-            }
-            public void setVariável(A variável) {
-                this.variável = variável;
-            }
-            public de getReferência() {
-                return referência;
-            }
-            public void setReferência(de referência) {
-                this.referência = referência;
-            }
-            public é getUsada() {
-                return usada;
-            }
-            public void setUsada(é usada) {
-                this.usada = usada;
-            }
-            public para getArmazenar() {
-                return armazenar;
-            }
-            public void setArmazenar(para armazenar) {
-                this.armazenar = armazenar;
-            }
-            public EXEMPLO getPARA() {
-                return PARA;
-            }
-            public void setPARA(EXEMPLO pARA) {
-                PARA = pARA;
-            }
-            public ENTEDER getBEM() {
-                return BEM;
-            }
-            public void setBEM(ENTEDER bEM) {
-                BEM = bEM;
-            }
-            public TIPOS getPRIMITIVOS() {
-                return PRIMITIVOS;
-            }
-            public void setPRIMITIVOS(TIPOS pRIMITIVOS) {
-                PRIMITIVOS = pRIMITIVOS;
-            }
-            public SINTAXE getJAVA() {
-                return JAVA;
-            }
-            public void setJAVA(SINTAXE jAVA) {
-                JAVA = jAVA;
-            }
-            public para getCriar() {
-                return criar;
-            }
-            public void setCriar(para criar) {
-                this.criar = criar;
-            }
-            public nome getVariavel() {
-                return variavel;
-            }
-            public void setVariavel(nome variavel) {
-                this.variavel = variavel;
-            }
-            public colocamos getO() {
-                return o;
-            }
-            public void setO(colocamos o) {
-                this.o = o;
-            }
-            public tipo getDela() {
-                return dela;
-            }
-            public void setDela(tipo dela) {
-                this.dela = dela;
-            }
-            public e getDepois() {
-                return depois;
-            }
-            public void setDepois(e depois) {
-                this.depois = depois;
-            }
-            public o getNome() {
-                return nome;
-            }
-            public void setNome(o nome) {
-                this.nome = nome;
-            }
-            public sendo getLetra() {
-                return letra;
-            }
-            public void setLetra(sendo letra) {
-                this.letra = letra;
-            }
-            public minuscula getA() {
-                return a;
-            }
-            public void setA(minuscula a) {
-                this.a = a;
-            }
-            public sendo getLetra() {
-                return letra;
-            }
-            public void setLetra(sendo letra) {
-                this.letra = letra;
-            }
-            public em getMinuscula() {
-                return minuscula;
-            }
-            public void setMinuscula(em minuscula) {
-                this.minuscula = minuscula;
-            }
-            public int getIdadeDoPai() {
-                return idadeDoPai;
-            }
-            public void setIdadeDoPai(int idadeDoPai) {
-                this.idadeDoPai = idadeDoPai;
-            }
-            public Isso getMostra() {
-                return mostra;
-            }
-            public void setMostra(Isso mostra) {
-                this.mostra = mostra;
-            }
-            public o getResulado() {
-                return resulado;
-            }
-            public void setResulado(o resulado) {
-                this.resulado = resulado;
-            }
-            public no getConsole() {
-                return console;
-            }
-            public void setConsole(no console) {
-                this.console = console;
-            }
-            public texto getMais() {
-                return mais;
-            }
-            public void setMais(texto mais) {
-                this.mais = mais;
-            }
-            public Isso getMostra() {
-                return mostra;
-            }
-            public void setMostra(Isso mostra) {
-                this.mostra = mostra;
-            }
-            public o getTexto() {
-                return texto;
-            }
-            public void setTexto(o texto) {
-                this.texto = texto;
-            }
-            public minuscula getA() {
-                return a;
-            }
-            public void setA(minuscula a) {
-                this.a = a;
-            }
-            public objeto getDa() {
-                return da;
-            }
-            public void setDa(objeto da) {
-                this.da = da;
-            }
-            public bits getTamanhos() {
-                return tamanhos;
-            }
-            public void setTamanhos(bits tamanhos) {
-                this.tamanhos = tamanhos;
-            }
-            public as getVariaveis() {
-                return variaveis;
-            }
-            public void setVariaveis(as variaveis) {
-                this.variaveis = variaveis;
-            }
-            public bytes getVai() {
-                return vai;
-            }
-            public void setVai(bytes vai) {
-                this.vai = vai;
-            }
-            public objeto getE() {
-                return e;
-            }
-            public void setE(objeto e) {
-                this.e = e;
-            }
-            public numeros getInteiros() {
-                return inteiros;
-            }
-            public void setInteiros(numeros inteiros) {
-                this.inteiros = inteiros;
-            }
-            public objeto getE() {
-                return e;
-            }
-            public void setE(objeto e) {
-                this.e = e;
-            }
-            public numeros getDecimais() {
-                return decimais;
-            }
-            public void setDecimais(numeros decimais) {
-                this.decimais = decimais;
-            }
-            public retorna getValores() {
-                return valores;
-            }
-            public void setValores(retorna valores) {
-                this.valores = valores;
-            }
-            public double getIdade() {
-                return idade;
-            }
-            public void setIdade(double idade) {
-                this.idade = idade;
-            }
-            public float getIdade2() {
-                return idade2;
-            }
-            public void setIdade2(float idade2) {
-                this.idade2 = idade2;
-            }
-            public e getUm() {
-                return um;
-            }
-            public void setUm(e um) {
-                this.um = um;
-            }
-            public erro getPois() {
-                return pois;
-            }
-            public void setPois(erro pois) {
-                this.pois = pois;
-            }
-            public o getCompilador() {
-                return compilador;
-            }
-            public void setCompilador(o compilador) {
-                this.compilador = compilador;
-            }
-            public nao getConsegue() {
-                return consegue;
-            }
-            public void setConsegue(nao consegue) {
-                this.consegue = consegue;
-            }
-            public colocamos getO() {
-                return o;
-            }
-            public void setO(colocamos o) {
-                this.o = o;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public espaco getOcupado() {
-                return ocupado;
-            }
-            public void setOcupado(espaco ocupado) {
-                this.ocupado = ocupado;
-            }
-            public na getMemoria() {
-                return memoria;
-            }
-            public void setMemoria(na memoria) {
-                this.memoria = memoria;
-            }
-            public entao getQuando() {
-                return quando;
-            }
-            public void setQuando(entao quando) {
-                this.quando = quando;
-            }
-            public e getUma() {
-                return uma;
-            }
-            public void setUma(e uma) {
-                this.uma = uma;
-            }
-            public float getCom() {
-                return com;
-            }
-            public void setCom(float com) {
-                this.com = com;
-            }
-            public e getUm() {
-                return um;
-            }
-            public void setUm(e um) {
-                this.um = um;
-            }
-            public ponto getAo() {
-                return ao;
-            }
-            public void setAo(ponto ao) {
-                this.ao = ao;
-            }
-            public devemos getColocar() {
-                return colocar;
-            }
-            public float getIdade2() {
-                return idade2;
-            }
-            public void setIdade2(float idade2) {
-                this.idade2 = idade2;
-            }
-            public o getCASTING() {
-                return CASTING;
-            }
-            public void setCASTING(o cASTING) {
-                CASTING = cASTING;
-            }
-            public e getVoce() {
-                return voce;
-            }
-            public void setVoce(e voce) {
-                this.voce = voce;
-            }
-            public e getUm() {
-                return um;
-            }
-            public void setUm(e um) {
-                this.um = um;
-            }
-            public minuscula getA() {
-                return a;
-            }
-            public void setA(minuscula a) {
-                this.a = a;
-            }
-            public entrar getNa() {
-                return na;
-            }
-            public void setNa(entrar na) {
-                this.na = na;
-            }
-            public outra getExemplo() {
-                return exemplo;
-            }
-            public void setExemplo(outra exemplo) {
-                this.exemplo = exemplo;
-            }
-            public long getSalarioNeymar() {
-                return salarioNeymar;
-            }
-            public void setSalarioNeymar(long salarioNeymar) {
-                this.salarioNeymar = salarioNeymar;
-            }
-            public int getSalarioCris() {
-                return salarioCris;
-            }
-            public void setSalarioCris(int salarioCris) {
-                this.salarioCris = salarioCris;
-            }
-            public ou getSeja() {
-                return seja;
-            }
-            public void setSeja(ou seja) {
-                this.seja = seja;
-            }
-            public eu getForço() {
-                return forço;
-            }
-            public void setForço(eu forço) {
-                this.forço = forço;
-            }
-            public esse getNumero() {
-                return numero;
-            }
-            public void setNumero(esse numero) {
-                this.numero = numero;
-            }
-            public a getEntrar() {
-                return entrar;
-            }
-            public void setEntrar(a entrar) {
-                this.entrar = entrar;
-            }
-            public na getOutra() {
-                return outra;
-            }
-            public void setOutra(na outra) {
-                this.outra = outra;
-            }
-            public variavel getCabendo() {
-                return cabendo;
-            }
-            public void setCabendo(variavel cabendo) {
-                this.cabendo = cabendo;
-            }
-            public ou getNao() {
-                return nao;
-            }
-            public void setNao(ou nao) {
-                this.nao = nao;
-            }
-            public e getPode() {
-                return pode;
-            }
-            public void setPode(e pode) {
-                this.pode = pode;
-            }
-            public ser getQue() {
-                return que;
-            }
-            public void setQue(ser que) {
-                this.que = que;
-            }
-            public o getCompilador() {
-                return compilador;
-            }
-            public void setCompilador(o compilador) {
-                this.compilador = compilador;
-            }
-            public corte getAlguns() {
-                return alguns;
-            }
-            public void setAlguns(corte alguns) {
-                this.alguns = alguns;
-            }
-            public bits getFazendo() {
-                return fazendo;
-            }
-            public void setFazendo(bits fazendo) {
-                this.fazendo = fazendo;
-            }
-            public ser getQue() {
-                return que;
-            }
-            public void setQue(ser que) {
-                this.que = que;
-            }
-            public crie getNumeros() {
-                return numeros;
-            }
-            public void setNumeros(crie numeros) {
-                this.numeros = numeros;
-            }
-            public aqui getSe() {
-                return se;
-            }
-            public void setSe(aqui se) {
-                this.se = se;
-            }
-            public colocamos getO() {
-                return o;
-            }
-            public void setO(colocamos o) {
-                this.o = o;
-            }
-            public tamanho getCouber() {
-                return couber;
-            }
-            public void setCouber(tamanho couber) {
-                this.couber = couber;
-            }
-            public o getCompilador() {
-                return compilador;
-            }
-            public void setCompilador(o compilador) {
-                this.compilador = compilador;
-            }
-            public vai getAceitar() {
-                return aceitar;
-            }
-            public void setAceitar(vai aceitar) {
-                this.aceitar = aceitar;
-            }
-            public bytes getVai() {
-                return vai;
-            }
-            public void setVai(bytes vai) {
-                this.vai = vai;
-            }
-            public colocamos getO() {
-                return o;
-            }
-            public void setO(colocamos o) {
-                this.o = o;
-            }
-            public numero getNormalmente() {
-                return normalmente;
-            }
-            public void setNormalmente(numero normalmente) {
-                this.normalmente = normalmente;
-            }
-            public COMECA getCOM() {
-                return COM;
-            }
-            public void setCOM(COMECA cOM) {
-                COM = cOM;
-            }
-            public LETRA getMAIUSCULA() {
-                return MAIUSCULA;
-            }
-            public void setMAIUSCULA(LETRA mAIUSCULA) {
-                MAIUSCULA = mAIUSCULA;
-            }
-            public PORQUE getELA() {
-                return ELA;
-            }
-            public void setELA(PORQUE eLA) {
-                ELA = eLA;
-            }
-            public PRECISA getDE() {
-                return DE;
-            }
-            public void setDE(PRECISA dE) {
-                DE = dE;
-            }
-            public UM getIDENTIFICADOR() {
-                return IDENTIFICADOR;
-            }
-            public void setIDENTIFICADOR(UM iDENTIFICADOR) {
-                IDENTIFICADOR = iDENTIFICADOR;
-            }
-            public objeto getE() {
-                return e;
-            }
-            public void setE(objeto e) {
-                this.e = e;
-            }
-            public se getInicia() {
-                return inicia;
-            }
-            public void setInicia(se inicia) {
-                this.inicia = inicia;
-            }
-            public de getAspas() {
-                return aspas;
-            }
-            public void setAspas(de aspas) {
-                this.aspas = aspas;
-            }
-            public o getNome() {
-                return nome;
-            }
-            public void setNome(o nome) {
-                this.nome = nome;
-            }
-            public OPERADORES getARITIMETICOS() {
-                return ARITIMETICOS;
-            }
-            public void setARITIMETICOS(OPERADORES aRITIMETICOS) {
-                ARITIMETICOS = aRITIMETICOS;
-            }
-            public OPREDORES getRELACIONAIS() {
-                return RELACIONAIS;
-            }
-            public void setRELACIONAIS(OPREDORES rELACIONAIS) {
-                RELACIONAIS = rELACIONAIS;
-            }
-            public a getPorcetagem() {
-                return porcetagem;
-            }
-            public void setPorcetagem(a porcetagem) {
-                this.porcetagem = porcetagem;
-            }
-            public utilizamos getPara() {
-                return para;
-            }
-            public void setPara(utilizamos para) {
-                this.para = para;
-            }
-            public colocamos getO() {
-                return o;
-            }
-            public void setO(colocamos o) {
-                this.o = o;
-            }
-            public objeto getDa() {
-                return da;
-            }
-            public void setDa(objeto da) {
-                this.da = da;
-            }
-            public operacao getEx() {
-                return ex;
-            }
-            public void setEx(operacao ex) {
-                this.ex = ex;
-            }
-            public int getResto() {
-                return resto;
-            }
-            public void setResto(int resto) {
-                this.resto = resto;
-            }
-            public isso getResultara() {
-                return resultara;
-            }
-            public void setResultara(isso resultara) {
-                this.resultara = resultara;
-            }
-            public colocamos getO() {
-                return o;
-            }
-            public void setO(colocamos o) {
-                this.o = o;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public objeto getE() {
-                return e;
-            }
-            public void setE(objeto e) {
-                this.e = e;
-            }
-            public OPERADORES getBOOLEANOS() {
-                return BOOLEANOS;
-            }
-            public void setBOOLEANOS(OPERADORES bOOLEANOS) {
-                BOOLEANOS = bOOLEANOS;
-            }
-            public retorna getValores() {
-                return valores;
-            }
-            public void setValores(retorna valores) {
-                this.valores = valores;
-            }
-            public verdadeiros getOu() {
-                return ou;
-            }
-            public void setOu(verdadeiros ou) {
-                this.ou = ou;
-            }
-            public operacao getEx() {
-                return ex;
-            }
-            public void setEx(operacao ex) {
-                this.ex = ex;
-            }
-            public boolean isDezMaiorQueVinte() {
-                return isDezMaiorQueVinte;
-            }
-            public void setDezMaiorQueVinte(boolean isDezMaiorQueVinte) {
-                this.isDezMaiorQueVinte = isDezMaiorQueVinte;
-            }
-            public isso getIra() {
-                return ira;
-            }
-            public void setIra(isso ira) {
-                this.ira = ira;
-            }
-            public OPERADORES getLOGICOS() {
-                return LOGICOS;
-            }
-            public void setLOGICOS(OPERADORES lOGICOS) {
-                LOGICOS = lOGICOS;
-            }
-            public IGUAL getA() {
-                return A;
-            }
-            public void setA(IGUAL a) {
-                A = a;
-            }
-            public MESMO getQUE() {
-                return QUE;
-            }
-            public void setQUE(MESMO qUE) {
-                QUE = qUE;
-            }
-            public C getTAMBEM() {
-                return TAMBEM;
-            }
-            public void setTAMBEM(C tAMBEM) {
-                TAMBEM = tAMBEM;
-            }
-            public ESTRUTURAS getCONDICIONAIS() {
-                return CONDICIONAIS;
-            }
-            public void setCONDICIONAIS(ESTRUTURAS cONDICIONAIS) {
-                CONDICIONAIS = cONDICIONAIS;
-            }
-            public double getIdade() {
-                return idade;
-            }
-            public void setIdade(double idade) {
-                this.idade = idade;
-            }
-            public boolean isAutorizadoBeber() {
-                return isAutorizadoBeber;
-            }
-            public void setAutorizadoBeber(boolean isAutorizadoBeber) {
-                this.isAutorizadoBeber = isAutorizadoBeber;
-            }
-            public operacao getEx() {
-                return ex;
-            }
-            public void setEx(operacao ex) {
-                this.ex = ex;
-            }
-            public para getDeclarar() {
-                return declarar;
-            }
-            public void setDeclarar(para declarar) {
-                this.declarar = declarar;
-            }
-            public um getArray() {
-                return array;
-            }
-            public void setArray(um array) {
-                this.array = array;
-            }
-            public em getJava() {
-                return java;
-            }
-            public void setJava(em java) {
-                this.java = java;
-            }
-            public precisar getReferenciar() {
-                return referenciar;
-            }
-            public void setReferenciar(precisar referenciar) {
-                this.referenciar = referenciar;
-            }
-            public objeto getEm() {
-                return em;
-            }
-            public void setEm(objeto em) {
-                this.em = em;
-            }
-            public objeto getE() {
-                return e;
-            }
-            public void setE(objeto e) {
-                this.e = e;
-            }
-            public colocamos getO() {
-                return o;
-            }
-            public void setO(colocamos o) {
-                this.o = o;
-            }
-            public tamanho getDos() {
-                return dos;
-            }
-            public void setDos(tamanho dos) {
-                this.dos = dos;
-            }
-            public int[] getIdades() {
-                return idades;
-            }
-            public void setIdades(int[] idades) {
-                this.idades = idades;
-            }
-            public a getInicializao() {
-                return inicializao;
-            }
-            public void setInicializao(a inicializao) {
-                this.inicializao = inicializao;
-            }
-            public ou getNao() {
-                return nao;
-            }
-            public void setNao(ou nao) {
-                this.nao = nao;
-            }
-            public conter getNenhum() {
-                return nenhum;
-            }
-            public void setNenhum(conter nenhum) {
-                this.nenhum = nenhum;
-            }
-            public valor getDentro() {
-                return dentro;
-            }
-            public void setDentro(valor dentro) {
-                this.dentro = dentro;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public isso getQuer() {
-                return quer;
-            }
-            public void setQuer(isso quer) {
-                this.quer = quer;
-            }
-            public ser getQue() {
-                return que;
-            }
-            public void setQue(ser que) {
-                this.que = que;
-            }
-            public os getEspacos() {
-                return espacos;
-            }
-            public void setEspacos(os espacos) {
-                this.espacos = espacos;
-            }
-            public na getMemoria() {
-                return memoria;
-            }
-            public void setMemoria(na memoria) {
-                this.memoria = memoria;
-            }
-            public nao getEsta() {
-                return esta;
-            }
-            public void setEsta(nao esta) {
-                this.esta = esta;
-            }
-            public sendo getUtilizados() {
-                return utilizados;
-            }
-            public void setUtilizados(sendo utilizados) {
-                this.utilizados = utilizados;
-            }
-            public para getNada() {
-                return nada;
-            }
-            public void setNada(para nada) {
-                this.nada = nada;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public declarar getOs() {
-                return os;
-            }
-            public void setOs(declarar os) {
-                this.os = os;
-            }
-            public int[] getNum1() {
-                return num1;
-            }
-            public void setNum1(int[] num1) {
-                this.num1 = num1;
-            }
-            public int[] getNum2() {
-                return num2;
-            }
-            public void setNum2(int[] num2) {
-                this.num2 = num2;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public int[] getNum3() {
-                return num3;
-            }
-            public void setNum3(int[] num3) {
-                this.num3 = num3;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public int[][] getMatriz() {
-                return matriz;
-            }
-            public void setMatriz(int[][] matriz) {
-                this.matriz = matriz;
-            }
-            public METODOS getSemRetorno() {
-                return SemRetorno;
-            }
-            public void setSemRetorno(METODOS semRetorno) {
-                SemRetorno = semRetorno;
-            }
-            public Metodos getSao() {
-                return sao;
-            }
-            public void setSao(Metodos sao) {
-                this.sao = sao;
-            }
-            public float getCom() {
-                return com;
-            }
-            public void setCom(float com) {
-                this.com = com;
-            }
-            public voce getPrecisa() {
-                return precisa;
-            }
-            public void setPrecisa(voce precisa) {
-                this.precisa = precisa;
-            }
-            public e getUm() {
-                return um;
-            }
-            public void setUm(e um) {
-                this.um = um;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public ser getQue() {
-                return que;
-            }
-            public void setQue(ser que) {
-                this.que = que;
-            }
-            public colocamos getO() {
-                return o;
-            }
-            public void setO(colocamos o) {
-                this.o = o;
-            }
-            public e getDepois() {
-                return depois;
-            }
-            public void setDepois(e depois) {
-                this.depois = depois;
-            }
-            public o getMetodo() {
-                return metodo;
-            }
-            public void setMetodo(o metodo) {
-                this.metodo = metodo;
-            }
-            public de getRetorno() {
-                return retorno;
-            }
-            public void setRetorno(de retorno) {
-                this.retorno = retorno;
-            }
-            public de getRetorno() {
-                return retorno;
-            }
-            public void setRetorno(de retorno) {
-                this.retorno = retorno;
-            }
-            public ou getSeja() {
-                return seja;
-            }
-            public void setSeja(ou seja) {
-                this.seja = seja;
-            }
-            public nao getRetorna() {
-                return retorna;
-            }
-            public void setRetorna(nao retorna) {
-                this.retorna = retorna;
-            }
-            public para getExecutar() {
-                return executar;
-            }
-            public void setExecutar(para executar) {
-                this.executar = executar;
-            }
-            public metodo getPrecisamos() {
-                return precisamos;
-            }
-            public void setPrecisamos(metodo precisamos) {
-                this.precisamos = precisamos;
-            }
-            public para getCriar() {
-                return criar;
-            }
-            public void setCriar(para criar) {
-                this.criar = criar;
-            }
-            public nome getVariavel() {
-                return variavel;
-            }
-            public void setVariavel(nome variavel) {
-                this.variavel = variavel;
-            }
-            public de getReferencia() {
-                return referencia;
-            }
-            public void setReferencia(de referencia) {
-                this.referencia = referencia;
-            }
-            public e getDepois() {
-                return depois;
-            }
-            public void setDepois(e depois) {
-                this.depois = depois;
-            }
-            public as getVariaveis() {
-                return variaveis;
-            }
-            public void setVariaveis(as variaveis) {
-                this.variaveis = variaveis;
-            }
-            public ser getQue() {
-                return que;
-            }
-            public void setQue(ser que) {
-                this.que = que;
-            }
-            public vao getEstar() {
-                return estar;
-            }
-            public void setEstar(vao estar) {
-                this.estar = estar;
-            }
-            public viva getDurante() {
-                return durante;
-            }
-            public void setDurante(viva durante) {
-                this.durante = durante;
-            }
-            public o getContexto() {
-                return contexto;
-            }
-            public void setContexto(o contexto) {
-                this.contexto = contexto;
-            }
-            public verdadeiros getOu() {
-                return ou;
-            }
-            public void setOu(verdadeiros ou) {
-                this.ou = ou;
-            }
-            public metodo getSintaxe() {
-                return Sintaxe;
-            }
-            public void setSintaxe(metodo sintaxe) {
-                Sintaxe = sintaxe;
-            }
-            public e getColocado() {
-                return colocado;
-            }
-            public void setColocado(e colocado) {
-                this.colocado = colocado;
-            }
-            public o getIdentificador() {
-                return identificador;
-            }
-            public void setIdentificador(o identificador) {
-                this.identificador = identificador;
-            }
-            public e getDepois() {
-                return depois;
-            }
-            public void setDepois(e depois) {
-                this.depois = depois;
-            }
-            public o getNome() {
-                return nome;
-            }
-            public void setNome(o nome) {
-                this.nome = nome;
-            }
-            public de getReferencia() {
-                return referencia;
-            }
-            public void setReferencia(de referencia) {
-                this.referencia = referencia;
-            }
-            public nome getVariavel() {
-                return variavel;
-            }
-            public void setVariavel(nome variavel) {
-                this.variavel = variavel;
-            }
-            public essa getClasse() {
-                return classe;
-            }
-            public void setClasse(essa classe) {
-                this.classe = classe;
-            }
-            public aqui getSe() {
-                return se;
-            }
-            public void setSe(aqui se) {
-                this.se = se;
-            }
-            public como getMostrar() {
-                return mostrar;
-            }
-            public void setMostrar(como mostrar) {
-                this.mostrar = mostrar;
-            }
-            public o getResultado() {
-                return resultado;
-            }
-            public void setResultado(o resultado) {
-                this.resultado = resultado;
-            }
-            public Teste getCalcular() {
-                return calcular;
-            }
-            public void setCalcular(Teste calcular) {
-                this.calcular = calcular;
-            }
-            public o getResultado() {
-                return resultado;
-            }
-            public void setResultado(o resultado) {
-                this.resultado = resultado;
-            }
-            public atribuindo getDois() {
-                return dois;
-            }
-            public void setDois(atribuindo dois) {
-                this.dois = dois;
-            }
-            public minuscula getA() {
-                return a;
-            }
-            public void setA(minuscula a) {
-                this.a = a;
-            }
-            public nome getVariavel() {
-                return variavel;
-            }
-            public void setVariavel(nome variavel) {
-                this.variavel = variavel;
-            }
-            public na getHora() {
-                return hora;
-            }
-            public void setHora(na hora) {
-                this.hora = hora;
-            }
-            public de getAtribuir() {
-                return atribuir;
-            }
-            public void setAtribuir(de atribuir) {
-                this.atribuir = atribuir;
-            }
-            public o getMetodo() {
-                return metodo;
-            }
-            public void setMetodo(o metodo) {
-                this.metodo = metodo;
-            }
-            public e getUma() {
-                return uma;
-            }
-            public void setUma(e uma) {
-                this.uma = uma;
-            }
-            public ser getQue() {
-                return que;
-            }
-            public void setQue(ser que) {
-                this.que = que;
-            }
-            public variavel getDe() {
-                return de;
-            }
-            public void setDe(variavel de) {
-                this.de = de;
-            }
-            public outro getTipo() {
-                return tipo;
-            }
-            public void setTipo(outro tipo) {
-                this.tipo = tipo;
-            }
-            public vamos getSupor() {
-                return supor;
-            }
-            public void setSupor(vamos supor) {
-                this.supor = supor;
-            }
-            public o getMetodo() {
-                return metodo;
-            }
-            public void setMetodo(o metodo) {
-                this.metodo = metodo;
-            }
-            public objeto getE() {
-                return e;
-            }
-            public void setE(objeto e) {
-                this.e = e;
-            }
-            public nome getVariavel() {
-                return variavel;
-            }
-            public void setVariavel(nome variavel) {
-                this.variavel = variavel;
-            }
-            public int getTeremos() {
-                return teremos;
-            }
-            public void setTeremos(int teremos) {
-                this.teremos = teremos;
-            }
-            public que getFazer() {
-                return fazer;
-            }
-            public void setFazer(que fazer) {
-                this.fazer = fazer;
-            }
-            public um getCasting() {
-                return casting;
-            }
-            public void setCasting(um casting) {
-                this.casting = casting;
-            }
-            public ou getSeja() {
-                return seja;
-            }
-            public void setSeja(ou seja) {
-                this.seja = seja;
-            }
-            public e getUma() {
-                return uma;
-            }
-            public void setUma(e uma) {
-                this.uma = uma;
-            }
-            public minuscula getA() {
-                return a;
-            }
-            public void setA(minuscula a) {
-                this.a = a;
-            }
-            public e getUma() {
-                return uma;
-            }
-            public void setUma(e uma) {
-                this.uma = uma;
-            }
-            public passamos getParametros() {
-                return parametros;
-            }
-            public void setParametros(passamos parametros) {
-                this.parametros = parametros;
-            }
-            public objeto getE() {
-                return e;
-            }
-            public void setE(objeto e) {
-                this.e = e;
-            }
-            public e getUm() {
-                return um;
-            }
-            public void setUm(e um) {
-                this.um = um;
-            }
-            public tipo getInteiro() {
-                return inteiro;
-            }
-            public void setInteiro(tipo inteiro) {
-                this.inteiro = inteiro;
-            }
-            public tipo getQueremos() {
-                return queremos;
-            }
-            public void setQueremos(tipo queremos) {
-                this.queremos = queremos;
-            }
-            public que getRetorne() {
-                return retorne;
-            }
-            public void setRetorne(que retorne) {
-                this.retorne = retorne;
-            }
-            public um getValor() {
-                return valor;
-            }
-            public void setValor(um valor) {
-                this.valor = valor;
-            }
-            public inteiro getEntao() {
-                return entao;
-            }
-            public void setEntao(inteiro entao) {
-                this.entao = entao;
-            }
-            public e getUm() {
-                return um;
-            }
-            public void setUm(e um) {
-                this.um = um;
-            }
-            public utilizamos getPara() {
-                return para;
-            }
-            public void setPara(utilizamos para) {
-                this.para = para;
-            }
-            public minuscula getA() {
-                return a;
-            }
-            public void setA(minuscula a) {
-                this.a = a;
-            }
-            public minuscula getA() {
-                return a;
-            }
-            public void setA(minuscula a) {
-                this.a = a;
-            }
-            public entrar getNa() {
-                return na;
-            }
-            public void setNa(entrar na) {
-                this.na = na;
-            }
-            public inteira.FORMAS getDIFERENTES() {
-                return DIFERENTES;
-            }
-            public void setDIFERENTES(inteira.FORMAS dIFERENTES) {
-                DIFERENTES = dIFERENTES;
-            }
-            public DE getSE() {
-                return SE;
-            }
-            public void setSE(DE sE) {
-                SE = sE;
-            }
-            public UTILIZAR getOS() {
-                return OS;
-            }
-            public void setOS(UTILIZAR oS) {
-                OS = oS;
-            }
-            public COMECA getCOM() {
-                return COM;
-            }
-            public void setCOM(COMECA cOM) {
-                COM = cOM;
-            }
-            public RETORNO getOU() {
-                return OU;
-            }
-            public void setOU(RETORNO oU) {
-                OU = oU;
-            }
-            public EXEMPLO getPARA() {
-                return PARA;
-            }
-            public void setPARA(EXEMPLO pARA) {
-                PARA = pARA;
-            }
-            public O getMESMO() {
-                return MESMO;
-            }
-            public void setMESMO(O mESMO) {
-                MESMO = mESMO;
-            }
-            public COMO getUTILIZAR() {
-                return UTILIZAR;
-            }
-            public void setUTILIZAR(COMO uTILIZAR) {
-                UTILIZAR = uTILIZAR;
-            }
-            public O getRETURN() {
-                return RETURN;
-            }
-            public void setRETURN(O rETURN) {
-                RETURN = rETURN;
-            }
-            public EM getUM() {
-                return UM;
-            }
-            public void setUM(EM uM) {
-                UM = uM;
-            }
-            public METODO getVOID() {
-                return VOID;
-            }
-            public void setVOID(METODO vOID) {
-                VOID = vOID;
-            }
-            public aqui getSe() {
-                return se;
-            }
-            public void setSe(aqui se) {
-                this.se = se;
-            }
-            public e getComo() {
-                return como;
-            }
-            public void setComo(e como) {
-                this.como = como;
-            }
-            public se getFosse() {
-                return fosse;
-            }
-            public void setFosse(se fosse) {
-                this.fosse = fosse;
-            }
-            public minuscula getA() {
-                return a;
-            }
-            public void setA(minuscula a) {
-                this.a = a;
-            }            import dominio.Teste;
+        --> quando passamos uma variavel primitiva para um metodo e alteramos o valor dela dentro do metodo, a variavel original nao sera alterada, porque estamos passando uma copia da variavel e nao a referencia dela;
 
     public class Main {
     public static void main(String[] args) {
@@ -5724,91 +4184,91 @@ EXCECOES E REGRAS DE SOBRESCRITA
 
 
 
-CLASSES UTILITARIAS WRAPPERS 
+// CLASSES UTILITARIAS WRAPPERS 
 
-    -> sao classes que vao melhorar o desempenho de nossas aplicacoes, melhorar o codigo, sao coisas que esta la para gente utiliziar.
+//     -> sao classes que vao melhorar o desempenho de nossas aplicacoes, melhorar o codigo, sao coisas que esta la para gente utiliziar.
 
-            o que são Wrappers? Objetos que vao encapsular os tipos primitivos, que sao eles;
+//             o que são Wrappers? Objetos que vao encapsular os tipos primitivos, que sao eles;
 
-                - byte
-                - short
-                - int 
-                - long
-                - float
-                - double
-                - char
-                - boolean
+//                 - byte
+//                 - short
+//                 - int 
+//                 - long
+//                 - float
+//                 - double
+//                 - char
+//                 - boolean
 
-                --> aqui trabalhamos com a regra de bits, tamanho do espaco em memoria que voce esta alocando.
+//                 --> aqui trabalhamos com a regra de bits, tamanho do espaco em memoria que voce esta alocando.
                 
-        public class Wrapper{
-            public static void main(String[] args){
-                Byte byteW = 1;
-                Short shortW = 1;
-                Integer intW = 1;
-                Long longW = 10L;
-                Float floatW = 10F;
-                Double doubleW = 10D;
-                Character charW = 'a';
-                Boolean booleanW = true;
+//         public class Wrapper{
+//             public static void main(String[] args){
+//                 Byte byteW = 1;
+//                 Short shortW = 1;
+//                 Integer intW = 1;
+//                 Long longW = 10L;
+//                 Float floatW = 10F;
+//                 Double doubleW = 10D;
+//                 Character charW = 'a';
+//                 Boolean booleanW = true;
 
-                --> para se criar um Wrapper basta pegar o nome do tipo primitivo e comecar com letra maiuscula, com duas excecoes sendo eles o int e o char.
-            }   
+//                 --> para se criar um Wrapper basta pegar o nome do tipo primitivo e comecar com letra maiuscula, com duas excecoes sendo eles o int e o char.
+//             }   
 
-                --> quando trabalhamos com classes Wrappers, eles valores estao relacionados ao polimorfismo, nao mais aos valores dos tipos primitivos relacionado ao tamanho que voce pode colocar em memoria.
+//                 --> quando trabalhamos com classes Wrappers, eles valores estao relacionados ao polimorfismo, nao mais aos valores dos tipos primitivos relacionado ao tamanho que voce pode colocar em memoria.
 
-                --> esses caras sao objetos, quando voce esta trabalhando com a passagem de parametros voce esta passando atraves de referencia. 
+//                 --> esses caras sao objetos, quando voce esta trabalhando com a passagem de parametros voce esta passando atraves de referencia. 
 
-                porque o java criou isso? um dos motivos e voce poder passar os valores numericos por referecia nao mais por valor, para caso queiramos fazer alguma alteracao dentro do metodo, o segundo motivo e quando trabalharmos com estrutura de dados do pacote de colecoes, com arrayLists, vetores, collections nao trabalham com tipos primitivos, nao podemos trabalhar com tipos primitivos pois dentro de colecoes guardamos por referencia. Quando trabalharmos com threds precisamos de objetos para trabalhar na parte de sincronizacao.
-        }
+//                 porque o java criou isso? um dos motivos e voce poder passar os valores numericos por referecia nao mais por valor, para caso queiramos fazer alguma alteracao dentro do metodo, o segundo motivo e quando trabalharmos com estrutura de dados do pacote de colecoes, com arrayLists, vetores, collections nao trabalham com tipos primitivos, nao podemos trabalhar com tipos primitivos pois dentro de colecoes guardamos por referencia. Quando trabalharmos com threds precisamos de objetos para trabalhar na parte de sincronizacao.
+//         }
 
 
-        AUTOBOXING 
-            -> E quando temos um tipo primitivo, mas fazemos o java transformar esse tipo primitivo em Wapper.
+//         AUTOBOXING 
+//             -> E quando temos um tipo primitivo, mas fazemos o java transformar esse tipo primitivo em Wapper.
 
-            EX: Integer intW = 1;
+//             EX: Integer intW = 1;
 
-        UNBOXING
-            -> E quando temos uma variavel primitiva mas queremos pegar o Wapper, entao o java esta se encarregando de transformar esse tipo Wapper em primitivo.
+//         UNBOXING
+//             -> E quando temos uma variavel primitiva mas queremos pegar o Wapper, entao o java esta se encarregando de transformar esse tipo Wapper em primitivo.
 
-            EX: int i = intW;
+//             EX: int i = intW;
 
 
         
 
-        --> temos a obcao, ja que estamos trabalhando com obj de agora utilizar metodos.
+//         --> temos a obcao, ja que estamos trabalhando com obj de agora utilizar metodos.
 
-            ex: int i = intW.intValue();
+//             ex: int i = intW.intValue();
 
-                -> basicamente o que o java vai fazer com esse metodo e um cast
+//                 -> basicamente o que o java vai fazer com esse metodo e um cast
                 
 
-            ex2: Integer intW2 = Integer.parseInt("10");
+//             ex2: Integer intW2 = Integer.parseInt("10");
 
-                -> o que esse metodo faz? ele pega uma string e transforma em um inteiro, e isso e muito util quando estamos trabalhando com entrada de dados, quando estamos trabalhando com arquivos, quando estamos trabalhando com banco de dados, e muito util para transformar uma string em um inteiro, e isso e muito util para trabalhar com Wrappers.
+//                 -> o que esse metodo faz? ele pega uma string e transforma em um inteiro, e isso e muito util quando estamos trabalhando com entrada de dados, quando estamos trabalhando com arquivos, quando estamos trabalhando com banco de dados, e muito util para transformar uma string em um inteiro, e isso e muito util para trabalhar com Wrappers.
                 
 
-            PARA CARACTER TEMOS METODOS: 
+//             PARA CARACTER TEMOS METODOS: 
 
-            Caracter.isDigit('a'); // retorna false, aceita valores numericos
+//             Caracter.isDigit('a'); // retorna false, aceita valores numericos
 
-            Caracter.isLetter('a'); // retorna true, aceita valores de letras
+//             Caracter.isLetter('a'); // retorna true, aceita valores de letras
 
-            Caracter.isLetterOrDigit('a'); // retorna true, aceita valores de letras e numeros, caso passe um valor '!@#$%¨&*' ele ira retornar false.
+//             Caracter.isLetterOrDigit('a'); // retorna true, aceita valores de letras e numeros, caso passe um valor '!@#$%¨&*' ele ira retornar false.
 
-            Caracter.isLowerCase('a'); // retorna true, aceita valores de letras minusculas
+//             Caracter.isLowerCase('a'); // retorna true, aceita valores de letras minusculas
 
-            Caracter.isUpperCase('a'); // retorna false, aceita valores de letras maiusculas
+//             Caracter.isUpperCase('a'); // retorna false, aceita valores de letras maiusculas
 
-            Caracter.toUpperCase('a'); // retorna 'A', transforma a letra minuscula em maiuscula
+//             Caracter.toUpperCase('a'); // retorna 'A', transforma a letra minuscula em maiuscula
 
-            Caracter.toLowerCase('A'); // retorna 'a', transforma a letra maiuscula em minuscula
+//             Caracter.toLowerCase('A'); // retorna 'a', transforma a letra maiuscula em minuscula
 
-            Caracter.isWhitespace(' '); // retorna true, aceita valores de espacos em branco
+//             Caracter.isWhitespace(' '); // retorna true, aceita valores de espacos em branco
 
-            Caracter.isWhitespace('\t'); // retorna true, aceita valores de tabulacao
+//             Caracter.isWhitespace('\t'); // retorna true, aceita valores de tabulacao
 
-            Caracter.isWhitespace('\n'); // retorna true, aceita valores de quebra de linha
+//             Caracter.isWhitespace('\n'); // retorna true, aceita valores de quebra de linha
 
             
 
@@ -5816,287 +4276,287 @@ CLASSES UTILITARIAS WRAPPERS
 
 
 
-CLASSES UTILITARIAS STRINGS
+// CLASSES UTILITARIAS STRINGS
 
-    -> Strings no java sao imutaveis 
+//     -> Strings no java sao imutaveis 
 
-    ex: 
-        public class StringTeste{
-            public static void main(Strings[] args){
+//     ex: 
+//         public class StringTeste{
+//             public static void main(Strings[] args){
 
-                String nome = "Kayque"; // String constant pool
+//                 String nome = "Kayque"; // String constant pool
 
-            }
-        }
-        {
-            --> isso significa que uma piscina constante de strings, se tivessimos que desenhar esse cara, e como se tivesse um quadrado grande, que e o Heap(Onde todos os objetos moram), e dentro dessa parte o java cria um espaco especialmente para as Strings, e esse espaco e chamado String pool.
+//             }
+//         }
+//         {
+//             --> isso significa que uma piscina constante de strings, se tivessimos que desenhar esse cara, e como se tivesse um quadrado grande, que e o Heap(Onde todos os objetos moram), e dentro dessa parte o java cria um espaco especialmente para as Strings, e esse espaco e chamado String pool.
 
-            --> O java utiliza essa parte de String pool, porque existe um conceito da Ciencia da Computacao chamado (String Interning), que basicamente e quando voce utiliza as Strings de forma imutavel, ou seja, no Java toda String que voce esta criando, se criar ela pela primeira vez ela ira ser alocada no pool de String, mas se voce cria pela segunda vez o java nao ira duplicar. 
+//             --> O java utiliza essa parte de String pool, porque existe um conceito da Ciencia da Computacao chamado (String Interning), que basicamente e quando voce utiliza as Strings de forma imutavel, ou seja, no Java toda String que voce esta criando, se criar ela pela primeira vez ela ira ser alocada no pool de String, mas se voce cria pela segunda vez o java nao ira duplicar. 
 
-            --> Entao quando colocamos a String nome = "Kayque", temos uma variavel de referencia onde faz refencia para o nome dentro da pool de String, e como sabemos que isso e verdade ? podemos fazer o seguinte: 
+//             --> Entao quando colocamos a String nome = "Kayque", temos uma variavel de referencia onde faz refencia para o nome dentro da pool de String, e como sabemos que isso e verdade ? podemos fazer o seguinte: 
 
-            String nome = "Kayque";
-            String nome2 = "Kayque";
+//             String nome = "Kayque";
+//             String nome2 = "Kayque";
 
-            System.out.println(nome == nome2);
+//             System.out.println(nome == nome2);
                 
-                -> quando quisemos comparar a referencia do objeto utilizamos o ==, e nesse caso ele ira retornar true, ou seja, isso significa que esses dois valores estao fazendo referencia para o mesmo objeto em memoria que e o "Kayque", e isso e muito util para economizar memoria, e tambem para melhorar o desempenho da aplicacao, e isso e muito util para trabalhar com Strings.
+//                 -> quando quisemos comparar a referencia do objeto utilizamos o ==, e nesse caso ele ira retornar true, ou seja, isso significa que esses dois valores estao fazendo referencia para o mesmo objeto em memoria que e o "Kayque", e isso e muito util para economizar memoria, e tambem para melhorar o desempenho da aplicacao, e isso e muito util para trabalhar com Strings.
 
-                    -> E importante perceber que como String e imutavel, nao e possivel voce alterar esse valor, como veremos: 
+//                     -> E importante perceber que como String e imutavel, nao e possivel voce alterar esse valor, como veremos: 
 
-                    public class StringTeste{
-                        public static void main(Strings[] args){
+//                     public class StringTeste{
+//                         public static void main(Strings[] args){
 
-                            String nome = "Kayque";
-                            String nome2 = "Kayque";
+//                             String nome = "Kayque";
+//                             String nome2 = "Kayque";
 
-                            nome.concat(" Allan"); --> metodo para concatenar Strings
+//                             nome.concat(" Allan"); --> metodo para concatenar Strings
 
-                            System.out.println(nome); // ira retornar somente Kayque, e nao Kayque Allan
+//                             System.out.println(nome); // ira retornar somente Kayque, e nao Kayque Allan
 
-                            System.out.println(nome == nome2); --> ira retornar true 
+//                             System.out.println(nome == nome2); --> ira retornar true 
 
 
-                            --> agora vamos entender, como isso deu true sempre que concatenamos isso, e ta concatenando com um sobrenome, e ai que vem a imutabilidade das Strings, a nao ser que fazemos uma nova associacao, nao podemos trocar o valor que existe.
-            }               
-        }   
+//                             --> agora vamos entender, como isso deu true sempre que concatenamos isso, e ta concatenando com um sobrenome, e ai que vem a imutabilidade das Strings, a nao ser que fazemos uma nova associacao, nao podemos trocar o valor que existe.
+//             }               
+//         }   
 
-        -->  Entao o que esta acontecendo ai, e que tem mais uma String sendo criada na pool de Strings, sendo " Allan", e existe ainda a String concatenada("Kayque Allan"), mas o problema e que nao existe uma variavel de referencia para elas, o que poderiamos fazer e o seguinte:
+//         -->  Entao o que esta acontecendo ai, e que tem mais uma String sendo criada na pool de Strings, sendo " Allan", e existe ainda a String concatenada("Kayque Allan"), mas o problema e que nao existe uma variavel de referencia para elas, o que poderiamos fazer e o seguinte:
 
-        public class StringTeste{
-            public static void main(Strings[] args){
-                    String nome = "Kayque";
-                    String nome2 = "Kayque";
+//         public class StringTeste{
+//             public static void main(Strings[] args){
+//                     String nome = "Kayque";
+//                     String nome2 = "Kayque";
 
-                    nome = nome.concat(" Allan"); 
+//                     nome = nome.concat(" Allan"); 
                     
-                    // -> Agora a variavel nome esta fazendo referencia para a nova String que foi criada, sendo ela "Kayque Allan".
+//                     // -> Agora a variavel nome esta fazendo referencia para a nova String que foi criada, sendo ela "Kayque Allan".
 
-                    System.out.println(nome); // ira retornar "Kayque Allan"
+//                     System.out.println(nome); // ira retornar "Kayque Allan"
 
-                    System.out.println(nome == nome2); --> ira retornar false 
+//                     System.out.println(nome == nome2); --> ira retornar false 
 
-                }
+//                 }
 
-                --> Agora quando for impresso ira imprimir "Kayque Allan", e tambem quando tenta comparar as duas ira retorar false, pois agora a variavel nome -> aponta para uma nova String que foi criada.
+//                 --> Agora quando for impresso ira imprimir "Kayque Allan", e tambem quando tenta comparar as duas ira retorar false, pois agora a variavel nome -> aponta para uma nova String que foi criada.
 
-            }
+//             }
 
 
             
-            --> agora o que acontece se criarmos uma Strig como se fosse objeto? E possivel criar...
+//             --> agora o que acontece se criarmos uma Strig como se fosse objeto? E possivel criar...
 
-            ex: 
-                String nome3 = new String ("Kayque");
+//             ex: 
+//                 String nome3 = new String ("Kayque");
 
 
-            ex em codigo:
-                public class StringTeste{
-                    public static void main(Strings[] args){
-                        String nome2 = "Kayque";
-                        String nome3 = new String ("Kayque");
+//             ex em codigo:
+//                 public class StringTeste{
+//                     public static void main(Strings[] args){
+//                         String nome2 = "Kayque";
+//                         String nome3 = new String ("Kayque");
 
-                    System.out.println(nomeI == nomeO); --> ira retornar false 
+//                     System.out.println(nomeI == nomeO); --> ira retornar false 
 
-                }
+//                 }
 
-                --> Veremos que ira retornar falso, pois o que esta acontecendo e que temos uma variavel nomeO, fazendo referencia a um objeto, quando criamos dessa forma, esta criando a String em outro lugar, o que esta acontecendo e que estamos criando a String dentro do Heap de memoria(nao no pool de String), entao o nome3 esta fazendo referencia para um objeto que esta no Heap, onde seu conteudo continua sendo o mesmo "Kayque", ou seja, nome3 esta fazendo referencia para um OBJETO que encapsula a String.
+//                 --> Veremos que ira retornar falso, pois o que esta acontecendo e que temos uma variavel nomeO, fazendo referencia a um objeto, quando criamos dessa forma, esta criando a String em outro lugar, o que esta acontecendo e que estamos criando a String dentro do Heap de memoria(nao no pool de String), entao o nome3 esta fazendo referencia para um objeto que esta no Heap, onde seu conteudo continua sendo o mesmo "Kayque", ou seja, nome3 esta fazendo referencia para um OBJETO que encapsula a String.
 
-                {
-                    se quisessemos pegar o valor(conteudo dentro do objeto poderiamos) fazer o seguinte:
+//                 {
+//                     se quisessemos pegar o valor(conteudo dentro do objeto poderiamos) fazer o seguinte:
 
-                    System.out.println(nome2 == nome3.intern()); --> ira retornar true
+//                     System.out.println(nome2 == nome3.intern()); --> ira retornar true
  
-                }
+//                 }
 
 
-                    String nome3 = new String ("Kayque");
+//                     String nome3 = new String ("Kayque");
 
-                        -> isso entao cria uma variavel de referencia, tambem um objeto do tipo String, e tambe uma String na pool de String caso nao tenha sido criada.
-
-
-            }
+//                         -> isso entao cria uma variavel de referencia, tambem um objeto do tipo String, e tambe uma String na pool de String caso nao tenha sido criada.
 
 
-
-            - resumo: Strings sao imutaveis, e quando criamos Strings da forma literal no codigo ele cria diretamente na pool de String, e quando utilizamos somente nome.concat(); ele cria essa String la no pool, e tambem o resultado, e se nos nao associamos a variavel de referencia para essa nova String o valor e perdirdo, vimos tambem que '==' pode ser feito para comparar referencias, nao o valor em si do objeto que estao referenciando.
+//             }
 
 
 
-
-
-
-CLASSES UTILITARIAS STRINGS PT2
-
-    metodos de auxilio para Strings:
-
-    public class StringTeste{
-        public static void main(String[] args){
-            String nome = "Kayque";
-
-            System.out.println(nome.charAt(0)); 
-            // retorna K, retorna o caracter que esta na posicao 0
-
-            System.out.println(nome.length()); 
-            // retorna 6, retorna o tamanho da String
-
-            System.out.println(nome.replace('K', 'C'));
-            // retorna Cayque, substitui o caracter K por C
-
-            System.out.println(nome.toLowerCase());
-            // retorna kayque, transforma a String em minuscula
-
-            System.out.println(nome.toUpperCase());
-            // retorna KAYQUE, transforma a String em maiuscula
-
-            System.out.println(nome.substring(0, 3));
-            // retorna Kay, retorna a String que esta entre a posicao 0 e 3, ou seja sempre sera menor que o segundo parametro.
-
-            System.out.println(nome.trim());
-            // retorna Kayque, remove os espacos em branco no inicio e no final da String
-        }
-    }
+//             - resumo: Strings sao imutaveis, e quando criamos Strings da forma literal no codigo ele cria diretamente na pool de String, e quando utilizamos somente nome.concat(); ele cria essa String la no pool, e tambem o resultado, e se nos nao associamos a variavel de referencia para essa nova String o valor e perdirdo, vimos tambem que '==' pode ser feito para comparar referencias, nao o valor em si do objeto que estao referenciando.
 
 
 
 
 
 
-CLASSES UTILITARIAS STRINGS PT3
+// CLASSES UTILITARIAS STRINGS PT2
 
-    public class PerformaceTeste{
-        public static void main(String[] args){
-            long inicio = System.currentTimeMillis();
+//     metodos de auxilio para Strings:
 
-            concatString(10_000);
+//     public class StringTeste{
+//         public static void main(String[] args){
+//             String nome = "Kayque";
 
-            long fim = System.currentTimeMillis();
+//             System.out.println(nome.charAt(0)); 
+//             // retorna K, retorna o caracter que esta na posicao 0
 
-            System.out.println("Tempo gasto: " + (fim - inicio) + "ms");
-        }
+//             System.out.println(nome.length()); 
+//             // retorna 6, retorna o tamanho da String
+
+//             System.out.println(nome.replace('K', 'C'));
+//             // retorna Cayque, substitui o caracter K por C
+
+//             System.out.println(nome.toLowerCase());
+//             // retorna kayque, transforma a String em minuscula
+
+//             System.out.println(nome.toUpperCase());
+//             // retorna KAYQUE, transforma a String em maiuscula
+
+//             System.out.println(nome.substring(0, 3));
+//             // retorna Kay, retorna a String que esta entre a posicao 0 e 3, ou seja sempre sera menor que o segundo parametro.
+
+//             System.out.println(nome.trim());
+//             // retorna Kayque, remove os espacos em branco no inicio e no final da String
+//         }
+//     }
+
+
+
+
+
+
+// CLASSES UTILITARIAS STRINGS PT3
+
+//     public class PerformaceTeste{
+//         public static void main(String[] args){
+//             long inicio = System.currentTimeMillis();
+
+//             concatString(10_000);
+
+//             long fim = System.currentTimeMillis();
+
+//             System.out.println("Tempo gasto: " + (fim - inicio) + "ms");
+//         }
         
-        private static void concatString(int tamanho){
-            String texto = "";
+//         private static void concatString(int tamanho){
+//             String texto = "";
 
-            for(int i = 0; i < tamanho; i++){
-                texto += i; // 0,01, 012, 0123 ...
-            }
-        }
+//             for(int i = 0; i < tamanho; i++){
+//                 texto += i; // 0,01, 012, 0123 ...
+//             }
+//         }
 
-        --> esse programa calcula o tempo da operacao do for, que conforme se utiliza String o tempo vai aumentando, pois a cada iteracao do for ele cria uma nova String, e isso e muito custoso para o processamento, e isso e muito util para mostrar a diferenca de performance entre a utilizacao de Strings.
-    }
-
-
-        --> para isso o java criou uma classe chamada StringBuilder que melhora bastante a performace !!
+//         --> esse programa calcula o tempo da operacao do for, que conforme se utiliza String o tempo vai aumentando, pois a cada iteracao do for ele cria uma nova String, e isso e muito custoso para o processamento, e isso e muito util para mostrar a diferenca de performance entre a utilizacao de Strings.
+//     }
 
 
-        --> tambem existe a classe StringBuffer que basicamente e a mesma coisa que StringBuilder, a diferenca e que o StringBuffer e para um ambiente onde tem multiplas threads acessando o mesmo recurso. 
+//         --> para isso o java criou uma classe chamada StringBuilder que melhora bastante a performace !!
 
 
-            -> agora vem o X da questao, quando utiliar cada um(String, StringBuffer ou StringBuilder)? entao quando trabalhamos com o sistema voce esta fazendo o mapeamento das regras de negocio que voce tem no mundo real, essas regras de negocio do mundo real e o que realmente vai te dizer se voce vai utilizar String, StringBuilder ou StringBuffer, na maioria das vezes sempre vamos utilizar Strings, mas quando voce tem um metodo que e chamado muitas vezes, e que voce tem que concatenar muitas Strings, e muito util utilizar o StringBuilder, e quando voce tem um ambiente onde tem multiplas threads acessando o mesmo recurso, e muito util utilizar o StringBuffer, e isso e muito util para melhorar a performace da sua aplicacao, e isso e muito util para trabalhar com Strings.
+//         --> tambem existe a classe StringBuffer que basicamente e a mesma coisa que StringBuilder, a diferenca e que o StringBuffer e para um ambiente onde tem multiplas threads acessando o mesmo recurso. 
+
+
+//             -> agora vem o X da questao, quando utiliar cada um(String, StringBuffer ou StringBuilder)? entao quando trabalhamos com o sistema voce esta fazendo o mapeamento das regras de negocio que voce tem no mundo real, essas regras de negocio do mundo real e o que realmente vai te dizer se voce vai utilizar String, StringBuilder ou StringBuffer, na maioria das vezes sempre vamos utilizar Strings, mas quando voce tem um metodo que e chamado muitas vezes, e que voce tem que concatenar muitas Strings, e muito util utilizar o StringBuilder, e quando voce tem um ambiente onde tem multiplas threads acessando o mesmo recurso, e muito util utilizar o StringBuffer, e isso e muito util para melhorar a performace da sua aplicacao, e isso e muito util para trabalhar com Strings.
             
             
 
 
 
 
-CLASSES UTILITARIAS STRINGBUILDER
+// CLASSES UTILITARIAS STRINGBUILDER
 
-    -> nos vimos que as Strings sao imutaveis e por causa disso que temos aquele ritimo de desempenho baixo, quando concatenamos varias Strings, 
+//     -> nos vimos que as Strings sao imutaveis e por causa disso que temos aquele ritimo de desempenho baixo, quando concatenamos varias Strings, 
 
-    public class StringBuilderTeste{
-        public static void main(String[] args){
-            String nome = "Kayque";
-            nome.concat(" Allan");
+//     public class StringBuilderTeste{
+//         public static void main(String[] args){
+//             String nome = "Kayque";
+//             nome.concat(" Allan");
 
-            System.out.println(nome); // ira retornar Kayque
+//             System.out.println(nome); // ira retornar Kayque
 
 
-            --> isso nos ja vimos e sabemos como funciona, mas ai temos agora a StringBuilder, quando trabalhamos com StringBuilder, ele e mutavel, porque StringBuilder nao e uma String, ele e uma Classe que no final das contas vai trabalhar com as Strings.
+//             --> isso nos ja vimos e sabemos como funciona, mas ai temos agora a StringBuilder, quando trabalhamos com StringBuilder, ele e mutavel, porque StringBuilder nao e uma String, ele e uma Classe que no final das contas vai trabalhar com as Strings.
 
-            ex: StringBuilder sb = new StringBuilder();
+//             ex: StringBuilder sb = new StringBuilder();
 
-                -> quando criamos esse objeto, podemos passar tres opcoes, ou passar uma String,  ou uma sequencia de caracteres ou int capacidade, se nao passarmos nada ele ira criar uma StringBuilder para capacidade de 16 caracteres, caso passamos dos 16 caracteres ele ira dobrar a capacidade.
+//                 -> quando criamos esse objeto, podemos passar tres opcoes, ou passar uma String,  ou uma sequencia de caracteres ou int capacidade, se nao passarmos nada ele ira criar uma StringBuilder para capacidade de 16 caracteres, caso passamos dos 16 caracteres ele ira dobrar a capacidade.
 
-                -> como eles nao sao a mesma coisa nao podemos mais associar diretamente como: sb = nome; , isso ira dar erro, nao podemos tambem adicionar dessa forma sb = "kayque", isso tambem ira dar erro.
+//                 -> como eles nao sao a mesma coisa nao podemos mais associar diretamente como: sb = nome; , isso ira dar erro, nao podemos tambem adicionar dessa forma sb = "kayque", isso tambem ira dar erro.
 
-                    -> Adicionamos atraves do metodo append, ele e sobrecarregado para todos os tipos primitivos, podemos passar boolean, char, int... que ira retornar um StringBuilder
+//                     -> Adicionamos atraves do metodo append, ele e sobrecarregado para todos os tipos primitivos, podemos passar boolean, char, int... que ira retornar um StringBuilder
 
-                        ex: sb.append("Kayque");
-        }
+//                         ex: sb.append("Kayque");
+//         }
 
-        --> agora vamos ver um exemplo pratico:
+//         --> agora vamos ver um exemplo pratico:
 
-        public class StringBuilderTeste{
-            public static void main(String[] args){
-            StringBuilder sb = new StringBuilder("Kayque");
+//         public class StringBuilderTeste{
+//             public static void main(String[] args){
+//             StringBuilder sb = new StringBuilder("Kayque");
 
-            System.out.println(sb); 
-                // -> se colocarmos aqui ira imprimir, porque? porque ele tem o metodo to.String dentro do StringBuilder que ira retornar o valor que esta dentro do String.
+//             System.out.println(sb); 
+//                 // -> se colocarmos aqui ira imprimir, porque? porque ele tem o metodo to.String dentro do StringBuilder que ira retornar o valor que esta dentro do String.
             
-            sb.append(" Allan"); --> Funciona como um concat 
+//             sb.append(" Allan"); --> Funciona como um concat 
 
 
-            System.out.println(sb); // ira retornar Kayque Allan, pois ele esta concatenando o valor dentro do StringBuilder.
+//             System.out.println(sb); // ira retornar Kayque Allan, pois ele esta concatenando o valor dentro do StringBuilder.
 
 
-                ---> Uma das razoes na qual a performace StringBuilder e bem maior que a da String e pela capacidade que a StringBuilder te oferece em fazer a mudanca da String sem precisar ficar alocando um novo espaco no pool de Strings, mas de certa isso aumenta um pouco a complexidade do codigo, porque? 
+//                 ---> Uma das razoes na qual a performace StringBuilder e bem maior que a da String e pela capacidade que a StringBuilder te oferece em fazer a mudanca da String sem precisar ficar alocando um novo espaco no pool de Strings, mas de certa isso aumenta um pouco a complexidade do codigo, porque? 
 
 
-            sb.append(" Allan").append (" Ribeiro"); // Teremos sempre que adicionar .append para se adicionar uma nova String, caso se coloque mutio, a visualizacao acaba ficando um pouco dificil.
+//             sb.append(" Allan").append (" Ribeiro"); // Teremos sempre que adicionar .append para se adicionar uma nova String, caso se coloque mutio, a visualizacao acaba ficando um pouco dificil.
 
-            }
-    }
+//             }
+//     }
 
-            --> Cuidados a se tomar: 
+//             --> Cuidados a se tomar: 
 
-            sb.substring(0, 3); 
-                // ira retornar ainda "Kayque Allan Ribeiro", porque o retorno que o metodo substring da e do tipo String e nao StringBuilder.
+//             sb.substring(0, 3); 
+//                 // ira retornar ainda "Kayque Allan Ribeiro", porque o retorno que o metodo substring da e do tipo String e nao StringBuilder.
 
-            para isso teriamos que fazer: 
+//             para isso teriamos que fazer: 
 
-            String nome = sb.substring(0, 3); 
-                // ira retornar "Kay", pois estamos pegando a substring do StringBuilder e passando para uma String.
+//             String nome = sb.substring(0, 3); 
+//                 // ira retornar "Kay", pois estamos pegando a substring do StringBuilder e passando para uma String.
 
 
             
-            --> Metodos que funcionam com StringBuilder:
+//             --> Metodos que funcionam com StringBuilder:
 
-            sb.reverse(); // inverte a String
+//             sb.reverse(); // inverte a String
 
-            sb.delete(0, 3); // deleta a String que esta entre 0 e 3
+//             sb.delete(0, 3); // deleta a String que esta entre 0 e 3
 
-            sb.insert(0, "Kayque"); // insere a String "Kayque" na posicao 0
+//             sb.insert(0, "Kayque"); // insere a String "Kayque" na posicao 0
 
-            sb.replace(0, 3, "Kay"); // substitui a String que esta entre 0 e 3 por "Kay"
+//             sb.replace(0, 3, "Kay"); // substitui a String que esta entre 0 e 3 por "Kay"
 
-            sb.length(); // retorna o tamanho da String
-
-
+//             sb.length(); // retorna o tamanho da String
 
 
 
 
 
-CLASSES UTILITARIAS DATE
 
-    --> para se utilizar date, e so criar um novom objeto dessa classe, hoje em dia e pouco utilizado, a maioria dos metodos estao em depreciacao;
 
-    public class DateTeste{
-        public static void main(String[] args){
+// CLASSES UTILITARIAS DATE
 
-            Date data = new Date(1_0000L); 
+//     --> para se utilizar date, e so criar um novom objeto dessa classe, hoje em dia e pouco utilizado, a maioria dos metodos estao em depreciacao;
 
-            --> date trabalha em ms, ele tem dentro um Long, que representa os segundos de desde janeiro de 1970
+//     public class DateTeste{
+//         public static void main(String[] args){
 
-            System.out.println(data); // ira retornar Thu Jan 01 01:00:10 GMT 1970, pois conta a partir desta data em milisegundos;
+//             Date data = new Date(1_0000L); 
 
-            Date data2 = new Date();
+//             --> date trabalha em ms, ele tem dentro um Long, que representa os segundos de desde janeiro de 1970
 
-            System.out.println(data2); // ira retornar a data atual do sistema.
+//             System.out.println(data); // ira retornar Thu Jan 01 01:00:10 GMT 1970, pois conta a partir desta data em milisegundos;
 
-        }
-    }
+//             Date data2 = new Date();
+
+//             System.out.println(data2); // ira retornar a data atual do sistema.
+
+//         }
+//     }
             
 
 
@@ -6104,126 +4564,126 @@ CLASSES UTILITARIAS DATE
 
 
 
-CLASSES UTILITARIAS CALENDAR
+// CLASSES UTILITARIAS CALENDAR
 
-    -> Foi a segunda classe criada para resolver os problemas da classe DATE;
+//     -> Foi a segunda classe criada para resolver os problemas da classe DATE;
 
-        obs: a classe calendar e uma classe abstrata, ou seja, nao podemos criar uma instancia dela;
+//         obs: a classe calendar e uma classe abstrata, ou seja, nao podemos criar uma instancia dela;
 
-        classes date e classes calendar, sao utilizadas em sistemas legado; hoje em dia se usa coisas melhores;
+//         classes date e classes calendar, sao utilizadas em sistemas legado; hoje em dia se usa coisas melhores;
 
-        // O Singleton é um padrão de projeto criacional que tem como objetivo garantir que uma classe tenha apenas uma única instância em toda a aplicação e fornecer um ponto de acesso global a essa instância. Ele é frequentemente usado quando é necessário um controle centralizado sobre algum recurso ou funcionalidade, como um gerenciador de configuração, cache, registro de logs, ou um gerenciador de conexão com o banco de dados.
+//         // O Singleton é um padrão de projeto criacional que tem como objetivo garantir que uma classe tenha apenas uma única instância em toda a aplicação e fornecer um ponto de acesso global a essa instância. Ele é frequentemente usado quando é necessário um controle centralizado sobre algum recurso ou funcionalidade, como um gerenciador de configuração, cache, registro de logs, ou um gerenciador de conexão com o banco de dados.
 
-        public class CalendarTeste{
-            public static void man(String[] args){
-                Calendar calendar = Calendar.getInstance();
+//         public class CalendarTeste{
+//             public static void man(String[] args){
+//                 Calendar calendar = Calendar.getInstance();
 
-                    --> Assim que pegamos a instancia de Calendar; 
+//                     --> Assim que pegamos a instancia de Calendar; 
                     
-                System.out.println(calendar); // ira retornar a data atual do sistema, mas em um formato diferente do que o Date retorna.
+//                 System.out.println(calendar); // ira retornar a data atual do sistema, mas em um formato diferente do que o Date retorna.
 
-                para resolver isso podemos pegar, e fazer um hackzinho utilizando a classe Date.
+//                 para resolver isso podemos pegar, e fazer um hackzinho utilizando a classe Date.
 
-                Date date = calendar.getTime();
+//                 Date date = calendar.getTime();
 
-                System.out.println(date); // ira retornar a data atual do sistema, mas em um formato diferente do que o Date retorna.
+//                 System.out.println(date); // ira retornar a data atual do sistema, mas em um formato diferente do que o Date retorna.
 
-                    --> Sendo assim podemos utilizar a data de acordo com o que precisamos.
-        }
+//                     --> Sendo assim podemos utilizar a data de acordo com o que precisamos.
+//         }
 
-        Metodos de utilizacao nessa classe: 
+//         Metodos de utilizacao nessa classe: 
 
-            calendar.getFirstDayOfWeek(); // retorna o primeiro dia da semana, dependendo da localizacao do seu sistema
+//             calendar.getFirstDayOfWeek(); // retorna o primeiro dia da semana, dependendo da localizacao do seu sistema
 
-                -> nos podemos fazer uma pequena logica nesse programa, sendo que dependendo de alguns paises temos o primeiro dia da semana como domingo e outros dias como segunda, podemos fazer o seguinte;
+//                 -> nos podemos fazer uma pequena logica nesse programa, sendo que dependendo de alguns paises temos o primeiro dia da semana como domingo e outros dias como segunda, podemos fazer o seguinte;
 
-                if(calendar.getFirstDayOfWeek() == Calendar.SUNDAY){
-                    //se compara as constantes que a classe calendar tem;
+//                 if(calendar.getFirstDayOfWeek() == Calendar.SUNDAY){
+//                     //se compara as constantes que a classe calendar tem;
 
-                    System.out.println("Domingao e o primeiro dia ")
-                }
-
-
+//                     System.out.println("Domingao e o primeiro dia ")
+//                 }
 
 
-                Tendo essas constantes podemos trabalhar com varias formasm, como por exemplo:
-
-                calendar.get(Calendar.DAY_OF_MONTH); // retorna o dia do mes
-                calendar.get(Calendar.DAY_OF_WEEK); // retorna o dia da semana
-                calendar.get(Calendar.DAY_OF_YEAR); // retorna o dia do ano
-                calendar.get(Calendar.MONTH); // retorna o mes
-                calendar.get(Calendar.YEAR); // retorna o ano
-                calendar.get(Calendar.HOUR); // retorna a hora
-                calendar.get(Calendar.MINUTE); // retorna os minutos
-                calendar.get(Calendar.SECOND); // retorna os segundos
-                calendar.get(Calendar.MILLISECOND); // retorna os milisegundo
 
 
-                -> Adicao de horas, minutos , dias ...: 
+//                 Tendo essas constantes podemos trabalhar com varias formasm, como por exemplo:
 
-                    calendar.add(Calendar.DAT_OF_MONTH, 1); // adiciona um dia
+//                 calendar.get(Calendar.DAY_OF_MONTH); // retorna o dia do mes
+//                 calendar.get(Calendar.DAY_OF_WEEK); // retorna o dia da semana
+//                 calendar.get(Calendar.DAY_OF_YEAR); // retorna o dia do ano
+//                 calendar.get(Calendar.MONTH); // retorna o mes
+//                 calendar.get(Calendar.YEAR); // retorna o ano
+//                 calendar.get(Calendar.HOUR); // retorna a hora
+//                 calendar.get(Calendar.MINUTE); // retorna os minutos
+//                 calendar.get(Calendar.SECOND); // retorna os segundos
+//                 calendar.get(Calendar.MILLISECOND); // retorna os milisegundo
+
+
+//                 -> Adicao de horas, minutos , dias ...: 
+
+//                     calendar.add(Calendar.DAT_OF_MONTH, 1); // adiciona um dia
                     
-                    calendar.add(Calendar.HOUR, 1); // adiciona uma hora
+//                     calendar.add(Calendar.HOUR, 1); // adiciona uma hora
 
                 
-                -> Setando valores:
+//                 -> Setando valores:
 
-                    calendar.set(Calendar.DAY_OF_MONTH, 1); // seta o dia do mes para 1
+//                     calendar.set(Calendar.DAY_OF_MONTH, 1); // seta o dia do mes para 1
 
-                    calendar.set(Calendar.MONTH, 1); // seta o mes para 1
+//                     calendar.set(Calendar.MONTH, 1); // seta o mes para 1
 
-                    calendar.set(Calendar.YEAR, 2021); // seta o ano para 2021
+//                     calendar.set(Calendar.YEAR, 2021); // seta o ano para 2021
 
-                    calendar.set(Calendar.HOUR, 1); // seta a hora para 1
+//                     calendar.set(Calendar.HOUR, 1); // seta a hora para 1
 
-                    calendar.set(Calendar.MINUTE, 1); // seta os minutos para 1
+//                     calendar.set(Calendar.MINUTE, 1); // seta os minutos para 1
 
-                    calendar.set(Calendar.SECOND, 1); // seta os segundos para 1
+//                     calendar.set(Calendar.SECOND, 1); // seta os segundos para 1
 
-                    calendar.set(Calendar.MILLISECOND, 1); // seta os milisegundos para 1
+//                     calendar.set(Calendar.MILLISECOND, 1); // seta os milisegundos para 1
 
-}
-
-
+// }
 
 
 
 
 
-CLASSES UTILITARIAS DateFormat
 
-    -> E uma classe utilizada para formatacao de datas, uma classe que oferece metodos pre-definidos para formatar;
 
-        --> ! Uma classe abstrata onde nao pode ser instanciada
+// CLASSES UTILITARIAS DateFormat
 
-        public class DateFormat{
-            public static void main(String[] args){
-                Calendar  calendar = Calendar.getInstance();
+//     -> E uma classe utilizada para formatacao de datas, uma classe que oferece metodos pre-definidos para formatar;
 
-                DateFormat[] df = new DateFormat[7];
+//         --> ! Uma classe abstrata onde nao pode ser instanciada
 
-                df[0] = DateFormat.getInstance();  --> Traz de acordo com a localizacao do sistema
+//         public class DateFormat{
+//             public static void main(String[] args){
+//                 Calendar  calendar = Calendar.getInstance();
 
-                df[1] = DateFormat.getDateInstance(); --> Traz somente a data
+//                 DateFormat[] df = new DateFormat[7];
 
-                df[2] = DateFormat.getDateTimInstance(); --> Traz a data e a hora
+//                 df[0] = DateFormat.getInstance();  --> Traz de acordo com a localizacao do sistema
 
-                df[3] = DateFormat.getDateInstance(DateFormat.SHORT);  --> Traz a data no formato curto
+//                 df[1] = DateFormat.getDateInstance(); --> Traz somente a data
 
-                df[4] = DateFormat.getDateInstance(DateFormat.MEDIUM); --> Traz a data no formato medio
+//                 df[2] = DateFormat.getDateTimInstance(); --> Traz a data e a hora
 
-                df[5] = DateFormat.getDateInstance(DateFormat.LONG); --> Traz a data no formato longo
+//                 df[3] = DateFormat.getDateInstance(DateFormat.SHORT);  --> Traz a data no formato curto
 
-                df[6] = DateFormat.getDateInstance(DateFormat.FULL); --> Traz a data no formato completo
+//                 df[4] = DateFormat.getDateInstance(DateFormat.MEDIUM); --> Traz a data no formato medio
 
-                for(DateFormat dateFormat : df){
-                    System.out.println(dateFormat.format(calendar.getTime()));
+//                 df[5] = DateFormat.getDateInstance(DateFormat.LONG); --> Traz a data no formato longo
 
-                    // Imprime a data de acordo com o formato que foi passado
-                }
+//                 df[6] = DateFormat.getDateInstance(DateFormat.FULL); --> Traz a data no formato completo
+
+//                 for(DateFormat dateFormat : df){
+//                     System.out.println(dateFormat.format(calendar.getTime()));
+
+//                     // Imprime a data de acordo com o formato que foi passado
+//                 }
             
-            }
-        }
+//             }
+//         }
 
 
 
@@ -6231,104 +4691,975 @@ CLASSES UTILITARIAS DateFormat
 
 
 
-CLASSES UTILITARIAS INTERCIONALIZACAO DATAS COM LOCALE
+// CLASSES UTILITARIAS INTERCIONALIZACAO DATAS COM LOCALE
 
-    -> Classe criada para trabalhar com intercionalizacao, feita para formatar tanto datas como moedas, numeros, baseado na preferencia do usuario ou de acordo com a localizacao da JVM dele;
+//     -> Classe criada para trabalhar com intercionalizacao, feita para formatar tanto datas como moedas, numeros, baseado na preferencia do usuario ou de acordo com a localizacao da JVM dele;
 
-        public class LocaleTeste{
-            public static void main(String[] args){
+//         public class LocaleTeste{
+//             public static void main(String[] args){
 
-                Calendar calendar = Calendar.getInstance();
-                Locale localePT = new Locale("pt", "BR");
+//                 Calendar calendar = Calendar.getInstance();
+//                 Locale localePT = new Locale("pt", "BR");
 
-                --> Essa classe podemos criar objetos dela, e tem a possibilidade de trabalhar com diversos tipos dela, ela segue a formatacao, entao ela segue o padrao da ISOS, uma para definir a lingua e outra para definir o pais. 
-
-
-                DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, localePT);
-
-                    --> Isso faz com que a data seja formada de acordo com a localizacao, coloca a formato que seria FULL, e depois o locale que seria o localePT.
-
-                System.out.println("Brazil " + df.format(calendar.getTime()));
-
-                    --> para printarmos fazemos o seguinte, pegamos a variavel de referencia para o objeto DataFormat, e chamamos o metodo format, passando o objeto calendar.getTime(), que ira retornar a data de acordo com a localizacao do sistema.
-            }  
-
-                System.out.println(localePT.getDisplayCountry()); 
-                // ira retornar Brazil, ou seja esta exibindo o pais de acordo com essa locale, mas esta exibindo de acordo com a lingua do sistema operacional padrao.      
-
-                --> mas caso criamos uma instancia de Locale em Japao por exemplo, e fazer:
-
-                    System.out.println(localePT.getDisplayCountry(localeJP));
-                    // ira retornar Brasil, na lingua japonesa, ou seja ele ira retornar o pais de acordo com a lingua que foi passada no localeJP.
+//                 --> Essa classe podemos criar objetos dela, e tem a possibilidade de trabalhar com diversos tipos dela, ela segue a formatacao, entao ela segue o padrao da ISOS, uma para definir a lingua e outra para definir o pais. 
 
 
-                System.out.println(Locale.getDefault()); 
-                // ira retornar a localizacao do sistema operacional
-        }  
+//                 DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, localePT);
+
+//                     --> Isso faz com que a data seja formada de acordo com a localizacao, coloca a formato que seria FULL, e depois o locale que seria o localePT.
+
+//                 System.out.println("Brazil " + df.format(calendar.getTime()));
+
+//                     --> para printarmos fazemos o seguinte, pegamos a variavel de referencia para o objeto DataFormat, e chamamos o metodo format, passando o objeto calendar.getTime(), que ira retornar a data de acordo com a localizacao do sistema.
+//             }  
+
+//                 System.out.println(localePT.getDisplayCountry()); 
+//                 // ira retornar Brazil, ou seja esta exibindo o pais de acordo com essa locale, mas esta exibindo de acordo com a lingua do sistema operacional padrao.      
+
+//                 --> mas caso criamos uma instancia de Locale em Japao por exemplo, e fazer:
+
+//                     System.out.println(localePT.getDisplayCountry(localeJP));
+//                     // ira retornar Brasil, na lingua japonesa, ou seja ele ira retornar o pais de acordo com a lingua que foi passada no localeJP.
 
 
+//                 System.out.println(Locale.getDefault()); 
+//                 // ira retornar a localizacao do sistema operacional
+//         }  
 
 
 
 
-CLASSES UTILITARIAS INTERCIONALIZACAO NUMEROS COM LOCALE
 
-        -> A classe NumberFormat ela e uma classe abstrata;
-            ex: NumberFormat nf = Number.getInstance();
+
+// CLASSES UTILITARIAS INTERCIONALIZACAO NUMEROS COM LOCALE
+
+//         -> A classe NumberFormat ela e uma classe abstrata;
+//             ex: NumberFormat nf = Number.getInstance();
         
-        public class NumberFormat{
-            public static void main(String[] args){
-                Locale localeBR = new Locale("pt", "BR");
-                Locale localeIT = new Locale("it", "IT");
-                Locale localeJP = new Locale("jp", "JP");
-                Locale localeUS = new Locale("us", "US");
+//         public class NumberFormat{
+//             public static void main(String[] args){
+//                 Locale localeBR = new Locale("pt", "BR");
+//                 Locale localeIT = new Locale("it", "IT");
+//                 Locale localeJP = new Locale("jp", "JP");
+//                 Locale localeUS = new Locale("us", "US");
 
-                NumberFormat[] nf = new NumberFormat[4];
-                //--> como iremos trabalhar com array utilizaos esse acima: 
+//                 NumberFormat[] nf = new NumberFormat[4];
+//                 //--> como iremos trabalhar com array utilizaos esse acima: 
 
-                nf[0] = NumberFormat.getInstance(localeBR);
-                nf[1] = NumberFormat.getInstance(localeJP);
-                nf[2] = NumberFormat.getInstance(localeIT);
-                nf[3] = NumberFormat.getInstance(localeUS);
+//                 nf[0] = NumberFormat.getInstance(localeBR);
+//                 nf[1] = NumberFormat.getInstance(localeJP);
+//                 nf[2] = NumberFormat.getInstance(localeIT);
+//                 nf[3] = NumberFormat.getInstance(localeUS);
 
-                double valor = 10_000.2130;
+//                 double valor = 10_000.2130;
 
-                for(NumberFormat numberFormat : nf){
-                    System.out.println(numberFormat.format(valor));
-                }
+//                 for(NumberFormat numberFormat : nf){
+//                     System.out.println(numberFormat.format(valor));
+//                 }
 
-                    -> podemos ver a formatacao de numeros de acordo com paises, utilizando Locale;
+//                     -> podemos ver a formatacao de numeros de acordo com paises, utilizando Locale;
                 
+//             }
+//         }
+
+
+
+
+
+
+// CLASSES UTILITARIAS INTERCIONALIZACAO DE MOEDA COM LOCALE
+
+//     --> E praticamente a mesma coisa que utilizamos antes,  a diferenca pr que antes utilizavamos getInstance() e agora utilizamos get.CurrencyInstance().
+
+//     public class Money{
+//         public static void main(String[] args){
+//             Locale localePT = new Locale("pt, BR");
+//             Locale localeUS = new Locale("en, US");
+            
+
+//             NumberFormat[] nf = new NumberFormat[4];
+
+//             nf[0] = NumberFormat.getCurrencyInstance(localePT);
+//             nf[0] = NumberFormat.getCurrencyInstance(localeUS);
+//             //aqui poderiamos colocar outros locale, em outras formatacoes, para que seja exibido de acordo com o pais
+
+//             double valor = 1_000;
+
+//             for(NumberFormat moneyFormat : nf){
+//                 System.out.println(moneyFormat.format(valor));
+
+//             }            
+//         }
+//     }
+
+
+
+
+
+
+
+// CLASSES UTILITARIAS SIMPLE DATE FORMAT
+        
+//     --> classe melhor para ajudar na formatacao de datas , ela oferece um pouco mais de flexibilidade do que a classe DateFormat, a maioria de classes de formatacao estao dentro da classe java.text ...
+
+
+//     public class SimpleDateFormat{
+//         public static void main(String[] args){
+//             SimpleDateFormat sdf = new SimpleDateFormat(); 
+//                 //-> classe nao e abstrata, podemos fazer instancias dela.
+
+//                 -> ela e uma classe que tem como objetivo e trabalhar com a formatacao de datas, com um pouquinho mais de flexibilidade, a documentacao mostra que podemos utilizar a formatacao de acordo com as letras, cada letra tem seu significado. Baseado em uma data podemos transformar ele em diverrsos tipos de formato.
+
+//                 // https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html
+
+//                 como exemplo: 
+
+//                 String pattern = "dd/MM/yyyy 'at' HH:mm:ss";
+//                 SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+//                     System.out.println(sdf.format(new Date()));
+
+//                         --> pegamos o objeto sdf e chamamos o metodo format, passando um objeto Date, e ele ira retornar a data formatada de acordo com o pattern que foi passado.
+//         }
+//     }
+
+
+
+
+
+
+// CLASSES UTULITARIAS LOCALDATE 
+
+//     -> classe nova do java 8, que veio para substituir a classe Date, ela e uma classe imutavel, e e muito mais facil de trabalhar com ela do que com a classe Date,
+
+//     public class LocalDate{ 
+//         public static void main(String[] args){
+//             LocalDate date = LocalDate.of(2022, 10, 10);
+//                 // -> para criar uma instancia de LocalDate, utilizamos o metodo of, passando o ano, mes e dia, da maneira que bem entender
+
+//             LocalDate date2 = LocalDate.now(); 
+//                 // -> para pegar a data atual do sistema, utilizamos o metodo now, que ira retornar a data atual do sistema.
+
+//                 System.out.println(date.getYear()); // ira retorna o ano
+
+//                 System.out.println(date.getMonth()); // ira retorna o mes
+//                 System.out.println(date.getMonthValue()); // ira o valor do mes
+
+//                 System.out.println(date.getDayOfWeel()); // ira retornar o dia da semana
+                
+//                 System.out.println(date.lengthOfMonth()); // ira retornar a quantidade de dias do mes
+
+//                 System.out.println(date.isLeapYear()); // ira retornar se o ano e bissexto ou nao
+
+//                 System.out.println(date.get(ChronoField.DAY_OF_MONTH)); // ira retornar o dia do mes. essa classes pode ser utiliza no lugar do getDayOfMonth.
+                
+//                 System.out.println();
+
+//         } 
+//     }   
+    
+
+
+
+
+
+// CLASSES UTILITARIAS LOCALTIME
+
+//     -> Suegue os mesmo padroes da classe LocalDate, porem trabalha com horas, minutos e segundos.
+
+//     public class LocalTime{
+//         public static void main(String[] args){
+//             LocalTime time = LocalTime.of(10, 20, 30);
+//                 // -> para criar uma instancia de LocalTime, utilizamos o metodo of, passando a hora, minuto e segundo, da maneira que bem entender
+
+//             LocalTime time2 = LocalTime.now();
+//                 // -> para pegar a hora atual do sistema, utilizamos o metodo now, que ira retornar a hora atual do sistema.
+                
+//                 System.out.println(time); // ira retornar a hora que foi passada
+
+//                 System.out.println(time2); // ira retornar a hora atual do sistema
+
+
+//                 -> Metodos que podemos utilizar:
+
+//                 System.out.println(time.getHour()); // ira retornar a hora
+
+//                 System.out.println(time.getMinute()); // ira retornar os minutos
+
+//                 System.out.println(time.getSecond()); // ira retornar os segundos
+
+//         }
+//     }
+
+
+
+
+
+
+// CLASSES UTILITARIAS LOCALDATETIME
+
+//     -> Essa classe e praticamente uma juncao das duas classes anteriores.
+
+//         public class LocalDateTimeTeste{
+//             public static void main(String[] args){
+//                 LocalDateTime ldt = LocaDateTime.of(2022, 10, 10, 10, 20, 30);
+//                     // -> para criar uma instancia de LocalDateTime, utilizamos o metodo of, passando o ano, mes, dia, hora, minuto e segundo, da maneira que bem entender
+
+//                 LocalDateTime ldt2 = LocalDateTime.now();
+//                     // -> para pegar a data e hora atual do sistema, utilizamos o metodo now, que ira retornar a data e hora atual do sistema.
+
+//                     System.out.println(ldt); // ira retornar a data e hora que foi passada
+
+//                     System.out.println(ldt2); // ira retornar a data e hora atual do sistema
+
+//                     -> Metodos que podemos utilizar:
+
+//                         System.out.println(ldt.getYear()); // ira retornar o ano
+
+//                             -> esses metodos sao parecidos com os que vimos nas classes anteriores, porem agora temos a data e a hora juntas.
+                            
+
+//                         --> temos esse metodo abaixo onde temos um dia e podemos adicionar uma hora e tambem o inverso;
+
+//                             LocalTime time = LocalTime.of(10, 20, 30);
+//                             LocalDate date = LocalDate.of(2022, 10, 10);
+
+//                             LocalDateTime ldt3 = date.atTime(time); // adiciona a hora a data
+//                             LocalDateTime ldt4 = time.atDate(date); // adiciona a data a hora
+
+//                             System.out.println(ldt3); // ira retornar a data e hora
+//                             System.out.println(ldt4); // ira retornar a data e hora
+//             }
+//         }
+
+
+
+
+
+
+// CLASSES UTILITARIAS INSTANT 
+
+//     -> E uma classe parecida com a date, mas a diferenca e que a classe date trabalha com milisegundos a partir de 1 de janeiro de 1930, ja a date trabalha com nanosegundos;
+
+//     public class Instant{
+//         public static void main(String[] args){
+//             Instant now = Instant.now();
+
+//             System.out.println(now); 
+//             System.out.println(LocaleDateTime.now());
+                    
+//             return: 
+//                 2021-10-10T10:20:30.123Z
+//                 2021-10-10T10:20:30.123
+
+//                     --> a diferenca entre os dois e que o Instant mostra um 'Z' no final, que significa zuluTime ou UTC, que e o tempo universal(neutro), isso e muito util para quando trabalhamos com aplicacoes que precisa ser salva no banco de dados;
+
+//                         -> vamos supor que voce salva a data no banco de dados de acordo de onde voce esta localizado, entao no meu horario e 'x horas', quando salvamos dessa forma, precisamos nos lembrar ou adicionar alguma coisa que nos representa nossa timeZone, se salvarmos dessa forma nao precisamos nos preocupar com isso, pois ele ja esta salvo de acordo com o tempo universal. 
+
+//                     -> RESUMO: e que a classe Instant trabalha em nanosegundos, ja as outra nao, os metodos que temos sao os mesmos que temos nas outras classes, porem com a diferenca que trabalha em nanosegundos.
+//         }
+//     }
+
+
+
+
+
+
+// CLASSES UTILITARIAS DURATION
+
+//     -> A classe Duration e uma classe que foi criada para voce trabalhar com a quantidade de tempo, ela geralmente e utilizada para qquando voce quer pegar um intervalo entre duas datas, ela e baseada em segundos e nanosegundos.
+
+
+//         public class DurationTeste{
+//             public static void main(String[] args){
+//                 LocalDateTime ld1 = LocalDateTime.now();
+//                 LocalDateTime ldtNowAfter = LocalDateTime.now().plusYears(3);
+//                     -> Precisamos de duas classes para saber a diferenca;
+
+//                 LocalTime timeNow = LocalTime.now();
+//                 LocalTime timeNow2 = LocalTime.now().minusHours(7);
+
+
+//                 Duration entre = Duration.between(ld1, ldtNowAfter); // retorna a diferenca entre as duas datas
+
+//                 System.out.println(entre); // ira retornar a diferenca entre as duas datas
+
+//                 return: 
+                     
+//             }
+//         }
+
+
+
+
+
+
+// CLASSES UTILITARIAS PERIOD
+
+//         --> A classe Period e uma classe que foi criada para voce trabalhar com a quantidade de tempo, ela geralmente e utilizada para quando voce quer pegar um intervalo entre duas datas, ela e baseada em anos, meses e dias.
+
+
+//             public class PeriodTeste{
+//                 public static void main(String[] args){
+//                     LocalDate now = LocalDate.now();
+//                     LocalDate nowAfterTwoYears = LocalDate.now().plusYears(2);
+
+//                         -> aceita somente LocalDate, nao aceita LocalDateTime, LocalTime, Instant, ela e baseada em anos, meses e dias.
+
+//                     Period p1 = Period.between(now(), nowAfterTwoYears);
+
+//                         System.out.println(p1); // ira retornar a diferenca entre as duas datas
+
+//                     Period p2 = Period.ofWeeks(10); // retorna 10 semanas
+
+//                         System.out.println(p2); // ira retornar 10 semanas
+
+                       
+//                 }
+//             }
+
+
+
+
+
+
+// CLASSES UTILITARIAS CHRONOUNIT 
+
+//     -> Uma classe que tem varios metodos que padronizam as datas e periodos, e quando voce utiliza ela para pegar dias meses e anos e mais simples do que voce tivesse utilizando a LocalDateTime, uma classe bem pratica que ajuda no intervalo de datas ; 
+
+//             java.time{
+
+//             -> Duration = Para Hora;
+//             -> Period = Para Datas;
+//             -> Instant = Para Nanosegundos;
+//             -> LocalDate = Para Datas, para nos seres Humanos;
+//             -> LocalDateTime = Para Datas e Horas, para nos seres Humanos; 
+//             -> LocalTime = Para Horas, para nos seres Humanos;
+//             -> ChronoUnit = Para Datas e Horas, para nos seres Humanos;
+
+//             }
+
+//         public class ChronoUnit{
+//             public static void main(String[] args){
+//                 LocalDateTime aniversario = LocalDateTime.of(2005, Month.AUGUST, 15, 12 , 0,0);
+
+//                 System.out.println(ChronoUnit.DAYS.between(aniversario, LocalDateTime.now()));  
+//                 // retorna a quantidade de dias entre as duas datas
+
+//                 System.out.println(ChronoUnit.WEEKS.between(aniversario, LocalDateTime.now()));
+//                 // retorna a quantidade de semanas entre as duas datas
+
+//                 System.out.println(ChronoUnit.MONTHS.between(aniversario, LocalDateTime.now()));
+//                 // retorna a quantidade de meses entre as duas datas
+
+                    
+//             }
+//         }
+
+
+
+
+
+
+// CLASSES UTILITARIAS TEMPORALADJUSTERS
+
+//     -> Ela e uma interface e so tem um metodo , e tem TEMPORALADJUSTERS que e uma classe que todos os metodos dessa classe sao estaticos, ou seja, isso e uma classe utilitaria, que foi criada para fazer ajustes no tempo, e e interessante que esses ajustes e diferente do nos estavamos trabalhando agora: 
+
+//     -> 
+//         public class TemporalAdjusters{
+//             public static void main(String[] args){
+//                 LocalDate now = LocalDate.now();
+
+//                 now = now.plusDays(1); // adiciona um dia
+//                     //-> a classe LocalDate e imutavel, entao para nos adicionarmos ou retirar algum valor, precisamos fazer uma associacao.
+
+//                     --> QUAL E A DIFERENCA ENTRE WITH E PLUS: e que o plus se nos adicionarmos ele ira mudar todo o conjunto, ja com op with ele muda somente o que estamos especificando, sem mudar o resto.
+
+//                 now = now.withDay(20); // seta o dia para 20
+
+
+//                 System.out.println(now); // ira retornar a data de amanha
+
+//                 System.out.println(now.getDaysOfWeek()); // ira retornar o dia da semana
+
+//             }
+//         }
+
+
+//         -> Agora vamos ver um outro exemplo, para sabermos quando que sera um proximo dia
+//         public class TemporalAdjusters{
+//             public static void main(String[] args){
+//                 LocalDate now = LocalDate.now();
+
+
+//                 now = LocaDateTime.now.with(TemporalAdjusters.next(DayOfWeek.SUNDAY)); 
+//                     // ira retornar a data do proximo domingo.
+
+//                     --> ! entre os metodos colocamos os prints para vermos o que esta acontecendo.
+
+//                 now = LocaDateTime.now.with(TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY)); 
+//                 // ira retornar a data de hoje, caso seja domingo, caso nao seja ira retornar a data do proximo domingo.
+
+//                 now = LocaDateTime.now.with(TemporalAdjusters.previous(DayOfWeek.SUNDAY)); 
+//                 // ira retornar a data do ultimo domingo.
+
+//                 now = LocaDateTime.now.with(TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY)); 
+//                 // ira retornar a data de hoje, caso seja domingo, caso nao seja ira retornar a data do proximo domingo.
+
+//                 now = LocaDateTime.now.with(TemporalAdjusters.firstDayOfMonth()); 
+//                 // ira retornar a data do primeiro dia do mes.
+
+//                 now = LocaDateTime.now.with(TemporalAdjusters.lastDayOfMonth());
+//                 // ira retornar a data do ultimo dia do mes.
+
+//                 now = LocaDateTime.now.with(TemporalAdjusters.firstDayOfNextMonth());
+//                 // ira retornar a data do primeiro dia do proximo mes.
+
+//                 now = LocaDateTime.now.with(TemporalAdjusters.firstDayOfYear());
+//                 // ira retornar a data do primeiro dia do ano.
+
+//             }
+//         }
+
+
+
+
+
+//         --> exercicio para saber o proximo dia util do mes;
+
+//         public class TemporalAdjusters{
+//             public static void main(String[] args){
+//                 LocalDate now = LocalDate.now();
+
+//                 now = now.with(TemporalAdjusters.next(DayOfWeek.SATURDAY));
+
+//                 if(now.getDayOfWeek().getValue() == 6 || now.getDayOfWeek().getValue() == 7){
+//                     now = now.with(TemporalAdjusters.next(DayOfWeek.MONDAY));
+//                 }
+//             }
+//         }
+
+
+
+
+
+
+// CLASSES UTILITARIAS ZONEDDATETIME ZONELD OFFSETDATETIME
+    
+//         -> serve para trabalhar com zonas e datas ao mesmo tempo.
+
+//         public class ZoneTest{
+//             public static void main(String[] args){
+//                 System.out.println(ZoneID.systemDefault());
+//                     // ira retornar a zona do sistema
+
+//                 ZoneID euaZone = ZoneID.of("America/New_York");
+//                     // ira retornar a zona de New York, e necessario adicionar a zona correta se nao ira dar uma Exception 
+
+//                 LocalDateTime ldt = LocalDateTime.now();
+
+//                 System.out.println(now);
+//                     -> Com essa zona nos podemos utilzar o LocalDateTime para trocar nosso horario, se imprimirmos isso ira retornar a data e hora de acordo com o padrao, como podemos ver ele nao te oferece nenhum tipo de zona, mas podemos atraves do ZoneDateTime: 
+
+//                 ZonedDateTime zoneDateTime = now.atZone(euaZone);
+//                     -> como ele e imutavel temos que adicionar ha uma variavel para que possamos ver o resultado, quando adicionamos falamos agora que nao e mais um localDateTime, agora ele e um zoneDateTime.
+
+//                 System.out.println(zoneDateTime);
+//                     -> ira retornar a data e hora de acordo com a zona que foi passada, mas ira imprimir sendo a data + a hora + a zona, sendo separado, se quisermos fazer de uma vez so, podemos fazer o seguinte:
+
+//                 Istant nowInstant = Instant.now();
+
+//                 ZonedDateTime zdt = nowInstant.atZone(euaZone);
+//                     -> o interessante dessa classe e que ela trabalha com o zulo time, se fizermos dessa forma ele ira retornar tambem um zoneDateTime, mas a diferenca e que ele vai trazer ja aplicado o horario da zona que foi passada.
+
+
+//             }
+//         }
+
+
+
+
+
+
+// CLASSES UTILITARIAS DATETIMEFORMATTER
+
+//         -> Classe utilizada para formatacao
+
+//         -> precisamos lembrar que toda vez que estamos trabalhando com formatacao que a palavra "format" significa que voce esta transformando do seu objeto para uma String, e todas as vezes que vemos a palavra "parse" voce esta transformando de uma String para um objeto.
+
+//         exemplo: 
+
+//             public class DateFormatterTeste{
+//                 public static void main(String[] args){
+//                     LocalDate date LocalDate.now();
+
+//                     date.format(/*Vemos que aqui dentro podemos colocar varios tipos */);
+
+//                     exemplos: 
+
+//                     String s1 = date.format(DateTimeFormatter.BASIC_ISO_DATE); 
+//                     // ira retornar a data no formato basico
+
+//                     String s2 = date.format(DateTimeFormatter.ISO_DATE); 
+//                     // ira retornar a data no formato ISO
+
+//                     String s3 = date.format(DateTimeFormatter.ISO_LOCAL_DATE); 
+//                     // ira retornar a data no formato ISO local
+
+//                     System.out.println(s1 + " " + s2 + " " + s3); 
+//                     // vai imprimir as formatacoes 
+
+
+
+//                     agora vamos supor que temos uma String e queremos transformar ela em um objeto: lembramos que temos que tomar cuidado e utilizar o mesmo padrao que voce utilizou para formatar em String , exemplo: 
+
+//                     LocalDate parse1 = LocalDate.parse("20210219");
+//                         -> Se fizermos dessa forma ele ira dar uma excecao, pois o java nao sabe como formatar essa data, entao temos que passar o padrao que foi utilizado para formatar essa data, exemplo:
+
+//                     LocalDate parse2 = LocalDate.parse("2021-02-19", DateTimeFormatter.BASIC_ISO_DATE);
+
+//                         -> Se fizermos dessa forma ele ira retornar a data que foi passada, pois ele sabe como formatar essa data.
+
+                    
+
+//                     --> Formatacao de datas 
+
+//                     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+//                         -> aqui passamos o modelo desejado de acordo com o que queremos, e depois passamos para o objeto que queremos formatar.
+
+//                     String formatBR = LocalDate.now().format(formatter);
+//                         -> aqui passamos o objeto que queremos formatar, e chamamos o metodo format, passando o formatter que queremos.
+
+//                     System.out.println(formatBR);
+//                         -> ira retornar a data formatada de acordo com o que foi passado no formatter.
+
+
+//                     --> agora aqui podemos fazer o parse de uma data que esta em String para um objeto:
+
+//                     LocalDate parseBR = LocalDate.parse("20/02/2021", formatterBR);
+//                         -> aqui passamos a data que esta em String, e chamamos o metodo parse, passando a data e o formatter que queremos.
+
+//                     System.out.println(parseBR);
+//                         -> ira retornar a data que foi passada, porem formatada de acordo com o formatter que foi passado.
+
+
+
+
+//                     --> Podemos fazer a formatacao na lingua que queremos, para isso temos que passar o locale que queremos, exemplo:
+
+//                     DateTimeFormatter formatterGR = DateTimeFormatter.ofPattern("dd.MMMM.yyyy", Locale.GERMAN);
+//                         -> aqui passamos o modelo desejado de acordo com o que queremos, e depois passamos para o objeto que queremos formatar, e passamos o locale que queremos.
+
+
+//                     String formatGR = localDate.now().format(formatterGR);
+//                         -> aqui passamos o objeto que queremos formatar, e chamamos o metodo format, passando o formatter que queremos.
+
+//                     System.out.println(formatGR);
+//                         -> ira retornar a data formatada de acordo com o que foi passado no formatter.
+//                 }
+//             }
+
+
+
+
+
+
+// CLASSES UTILITARIAS RESOURCEBUNDLE
+
+//     -> e uma forma que voce tem de intercionalizar a suas mensagens, 
+
+
+
+
+
+
+COLECOES EQUALS 
+
+    -> O que e colecoes: e um conjunto de objetos, que sao armazenados em uma unica variavel, e que podem ser acessados atraves de um indice ou de uma chave, e que podem ser acessados de forma sequencial ou aleatoria.
+
+    -> public class EqualsTest{
+        public static void main(String[] args){
+            String nome = "Kayque Allan";
+            String nome2 = "Kayque Allan";
+            String nome3 = new String("Kayque Allan");
+
+            System.out.println(nome == nome2); --> retorna true 
+
+            System.out.println(nome == nome3); --> retorna false, porque temos "kayque allan" dentro do pool de String, mas temos o new String no heap de memoria, olhando para esse dois valores sabemos que esta correto, mas o java nao entende que estao corretos, porque o java foi desenvolvido para trabalhar dessa forma.
+
+
+                    -> para que retorne true, temos que fazer o seguinte:
+
+
+            System.out.println(nome.equals(nome2)); --> retorna true, o equals vai trabalhar no que foi definido, ele vem da classe objetcts que idependente de sobrescrever ou nao, ele vai fazer a sobrescrita do equals para comparar se essas duas variaveis de referencias sao iguais.
+
+        }
+    }
+
+    --> Exemplo 2:
+
+    ->  public class Smartphone{
+
+            private String serialNumber;
+            private String marca;
+
+            public Smartphone(String serialNumber, String marca){
+                this.serialNumber = serialNumber;
+                this.marca = marca;
+            }
+
+            public void setSerialNumber(String serialNumber){
+                this.serialNumber = serialNumber;
+            }
+
+            public String getSerialNumber(){
+                return serialNumber;
+            }
+
+            public void setMarca(String marca){
+                this.marca = marca;
+            }
+
+            public String getMarca(){
+                return marca;
+            }
+
+        }
+
+        -->  com essa classe agora podemos voltar la para classe teste, sendo que vamos supor que temos dois Smartphones iguais, onde vamos tentar fazer a comparacao:  
+    }
+
+
+
+    public class EqualsTest{
+        public static void main(String[] args){
+            Smartphone s1 = new Smartphone("1ABC1", "Apple");
+            Smartphone s2 = new Smartphone("1ABC1", "Apple");
+
+            System.out.println(s1.equals(s2)); 
+                --> quando comparamos esses dois valores, se voltarmos la na classe Object vamos ver que ele esta comparando se o valor de memoria  = objeto, se executarmos o equals teste ele ira retornar false;
+                
+                    - porque? nos temos os dois objetos que possui o mesmo serialNumber e mesma marca, mas a diferenca e que temos duas variaveis de referencia que uma e "s1" e outra e "s2", quando utilizamos o equals que vem do objetcts ele vai comparar se o esse(s1) valor em memoria(objeto em memoria) e igual a esse(s2).
+
+                    - entao a variavel de referencia que s1 esta fazendo referencia esta fazendo referencia para o mesmo objeto que s2? e isso que estamos comparando. e como ele esta fazendo referencia para dois objetos distintos ele vai retornar false.
+
+                    ou seja: 
+
+                        s1 --> "1ABC1" e s2 --> "1ABC1" 
+
+                            -> para que funcionasse o s2 teria que fazer referencia para o mesmo objeto em memoria que s1;
+
+                        s1 --> "1ABC1" <-- s2  "1ABC1"
+
+                            -> agora sim ira retornar true, para fazermos isso temos que colocar ele em referenciando um mesmo objeto. 
+                            
+                ex: 
+                
+                    Smartphone s1 = new Smartphone("1ABC1", "Apple");
+                    Smartphone s2 = s1;
+
+                    System.out.println(s1.equals(s2)); 
+                        --> isso agora ira retorna true, porque s2 esta fazendo referencia para o mesmo objeto em memoria que s1, entao ele vai retornar true.
+                    
+
+        }
+    }
+
+
+
+
+
+
+COLECOES EQUALS PT2
+
+    -> precisamos falar para o java agora que todas as vezes que formos comparar dois objetos do tipo Smartphone precisa levar em consideracao o serialNumber deles, para isso sabemos que todo objeto e da classe objects com isso sabemos que podemos fazer a sobrescrita do metodo equalsl, 
+
+
+    public class Smartphone{
+
+            private String serialNumber;
+            private String marca;
+
+            public Smartphone(String serialNumber, String marca){
+                this.serialNumber = serialNumber;
+                this.marca = marca;
+            }
+
+            @Override
+            public boolean equals(Object obj){
+
+                -> com essas regras precisamos implementar o metodo equals, basicamente a primeira coisa que temos que fazer e verificar se o objeto e nulo, se objeto que estamos passando e recebemos em "Object obj" obviamente nos temos que retornar false;
+
+                -> equals ira sempre ser executado a partir de um objeto, ou seja, o this sempre ira existir, o que estamos referenciando e o this como o "x.".
+
+                - agora a implementacao, que verifica se objeto passado e null: 
+
+                    if(obj == null) return false;
+
+                - agora precisamos verificar se temos dois objetos iguais: 
+
+                    if(this == obj) return true;
+
+                - agora temos como parametro object, mas precisamos verificar se esse objeto faz parte do Smartphone.
+
+                    if(this.getClass() != obj.getClass()) return false;
+
+                - quando chegamos nessa linha temos certeza absoluta que o objeto e um celular entao podemos criar uma variavel de referencia para o objeto que estamos comparando, e fazer um cast para o objeto que estamos comparando. Após confirmar que obj é um Smartphone, fazemos o casting para transformar o tipo genérico Object em um tipo específico: Com isso, podemos acessar atributos como serialNumber e marca do objeto smartphone para compará-los com os do objeto atual (this).
+
+                    Smartphone smartphone = (Smartphone) obj;
+
+
+                - agora podemos fazer a comparacao dos objetos, e retornar o resultado: 
+
+                    return serialNumber != null && serialNumber.equals(smartphone.serialNumber);
+
+                        --> estamos chamando o .equals agora de uma String, e o que o equals da String faz? ele compara dois valores literais, ou seja, ele compara se o valor que esta dentro do serialNumber e igual ao valor que esta dentro do serialNumber do objeto que estamos comparando, se for igual ele retorna true, se nao for ele retorna false. 
+
+                
+
+
+                /*-> regra que precisamos seguir:
+
+                    - Reflexivo: metodo equals precisa ser reflexivo, que significa que x.equals(x) tem que ser true para tudo que dor diferente de null
+
+                    - Simetrico: para x e y diferentes de null, x.equals(y) == true logo, y.equals(x) == true
+
+                    - Transitividade: para x,y, z diferentes de null, se x.equals(y) == true, e x.equals(z) true logo, y.equals(z) tem que ser == true
+
+                    - Consistente: x.equals(x) sempre retorna true se x for diferente de null
+
+                    - para x diferente de null, x.equals(null) tem que retornar false
+                */ 
+            }
+
+            public void setSerialNumber(String serialNumber){
+                this.serialNumber = serialNumber;
+            }
+
+            public String getSerialNumber(){
+                return serialNumber;
+            }
+
+            public void setMarca(String marca){
+                this.marca = marca;
+            }
+
+            public String getMarca(){
+                return marca;
             }
         }
 
 
 
 
+        resultado da sobrescrita do equals: 
+
+        @Override
+        public boolean equals(Object obj){
+            if(obj == null) return false;
+
+            if(this == obj) return true;
+
+            if(this.getClass() != obj.getClass()) return false;
+
+            Smartophone smartphone = Smartophone obj;
+
+            return serialNumber != null && serialNumber.equals(smartphone.serialNumber); 
+        } 
 
 
-CLASSES UTILITARIAS INTERCIONALIZACAO DE MOEDA COM LOCALE
 
-    --> E praticamente a mesma coisa que utilizamos antes,  a diferenca pr que antes utilizavamos getInstance() e agora utilizamos get.CurrencyInstance().
 
-    public class Money{
+
+
+
+COLECOES HASHCODE 
+
+    -> vamos falar sobre o irmao do equals que e o hashcode, que um mais um metodo do java tem para gente que vai trabalhar diretamente nas colecoes que irao trabalhar com hash, na ultima aula trabalhamos com equals agora sabemos dizer para o java como ele pode identificar que dois objetos sao iguais.
+
+        o que e hash code? vamos imaginar que temos duas caixas, e essas duas caixas terao nome dentro dela, se pensarmos em trabalhar com arrays o problema seria fazer busca, exemplo se voce tem um array de 10 buscar voce ira fazer dentro dessas 10 buscas, mas se voce tem um array com 70 millions de posicoes fica complicado fazer uma busca, entao para solucionar esse problema de performace nos temos as colecoes que utilizam hash;
+
+            - hash e um numero que voce gera, a logica para gerar existe diversas. 
+            
+            
+            podemos usar como exemplo que cada letra seria um numero: a = 1, b = 2, c = 3...
+            
+            com isso poderiamos criar uma logica para que cada nome que fosse passado, ele iria gerar um numero, e esse numero seria o hash, e com isso poderiamos fazer uma busca mais rapida, porque ele iria buscar o hash e nao o nome: 
+            
+            ex: 
+            
+            bob = 2 + 15 + 2 = 19   
+            alex = 1 + 12 + 5 + 24 = 42
+            
+            o hash e basicamente isso gerar um valor numerico para identificar seu valor, porem temos que tomar cuidado porque imagina que: 
+
+
+            bob = 2 + 15 + 2 = 19   
+            alex = 1 + 12 + 5 + 24 = 42
+            dirk = 4 + 9 + 18 + 11 = 42
+
+            --> agora temos dois nomes dentro da caixa que serao representados pelo hash 42, como que o java consegue se virar? como por exemplo eu peca o alex, o java vai fazer o seguinte irar rodar e pedir o hash 42, entrando dentro da caixa onde esta alocado esses dois valores, e agora como ira se diferenciar? para saber qual se deve retornar ele se utiliza o equals porque ele ira trazer o valor baseado no que definimos logicamente, basicamente hash e isso voce vai gerar um valor e esse valor ira ser gerado pelo java para indexar as colecoes e o equals caso voce tenha valores duplicados vai trazer aquele valor que voce esta procurando.
+
+
+
+
+
+
+HASHCODE PT2 
+
+      -> vamos sobrescrever o metodo do hashcode  
+      
+      /*public class Smartphone{
+
+            private String serialNumber;
+            private String marca;
+
+            public Smartphone(String serialNumber, String marca){
+                this.serialNumber = serialNumber;
+                this.marca = marca;
+            }
+
+            @Override
+            public boolean equals(Object obj){
+                if(obj == null) return false;
+                if(this == obj) return true;
+
+                if(this.getClass() != obj.getClass()) return false;
+
+                Smartphone smartphone = (Smartphone) obj;
+
+                return serialNumber != null && serialNumber.equals(smartphone.serialNumber);
+
+                        
+            }
+        */
+
+            ----> AQUI: 
+
+            @Override
+            public int hashCode(){
+                return super.hashCode();
+            }
+
+                -> temos algumas regras para implementarmos esse hashcode
+
+                1 regra: se tivermos x.equals(y) == true, y.hashCode() == x.hashCode(), se falarmos que x e y sao iguais, entao o hashcode de x tem que ser igual ao hashcode de y, se x.equals(y) == true, y.hashCode() == x.hashCode() tem que ser verdadeiro.
+
+                    - exemplos: se temos alex e alex o hashCode deles tem que ser exatamente o mesmo
+                    
+                2 regra : y.hashCode() == x.hashCode() nao necessariamente o equals de y.equals(x) tem que ser true, exemplo: se temos y.hashCode() == x.hashCode() nao necessariamente significa que y.equals(x) tem que retornar a mesma coisa, porque? 
+                    
+                    - digamos que estamos compararando o hashCode de alex e dirk e exatamente, mas nao significa que eles sao o mesmo objeto.
+
+
+                3 regra: se x.equals(y) == false, o hashCode tem que ser diferente 
+
+                4 regra: y.hashCode() != x.hashCode() x.equals(y) devera ser false, se o hashCode de y for diferente do hashCode de x, entao x.equals(y) tem que ser false. 
+
+
+
+                como podemos fazer? 
+
+
+                public int hashCode(){
+                    return this.serialNumber.hashCode();
+                        -> na propria classe String, ja tem a implementacao para fazer o calculo do hashcode, estamos dependendo do hashCode desenvolvidos pelos arquitetos do java, entao precisamos tambem verificar se ele e nulo, por caso seja teremos uma excecao de nullPointerException, precisamos verificar aqui se o serialNumber e diferente de null, se for diferente de null, ele ira retornar o hashcode do serialNumber, se for igual a null ele ira retornar 0, e isso e uma regra que temos que seguir, se o objeto e nulo ele tem que retornar 0, se o objeto nao e nulo ele tem que retornar o hashcode do objeto.
+                }
+
+
+                resumo: e um numero que ira ser gerado, de preferencia esse numero tera que ser unico para os objetos, quando estamos implementando o hashCode ele tem que dar um match no equals, o equals se estamos usando o serialNumber para verificar se dois objetos sao iguais, no hashCode() tambem teremos que utilizar o serialNumber para gerar o numero hash, nao importa se estamos gerando != algoritimos, o importante e o atributo que voce esta gerando e o mesmo utilizado la no equals.
+
+                                
+        /*
+            public void setSerialNumber(String serialNumber){
+                this.serialNumber = serialNumber;
+            }
+
+            public String getSerialNumber(){
+                return serialNumber;
+            }
+
+            public void setMarca(String marca){
+                this.marca = marca;
+            }
+
+            public String getMarca(){
+                return marca;
+            }
+        }
+    */
+
+
+
+
+
+
+COLECOES COMPLEXIDADE 
+
+    -> basicamente precisamos entender que as colecoes e um grupo de dados que pode ser dividido em diferentes classes, mas que eles se enquadram em duas categorias a "Ordered" (ordenados) e "Sorted" (sortidos), quando falamos que algo e ordenado geralmente o java utiliza a palavra que a colecao e ordenada quando ele consegue lembrar a ordem dos elementos onde eles deveriam estar, por exemplo: se estamos trabalhando do array, temos a posicao 0,1,2,3,4 ... o java lembra dessa ordem, entao um array ele e ordenado, quando falamos sortido, significa que a iteracao da ordem geralmente baseado no que voce pre-definiu, exemplo: um conjunto de nomes, onde queremos que ele seja sempre organizado em ordem alfabetica, entao todas as vezes que nos inserirmos em uma colecao, ela tera que se ajustar e ordenar os nomes em ordem alfabetica.
+
+        --> quando trabalhamos com colecoes de dados precisamos levar em consideracao a performace, um conceito muito famoso seria o big O, que basicamente define a velocidade baseado no tipo de operacao que voce estar fazendo.
+
+        --> quando falamos em colecao (seria colecao de dados ), ja a collection significa a interface collection, onde as classes implementam e temos tambem uma classe abstrata chamada collections, que seria como se fosse uma classe utilitaria que prove os metodos interessantes. temos tambem que tomar cuidado com a complexidade Big O, cada uma das colecoes que estamos trabalhando tem um nivel de dificudade para operacao, exemplo: adicionar, remover, procurar, verificar se existe...}
+
+
+
+
+
+
+
+COLECOES LIST PT1
+
+    -> vamos falar agora sobre listas, ela seria uma interface, e tambem proven de uma colecao ordenada, ou seja, sequencial. 
+
+
+    public class ListTest{
         public static void main(String[] args){
-            Locale localePT = new Locale("pt, BR");
-            Locale localeUS = new Locale("en, US");
+            // List nomes = "podemos criar varios tipos de objetos aqui, mas o mais famoso e o ArrayList";
+
+            -> o pacote collection e altamente coeso, normalmente trabalhamos orientado a interface, entao precisamos de um tipo para esse objeto, onde o mais famoso seria o ArrayList, e o mesmo, e basicamente um array que pode ser dinamicamente incrementado, ou seja, ele e por padrao se inicia com 16 posicoes, e ele pode ser aumentado, quando adicionamos valores, nao precisamos recriar o array, ele faz isso automaticamente por traz dos panos. 
+
+
+            List nomes = new ArrayList();  -> esse modo era feito ate a versao 1.4 do java; 
+
+            nomes.add("Kayque"); -> adiciona um nome na lista
+            nomes.add(123);
+            nomes.add("Kaypiraz"); 
+
+            ("se vermos dentro de nome.add, vemos que ele esta pedindo um Objeto, entao qual objeto que temos aqui? nos nao sabemos, sabemos que tem String ali dentro mas o java nao sabe")
+
+            for(Object nome: nomes){
+                System.out.println(nome);
+                    -> isso ira funcionar normalmente, ele ira imprimir tudo que coloquei acima, ele esta aceitando qualquer coisa e isso seria um problema, era isso que acontecia de problema ate a versao 1.4;
+
+            }
             
 
-            NumberFormat[] nf = new NumberFormat[4];
 
-            nf[0] = NumberFormat.getCurrencyInstance(localePT);
-            nf[0] = NumberFormat.getCurrencyInstance(localeUS);
-            //aqui poderiamos colocar outros locale, em outras formatacoes, para que seja exibido de acordo com o pais
+            --> agora nas novas versoes eles adicionaram um novo tipo, forcaram em tempo de compilacao a definicao do tipo;
 
-            double valor = 1_000;
+            List <String> nomes = ArrayList();
 
-            for(NumberFormat moneyFormat : nf){
-                System.out.println(moneyFormat.format(valor));
+                - agora estamos forcando isso em tempo de compilacao a ser uma lista somente de Strings, agora se apertamos com control + P poderemos ver que agora o tipo que ele aceita e somente String, porque substituimos por String, isso foi feito para manter a compatibilidade retrativa com as outras versoes do java, a partir da versao 1.5 quando compilamos o codigo, em bytecode o java ira ver somente "List nomes = ArrayList()", mas em tempo de compilacao ele ira te forcar a colocar somente String, caso voce coloque um inteiro ele ira dar erro;
 
-            }            
+
+                - Esse objeto e um ArrayList ou seja uma lista, um array que pode ser incrementado em tamanho tecnicamente indefinido (enquanto existir memoria)
+
+                for(String nome: nomes){
+                    System.out.println(nome);
+
+                    --> podemos colocar aqui agora que e do tipo String, porque o que estiver dentro dessa lista sera String;
+                }
+
+                
+                -> como pegariamos algo com o for indexado? 
+
+                    for(int i = 0; i < nomes.size(); i++){
+                        System.out.println(nomes.get(i));
+
+                        // -> pega o valor de acordo com o indice, e imprime o valor de acordo com o indice;
+                    } 
+                    
+                    como isso nao e mais um array e sim um ArrayList teremos que utilizar agora o size() que ira retornar o tamanho;
         }
     }
 
@@ -6338,7 +5669,345 @@ CLASSES UTILITARIAS INTERCIONALIZACAO DE MOEDA COM LOCALE
 
 
 
-CLASSES UTILITARIAS SIMPLE DATE FORMAT
-        
+COLECOES LIST PT2
 
-       
+    -> 
+
+
+    public class ListTest{
+        public static void main(String[] args){
+        
+           List <String> nomes = ArrayList();
+
+            nomes.add("Kayque");
+            nomes.add(123);
+                         
+
+                for(String nome: nomes){
+                    System.out.println(nome);
+
+                    -> O que acontece se colocarmos o nomes.add dentro do for? ele ira dar uma exececao, acontece por causa da forma que  o for funcionar, ele meio que ja tem um tamanho fixado na hora que voce comeca a iterar sobre ele o java ja sabe, nao podemos simplesmente alterar o tamanho pois "nomes" sinalizado dentro do for ja sabe o size;
+
+                    nomes.add("Kaypiraz");  
+                }
+        
+                for(int i = 0; i < nomes.size(); i++){
+                    System.out.println(nomes.get(i));
+
+                    nomes.add("Kaypiraz"); 
+                    
+                    --> para se utilizar dessa forma teremos que utilizar o for indexado, ele vai imprimir e adiocionar mais um, de dois vai aumentar para 3, a iteracao vai continuar i vai aumentar mais um e assim por diante, esse cara nunca ira parar de executar;
+                } 
+                    
+                    !! nao tem como fazer dessa forma
+
+                
+                -> Temos que tomar cuidado na criacao de qualquer tipo de colecao o valor que estamos passando aqui <String> tem que ser obrigatoriamente um objeto por isso utilizamos Wrappers, 
+
+                List <Integer> numeros = new ArrayList();  
+                
+                    --> dessa forma, e porque nao podemos criar colecoes com tipos primitivos? porque as colecoes chamam o equals e o hashcode internamente, como os tipos primitivos sao primitivos nao tem como existir um equals e um hashCode para tipos primitivos;
+
+
+
+
+                --> Temos outros metodos interessantes tambem como: 
+
+
+                @remove: 
+
+                nomes.remove(0); 
+                    --> ou remover pelo indice 
+
+                nomes.remove("Kayque"); 
+                     --> podemos passar diretamento o objeto, no caso uma String, atraves do equals ele ira remover o objeto que esta dentro da lista;
+
+
+                @addAll: 
+
+                --> passamos tudo de uma outra lista para dentro de uma outra lista,
+
+                List <String> nomes1 = new ArrayList();
+                List <String> nomes2 = new ArrayList();
+
+                nomes.addAll(nomes2); 
+                    -> todos os valores que estao dentro de nomes2 serao passados para dentro de nomes1, e nomes2 continuara com os valores que ele tinha antes, e nomes1 tera os valores de nomes2;
+
+
+                @clear:
+
+                nomes.clear(); 
+                    -> limpa a lista, remove todos os valores que estao dentro da lista;
+        }   
+    }
+
+
+
+
+
+
+COLECOES LIST PT3
+
+    -> vamos trabalhar agora com uma lista voltada para o mundo real
+
+    public class SmartphoneTest{
+        public static void main(String[] args){
+            Smartphone s1 = new Smartphone("1ABC1", "Apple");
+            Smartphone s2 = new Smartphone("22222", "Pixel");
+            Smartphone s2 = new Smartphone("33333", "Sansung");
+
+            -> vamos supor que temos uma lista de smartphones, e queremos adicionar esses smartphones dentro dessa lista, como podemos fazer isso?
+
+            List<Smartphone> smartphones = new ArrayList(6);
+                --> Uma lista do tipo Smartphones;
+
+
+            smartphones.add(s1);
+            smartphones.add(s2);
+            smartphones.add(s3);
+
+            for(Smartphone smartphone: smartphones){
+                System.out.println(smartphone);
+            } 
+
+
+                ---> o que queremos mostrar e o uso do equals, por exemplo digamos que temos aqui um quarto smartphone, e digamos por exemplo, voce tem esses tres valores acima guardados no banco de dados ai uma pessoa vai la e digita por exemplo em uma telinha o serial "22222", ta sendo inserido pelas pessoas, e queremos saber se esse smartphone existe naquela lista, como podemos fazer isso?  
+
+                Smartphone s4 = new Smartphone("22222", "Pixel");
+
+                atraves do metodo contains: 
+
+                    smartphones.contains(s4);
+                        -> onde ele retorna true ou false, para saber se aquele objeto existe dentro da lista;
+
+                        e a mesma coisa que fazer: 
+
+                    s4.equals(s2);
+                        -> que tambem ira retornar true 
+
+
+                -> temos outro metodo que e o indexOf, que traz o indice do objeto que voce esta passando
+
+                smartphones.indexOf(s4);
+                    -> ira retornar o indice do objeto que voce esta passando, se ele nao existir ele ira retornar -1;
+        }
+    }
+
+
+
+
+
+
+COLECOES LIST PT4
+
+    -> sortidos e ordenados
+
+        public class ListSortTest{
+            public static void main(String[] args){
+                List<String> mangas = new ArrayList();
+
+                mangas.add("Naruto");
+                mangas.add("Pokemon");
+                mangas.add("One Piece");
+                mangas.add("Dragon Ball");
+                mangas.add("Bleach");
+
+                Collections.sort(mangas);
+                    -> classe utilitaria onde os metodos sao todos estaticos, ele ira reorganizar a lista de forma em ordem alfabetica, pegamos a lista e fizemos um reodernamento um algoritimo de sortir e classificar e ordenar nossa lista
+
+                for(String manga: mangas){
+                    System.out.println(manga);
+                        -> vai imprimir a lista
+                }
+
+            } 
+        }
+
+
+        -->  mas nem tudo esta certo, porque se tentarmos fazer dessa forma dentro de Smartophone ira dar erro porque temos dois atributos, e o java nao sabe qual ele deve ordenar;
+
+        para isso vamos representar: 
+
+
+            public class Manga interface Comparable<Manga>{
+                private Long id;
+                private String nome;
+                private double Preco;
+
+                public Manga(Long id, String nome, double preco){
+                    Objects.requireNonNull(id,, "Id nao pode ser nulo");
+                    Objects.requireNonNull(nome);
+                    Objects.requireNonNull(preco);
+
+                        --> aqui estamos verificando se os valores sao nulos, se forem ele ira lancar uma excecao;
+
+                    this.id = id;
+                    this.nome = nome;
+                    this.preco = preco;
+                }
+
+                public void setId(Long id){
+                    this.id = id;
+                }
+
+                public Long getId(){
+                    return id;
+                }
+
+                public void setNome(String nome){
+                    this.nome = nome;
+                }
+
+                public String getNome(){
+                    return nome;
+                }
+
+                public void setPreco(double preco){
+                    this.preco = preco;
+                }
+
+                public double getPreco(){
+                    return preco;
+                }
+
+                @Override
+                public String toString(){
+                    return "Manga{" + "id=" + id + ", nome=" + nome + ", preco=" + preco + "}";
+                }
+
+                @Override
+                public boolean equals(Object obj){
+                    if(obj == null) return false;
+                    if(this == obj) return true;
+                    if(this.getClass() != obj.getClass()) return false;
+
+                    Manga manga = (Manga) obj;
+
+                    return id != null && id.equals(manga.id);
+                }
+
+                @Override
+                public int hashCode(){
+                    return id.hashCode();
+                }
+
+                @Override
+                public int compareTo(Manga manga){
+                    return this.nome.compareTo(manga.getNome());
+                }
+            }
+
+        
+        --> agora vamos para a classe de teste:
+
+            public class MangaTeste{
+                public static void main(String[] args){
+                    List<Manga> mangas = new ArrayList();
+
+                    mangas.add(new Manga(1L , "Naruto", 10.0));
+                    mangas.add(new Manga(2L , "Pokemon", 20.0));
+                    mangas.add(new Manga(3L , "One Piece", 30.0));
+                    mangas.add(new Manga(4L , "Dragon Ball", 40.0));
+                    mangas.add(new Manga(5L , "Bleach", 50.0));
+
+                        -> agora precisamos orfernar, mas precisamos dizer para o java como ordernan a lista, so conseguimos fazer isso na classe "ListSortTest" a primeira acima nessa aula, porque a propria classe String implementa a interface Comparable, e a interface Comparable tem um metodo chamado compareTo, que basicamente ele compara um objeto com outro, e ele retorna um inteiro, se for 0 ele e igual, se for 1 ele e maior, se for -1 ele e menor, e a classe String implementa essa interface, e por isso conseguimos fazer dessa forma, mas a classe Manga nao implementa essa interface, entao precisamos fazer isso manualmente;
+                }
+            }
+
+
+            ex: public class Manga interface Comparable<Manga>{
+                -> onde precisamos passar tambem o tipo que seria manga, e tambem implementar o metodo compareTo;
+
+
+                @Override
+                public int compareTo(Manga manga){
+            
+                        -> REGRAS DESSE METODO: 
+
+                            - se o retorno for 0, significa que os objetos sao iguais
+                            - se o retorno for maior que 0, significa que o objeto que esta chamando e maior
+                            - se o retorno for menor que 0, significa que o objeto que esta chamando e menor
+
+                        ou seja: 
+
+                        if(this.id < manga.getId()){
+                            return -1;
+                        }else if(this.id.equals(manga.getId())){
+                            return 0;
+                        }else{
+                            return 1;
+                        }
+
+
+                    -> dessa forma nos implementando o metodo compareTo, conseguimos ordenar a lista de mangas, e agora podemos fazer o sort da lista de mangas, e ele ira ordenar de acordo com o que foi implementado no compareTo, e ele ira ordenar de acordo com o id, se for igual ele ira retornar 0, se for maior ele ira retornar 1, se for menor ele ira retornar -1, e dessa forma conseguimos ordenar a lista de mangas de acordo com o id;
+             
+                }
+            }
+
+
+            temos uma forma melhor de fazer isso, pois o id e um Long, que e um Wrapper, eles possui metodos que podemos utilizar, entao o Wrapper do Long, ja implementou o compareTo
+
+
+            @Override
+                public int compareTo(Manga manga){
+                    
+                    return this.id.compareTo(manga.getId());
+
+                        -> estamos delegando a responsabilidade para o compareTo do Long, entao todo aquele codigo que tinhamos antes e reduzido para isso ai, mas quando nao poderiamos utilizar o compareTo dessa forma? quando estamos trabalhando com o tipo primitivo, entao por exemplo se quisermos organizar essa List por preco, dessa forma nao daria, pois ela e um tipo primitivo(double preco), pois ele nao tem metodos, tinhamos
+                  
+                }
+
+                caso fosse por preco teriamos que fazer:
+
+                return Double.valueOf(preco).compareTo(manga.getPreco());
+
+                    -> dessa forma ele iria transformar o preco em um objeto, e iria chamar o compareTo do Double, e iria comparar os valores, e dessa forma iria ordenar a lista de mangas de acordo com o preco; se utiliza o valueOf, para o que for passado dentro do paramentro se transformar em um Wrapper;
+            }
+
+
+            RESUMO: 
+                -> voce prove a implementacao da Comparable, em seguida voce precisa fazer a implementacao do compareTo, e dentro do compareTo voce precisa dizer como que voce quer ordenar, e depois disso voce pode chamar o sort, e ele ira ordenar de acordo com o que foi implementado no compareTo, sempre que possivel delegue as responsabilidades para dentro da classe do java;
+
+
+
+
+
+
+COLECOES SORTING LITS COMPARATOR
+    
+    -> Sobre o sorteamento e ordenacao de listas, vamos falar sobre um problema comum depois de muito tempo de desenvolvimento, digamos que implementamos o comparable, e o compareTo esta retornando a lista de forma ordenada, mas ai vem um problema digamos que queremos trocar, ex: "nao queremos mais ordernar por nome, e sim por id", se tentarmos fazer isso e possivel que ocasione muitos problemas no codigo, digamos que quando temos o compareTo sendo executado de uma forma por todo sistema a outra forma que temos seria utilizar a Comparator; 
+
+            -> que seria um interface que ira tambem fazer comparacao, mas a unica diferenca entre essa e a Comparable, e que essa nos temos o metodo compare() e voce nao utliza implementando em sua classe diretamente ou seja( implements Comparator), porque o sort espera um objeto que implementa a interface Comparable;
+
+
+    como fazemos quando temos esses metodos especificos? 
+
+    
+        class MangaById implements Comparator<Manga>{
+            @Override
+            public int compare(Manga manga1, Manga manga2){
+                return manga1.getId().compareTo(manga2.getId());
+
+                -> exatamente a mesma regra que tinhamos no compareTo, porem como podemos ver nao estamos mais com o objeto manga, nos estamos com o  objeto MangaById, nesse caso nos temos acesso a dois, da mesma forma que nos fizemos la estamos fazendo aqui;
+            }
+        }
+
+            public class MangaTeste{
+                public static void main(String[] args){
+                    List<Manga> mangas = new ArrayList();
+
+                    mangas.add(new Manga(1L , "Naruto", 10.0));
+                    mangas.add(new Manga(2L , "Pokemon", 20.0));
+                    mangas.add(new Manga(3L , "One Piece", 30.0));
+                    mangas.add(new Manga(4L , "Dragon Ball", 40.0));
+                    mangas.add(new Manga(5L , "Bleach", 50.0));
+                }
+
+
+                agora em meu sort: 
+
+                Collections.sort(mangas, new MangaById());
+                    -> como funciona agora? queremos que o sort, ao inves de utilizar o comportamento padrao da classe Manga, que e fazendo a organizacao via nome, queremos que ele faca a organizacao via id, e e por isso que esse metodo e sobrecarregado, pois ele aceita um objeto que passa no test comprareTo, e ele dis que aceita somente objeto do tipo Manga, por isso passamos ao utilizar o implements Comparator<Manga>, quem vai se encarregar de chamar esse objeto e o java;
+            }
+
+        
