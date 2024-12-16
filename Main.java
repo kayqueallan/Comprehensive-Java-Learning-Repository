@@ -1052,7 +1052,7 @@ em metodos podemos utilizar o this.nomeDoMetodo, para chamar quando estiver dent
 public class Main {
     public static void main(String[] args) {
         Pessoa pessoa = new Pessoa("Kayque",12,"Visual Studio");
-        --> isso faz refenrencia ao contrutor 
+        --> isso faz refenrencia o objeto passando dentro dos parenteses o conteudo para o construtor
     }
 }
 
@@ -1076,40 +1076,39 @@ public class Pessoa {
 PODEMOS TER MAIS DE DOIS CONTRUTORES 
 
 
-public class Main {
-    public static void main(String[] args) {
-        Pessoa pessoa = new Pessoa("Kayque",12,"Visual Studio", "Masculino");
-    }
-}
+        public class Main {
+            public static void main(String[] args) {
+                Pessoa pessoa = new Pessoa("Kayque",12,"Visual Studio", "Masculino");
+            }
+        }
 
 
-o que acontece e o seguinte quando executarmos o codigo o objeto Pessoa("Kayque",12,"Visual Studio", "Masculino");
+        o que acontece e o seguinte quando executarmos o codigo o objeto Pessoa("Kayque",12,"Visual Studio", "Masculino");
 
-a primeira linha que ira ser executada e onde possui o numero um com isso quando essa primira linha for executada logo ira levar ao dois porque ela faz uma referencia; this(nome, episodio, estudio); que ira levar para o numero 2; this(); que quando ser executada vai levar ao terceiro contrutor que ira imprimir hello world e depois ira imprimir em linha normalmente como mostra abaixo, isso serve para quando queremos ter uma sobregarga, vamos supor que temos 4 atributos ja defenidos e agora vamos passar a ter 5, se modificarmos diretamente no contrutor principal pode ser que de quebra entre as classes, com isso podemos criar um outro contrutor que ira adicionar a informacoesm sem interfirir.
+        a primeira linha que ira ser executada e onde possui o numero um com isso quando essa primira linha for executada logo ira levar ao dois porque ela faz uma referencia; this(nome, episodio, estudio); que ira levar para o numero 2; this(); que quando ser executada vai levar ao terceiro contrutor que ira imprimir hello world e depois ira imprimir em linha normalmente como mostra abaixo, isso serve para quando queremos ter uma sobregarga, vamos supor que temos 4 atributos ja defenidos e agora vamos passar a ter 5, se modificarmos diretamente no contrutor principal pode ser que de quebra entre as classes, com isso podemos criar um outro contrutor que ira adicionar a informacoesm sem interfirir.
 
-ou seja podemos chamar outros contrutores com a palavra this, porem temos duas regras, se formos chamar outro construtor o this precisa ser a primeira linha executavel; e o this(); desse modo dentro de um metodo nao funciona somente em um construtor
+        ou seja podemos chamar outros contrutores com a palavra this, porem temos duas regras, se formos chamar outro construtor o this precisa ser a primeira linha executavel; e o this(); desse modo dentro de um metodo nao funciona somente em um construtor
 
 
-public class Pessoa {
-    public String nome;
-    public int episodio;
-    public String estudio;
-    public String genero;
+        public class Pessoa {
+            public String nome;
+            public int episodio;
+            public String estudio;
+            public String genero;
 
-     public Pessoa(String nome, int episodio, String estudio) {
-  2 -   this();
-   4 System.out.println(nome + episodio + estudio);
-    }
+            public Pessoa(String nome, int episodio, String estudio) {
+        2 -     this();
+        4       System.out.println(nome + episodio + estudio);
+            }
 
-    public Pessoa(String nome, int episodio, String estudio, String genero) {
-1 -  this(nome, episodio, estudio);
-    5 System.out.println(genero);
-    }
+            public Pessoa(String nome, int episodio, String estudio, String genero) {
+        1 -     this(nome, episodio, estudio);
+        5       
 
-        public Pessoa(){
-3-   System.out.println("Hello World");
-    }
-}
+            public Pessoa(){
+        3-      System.out.println("Hello World");
+            }
+        }
 
 
 
@@ -1175,7 +1174,7 @@ MODIFICADORES ESTATICOS
 
 
 
-    --> explicacao: criamos uma classe carro onde possui atributos como nome, velocidade maxima, e velocidade limite de trafego em rua, pois na alemanha a partir de uma categoria de carros tem que ter um limitador de sua velociade mesmo que ela seja maior, ou seja o carro pode chegar a 300 km/h , mas existe um limitador que deixa ele chgar a somente 250;
+    --> explicacao: criamos uma classe carro onde possui atributos como nome, velocidade maxima, e velocidade limite de trafego em rua, pois na alemanha a partir de uma categoria de carros tem que ter um limitador de sua velociade mesmo que ela seja maior, ou seja o carro pode chegar a 300 km/h , mas existe um limitador que deixa ele chegar a somente 250;
 
 
     --> acima cada objeto e independente ou seja podemos colocar c1.getVelocidadeMaxima(300); e somente no objeto c1 sera modificado a velocidadeMaxima, isso fica meio ruim pois e uma regra os carros obdecerem; e os outros irao permanecer 250;
@@ -1373,7 +1372,7 @@ ASSOCIACAO E PARECIDA COM A IDEIA DE BANCO DE DADOS:
 ASSOCIACAO UNIDIRECIONAL MUITOS PARA UM
 
 
-    associacao de um jogador e um time
+    - associacao de um jogador e um time
 
     public class Jogador {
         private String nome;
@@ -5829,73 +5828,7 @@ COLECOES LIST PT4
         para isso vamos representar: 
 
 
-            public class Manga interface Comparable<Manga>{
-                private Long id;
-                private String nome;
-                private double Preco;
-
-                public Manga(Long id, String nome, double preco){
-                    Objects.requireNonNull(id,, "Id nao pode ser nulo");
-                    Objects.requireNonNull(nome);
-                    Objects.requireNonNull(preco);
-
-                        --> aqui estamos verificando se os valores sao nulos, se forem ele ira lancar uma excecao;
-
-                    this.id = id;
-                    this.nome = nome;
-                    this.preco = preco;
-                }
-
-                public void setId(Long id){
-                    this.id = id;
-                }
-
-                public Long getId(){
-                    return id;
-                }
-
-                public void setNome(String nome){
-                    this.nome = nome;
-                }
-
-                public String getNome(){
-                    return nome;
-                }
-
-                public void setPreco(double preco){
-                    this.preco = preco;
-                }
-
-                public double getPreco(){
-                    return preco;
-                }
-
-                @Override
-                public String toString(){
-                    return "Manga{" + "id=" + id + ", nome=" + nome + ", preco=" + preco + "}";
-                }
-
-                @Override
-                public boolean equals(Object obj){
-                    if(obj == null) return false;
-                    if(this == obj) return true;
-                    if(this.getClass() != obj.getClass()) return false;
-
-                    Manga manga = (Manga) obj;
-
-                    return id != null && id.equals(manga.id);
-                }
-
-                @Override
-                public int hashCode(){
-                    return id.hashCode();
-                }
-
-                @Override
-                public int compareTo(Manga manga){
-                    return this.nome.compareTo(manga.getNome());
-                }
-            }
+           
 
         
         --> agora vamos para a classe de teste:
@@ -6009,5 +5942,520 @@ COLECOES SORTING LITS COMPARATOR
                 Collections.sort(mangas, new MangaById());
                     -> como funciona agora? queremos que o sort, ao inves de utilizar o comportamento padrao da classe Manga, que e fazendo a organizacao via nome, queremos que ele faca a organizacao via id, e e por isso que esse metodo e sobrecarregado, pois ele aceita um objeto que passa no test comprareTo, e ele dis que aceita somente objeto do tipo Manga, por isso passamos ao utilizar o implements Comparator<Manga>, quem vai se encarregar de chamar esse objeto e o java;
             }
+            
 
-        
+
+
+
+
+COLECOES BINARY SEARCH 
+
+    -> binary search retorna a posicao onde voce deveria inserir esse elemento caso ele nao exista;
+    
+    {
+
+    public class BinarySearch{
+        public static void main(String[] args){
+            List<Integer> numeros = new ArrayList<>();
+
+            numero.add(2);
+            numero.add(0);
+            numero.add(4);
+            numero.add(3);
+
+            -> binarySearch vai fazer uma busca na lista que nos passarmos e vai retornar para gente o indice caso encontre o que nos procuramos, mas caso nao encontre ele ira retornar algo seguindo essa regra: 
+            
+                --> //(-(ponto de insercao) -1), precisamos que a lista seja ordenada, podemos ter a ordem definida pelas classes wrapper ou por exemplo, caso tenha definido um comparator voce precisa passar esse comparator tambem, entao voce precisa passar obrigatoriamente uma lista que ja esteja ordenada, se nao o resultado nao pode ser confiado, entao antes de chamar o binarySearch voce precisa chamar o sort, para garantir que a lista esta ordenada;
+
+            Collections.sort(numeros);
+
+            System.out.println(Collections.binarySearch(numeros, 2));
+                -> entao digamos que queremos procurar o numero 2, ele precisa da nossa lista, entao queremos achar dentro da nossa lista "numeros" a posicao 2, onde ira retornar o indice (1);
+
+
+            --> agora o que acontece se passarmos dentro do binarySearch um numero que nao existe dentro da lista, ele ira retornar essa regra //(-(ponto de insercao) -1)?
+
+            System.out.println(Collections.binarySearch(numeros, 1));
+                
+                -> entao ele ira retornar um numero positivo se e somente se ele encontrar o numero que voce esta procurando dentro da sua lista, se ele nao existir dentro da sua lista ele ira retornar de acordo com sua regra; pois por exemplo imagine que colocamos o 0 dentro da lista, e fazemos essa procura, com isso ele iria se encontrar no indice 0, e se nao existisse essa regra o numero nao encontrado tambem se apareceria com indice 0, para isso nao ocorrer foi criado essa regra;
+        }
+    }
+
+    exemplo 2: 
+
+    public class BinarySearch2{
+        public static void main(String[] args){
+             List<Manga> mangas = new ArrayList();
+
+                    mangas.add(new Manga(1L , "Naruto", 10.0));
+                    mangas.add(new Manga(2L , "Pokemon", 20.0));
+                    mangas.add(new Manga(3L , "One Piece", 30.0));
+                    mangas.add(new Manga(4L , "Dragon Ball", 40.0));
+                    mangas.add(new Manga(5L , "Bleach", 50.0));
+
+            -> digamos que queremos fazer a busca, primeiro passo a se fazer e a ordenacao: 
+
+            Collections.sort(mangas);
+
+            Manga mangaToSearch = new Manga(2L, "Kaypiraz", 2.99);
+
+            System.out.println(Collections.binarySearch(mangas, mangaToSearch));
+
+            -> aqui estamos colocando que queremos dentro da lista de mangas que ele ache o objeto mangaToSearch, isso ira retornar a posicao dele;
+
+        }
+
+
+        -> agora caso nos tivessemos feito uma ordenacao customizada e nao tivessemos passado o comparator, ele iria dar erro, porque ele nao iria saber como ordenar, entao precisamos passar o comparator, e para isso precisamos passar o comparator dentro do binarySearch, e ele ira fazer a busca de acordo com o comparator que foi passado;
+
+
+        exemplo: 
+
+
+        List<Manga> mangas = new ArrayList();
+        MangaByIdComparator mangaByIdComparator = new MangaByIdComparator();
+
+                    mangas.add(new Manga(1L , "Naruto", 10.0));
+                    mangas.add(new Manga(2L , "Pokemon", 20.0));
+                    mangas.add(new Manga(3L , "One Piece", 30.0));
+                    mangas.add(new Manga(4L , "Dragon Ball", 40.0));
+                    mangas.add(new Manga(5L , "Bleach", 50.0));
+
+
+            mangas.sort(mangaByIdComparator);
+
+            Manga mangaToSearch = new Manga(2L, "Kaypiraz", 2.99);
+
+            System.out.println(Collections.binarySearch(mangas, mangaToSearch));
+
+            --> se colocarmos apenas dessa forma ele ira se perder pois a ordenacao esta customizada, precisamos passar o mesmo valor para a pesquisa;
+
+            System.out.println(Collections.binarySearch(mangas, mangaToSearch ,mangaByIdComparator));
+
+                -> agora dessa forma ele ira retornar o indice que o objeto esta dentro da lista;
+    }
+
+
+
+
+
+
+COLECOES CONVERSAO DE LISTA PARA ARRAYS E VICE VERSA
+
+    public class ListaArrayConversao{
+        public static void main(String[] args){
+            List<Integer> numeros = new ArrayList<>();
+
+            numeros.add(1);
+            numeros.add(2);
+            numeros.add(3);
+
+            numeros.toArray();
+                -> ele ira retornar um array de objetos;
+
+            ou 
+
+            Integer[] integers = numeros.toArray(new Integer[0]);
+                -> ele pede um array de objeto, que podemos utilizar dessa forma:
+                
+                
+            System.out.println(Arrays.toString(integers));
+                -> ele ira imprimir o array de objetos;
+
+            -> agora temos um array com a mesma posicao que temos dentro de um array list;
+
+
+                --> agora vamos fazer o contrario, vamos pegar um array e transformar em uma lista;
+
+                Integer[] numerosArray = new Integer[3];
+
+                numerosArray[0] = 1;
+                numerosArray[1] = 2;
+                numerosArray[2] = 3;
+
+                List<Integer> arrayToList = Arrays.asList(numerosArray);
+                    -> ele ira retornar uma lista de objetos;
+
+
+                system.out.println(Array.toString(numerosArray));    
+                system.out.println(arrayToList);
+
+                    numerosToArray.set(0, 12);
+
+                        -> se fizermos isso, ambos os array serao alterados para a posicao 0 com o valor 12, pois o Array.asList cria um link com o array original, e isso fica mais complicado ainda se tentarmos adicionar um valor, que ira dar um erro, pois nao podemos fazer alteracoes seja adicionando quando criamos um array atraves do Arrays.asList;
+
+
+                    - e como fariamos para alterar? como podemos criar um cara desse que permite fazer alteracoes?
+
+                        podemos fazer da seguinte forma: 
+
+                    List<Integer> numerosList = new ArrayList<>(Arrays.asList(numerosArray));
+
+                    numerosList.add(15);  --> nao ira dar erro;
+                        
+                        -> O arrayList construtor e sobrecarregado, podemos passar um valor sendo a capacidade inicial ou  podemos passar uma outra colecao, dessa forma ele ira criar uma nova lista, e nao ira criar um link com o array original, e dessa forma podemos fazer alteracoes, adicionar, remover, etc;
+
+
+
+                    - E como podemos passar diretamente varios valores ao array list, sem precisar toda hora criar um add: 
+
+                        List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+
+                            -> assim ele ira criar, e adicionar a uma lista, e dessa forma podemos fazer alteracoes, adicionar, remover, etc;
+
+                        A partir da versao 11, criou-se uma nova forma atraves do : 
+
+                        List<Integer> numeros = List.of(1,2,3,4,5,6,7,8,9,10);
+
+                            -> que seria a mesma coisa, cria-se uma lista imutavel que pode ser passada a ser mutavel ;
+
+                    
+                    
+
+            
+        }
+    }
+
+
+
+
+
+
+COLECOES ITERATOR 
+    
+    -> vamos ver como podemos remover dados de uma lista;
+
+    // utilizando a mesma classe Manga, so que agora adicionamos um novo atributo, no video ele cria um construtor sobrecarregado para receber o id
+
+     public class Manga interface Comparable<Manga>{
+                private Long id;
+                private String nome;
+                private double Preco;
+                private int quantidade;
+
+                public Manga(Long id, String nome, double preco){
+                    Objects.requireNonNull(id,, "Id nao pode ser nulo");
+                    Objects.requireNonNull(nome);
+                    Objects.requireNonNull(preco);
+
+                    this.id = id;
+                    this.nome = nome;
+                    this.preco = preco;
+                    this.quantidade = quantidade;
+                }
+
+                public void setId(Long id){
+                    this.id = id;
+                }
+
+                public Long getId(){
+                    return id;
+                }
+
+                public void setNome(String nome){
+                    this.nome = nome;
+                }
+
+                public String getNome(){
+                    return nome;
+                }
+
+                public void setPreco(double preco){
+                    this.preco = preco;
+                }
+
+                public double getPreco(){
+                    return preco;
+                }
+
+                @Override
+                public String toString(){
+                    return "Manga{" + "id=" + id + ", nome=" + nome + ", preco=" + preco + "}";
+                }
+
+                @Override
+                public boolean equals(Object obj){
+                    if(obj == null) return false;
+                    if(this == obj) return true;
+                    if(this.getClass() != obj.getClass()) return false;
+
+                    Manga manga = (Manga) obj;
+
+                    return id != null && id.equals(manga.id);
+                }
+
+                @Override
+                public int hashCode(){
+                    return id.hashCode();
+                }
+
+                @Override
+                public int compareTo(Manga manga){
+                    return this.nome.compareTo(manga.getNome());
+                }
+            }
+
+
+    -> agora vamos no teste
+
+        public class IteratorTeste{
+            List<Manga> mangas = new ArrayList();
+                
+            mangas.add(new Manga(5L , "Naruto", 10.0, 0));
+            mangas.add(new Manga(1L , "Pokemon", 20.0, 5));
+            mangas.add(new Manga(4L , "One Piece", 30.0, 0));
+            mangas.add(new Manga(3L , "Dragon Ball", 40.0, 2));
+            mangas.add(new Manga(2L , "Bleach", 50.0, 0));
+
+            for(Manga mangas: mangas){
+                if(manga.getQuantidade() == 0){
+                    mangas.remove(manga);
+                    
+                    -> se tentarmos fazer dessa forma ira dar erro;
+                }
+            
+            - outra forma de remover seria utilizando o iterator: 
+
+            Iterator<Manga> mangaIterator = mangas.iterator();
+
+                -> o que e iterator? e uma classe que meio que checa antes de fazer alguma acao, imagine que estamos no banco olhando a fila do banco, voce e o iterator, a fila do banco e os mangas, voce precisa de olhar alguem na fila, voce antes de chamar alguem da fila voce vai olhar, voce vai olhar para fila de novo para depois apontar o dedo e voce vem ca tambem: 
+                
+                    - entao o iterator vai fazer isso: 
+
+                while(mangaIterator.hasNext()){
+                    if(mangaIterator.next().manga.getQuantidade() == 0){
+                        mangaIterator.remove();
+                    }
+
+                    -> dessa forma consiguir remover de uma forma segura por causa do hasNext; 
+                }
+
+                com o java 8 veio uma nova forma de remover atraves do: 
+
+                - mangas.removeIf();
+                    --> para se utilizar precisamos de uma variavel de referencia, da mesma forma que o do foreach, tanto faz o nome, quem vai fazer a navegacao dos elementos sera o proprio removeIf;
+
+                
+                    ex: mangas.removeIf(manga -> manga.getQuantidade() == 0);
+
+                        -> explicacao: queremos que utilize "manga" como variavel de referencia e a logica de negocio ira ir depois da seta(a seta e obrigatoria), dessa forma estamos falando, navega por todo os mangas e remove se voce achar que a quantidade e igual a 0, e dessa forma ele ira remover todos os mangas que tiverem a quantidade igual a 0;
+
+                               
+            }
+        }
+
+
+
+
+
+
+COLECOES SET HASHSET 
+
+    -> primeiramente vamos mostrar a vantagem de trabalhar orientado a interface, antes estavamos trabalhando com ArrayList, mas existe uma outra possibilidade por new LinkedList<>(); , se trocamos o exemplo de antes por isso daria no mesmo resultado, o LinkedList ele nada mais nada que um Array onde cada uma das posicoes do array sabe sobe a posicao anterior e a proxima,  a vantagem de utilizar um LinkedList, de acordo com o Big o , ele possui um percentual melhor de desempenho em questao de remocao, se voce utiliza bastante remocao na lista seria mais vantagem utilizar o LinkedList; 
+
+
+    Set
+
+    public class SetTeste{
+        public static void main(String[] args){
+
+            Set<Mangas> mangas = new HashSet<>();
+
+            -> a vantagem do set e que ele nao permite elementos duplicados dentro da colecao, e podemos criar um objeto do tipo HashSet<>(); significa que essa e uma colecao que permite apenas elementos unicos e esses elementos serao organizados pelo hash, ou seja, na tem como garantir como esses caras vao estar dentro da nossa lista, porque ele pode se ajustar com base no que nos nos inserirmos, entao vamos imprimir;
+            
+            mangas.add(new Manga(5L , "Naruto", 10.0, 0));
+            mangas.add(new Manga(1L , "Pokemon", 20.0, 5));
+            mangas.add(new Manga(4L , "One Piece", 30.0, 0));
+            mangas.add(new Manga(3L , "Dragon Ball", 40.0, 2));
+            mangas.add(new Manga(3L , "Dragon Ball", 40.0, 2));
+            mangas.add(new Manga(2L , "Bleach", 50.0, 0));
+            
+            mangas. -> veremos que nao possui indice "ex: mangas.get ", porque o set ele nao e indexado, nao tem como pegar get(0), voce precisa navegar sobre a colecao e voce pode utilizar o foreach 
+
+            for(Manga manga : mangas){
+                System.out.println(manga); 
+
+                -> ao imprimir podems ver que a forma impressa foi totalmente diferente da sequencia passada, e que se formos dentro da Classe manga, podemos ver que a logica como o metodo hashCode(); faz para gerar um hash e guardar dentro da colecao;
+
+            
+                - o que acontece se coloca um objeto duplicado dentro da colecao?
+
+                    la em cima duplicamos o "dragon ball", se imprimirmos poderemos ver que apenas um foi impresso, porque? antes de inserir ele ira checar dentro do metodo equals, por isso e importante do ter o metodo equals sobrescrito na sua classe pois ele ira garantir que voce nao ira adicionar elementos duplicados; 
+
+
+                se quisermos que seja os elementos fique da forma de ordenacao de como foi criado e so utilizar: 
+
+                Set<Manga> mangas = new LinkedHashSet<>();
+                    -> dessa forma ele ira seguir a ordem que foi inserido, e nao ira seguir a ordem do hash; 
+            }
+        }
+    }
+
+
+
+
+
+    
+    /* COLECOES NAVIGABLESET TREESET 
+    
+    -> VER A OUTRA AULA E ESSA
+    
+    class SmartphoneMarcaComparator implements Comparator<Smartphone>{
+        return o1.getMarca().compareTo(o2.getMarca());
+    
+            -> dessa forma ele ira comparar a marca do smartphone, e ira ordenar de acordo com a marca;
+    }
+
+    public class NavegleSetTeste{
+        public static void main(String[] args){
+
+            - e uma interface que estende a interface SortedSet, e o SortedSet estende o set, tudo e parte de um set que segue a mesma regra, significa que voce precisa obrigatoriamente nao inserir elementos duplicados, ele nao vai deixar atraves da utilizacao do equals para saber se aquele elemento ja existe dentro do set, ele adiciona alguns metodos para pegar elementos baseado em posicoes existententes;}
+
+            NavigableSet<Smartphone> set = new TreeSet<>(SmartphoneMarcaComparator);
+                -> as classes que vemos com esse nome tree, normalmente vao trabalhar diretamente com a parte do sort, ou seja, precisam que as classes que estamos adicionando dentro dessa colecao tree, precisamos ter certeza que ela possui comparable.
+
+            Smatphone smartphone = new Smarphone("123", "Apple");
+
+            set.add(smartphone);
+                -> veremos que ele ira dar erro, pois ele tenta verificar se o smartphone e um comparable, como ele nao e, ele lanca uma excecao, mas vamos supor que nao tenhamos acesso a classe smatphone e mesmo assim queremos adicionar;
+            
+        }
+
+    }
+    */
+
+
+
+
+
+
+COLECOES MAP HASHMAP
+
+    -> tenicamente o map nao e uma colletion, ele nao faz parte da linha de heranca da interface collection;
+
+
+    public class MapTeste{
+        public static void main(String[] args){
+            Map<k , v>
+                -> se entrarmos dentro da interface map, poderemos ver que ele pede primeiro uma chave(k) e valor(v), para cada chave voce tem um valor associado{
+
+            Map<String, String> map = new HashMap<>();
+                -> como tem hash no nome significa que ele vai ordernar as chaves baseado no hash, ou seja a ordem pode mudar conforme voce vai inserindo os elementos, e obrigatoriamente voce vai precisar do equals e o hashCode implementado, porque uma das primeira regra que voce tem no map, e que voce nao pode possuir chaves duplicadas, como adicionamos valores no map? 
+
+            map.put("teklado", "teclado");
+            map.put("mouze", "mouse");
+            map.put("vc", "voce");
+            map.put("vc", "voce2");
+
+            - se tentarmos colocar a mesma chave e substituir o valor, ele continuara com a mesma chave e ira sobrescrever o valor, por isso que tem esse metodo: 
+
+            putIfAbsent("vc", "voce2");
+                -> se a chave nao existir ele ira adicionar, se existir ele nao ira fazer nada;
+
+            
+            - como fazemos para navegar? e imprimir esses valores? atraves do for normal existe duas opcoes, uma seria utilizando a navegacao via chave ou via valores, como sabemos para cada chave possuimos um valor, e se pegarmos todas essas chaves teremos elementos unicos, ou seja, a chave e um set;
+
+            for(String key : map.keySet()){
+                -> oq esse metodo faz e pegar todas a chaves de map;
+            
+                System.out.println(key + ": " + map.get(key));
+                    -> dessa forma ele ira imprimir a chave e o valor;
+            }
+
+            ---------------------------------------------------------
+
+            for(String values : map.values()){      
+                System.out.println(values);
+                    -> dessa forma ele ira imprimir apenas os valores;
+            }
+
+
+            ---------------------------------------------------------
+
+                --> a primeira opcao pegamos somente a chave e a segunda somente o valor, agora existe uma terceira opcao para pegar os dois;
+
+            for(Map.Entry<String, String> entry : map.entrySet()){
+
+                -> basicamente temos o metodo entrySet, que nada mais e que um objeto que ira ter a chave e o valor, so que aforma de criar o for fica um pouco diferente, pois temos que colocar o tipo que ira retornar.tipo da chave/valor Map.Entry<String, String>, da um nome e chamamos map.entrySet(); dessa forma temos atravades da variavel entry a chave e o valor;
+
+                System.out.println(entry.getKey() + ": " + entry.getValue());
+                    -> dessa forma ele ira imprimir a chave e o valor;
+            }
+
+
+            se quisessemos manter a ordem de como nos inserimos os objetos basta na hora de criar, adicionar o linkedHashMap<>();
+
+            Map<String, String> map = new LinkedHashMap<>();
+                -> dessa forma ele ira manter a ordem de insercao, e nao ira mudar a ordem de acordo com o hash;            
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SOLID
+
+    -> Esses principios ajudam a escrever codigos mais limpos, porque eles separam responsabilidades, porque diminuem o acoplamento, facilitando na refatoracao e estimulando o reaproveitamento de codigo;
+
+        S - Single Responsability Principle
+        O - Open / Closed Principle
+        L - Liskov Substitution Principle
+        I - Interface Segregation Principle
+        D - Dependency Inversion Principle
+
+
+    Single Responsability Principle
+        -> uma classe deve ter um e somente um motivo para mudar, esse principio diz que uma classe deve ser especializada em unico assunto e deve possuir uma unica responsabilidade, ou seja, a classe deve ter uma unica tarefa ou acao para executar; GOD CLASS(e nome dado as classes que possuem muitas responsabilidades);, usar o GodClass nao e algo muito legal;
+
+    
+    Open Closed Principle
+        -> objetos ou entidades devem estar aberto para extensao, mas fechados para modificacao, quando um novo comportamento e recursos precisam ser adicionados em um software devemos extender e nao alterar o codigo fonte original;
+
+    
+    Liskov Substitution Principle
+        -> uma classe derivada deve ser substituivel por sua classe base, ou seja, se S e um subtipo de T, entao os objetos do tipo T podem ser substituidos por objetos do tipo S, sem que seja necessario alterar as propriedades desse programa, ou seja, a classe derivada deve ser capaz de substituir a classe base sem quebrar o programa;
+
+    
+    Interface Segregation Principle
+        -> onde uma classe nao deve ser forcada a implementar interface / metodos que nao irao utilizar, esse principio diz que e melhor criar interfaces mais especificas do que uma unica generica
+
+    
+    Dependency Inversion Principle
+        -> diz que devemos depender de abstracoes e nao implementacoes, ou seja, modulos de alto nivel nao devem depender de modulos de baixo nivel, ambos devem depender da abstracao, e que abstracao nao deve depender de detalhe, detalhes devem depender de abstracoes, ou seja, devemos depender de interfaces e nao de classes concretas, Isso promove um design mais flexível e desacoplado, facilitando a manutenção e a escalabilidade do código;
+
+
+
+
+
+
+PADROES DE PROJETO 
+
+    design patterns: 
+        estao relacionados a arquitetura e engenharia de software, os padroes de projeos estao iteiramente interligados ao paradgma de orientacao a objetos, os designer patternes sao solucoes elegantes ja prontas, pensadas e testadas de problemas que acontecem regulamente no dia dia do programador, focam na reutilizacao de solucoes, devem ser aplicados durante o processo de refatoracao;
+
+            - padroes de criacao: trata da construcao de objetos e o de referencia, esse grupo e importante pois ele sustenta o principio, programe para interface, e nao para implementacoes; exemplos: Singletoon, factori method;
+
+            - padroes estruturais: trata da relacao entre objetos, e como eles interagem entre si, para formarem grandes objetos complexos(grandes estruturas); exemplos: adapter, decorator, flyweight, proxy, bridge, composite;
+            
+            - padroes comportamentais: que trata da comunicacao entre os objetos, especialmente em termo de responsabilidades e algoritimos; exemplos: chain of responsibility, observer
+;
