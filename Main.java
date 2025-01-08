@@ -6101,13 +6101,13 @@ COLECOES CONVERSAO DE LISTA PARA ARRAYS E VICE VERSA
 
                         List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
-                            -> assim ele ira criar, e adicionar a uma lista, e dessa forma podemos fazer alteracoes, adicionar, remover, etc;
+                            -> assim ele ira criar, e adicionar a uma lista, e dessa forma podemos fazer alteracoes, adicionar, remover, etc, esse metodo ira criar uma Lista a partir de um array ou elementos fornecidos;
 
                         A partir da versao 11, criou-se uma nova forma atraves do : 
 
                         List<Integer> numeros = List.of(1,2,3,4,5,6,7,8,9,10);
 
-                            -> que seria a mesma coisa, cria-se uma lista imutavel que pode ser passada a ser mutavel ;
+                            -> que seria a mesma coisa, cria-se uma lista imutavel a partir de elementos fornecidos ;
 
                     
                     
@@ -6369,7 +6369,6 @@ COLECOES MAP HASHMAP
                     -> dessa forma ele ira imprimir apenas os valores;
             }
 
-
             ---------------------------------------------------------
 
                 --> a primeira opcao pegamos somente a chave e a segunda somente o valor, agora existe uma terceira opcao para pegar os dois;
@@ -6396,17 +6395,9 @@ COLECOES MAP HASHMAP
 
 
 
+// COLECOES MAP HASHMAP LINKEDHASHMAP
 
-
-
-
-
-
-
-
-
-
-
+//     -> navigale 176 - 182 / ver essas aulas 
 
 
 
@@ -6459,3 +6450,1370 @@ PADROES DE PROJETO
             
             - padroes comportamentais: que trata da comunicacao entre os objetos, especialmente em termo de responsabilidades e algoritimos; exemplos: chain of responsibility, observer
 ;
+
+
+
+
+
+
+
+GENERICS 
+
+    - Generics é uma ferramenta no Java que ajuda você a escrever código que funciona com diferentes tipos de dados, mas de forma segura e organizada. Ele permite que você diga ao compilador qual tipo de dado você quer usar, evitando erros e deixando tudo mais fácil de entender.
+
+
+    como funcionava antigamente na versao 1.4 do java, as coisas funcionavam assim :
+
+    public class GenericsTest01{
+        public static void main(String[] args){
+            List lista = new ArrayList();
+                -> eram assim que as listas eram criadas, quando fazemos isso estamos falando para o java vai guardar um elemento, mas nao se sabe qual tipo de elemento;
+
+                lista.add("Kayque");
+                lista.add(1000L);
+                lista.add(new Consumidor("Goku"));
+
+
+                for(Objetct o : lista){
+                    System.out.println(o);
+                }
+
+                - como podemos ver aceita qualquer tipo de elemento, quando iremos fazer o for qual e o objeto que colocamos como referencia, so pode ser o object , como podemos aceitar qualquer objeto dentro dessa lista podemos colocar somente como variavel de referencia o Object, como o java tem o toString ele ira chamar para todo mundo e vai transformar todo mundo em String e consiguimos manipular, mas qual e o problema? 
+
+                    - o problema seria quando quisessemos manipular, e como saberemos se o objeto que estavamos manipulando e do tipo String, ou double, teriamos que fazer infinitos if para cada ocasiao:
+
+                    ex: if(o instanceof Long){
+                        Long l = (Long) o;
+                        System.out.println(l);
+                    }
+
+
+                - entao eles precisavam de uma forma onde eles pudessem definir o tipo da lista, mas o problema e que o java e uma linguagem onde todas as atualizacoes tentam manter a compatibilidade com as versoes anteriores, mas e ai como fazemos agora para forcar o tipo, mas ainda manter a compatibilidade com todos os bilhoes de usuarios e sistemas? 
+
+                    - entao foi criado uma solucao em tempo de compilacao entao, generics isso que nos fizessemos aqui (List<String> lista = new ArrayList<>();), quando fizemos isso estamos forcando em tempo de compilacao nao vai deixar voce executar pois so ira aceitar tipo String;
+
+                agora fazemos, o for ao inves de se utilizar de um tipo Objetct passara a ser do tipo String, mas temos que tomar cuidado com isso pois, o que fazemos ai e em tempo de compilacao porque? porque quando o java manda o bytecode para a jvm ele vai assim (List lista = new ArrayList()), la dentro da jvm nao sabemos o que tem dentro da lista , por isso e feito esse check em tempo de compilacao e dessa forma consiguimos manter compatibilidade com todos os sistemas, entao esse conceito e chamado de "Type Erasure", ou seja, realmente ele esta apagando o tipo depois que o codigo e compilado: 
+
+                vamos mostrar um exemplo de algo bem estranho que possa acontecer:
+
+                public class GenericsTest01{
+                    public static void main(String[] args){
+                        List lista = new ArrayList();
+                
+                        lista.add("Kayque");
+                        lista.add(1000L);
+                        lista.add(new Consumidor("Goku"));
+
+
+                        for(String o : lista){
+                            System.out.println(o);
+                        }
+
+                        add(lista, new Consumidor("Kayque"));
+
+                        public static void add(List lista, Consumidor consumidor){
+                            lista.add(consumidor);
+
+                            - aqui e se passado um consumidor, e ele e adicionado a lista, se executarmos o codigo dessa forma nao ira dar erro, mas se executarmos dessa forma abaixo 
+                        }
+
+
+                forma de execut:
+                
+                    -o que foi feito, foi alterar o for para a linha abaixo do add e tentar rodar, se tentar rodar ira dar um erro de ClassCastException, porque? porque o java nao sabe o que tem dentro da lista, entao ele vai tentar fazer um cast para String, e como nao e possivel fazer um cast de um consumidor para String, ele ira dar um erro, entao, se colocarmos o for sendo ele a variavel de referencia como Objetct nao ira dar erro:
+
+                public class GenericsTest01{
+                    public static void main(String[] args){
+                        List lista = new ArrayList();
+                
+                        lista.add("Kayque");
+                        lista.add(1000L);
+                        lista.add(new Consumidor("Goku"));
+
+                        add(lista, new Consumidor("Kayque"));
+
+                        for(String o : lista){
+                            System.out.println(o);
+                        }
+
+                        public static void add(List lista, Consumidor consumidor){
+                            lista.add(consumidor);
+
+                        }
+
+                    
+                forma de executar certo: 
+
+                        - o que fizemos aqui foi adicionar o generics no metodo, porque nao temos garantia que se fizermos isso ele ira aceitar, entao por isso e importante fazer essa validacao em tempo de compilacao utilizando o generics, ou seja ele nao deixa o codigo passar para jvm se nao tomarmos cuidado em colocar o tipo corretanete; 
+
+                public class GenericsTest01{
+                    public static void main(String[] args){
+                        List lista = new ArrayList();
+                
+                        lista.add("Kayque");
+                        lista.add(1000L);
+                        lista.add(new Consumidor("Goku"));
+
+                        add(lista, new Consumidor("Kayque"));
+
+                        for(String o : lista){
+                            System.out.println(o);
+                        }
+
+                        public static void add(List<String> lista, Consumidor consumidor){
+                            lista.add(consumidor);
+                        }
+                
+        }
+    }
+
+
+
+
+
+
+GENERICS PT2 WILDCARD
+
+    -> O wildcard e o caracter coringa
+
+    exemplo: 
+
+    abstract class Animal{
+        public abstract void consulta();
+    }
+
+    class Carchorro extends Animal{
+        @Override
+        public void consulta(){
+            System.out.println("Consultando doguinho");
+        }
+    }
+
+    class Gato extends Animal{
+        @Override
+        public void consulta(){
+            System.out.println("Consultando Gato");
+        }
+    }
+
+    public class WildCardTest{
+        public static void main(String[] args){
+
+            --> vamos imaginar que temos um metodo onde iremos receber todos os tipos de animais, mais ele se comporta de forma diferente, quando se trabalha com arrays ou com listas, entao por exemplo imagina que queremos um metodo de consulta, 
+
+            private static void printConsulta(Animal[] animals){
+                for (Animal animal : animals){
+                    animal.consulta();
+                }
+                - como podemos visualizar temos o metodo printConsulta que recebe um array de animais, que esta chamando o for;
+            }
+
+        }
+    }
+
+
+
+    - atualizando o codigo: para que fique mais legivel de se visualizar: 
+
+
+     public class WildCardTest{
+        public static void main(String[] args){
+            -> criando dois objetos, passando objetos para dentro do vetor, depois chamamos o metodo printConsulta, passando a variavel de referencia do objeto, e podemos ver que o codigo ira funcionar normalmente, porque o java sabe principalmente para os arrays que em tempo de execucao qual e o tipo de objeto que voce esta trabalhando, ;
+
+            Cachorro[] cachorro = {new Cachorro(), new Cachorro()};
+            Gato[] gato = {new Gato(), new Gato()};
+
+            printConsulta(cachorro);
+            printConsulta(gato);
+
+            private static void printConsulta(Animal[] animals){
+                for (Animal animal : animals){
+                    animal.consulta();
+                }
+               
+            }
+
+        }
+    }
+
+
+    -> agora fazendo a mesma coisa com listas:
+
+
+    public class WildCardTest{
+        public static void main(String[] args){
+            -> com listas a coisa comeca a ficar diferente, o codigo dessa forma ira dar erro pois uma vez compilado o java nao sabe que lista voce esta passando, lembrando que o nome desse termo e o "Type Erasure", por cause do mesmo, o java nao sabe por exemplo que o que voce esta passando e uma lista de cachorros que pode ser referenciada por uma lista de animais, mas voce ainda consegue por exemplo adicionar dentro dessa lista de animais objetos independentes, que sejam filho de animal(@aqui),porque exatamente o que fizemos com array ex(Aninal a = new Cachorro()), mas quando voce esta trabalhando com listas o tipo da lista quando voce tenta passar por parametros ou obj o tipo tem que passar exateamente o que foi definido nessa sintaxe, por isso tem o wildcard;
+
+            List<Cachorro> cachorro = List.of(new Cachorro(), new Cachorro());
+            List<Gato> gato = List.of(new Gato(), new Gato());
+            
+            printConsulta(cachorro);
+            printConsulta(gato);
+
+        }
+            private static void printConsulta(List<Animal> animals){
+                for (Animal animal : animals){
+                    animal.consulta();
+                }
+
+                @aqui
+                animals.add(New Cachorro());
+               
+            }
+
+        }
+
+        -> Para que o polimorfismo funcione corretamente em Java com listas genéricas, o tipo do parâmetro da lista que você passa para o método precisa corresponder exatamente ao tipo declarado no método. Isso ocorre porque, ao contrário de arrays, as listas genéricas não suportam polimorfismo diretamente devido ao type erasure.
+
+
+
+
+
+
+GENERICS WILDCARD PT2
+
+    -> Veremos como podemos melhorar para que o metodo printConsuta aceita, e passe no teste, o wildcard e bem simples, o wildcard e uma "?",  e eu quero que esse metodo aceite qualquer tipo de lista que seja um animal, ou seja, extends Animal;
+
+    !! importante, quando fizemos isso estamos assinando um contrato onde se diz que, nao iremos poder adicionar elementos nessa lista, porque nao podemos? imagine o seguinte: 
+    
+
+     private static void printConsulta(List<? extends Animal> animals){
+                Animal a = new Cachorro();
+                Animal a1 = new Gato();
+
+                -> isso que fiz acima e valido no ponto de vista do polimorfismo e heranca, entao podemos passar ambos, agora o problema abaixo: 
+
+                Cachorro a = new Animal();
+                Cachorro a1 = new Gato();
+
+                -> nao podemos fazer isso, pois o cachorro e mais especifico da mesma forma que nao poderiamos criar um new Gato();, 
+
+                for (Animal animal : animals){
+                    animal.consulta();
+                }
+               
+            }
+        
+    !! continucao: entao por causa desse problema que podemos citar qualquer coisa que seja filho de animal, podemos passar colecoes que sao irmas que nunca ira passar no teste de polimorfismo, ou seja, perdeu a possibilidade de adicionar elementos nessa lista, tudo que iremos passar ai sera apenas para leitura, ou seja, o @aqui nao poderia existir nessa classe
+            
+            -> segundo ponto importante e que independente que seja uma interface ou classe abstrata a palavra sempre ira ser extends}{
+
+    dessa forma, agora poderemos passar cachorros e gatos, mas nao vamos poder adicionar nada naquela lista:
+    
+            printConsulta(cachorro);
+            printConsulta(gato);
+
+    -> mas eai, se quisessemos adicionar algo nessa lista, podemos fazer da seguinte forma 
+    
+
+    /* public class WildCardTest{
+        public static void main(String[] args){
+            List<Cachorro> cachorro = List.of(new Cachorro(), new Cachorro());
+            List<Gato> gato = List.of(new Gato(), new Gato());
+            
+            printConsulta(cachorro);
+            printConsulta(gato);
+
+        }
+            private static void printConsulta(List<Animal> animals){
+                for (Animal animal : animals){
+                    animal.consulta();
+                }
+            }
+    */
+                
+            -> queremos dizer o seguinte, que queremos receber nessa lista qualquer tipo de objeto que seja um animal ou um super de animal;
+
+            -> qual a diferenca? aqui (List<Animal> animals), estamos dizendo que podemos receber animal ou qualquer um que seja filho, ja no meotdo de baixo dizemos que podemos receber aqui falamos que podemos receber qualquer um que seja animal ou seja pai;
+
+            private static void printConsultaAnimal(List<? super Animal> animals){
+                // implementacao 
+            }
+
+            -> nesse exemplo abaixo utilizando o super, podemos adicionar qualquer coisa que seja cachorro, animal ou object, porque? estamos declarando a heranca sendo ela inversa;
+
+            private static void printConsultaAnimal(List<? super Cachorro> animals){
+                //implementacao 
+            }
+
+            ou seja aqui podemos: 
+
+            List<Animal> animals = new ArrayList<>();
+
+            printConsultaAnimal(animals);
+            printConsultaAnimal(cachorros);
+
+            -> podemos passar esses dois tipos + objects, o problema e que nao sabemos o que e, pois quando estamos utilizando a heranca para baixo e facil, agora quando e para cima nao consiguimos enteder o que ira receber, iramos percorrer a hierarquia ate chegar ao topo;
+
+
+            o for para isso sera: 
+
+            private static void printConsultaAnimal(List<? super Cachorro> animals){
+                for(Object animal : animals){
+                    System.out.println(animal);
+
+                    -> porque temos que declarar object? nao conseguimos utilizar nada aqui que nao seja object, porque? exemplo: se colocarmos Cachorro, ira dar um erro pois pode ser que como argumento a gente passe um animal, entao ja nao se encaixaria no metodo, entao temos que colocar o teto maximo possivel;
+
+                    e para pegar cada elemento especifico dentro da lista teriamos que utlizar o instanceof
+
+                    exemplo: 
+
+                    if(animals instanceof Cachorro){
+                        Cachorro c = (Cachorro) animals;
+                        System.out.println(c);
+                    }
+                }
+            }
+
+            --> mas para entender, por qual motivo podemos adicionar? 
+
+            
+            private static void printConsultaAnimal(List<? super Animal> animals){
+                -> Aqui diz que obrigatoriamente tudo que formos passar aqui tera que ser um animal ou um super de animal, nao podemos passar mais subclasses, somente superclasses, e com isso temos algumas garantias, como: os objetos que formos passar dentro dessa lista sempre vao ser do tipo animal, quando temos um tipo animal, sempre poderemos passar novos elementos:
+                
+                Animal animal = new Cachorro();
+                Animal animal = new Gato();
+                
+                animals.add(new Cachorro());
+                animals.add(new Gato());
+
+                -> aqui podemos ADICIONAR qualquer subclasse porque temos garantia do polimorfimo, que passam no teste e um;
+            }
+            
+            private static void printConsultaAnimal(List<? super Animal> animals){
+                -> entao porque nao podemos colocar aqui? porque aqui se nos passar uma lista de cachorros nao iremos poder passar uma lista de gatos, e vise versa;
+
+                -> aqui como nao sei o que ira vir os filhos, entao podemos ter problemas com irmao
+            }
+            
+            
+        }
+
+
+
+
+
+
+
+CLASSES GENERICS 
+
+       ->  como exemplo iremos utilizar um probleminha simples, vamos imaginar que temos que fazer um codigo para alugueis de carros, barcos...
+
+    public class Carro{
+        private String nome;
+
+        public Carro(String nome){
+            this.nome = nome;
+        }
+
+        @Override
+        public String toString(){
+            return "Carro{" + "nome='" + nome + '\'' + '}';
+        }
+    }
+
+    public class Barco{
+        private String nome;
+
+        public Barco(String nome){
+            this.nome = nome;
+        }
+
+        @Override
+        public String toString(){
+            return "Barco{" + "nome='" + nome + '\'' + '}';
+        }
+    }
+
+
+    
+    public class CarroRentavelService{
+        -> imagina que temos um banco de dados de carros, onde vamos utilizar um arrayList para simular;
+
+        private List<Carro> carrosDisponiveis = new ArrayList<>(List.of(new Carro("BWM"), new Carro("Fusca")));
+
+        public Carro buscarCarroDisponivel(){
+            System.out.println("Buscando carro disponivel...");
+            Carro carro = carrosDisponiveis.remove(0);
+            System.out.println("Alugando carro: " + carro);
+            System.out.println("Carros disponiveis para alugar: " + carrosDisponiveis);
+
+            return carro;
+
+            --> A gente tem um banco de dados, onde sempre ira retornar o primeiro, ou seja, se voce for o primeira a alugar ira pegar a BWM, e se voce for o segundo ira pegar o Fusca
+
+        }
+
+        public void retornarCarroAlugado(){
+            System.out.println("Devolvendo carro " + carro);
+            carrosDisponiveis.add(carro);
+            System.out.println("Carros disponiveis para alugar: " + carrosDisponiveis);
+        }
+    }
+
+
+    -> classe que vai alugar carro ou barco 
+    
+    public class ClasseGenerica{
+        public static void main(String[] args){
+            CarroRentavelService carroRentavelService = new CarroRentavelService();
+            Carro carro = carroRentavelService.buscarCarroDisponivel();
+            
+            System.out.println("Usando carro por um mes...");
+
+            carroRentavelService.retornarCarroAlugado(carro);
+
+
+            --> fizemos tudo isso e executamos e ao final ira dar tudo como esperado, mas onde o problema esta? 
+
+                -> bom o problema esta quando pensamos em outros tipos de servicos de alugueis, por exemplo temos o barco aqui e agora queremos fazer a mesma coisa para barco, como fariamos? teriamos que copiar a classe CarroRentavelService e mudar para BarcoRentavelService, e renomear todas variaveis e metodos...e isso nao e legal;
+
+                - Dai que entra a classe Generica, que ira criar uma classe unica que ira trabalhar no tipo de objeto que voce quiser;
+        }
+    }
+
+
+
+
+
+
+
+CLASSES GENERICAS PT2 
+
+    antes: 
+
+    public class RentalService{
+        private List<Carro> objetosDisponiveis;
+
+        public RentalService(List<Carro> objetosDisponiveis){
+            this.objetosDisponiveis = objetosDisponiveis;
+        }
+
+        public Carro buscarCarroDisponivel(){
+            System.out.println("Buscando carro disponivel...");
+            Carro carro = objetosDisponiveis.remove(0);
+            System.out.println("Alugando carro: " + carro);
+            System.out.println("Carros disponiveis para alugar: " + objetosDisponiveis);
+
+            return carro;
+        }
+
+        public void retornarCarroAlugado(){
+            System.out.println("Devolvendo carro " + carro);
+            objetosDisponiveis.add(carro);
+            System.out.println("Carros disponiveis para alugar: " + objetosDisponiveis);
+        }
+    }
+    
+
+    -> aqui criamos um construtor para receber o tipo de objeto que queremos trabalhar, sabemos que basicamento o que temos que trocar e o tipo do objeto em que estamos trabalhando, ou seja nao sabemos quem e esse cara aqui "<Carro>", ai que vem a parte generiaca ai que colocamos:
+
+    --> na criacao da classe adicionamos op <T> de type(tipo), entao declaramos, e aonde estivermos o tipo de objeto generic(<Carro>) iremos substituir por <T>, nao sabemos do que e a lista mas sabemos que a lista ira ser baseada no tipo de objeto que iremos passar, onde nao sabemos qual e o tipo, apenas na hora da criacao
+
+
+
+    depois: 
+
+
+    public class RentalService<T>{
+        private List<T> objetosDisponiveis;
+
+        public RentalService(List<T> objetosDisponiveis){
+            this.objetosDisponiveis = objetosDisponiveis;
+        }
+
+        public T buscarObjetoDisponivel(){
+            System.out.println("Buscando objeto disponivel...");
+            T t = objetosDisponiveis.remove(0);
+            System.out.println("Alugando objetos: " + t);
+            System.out.println("Objetos disponiveis para alugar: " + objetosDisponiveis);
+
+            return t;
+        }
+
+        public void retornarObjetoAlugado(){
+            System.out.println("Devolvendo objeto " + t);
+            objetosDisponiveis.add(t);
+            System.out.println("Carros disponiveis para alugar: " + objetosDisponiveis);
+            }
+        }
+    }
+
+    -> basicamento estamos trocando onde tinha objeto por algo que ira ser definido no futuro, e agora iremos para main visualizar isso: 
+
+
+    public class Main{
+        public static void main(String[] args){
+            List<Carro> carrosDisponiveis = new ArrayList<>(List.of(new Carro("BWM"), new Carro("Fusca")));
+
+            List<Barco> carroRentalService = new ArrayList<>(List.of(new Barco("Titanic"), new Barco("Barco do amor")));
+
+            --> Agora vamos criar um novo objeto de RentalService onde ele pede um tipo de objeto que vamos trabalhar, e passamos a lista de carros, e depois pede a lista de carros e passamos a variavel de referencia para o objeto dentro dos parenteses;
+
+
+            RentalService<Carro> rentalService = new RentalService<>(carrosDisponiveis);
+            RentalService<Barco> rentalService = new RentalService<>(barcosDisponiveis);
+        }
+        }
+    }
+
+
+
+
+
+
+GENERICS METODOS GENERICOS
+
+    -> na ultima aula criamos a classe generica, onde na classe RentalService usamos o tipo diretamente na classe o que possibilitou a gente declarar o tipo nos metodos e declarar tambem os atributos, como podemos criar um metodo generico, sem que seja preciso fazer na classe inteira? 
+
+    -> vamos imaginar o seguinte problema onde temos na nossa classe o metodo generico que por exemplo crie um array para mim, vamos passar um objeto e ele ira retornar um array desse objeto para mim!! 
+
+    public class MetodoGenericoTest{
+        public static void main(String[] args){
+            criarUmArrayComUmObjeto("Kayque");
+        }
+
+        -> primeira coisa quando estivermos criando um metodo generico e definir o tipo que iremos receber como paramentro, ele vem depois do modificador de acesso e antes do retorno.
+
+        private static <T> void criarArrayComUmObjeto(T t){
+            List<T> list = new ArrayList<>();
+            list.add(t);
+            System.out.println(list);
+        } 
+    }
+
+
+    --> isso seria basiamento o que esta abaixo: 
+
+    private static void criarArrayComUmObjeto(String t) {
+        List<String> list = new ArrayList<>();
+        list.add(t);
+        System.out.println(list);
+    }
+    
+    resumo: 
+        A lista criada no método genérico será do tipo do objeto passado como argumento. No caso do exemplo, como foi passado um objeto do tipo Barco, a lista será List<Barco>. Se fosse passado um objeto do tipo String, a lista seria List<String>. Portanto, a lista não é "do tipo Kayque", a menos que você tenha uma classe chamada Kayque e passe um objeto desse tipo ao método. 
+
+
+
+    -> outro exemplo seguindo a mesma linha de raciocinio: 
+
+    public class MetodoGenericoTest {
+        public static void main(String[] args) {
+            // Primeiro tipo: String
+            List<String> listaDeStrings = criarArrayComUmObjeto("Kayque");
+            System.out.println("Lista de Strings: " + listaDeStrings);
+
+            // Segundo tipo: Barco
+            List<Barco> listaDeBarcos = criarArrayComUmObjeto(new Barco("Titanic"));
+            System.out.println("Lista de Barcos: " + listaDeBarcos);
+
+            // Acessando as listas fora do método
+            listaDeStrings.add("Outro String");
+            listaDeBarcos.add(new Barco("Queen Mary"));
+            System.out.println("Lista de Strings atualizada: " + listaDeStrings);
+            System.out.println("Lista de Barcos atualizada: " + listaDeBarcos);
+        }
+
+        private static <T> List<T> criarArrayComUmObjeto(T t) {
+            List<T> list = new ArrayList<>();
+            list.add(t);
+            return list; // Retorna a lista criada
+        }
+
+
+        Explicação:
+
+            1- Modificação do método:
+                - O método foi alterado para retornar List<T>, permitindo que a lista criada dentro dele seja acessada fora.
+                - A palavra-chave return devolve a referência para a lista criada.
+                
+            2- Chamadas ao método:
+                - Quando você chama criarArrayComUmObjeto, a lista criada é retornada e pode ser armazenada em uma variável (listaDeStrings, listaDeBarcos).{
+
+            3- Manipulação fora do método:
+                - Depois de armazenar a lista em uma variável, você pode adicionar elementos, remover, iterar, etc., como faria com qualquer List.
+
+
+        Observação:
+        
+            Com essa abordagem, as listas criadas são independentes e podem ser usadas em diferentes partes do código, desde que estejam armazenadas em variáveis apropriadas. Se você quiser trabalhar com uma lista única e compartilhada, precisará criar uma estrutura de dados global ou passada como argumento entre os métodos.
+}
+
+
+
+
+
+
+
+
+CLASSES INTERNAS INTRODUCAO
+
+    -> o que sao? basicamente e uma classe dentro da outra, e quando e util? sem trabalhar com interfaces graficas e um pouco dificil ver a utilidade de classes internas, imagine que temos um chat, geralmente temos a tela e os botoes (interface grafica e as acoes), no ponto de vista da coesao temos que ter uma interface que cuide da parte grafica e outra que cuide das acoes, esses objetos sao dois objetos diferentes, mas que eles estao tecnicamente e fortemente acoplados, nao faz sentido a acao de um botao por exemplo enviar estar fora da interface grafica, para esses cassos especificos foi criado as classes internas;
+
+    public class ClassesInternasTest{
+        private String name = "Kayque";
+    
+        class Interna{
+            -> basicamente aqui esta a classe interna temos que apenas adicionar class dentro de outra classe;
+
+            - a classe interna seria como se fosse um metodo, sendo bem mais poderoso podendo declarar atributos, e tambem possuindo acesso a todos os objetos da classe externa;
+        }    
+    public static void main(String[] args){
+
+        }
+    }
+
+
+
+    continuacao: 
+
+
+    public class ClasseInternasTest{
+        private String name = "Kayque";
+
+        class Interna{
+            public void printObjetoClassExterna(){
+                System.out.println(name);
+            }
+        }
+        public static void main(String[] args){
+            -> para criarmos um objetod da classe interna precisamos que seja criado um objeto da classe externa, esta fortemente linkado;
+
+            ClassesInternasTest externa = new ClassesInternasTest();
+
+            --> existe essas duas formas de criar objetos dessas classes internas
+
+            Interna interna = externa.new Interna();
+            Interna interna2 = new ClassesInternasTest().new Interna();
+            
+        }
+    }
+
+
+
+    --> um problema seria na utilizacao do this, pois ele sempre ira chamar a classe onde ele foi alocado, ou seja, se chamarmos a this na classe interna ele ira referenciar a classe interna, e como fazemos para que ele chame da classe externa? 
+
+    -> 
+
+    public class ClasseInternasTest{
+        private String name = "Kayque";
+
+        class Interna{
+            public void printObjetoClassExterna(){
+                System.out.println(name);
+
+                System.out.println(this); 
+                    -> aqui ele ira imprimir referencia de Interna
+
+                System.out.println(ClasseInternasTest.this); 
+                    -> aqui ele ira imprimir referencia da classe externa;
+            }
+        }
+    }
+
+
+
+
+
+
+
+CLASSES LOCAIS 
+
+    -> as classes locais sao quando voce tem uma classe dentro de um metodo, ou um bloco de inicializacao estatico, isso e bem pouco utilizado
+
+    public class OuterClassesTest01{
+        private String name = "Kayque";
+
+        public void print(){
+
+            class LocalClass{
+                public void printLocal(){
+                    System.out.println(name);
+                }
+            }
+
+            LocalClass local = new LocalClass();
+            local.printLocal();
+
+            ou 
+
+            new LocalClass().printLocal();
+        }
+
+        public static void main(String[] args){
+            -> quando temos uma classe local, nao temos mais acesso a essa classe uma vez que esse metodo termina, entao sempre que criarmos uma classe local sempre teremos que inicializar ela dentro do metodo, se nao nao teremos mais acesso ao metodo quando ele terminar;
+
+            -> dentro da classe que esteja dentro do metodo e possivel criar somente atributos final, e podemos tambem acessar os atributos que estejam fora desse metodo;
+            
+            OuterClassesTest01 outer = new OuterClassesTest01();
+
+            outer.print();
+                -> o metodo print ira ficar encarregado de executar toda classe;
+        }
+    }
+
+
+
+
+
+
+CLASSES ANONIMAS 
+
+    -> sao classes que irao existir brevemente por um periodo de tempo no codigo e que nao podem ser reutilizadas em nenhum outro lugar, vamos imaginar por exemplo:
+
+
+    class Animal{
+        public void caminhar(){
+            System.out.println("Caminhando...");
+        }
+
+        -> imagina que queremos trocar o comportamento do metodo caminhar, imagine que queremos outro comportamento, como podemos fazer isso? 
+
+            -> a forma de como fariamos isso seria criar uma subclasse de animal e sobrescrever o metodo caminhar, mas e se nao quisermos criar uma subclasse?
+
+                --> mas imagine que queremos trocar o comportamento desse metodo so por um determinado momento, e para isso que existe as classes anonimas;
+    }
+
+    /*class Cachorro extends Animal{
+        @Override
+        public void caminhar(){
+            System.out.println("Cachorro caminhando...");
+        }
+    }*/
+
+
+    para fazer isso:
+
+    public class AnonimasClass{
+        -> ao inves de so criar o animal, iremos adicionar as chaves e nesse exato momento em que teremos a classe anonima, parece que estamos criando um objeto de animal, mas na verdade estamos criando uma subclasse de animal, e como sabemos que e uma subclasse? porque temos acesso ao metodo caminhar, ou seja podemos sobrescrever ele;
+
+        Animal animal = new Animal(){
+            @Override
+            public void caminhar(){
+                System.out.println("Cachorro caminhando...");
+            }
+        }   
+
+        animal.caminhar();
+
+            -> quando executarmos isso agora veremos o resultado "Cachorro caminhando...", e se quisermos voltar ao comportamento original, basta apagar o que esta dentro das chaves;
+    }
+
+
+
+
+
+    regras: 
+
+    public class AnonimasClass{
+    
+        Animal animal = new Animal(){
+            @Override
+            public void caminhar(){
+                System.out.println("Cachorro caminhando...");
+                //pular();
+            }
+
+            public void pular(){
+
+            }
+        }   
+
+        animal.caminhar();
+
+        animal.pular(); 
+            // nao e possivel chamar esse metodo jump, pois dentro da minha varivel de referencia nao existe jump, entao eu nao consigo chamar, poderiamos chamar dentro do metodo caminhar();   
+    }
+
+
+
+
+    -> OUTRO EXEMPLO: 
+
+
+    public class AnonimaClass{
+        public static void main(String[] args){
+            //vamos utilizar o tipo da lista do exemplo de collections sendo ela Barco 
+
+            List<Barco> barcosList = new ArrayList<>(List.of(new Barco("Titanic"), new Barco("Lusitania")));
+
+                //-> passamos o listOf para dentro de ArrayList, para que a lista seja mutavel 
+
+             -> imagine que temos a seguinte situacao: imagina que temos uma lista de barco, caso queira dar um sort nessa lista precisamos  de um comparator, ou podemos utilizar Collections.sort passando a lista, mas nao temos um coparator no barco, e nao queremos criar uma classe para isso, ex: 
+             
+            class BarcoNameComparator implements Comparator<Barco>{
+                @Override
+                public int compare(Barco o1, Barco o2){
+                    return o1.getName().compareTo(o2.getName());
+                }
+            }
+
+            -> ai poderiamos passar: barcoList.sort(new BarcoNameComparator());
+
+                --> mas nao e isso que queremos fazer, nesse caso classes anonimas podem ser uteis para isso, como podemos fazer isso? 
+
+            ex: 
+
+            barcoList.sort(new Comparator<Barco>(){
+                @Override
+                public int compare(Barco o1, Barco o2){
+                    return o1.getName().compareTo(o2.getName());
+                }
+            })
+
+
+            --> podemos criar uma classe anonima a partir de uma interface, sabemos que nao podemos criar uma instancia de interface quando estamos trabalhando com classes anonimas, fazemos da mesma forma a implementacao do metodo compare, a diferenca e que aqui criamos diretamente no objeto e nao em uma classe separada;
+
+
+            resumo: podemos dar new em uma interface dentro de uma chamada de um metodo, e estamos criando uma classe sem nome(anonima) que passa no teste e um comparator, e podemos utilizar nesse ponto especifico do tempo;
+        }
+
+
+
+
+
+
+
+CLASSES INTERNAS ESTATICAS
+
+    -> Basicamente e muito parecido com as classes internas, ou seja um classe dentro da outra, mas a diferenca e que voce vai ter o static, e quando voce utiliza essa static e como se voce tivesse uma classe que e topLevel(ClassesInternasEstaticasTest) que e uma classe no nivel mais alto, o static class(StaticInterna) voce colocando dentro dessa classe(ClassesInternasEstaticasTest), e como se fosse uma outra classe de alto nivel e voce so esta fazendo dessa forma colocando essa classe estatica dentro da ClassesInternasEstaticasTest por uma questa de empacotamento;
+
+        -> voce dentro da static class nao vai nao vai conseguir acessar nenhum atributo que nao seja estatico da classe mais extena para acessar 
+
+    public class ClassesInternasEstaticasTest{
+        private String name = "Kayque";
+        static class StaticInterna{
+            private String lastName = "Allan";
+
+            public void print(){
+                System.out.println(new ClassesInternasEstaticasTest().name + " " + lastName);
+                // apenas dessa forma conseguiriamos acessar o attributo da classe externa; 
+            }
+        }
+        
+        public static void main(String[] args){
+            StaticInterna staticInterna = new StaticInterna();
+            staticInterna.print();
+            // console: Kayque Allan
+        }
+    }
+
+
+
+
+
+
+
+PARAMETRIZACAO DE COMPORTAMENTOS
+
+    -> E algo que ira ajudar a desenvolver um codigo robusto e de uma maior facilidade de manutencao;
+
+    public class Car{ 
+        private String name = "Audi";
+        private String color;
+        private int year;
+
+        public Car(String color, int year){
+            this.color = color;
+            this.year = year;
+        }
+
+        @Override
+        public String toString(){
+            return "Car{" + "name='" + name + '\'' + ", color='" + color + '\'' + ", year=" + year + '}';
+        }
+
+        public String getName(){
+            return name;
+        }
+
+        public String getColor(){
+            return color;
+        }
+
+        public int getYear(){
+            return year;
+        }
+
+        public void setColor(String color){
+            this.color = color;
+        }
+
+        public void setYear(int year){
+            this.year = year;
+        }
+    }
+
+
+    -> Main
+
+    public class ComportamentoPorParametro{
+        private static List<Car> cars = List.of(
+            new Car("red", 2019), 
+            new Car("black", 1998), 
+            new Car("green", 2011)
+            );
+
+        private static List<Car> filterGreenCar(List<Car> cars){
+            List<Car> greenCars = new ArrayList<>();
+
+            for(Car car : cars){
+                if(car.getColor().equals("green")){
+                    greenCars.add(car);
+                }
+            }
+            return greenCars;
+        }
+
+
+        public static void main(String[] args){
+            System.out.println(filterGreenCar(cars);)
+        }
+
+            --> legal agora que temos essa lista de carros imprimimos ela, entregamos a funcionalidade mais ai vem o cliente e pede um filtro de vermelho? o que fariamos de cara seria copiar e colar o metodo e mudar o nome para filterRedCar, e mudar a cor para red, mas isso nao e legal, entao como podemos fazer isso de uma forma mais generica?
+    }
+
+
+
+    -> MELHORA NO EXEMPLO ACIMA:
+
+        - podemos melhorar esse metodo pedindo a cor como paramentro: 
+
+        private static List<Car> filterCarbyColor(List<Car> cars, String color){
+                List<Car> filterCar = new ArrayList<>();
+
+                for(Car car : cars){
+                    if(car.getColor().equals(cor)){
+                        filterCar.add(car);
+                    }
+                }
+                return filterCar;
+        }
+
+        -> main
+
+        public static void main(String[] args){
+                System.out.println(filterGreenCar(cars, "red");)
+            }
+        }
+
+        --> na main agora passamos como argumento a cor em que queremos filtrar, fica muito mais generico e funciona, mas ai agora e se ele pedir para filtrar por ano? 
+
+        - podemos fazer a mesma coisa, passando o ano como argumento, mas e se ele pedir para filtrar por nome?
+
+
+        
+        private static List<Car> filterAge(List<Car> cars, int year){
+                List<Car> oldCar = new ArrayList<>();
+
+                for(Car car : cars){
+                    if(car.getYear() < year){
+                        oldCar.add(car);
+                    }
+                }
+                return oldCar;
+        }
+
+        public static void main(String[] args){
+                System.out.println(filterAge(cars,  2015);)
+            }
+        }
+
+        --> as coisas vao mudar e como podemos reparar somente uma pequena parte do meu codigo ta sendo alterado, que e o if, nessas tres ocasioes e a unica parte do codigo que mudou, e se pudessemos passar essa condicao como parametro? 
+
+
+
+
+
+
+
+PARAMETRIZACAO COMPORTAMENTOS PT02
+
+    public interface CarPredicate{
+        boolean test(Car car);
+    }
+
+    public class ComportamentoPorParametro{
+        private static List<Car> cars = List.of(
+            new Car("red", 2019), 
+            new Car("black", 1998), 
+            new Car("green", 2011)
+            );
+            
+        
+        --> agora a responsabilidade nao vai ser mais do metodo, a responsabilidade vai ser enviada via o CarPredicate, e como podemos fazer isso?
+
+            -> a responsabilidade da regra de negocio vai ser enviada via o carPredicate, atraves do polimorfismo, e o que acontece? a unica diferenca e que o carPredicate.test se ele for verdade ele vai adicionar o carro na lista,  e o que vai ser o teste? nao sabemos, nos ainda nao definimos, vamos definir atraves da criacao de uma classe anonima
+
+        private static List<Car> filter(List<Car> cars, CarPredicate carPredicate){
+            List<Car> filterCar = new ArrayList<>();
+
+            for(Car car : cars){
+                if(carPredicate.test(car)){
+                    filterCar.add(car);
+                }
+            }
+            return filterCar;
+        } 
+    }
+
+
+    public static void main(String[] args){
+        
+        filter(cars, new CarPredicate(){
+            @Override
+            public boolean test(Car car){
+                return car.getColor().equals("green");
+            }
+        }); 
+
+        --> estamos definindo o teste atraves da criacao da classe anonima, damos o new em uma interface e depois fazemos a sobrescricao do metodo;
+
+    }
+        
+        RESUMO: atraves do metodo filter, definimos apenas uma logica de negocio que ira mudar de acordo com a chamada, ou seja, o comportamento esta vindo por parametro, e podemos ir alem, agora que podemos trabalhar com generics podemos fazer um metodo que filtra qualquer coisa: 
+        
+    }
+
+
+    --> Existe uma interface no java chamada Predicate podemos utilizar ela para fazer um filtro extremamente generico, onde ele ira filtrar qualquer coisa{
+
+    metodo -> :
+
+    -> o tipo nao sabemos entao colocamos <T>, o retorno nao sabemos tambem entao colocamos List<T>, e a lista que estamos recebendo tambem nao sabemos entao colocamos List<T>, o tipo da lista ira ser definido no momento da chamada, e o Predicate ira seguir tambem o mesmo tipo;
+    
+    private static <T> List<T> filter(List<T> list, Predicate<T> predicate){
+        List<T> filterList = new ArrayList<>();
+
+        for(T e : list){
+            if(predicate.test(e)){
+                filterList.add(e);
+            }
+        }
+        return filterList;
+    }
+
+
+    o bom disso que podemos filtrar qualquer coisa agora, podemos criar outras listas e utilizar o mesmo metodo para que filtre os argumentos passados, entao a diferenca agora e que estamos passando a logica de negocio atraves da chamada do metodo, somente utilizando Generics e Predicate; 
+
+
+        -> E ai como fizemos um metodo generico podemos agora trabalhar com qualquer tipo de lista e passar a condicao por comportamento, e essa condicao vai ser aplicada aqui no nosso teste; 
+
+
+
+
+
+
+LAMBDAS PREDICATE
+
+    -> lambdas para funcionarem e preciso que a interface que esteja trabalhando seja funcional, e o que seria uma interface funcional? onde voce tem apenas um metodo abstrato, o resto podem ter corpo atraves da utilizacao do default, se tentarmos criar outro metodo abstrato ira dar um erro, a segunda regra que temos e em relacao a como voce montar a lambda, o metodo que temos na interface funcional diz tudo que precisamos saber de como aquela lambda vai se comportar, ela tem o parametro e o corpo; 
+
+    @FuncionalInterface
+    public class CarPredicate{
+        boolean test(Car car);
+        // (parametro) -> <expressao>
+
+        // (Car car) -> car.getColor().equals("green"); 
+    
+        // car -> car.getColor().equals("green"); 
+        
+
+            -> sempre teremos um tipo de retorno, as lambdas sao anonimas, e chamamos elas de funcoes porque porque elas nao estao atreladas em nenhuma classe, o objetvo e fazer o codigo mais conciso e mais legivel, resumo: para utilizar lambdas e preciso que seja uma interface funcional, e metodo da interface diz como a lambda vai se comportar, o contrato, nesse exemplo diz que voce tem que retornar um boolean e que voce esta recebendo um carro como parametro; {
+
+
+        - e se caso a lambda nao tivesse parametro? \
+
+        // () -> System.out.println("Hello World");
+
+    }
+
+
+
+
+
+
+
+LAMBDAS CONSUMER 
+
+    -> e uma interface funcional parecida com predicate, a diferenca e que ele ira executar uma operacao e nao ira retornar nada;
+
+    public class LambdaTestCosumer{
+        public static void main(String[] args){
+            List<String> strings = List.of("Kayque", "Allan", " Ribeiro");
+            forEach(strings, s -> System.out.println(s));
+        }
+
+        private static <T> void forEach(List<T> list, Consumer<T> consumer){
+            for(T e : list){
+                consumer.accept(e);
+            }
+        }
+    }
+
+
+
+
+
+
+LAMBDAS FUNCTION 
+
+    -> e uma interface funcional, ele tem uma pequena diferenca, ela ira ter um tipo <t> e um tipo <r>, o <t> e o tipo que voce vai receber e o <r> e o tipo que voce vai retornar, e pode ser absolutamente qualquer coisa,
+
+
+    public class LamdaTest{
+        public static void main(String[] args){
+            List<String> strings = List.of("Kayque", "Allan", "Ribeiro");
+            List<Integer> integers = map(strings, (String s) -> s.length());
+            // -> aqui fazemos a lambda passando a lista de Strings e retornando o tamanho de cada String, como parametro passamos uma String e retornamos um inteiro que no caso e a expressao que queremos fazer;
+
+            System.out.println(integers);
+                //-> ira retornar a lista de inteiros 
+        }
+        private static <T, R> List<R> map(List<T> list, Function <T, R> function){
+            List<R> result = new ArrayList<>();
+            for(T e: list){
+                R r = function.apply(e);
+                // apply ele recebe T e retorna R
+                result.add(r);
+            } 
+            return result; // -> retornamos a lista R;
+        } 
+
+
+            resumo: criamos uma metodo generic, que recebe uma lista de qualquer coisa e uma funcao que recebe um tipo e retorna outro tipo, e o que fazemos? para cada elemento da lista, aplicamos a funcao e adicionamos o resultado em uma nova lista, e retornamos essa lista;
+    }
+
+
+
+
+
+
+
+REFERENCIA DE METODO ESTATICOS
+
+    -> e uma sintaxe para se utilizar com base com as lambdas, que simplifica ainda mais, se a lambda chama apenas um metodo podemos utilzar method reference;
+
+    public class Anime{
+        private String titulo;
+        private int episodios;
+
+        public Anime(String titulo, int episodios){
+            this.titulo = titulo;
+            this.episodios = episodios;
+        }
+
+        public String getTitulo(){
+            return titulo;
+        }
+
+        public int getQuantidade(){
+            return episodios;
+        }
+
+        public String toString(){
+            return "Anime{" + "titulo='" + titulo + '\'' + ", quantidade=" + quantidade + '}';
+        }
+    }
+
+
+    public class AnimeComparators{
+
+    }
+
+    public class MethodReferenceTeste{
+
+
+        public static void main(Strings, args){
+            List<Anime> animeList = new ArrayList<>  (
+            new Anime("Bersek", 20), 
+            new Anime("Naruto", 500), 
+            new Anime("One Piece", 1000)
+            );
+
+            Collections.sort(animeList, (a1, a2) -> a1.getTitulo().compareTo(a2.getTitulo()));
+
+            System.out.println(animeList);
+
+                -> aqui criamos uma Lambda para comparar os titulos dos animes, mas podemos simplificar isso como podemos fazer? 
+        }
+    }
+    
+
+    -> se fizermos pequenas alteracoes podemos utilizar method reference, porque a lambda so se importa com tigert-tipe(contexto onde a lambda esta inseridatt) e o function description; significa que podemos criar um metodo que exatamente o que o compareTo faz, ele pede dois atributos do tipo <t> e retorna um int, entao se nos criarmos a classe AnimalComparator podemos criar um metodo que faz a mesma coisa, mas nao ira passar no teste e um comparator;
+    
+    
+    public class AnimeComparators{
+        public static int compareByTitle(Anime a1, Anime a2){
+            return a1.getTitulo().compareTo(a2.getTitulo());
+        }
+    }
+
+        -> agora como podemos ver temos um metodo estatico dentro do meu AnimeComparators, e la no meu sort podemos passar o metodo que faz a mesma coisa que a lambda, e como podemos fazer isso?
+
+    public class MethodReferenceTeste{
+
+        public static void main(Strings, args){
+            List<Anime> animeList = new ArrayList<>  (
+            new Anime("Bersek", 20), 
+            new Anime("Naruto", 500), 
+            new Anime("One Piece", 1000)
+            );
+
+            // Collections.sort(animeList, (a1, a2) -> a1.getTitulo().compareTo(a2.getTitulo()));
+
+            Collections.sort(animeList, (a1, a2) -> AnimeComparators.compareByTitle(a1, a2));
+
+            Collections.sort(animeList, AnimeComparators::compareByTitle)
+
+
+                -> o que aconteceu foi que criamos uma classe AnimeComparators para que tenhamos apenas um metodo para que utilizamos method reference simplificando ainda mais a utilizacao; 
+        }
+    }
+
+
+
+
+
+
+
+REFERENCIA  A METODOS NAO ESTATICOS
+
+    -> no ultimo exemplo compareByTitle era um metodo estatico, poderiamos ter outro metodo tambem que nao fosse estatico, ai precisariamos de um objeto para chamar o metodo, e como podemos fazer isso;
+
+    public class AnimeComparators{
+        public int compareByTitleNonStatic(Anime a1, Anime a2){
+            return a1.getTitulo().compareTo(a2.getTitulo());
+        }
+    }
+
+
+    public class MethodReferenceTeste{
+        public static class(String[] args){
+            List<Anime> animeList = new ArrayList<>  (
+            new Anime("Bersek", 20), 
+            new Anime("Naruto", 500), 
+            new Anime("One Piece", 1000)
+            );
+
+            AnimeComparators animeComparators = new AnimeComparators();
+
+            animeList.sort(animeComparators :: compareByTitleNonStatic);
+
+            System.out.println(animeList);
+
+                --> e da mesma forma que fizemos, e uma lambda normal, a diferenca e que estamos chamando atraves de um objeto e nao da classe, se fosse atraves de um lambda seria assim: 
+                
+            animeList.sort((a1, a2) -> animeComparators.compareByTitleNonStatic(a1, a2));
+        }
+    }
+
+
+
+
+    outro exemplo:
+    
+    
+
+
+        -> esse terceiro exemplo e voce utilizar ao inves de um objeto a classe, mas o metodo sendo nao estatico;
+
+            public class MethodReferenceTeste03{
+                public static void main(String[] args){
+                    List<String> list = ArrayList<>(List.of("Kayque", "Allan", "Ribeiro"));
+                    //queremos fazer a comparacao da dessa lista, e sabemos que a String implementa comparable, isso significa que teremos o metodo compareTo, e um metodo nao estatico, mas podemos chamar ele atraves do nome da classe;
+
+                    list.sort(String::compareTo);
+
+                    System.out.println(list);
+                        //ira imprimir a lista por ordem alfabetica;
+
+                }
+            }
+
+
+
+            -> imagine que queremos criar uma funcao onde pega o numero em string e ira transformar ele em Integer, ou seja se precisamos utilizar atraves de uma interface funcional podemos fazer atraves do function;
+
+            public class MethodReferenceTeste03{
+                public static void main(String[] args){
+                    List<String> list = ArrayList<>(List.of("Kayque", "Allan", "Ribeiro"));
+                    list.sort(String::compareTo);
+                    System.out.println(list);
+                    
+                    
+                    /* O que significa essa declaração?
+                        --> Function<String, Integer>:
+    
+                        - Function é uma interface funcional do pacote java.util.function.
+                        - A declaração Function<String, Integer> indica que numStringToInteger é uma variável que pode armazenar um objeto de tipo Function que aceita um argumento do tipo String e retorna um valor do tipo Integer.
+                        - Function<T, R> é uma interface genérica. O T é o tipo de entrada e o R é o tipo de saída. 
+                    */
+
+                    //Function<String, Integer> numStringToInteger = (String s) -> Integer.parseInt(s);
+
+            {        
+                Function<String, Integer> numStringToInteger = Integer::parseInt;
+                Integer num = numStringTointeger.apply("10");
+                System.out.println(num);
+            }
+
+            {
+                BiPredicate<List<String>, String> checkName = List::contains;
+                System.out.println(checkName.test(list, "Kayque"));
+
+                //  O contains é um método da interface List em Java que verifica se um elemento específico está presente na lista. Ele retorna um valor booleano (true ou false) dependendo de a lista conter ou não o elemento procurado
+            }           
+        }
+    }
+
+
+
+
+
+
+
+REFERENCIA A CONSTRUTOR 
+
+    -> 
+
+    public class MethodReferenceTeste {
+        public static void main(String[] args){
+            AnimeComparators animeComparators = new AnimeComparators();
+            List<Anime> = new ArrayList<>(List.of(
+                new Anime("Bersek", 20), 
+                new Anime("Naruto", 500), 
+                new Anime("One Piece", 1000)
+            ));
+
+            animeList.sort(animeComparators :: compareByEpisodesNonStatic);
+
+            --> existe uma interface funcional chamada de Supplier, ela nao recebe nenhum argumento e retorna um tipo <T>, porque isso seria importante para nos?         {
+            
+                Supplier<AnimeComparators> animeComparators = () -> new AnimeComparators();
+
+            - temos uma interface funcional que nao tem nenhum argumento mas retorna um anime, isso ai pode virar um metodo reference atraves do expressao abaixo, isso ai nao ocorre a criacao do objeto, objeto e criado em:                          {
+            
+                Supplier<AnimeComparators> animeComparators = AnimeComparators::new;
+
+            criacao do objeto: 
+                AnimeComparators animeComparators = new AnimeComparators.get();
+
+
+
+            -> como fariamos para criar um objeto do tipo anime, porque em anime temos um construtor que recebe dois argumetos, e como podemos fazer isso? primeiro precisamos definir algo que vai receber dois argumentos diferentes e vai retornar um terceiro argumento, temos o BiFunction;
+
+                # BiFunction<String, Integer, Anime> animeCreator = (title, episodes) -> new Anime(title, episodes);
+
+            -> ai em cima temos uma lambda que recebe dois argumentos e retornar um terceiro, e como podemos fazer isso atraves de um metodo reference? 
+
+                BiFunction<String, Integer, Anime> animeCreator = Anime::new;
+
+            -> o java ja sabe que temos dois atributos ele ira colocar diretamente no construtor, e ira retornar diretamente no construtor, lembrando que o objeto nao esta sendo criado nessa linha, devemos: 
+
+                System.out.println(animeCreator.apply("Kaypiraz Series", 35));
+
+            -> o apply ira se encarregar de criar o objeto e passar os argumentos para o construtor, e ira retornar o objeto criado;
+
+        }
+    }
