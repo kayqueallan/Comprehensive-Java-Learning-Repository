@@ -1,13 +1,3 @@
-!! REVER ASSOCIACOES
-
-!! rever toString
-
-!! rever TRY Try With Resouurces
-
-!! Calendar e Date -> Vistas breviamente 
-
-!! AULA 128 REVER QUANDO PUDER
-
 O QUE E PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)?
 
 
