@@ -1,5 +1,15 @@
-O QUE E PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)?
+!! REVER ASSOCIACOES
 
+!! rever toString
+
+!! rever TRY Try With Resouurces
+
+!! Calendar e Date -> Vistas breviamente 
+
+!! AULA 128 REVER QUANDO PUDER
+       
+
+O QUE E PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)?
 
 Objetivo: Aproximar o mundo digital do mundo real. 
 
@@ -2482,7 +2492,7 @@ METODOS ABSTRATOS
         }
 
 
-        !! quando extendemos de uma classe abstrata, precisamos obrigatoriamente prover uma implementacao mesma que seja vazia, ex: caso extendemos a class funcionario para a classe desenvolvedor, precisamos obrigatoriamente sobrescrever o metodo calculaBonus(); mesmo que seja vazio;
+        !! quando extendemos de uma classe abstrata, precisamos obrigatoriamente prover uma implementacao mesma que seja  vazia, ex: caso extendemos a class funcionario para a classe desenvolvedor, precisamos obrigatoriamente sobrescrever o metodo calculaBonus(); mesmo que seja vazio;
 
         @Override
         public void calculaBonus(){
@@ -7765,7 +7775,7 @@ REFERENCIA  A METODOS NAO ESTATICOS
 
 REFERENCIA A CONSTRUTOR 
 
-    -> 
+    -> A interface Supplier representa uma função que fornece um valor de um tipo específico, mas não recebe nenhum argumento. Ou seja, ela é uma função sem parâmetros, mas que retorna um valor. Isso a torna útil em cenários onde você precisa gerar ou fornecer um valor sob demanda, sem depender de nenhum dado de entrada.
 
     public class MethodReferenceTeste {
         public static void main(String[] args){
@@ -7807,3 +7817,794 @@ REFERENCIA A CONSTRUTOR
 
         }
     }
+
+
+
+
+
+
+
+
+OPTIONAL 
+
+    -> Optional e uma classe que foi introduzida na versao 8 do java, e o intuito dessa classe em termos simples e tentar evitar o nullPointerException, ao inves de voce retornar null ira retornar um optional, e o que e um optional? e uma classe que pode ou nao conter um valor;
+
+    public class OptionalTeste{
+        public static void main(String[] args){
+            Optional 
+        }
+        
+        private static String findName(String name){
+            List<String> list = List.of("Willian", "DevDojo");
+            int i = list.indexOf(name);
+            if(i != 0){
+                return list.get(i);
+            }
+            return null;
+
+        -> o que estamos fazendo aqui e uma lista de nomes, caso o nome exista na lista ele ira retornar o devido nome, caso ele nao exista ele ira retornar null, e qual e o problema? 
+
+        psvm{
+            String name = findName("Willian");
+            System.out.println(name.toUpperCase());
+
+            --> aqui ira dar um erro de nullPointerException, porque ele nao conseguiu encontrar, para facilitar esse tipo de caso a galera do java criou o Optional, ele e um objeto que ira encapsular outros objetos;
+        }
+    }
+    }
+
+
+    -> como podemos fazer isso? 
+
+        public class OptionalTeste{
+            public static void main(String[] args){
+                // Optional <Tipo> = nomeQualquer = Optional.of(valor); 
+
+                    temos tres tipos: 
+
+                    - Optional<String> optionalString = Optional.of("Kayque");  
+                        -> ira retornar a mensagem encapsulada dentro do objeto 
+
+                    - Optional<String> optionalNull = Optional.ofNullable(null);
+                        -> caso queira saber se ele ira ser nulo ou nao temos essa opcao, e dessa forma ele ira executar e imprimir um Optional Vazio;
+
+                    - Optional<String> optionalEmpty = Optional.empty();
+                        -> Temos a opcao de criar um optional completamente vazio;
+                
+
+                Optional<>
+            }
+            
+            private static String findName(String name){
+                List<String> list = List.of("Willian", "DevDojo");
+                int i = list.indexOf(name);
+                if(i > 0){
+                    return list.get(i);
+                }
+                return null;
+            }
+        }
+
+
+
+    --> exemplo de utilizacao 
+
+        public class OptionalTeste{
+            public static void main(String[] args){
+                Optional<String> nameOptional = Optional.ofNullable(findName("Willian"));
+
+                -> se caso quisessemos utilizar o findName, teriamos que utilizar o ofNullable, pois ele pode retornal null; 
+
+                -> digamos que queiramos executar caso tenha alguma coisa, digamos que temos o Optional, caso nao tenhamos o que teriamos que fazer? e como se fosse um if else;
+
+                String vazio = nameOptional.orElse("VAZIO");
+
+                System.out.println(vazio);
+                    -> aqui ira imprimir caso nao tenha nada dentro do optional, ele ira imprimir VAZIO, como se fosse um if else em somente uma linha, e se caso ele encontrasse iria retornar o proprio william;
+            }
+            
+            private static String findName(String name){
+                List<String> list = List.of("Willian", "DevDojo");
+                int i = list.indexOf(name);
+                if(i != 0){
+                    return list.get(i);
+                }
+                return null;
+            }
+        }
+        
+
+
+        -> Como podemos ver o optional da opcoes para trabalhar de um modo mais funcional, o intuito da Oracle seria ter algo mais o menos assim abaixo: 
+
+        private static Oprional<String> findName(String name){
+            List<String> list = List.of("Willian", "DevDojo");
+            int i = list.indexOf(name);
+            if(i != 0){
+                return Optional.of(list.get(i));
+            }
+            return Optional.empty();
+
+            --> porque o que fizemos retornamos (return Optional.of(list.get(i));) para caso exista, e caso nao exista retornamos (return Optional.empty();), porque ai o que acontece nao precisamos mais chamar na psvm dessa forma: 
+
+            -> Optional<String> nameOptional = Optional.ofNullable(findName("Willian"));
+
+            podemos chamar assim: 
+
+            -> Optional<String> nameOptional = findName("Willian");
+
+            
+            resumo: nos como desenvolvedores quando batemos o olho e vermos esse retorno ele meio que te forma a pensar no caso negativo, o que faco se encontrar e o que faco se eu nao encontrar;                            
+
+        }
+
+
+
+
+
+
+
+OPTIONAL PT2
+
+    -> precisamos lembrar que ele nao e indicado na utilizacao de passagem de paramentros, e tambem nao e nao e uma boa ideia como uma variavel de classe, e somente indicado na utilizacao de retorno;
+
+        -> exemplo de utilizacao do optional, digamos que dado um repositorio, quero que procure por titulo e se o titulo for encontrado quero que voce procure por id, caso o id nao exista quero que voce lance uma excecao IllegalArgumentException, e terceiro quero que procure por titulo e caso nao exista quero que crie um novo manga;
+
+    public class Manga{
+        private Integer id;
+        private String title;
+        private int chapters;
+
+        //utilizamos o Integer para que caso queiramos utilizaremos o equals;
+
+        public Manga(Integer id, String title, int chapters){
+            this.id = id;
+            this.title = title;
+            this.chapters = chapters;
+        }
+
+        public Integer getId(){
+            return id;
+        }
+
+        public String getTitle(){
+            return title;
+        }
+
+        public int getChapters(){
+            return chapters;
+        }
+
+        public void setId(Integer id){
+            this.id = id;
+        }
+
+        public void setChapters(int chapters){
+            this.chapters = chapters;
+        }
+
+        public String toString(){
+            return "Manga{" + "id=" + id + ", title='" + title + '\'' + ", chapters=" + chapters + '}';
+        }
+    }
+
+
+    -> Podemos fazer o uso da classe Predicate abaixo: Em Java, a classe Predicate faz parte da biblioteca java.util.function e representa uma função de predicado (ou simplesmente predicado), que recebe um argumento e retorna um valor booleano (true ou false). O propósito principal da interface Predicate é avaliar uma condição booleana com base em um objeto dado.
+
+    public class MangaRepository{
+        private static List<Manga> mangas = new ArrayList<>(List.of(
+            new Manga(1, "Berserk", 100),
+            new Manga(2, "Naruto", 700),
+            new Manga(3, "One Piece", 1000)
+        ));
+
+        public static Optional<Manga> findBy(Predicate<Manga> predicate){
+            Manga found = null;
+
+            for(Manga manga : mangas){
+                if(predicate.test(manga)){
+                    found = manga;
+                }
+            }
+            return Optional.ofNullable(found);
+        }
+
+        public static Optional<Manga> findByTitle(String title){
+            return findBy(m -> m.getTitle().equals(title));
+        }
+
+        public static Optional<Manga> findById(Integer id){
+            return findBy
+        }
+    }
+
+    Explicacao: 
+
+    - findBy(Predicate<Manga> predicate): O método findBy recebe um predicado (Predicate<Manga> predicate), que é uma expressão que define a condição que você quer aplicar a cada objeto Manga da lista. O tipo de predicate é um predicado que testa se um Manga atende a uma certa condição.
+
+    - findByTitle(String title): Esse método é uma forma de criar um predicado específico para buscar mangas com um título correspondente. Ele chama o método findBy e passa como argumento um predicado definido pela expressão lambda m -> m.getTitle().equals(title);
+
+
+
+    public class OptionalTeste01{
+        public static void main(String[] args){
+            MangaRepository.findByTitle("Berserk")
+                .ifPresent(m -> m.setTitle("Berserk 2"));
+
+            // aqui fizemos uma condicional que se o titulo for encontrado ele ira setar um novo titulo; 
+
+            MangaRepository.findById(2)
+                .orElseThrow(IllegalArgumentException::new);
+
+                // .orElseThrow(() -> new IllegalArgumentException("Manga not found"));
+
+            // aqui ele ira procurar pelo id, caso nao encontre ele ira lancar uma excecao IllegalArgumentException;
+
+            MangaRepository.findByTitle("One Punch")
+                .orElse(new Manga(3, "One Punch", 100));
+
+            // aqui ele ira procurar pelo titulo, caso nao encontre ele ira criar um novo manga;
+
+            MangaRepository.findByTitle("One Punch")
+                .orElseGet(() -> new Manga(3, "One Punch", 100));
+
+            // aqui ele ira procurar pelo titulo, caso nao encontre ele ira criar um novo manga, mas dessa vez ele ira utilizar o orElseGet, que e uma forma de criar um novo objeto, mas ele so ira criar se nao existir, e ele ira criar atraves de uma funcao lambda;
+        }
+    }
+            
+
+    resumo: uma das vantagens de programacao funcional seria na facilitacao de leitura e tambem de praticidade de codigo, pois esse codigo poderia ter bem mais linhas utilizando varios if else, nos como desenvolver consegue ler o codigo e entender o que esta acontecendo;
+
+
+
+
+
+
+
+STREAMS 
+
+    -> streams e uma forma de processamento de dados que ajuda a fazer as funcionalidades que voce precisa em uma collecao de uma forma mais funcional / +declarativa;
+
+    -> para exemplificar o uso de streams vamos trabalhar com um exemplo, imagine que temos uma classe que tenha dois atributos titulo e preco, queremos que ordene eles por titulo e queremos que traga os tres primeiros elementos que o preco seja menor que 4 reais;
+
+
+
+    public class LightNovel{
+        private String title;
+        private double price;
+
+        public LightNovel(String title, double price){
+            this.title = title;
+            this.price = price;
+        }
+
+        @Override
+        public String toString(){
+            return "LightNovel{" + "title='" + title + '\'' + ", price=" + price + '}';
+        }
+
+        public String setTitle(){
+            return title;
+        }
+
+        public double getPrice(){
+            return price;
+        }
+    }
+
+
+    //1. Order LightNovels by title
+    //2. Retrieve the first 3 titles LightNovels with price less than 4
+
+    public class StreamTeste{
+        private static List<LightNovel> lightNovels = List.of(
+            new LightNovel("Tensei Shittara", 8.99),
+            new LightNovel("Overlord", 3.99),
+            new LightNovel("Violet Evergarden", 5.99),
+            new LightNovel("No Game no Life", 2.99),
+            new LightNovel("Fullmetal Alchemist", 5.99),
+        )
+        public static void main(String[] args){
+            lightNovels.sort(Comparator.comparing(LightNovel::getTitle));
+            // -> aqui estamos ordenando por titulo;
+
+
+            List<LightNovel> titles = new ArrayList<>();
+            for(LightNovel lightNovel : lightNovels){
+                if(lightNovel.getPrice() <= 4){
+                    titles.add(lightNovel.getTitle());
+                }
+                if(titles.size() >= 3){
+                    break;
+                }
+            }
+
+            System.out.println(lightNovels);
+            System.out.println(titles);
+        }
+    }
+
+
+    --> essa forma e sem a utilizacao de streams, agora vamos aprender a utilizar streams para que seja mais funcional e mais declarativo;
+
+
+
+
+
+
+
+
+STTREAMS PT2
+
+    -> streams e uma sequencia de elemtentos, quando estamos falando sobre collecoes estamos falando de elementos em um espaco onde voce esta guardadando seus dados e colecoes(memoria), quando trabalhamos com streams(sequencia de elementos), esses elementos estao meio que no tempo, podemos falar entao que colecoes trabalha com dados no espaco e streams trabalha com dados no tempo;
+
+
+
+        public static void main(String[] args){
+            lightNovels.stream()  --> isso retorna uma Stream 
+
+            Stream<LightNovel> stream = lightNovels.stream();
+
+            --> significa que agora vamos trabalhar com essa sequencia de elementos e o que vamos fazer com essa sequencia de elementos? digamos que tenhamos varios tipos de operacoes, as operacoes em stream tem duas opcoes, ou elas sao intermediarias ou sao finais;
+
+            Intermediaria: e uma acao que ira retornar uma propria Stream, ou seja podemos encadear acoes, ou seja podemos filtrar, da uma ordenada, limitar... tudo isso ira retornar outra stream;
+        }
+    }
+
+    -> 
+
+    public class StreamTeste02{
+        private static List<LightNovel> lightNovels = List.of(
+            new LightNovel("Tensei Shittara", 8.99),
+            new LightNovel("Overlord", 3.99),
+            new LightNovel("Violet Evergarden", 5.99),
+            new LightNovel("No Game no Life", 2.99),
+            new LightNovel("Fullmetal Alchemist", 5.99),
+        );
+            public static void main(String[] args){
+                -> Em stream temos o metodo sorted, para fazer a ordenacao, temos tambem o metodo filter que pede um predicate, ou seja significa que podemos utilizar lambda, o filter tambem retorna uma Stream ou seja significa que ele e uma opercao intermediaria tambem, depois temos o metodo limit() que vai limitar o numero de operacoes, e tambem ele e uma opercao intermediaria que ira retornar uma Stream;
+
+                lightNovels.stream()
+                    .sorted(Comparator.comparing(LightNovel::getTitle))
+                    .filter(ln -> ln.getPrice() <= 4)
+                    .limit(3)
+                    .map(LightNovel::getTitle)
+
+                    -> por ultimo vem a parte que precisamos pegar apenas os titulos, como vamos fazer o mapeamentos especifico de um atributo de uma classe, temos o metodo map, ele aceita uma funcao(Function), ele recebe um <t> e retorna <r>, estamos extraindo apenas os titulos, o map tambem e uma operacao intermediaria que ira retornar uma outra Stream, agora precisamos de uma operacao final, que ira fechar o Stream e ira retornar uma colecao, uma das operacoes finais que temos e o collect, ou seja, fizemos a ordenacao -> filtragem -> limitacao -> mapeamento... e coletar, lembrando que stream  e uma sequencia de dados, precisamos que agrupe tire do tempo e mova para o espaco que seria o collect, lembrando que o collect agora retornar um <R>;
+
+
+                -> dentro do .collect() temos a opcao de retornar o tipo de lista que no caso como queremos uma lista de titulos, entao podemos fazer assim: 
+
+                List<String> titles = lightNovels.stream()
+                    .sorted(Comparator.comparing(LightNovel::getTitle))
+                    .filter(ln -> ln.getPrice() <= 4)
+                    .limit(3)
+                    .map(LightNovel::getTitle)
+                    .collect(Collectors.toList());
+
+                System.out.println(titles);
+
+                    -> ira retornar exatamete o mesmo resultado que o da ultima aula mas de uma forma mais funcional e declarativa, estamos fazendo aqui de uma forma muito mais legivel, tendo que qualquer pessoa que nao possua um conhecimento em programacao consiga ler de forma facil;
+            }
+
+
+
+
+
+
+
+STREAMS PT3
+
+    -> temos outras operacoes que podemos fazer sendo ela final, seria o foreach;
+
+    public class StreamTeste03{
+        private static List<LightNovel> lightNovels = List.of(
+            new LightNovel("Tensei Shittara", 8.99),
+            new LightNovel("Overlord", 3.99),
+            new LightNovel("Violet Evergarden", 5.99),
+            new LightNovel("No Game no Life", 2.99),
+            new LightNovel("Fullmetal Alchemist", 5.99),
+            new LightNovel("Kumo desuga", 1.99),
+            new LightNovel("Kumo desuga", 1.99),
+            new LightNovel("Monogatari", 4.00),
+            );
+        
+        public static void main(String[] args){
+            lightNovels.stream()
+                .forEach(System.out::println);
+
+            -> aqui temos a operacao propria do forEach, em que podemos imprimir a lista sendo ela final, mas precisamos lembrar que na propria lista temos a opcao de foreach, que seria apenas um metodo, nao seria nada relacionada com streams pois nao esta se utilizando streams, apenas para colecoes: 
+            
+            ex: lightNovels.forEach(System.out::println);
+
+
+            outras operacoes que podemos fazer com streams: 
+
+            - count(terminal): retorna a quantidade de elementos da stream;
+                EX: stream.filter(ln -> ln.getPrice() <= 4).count();
+
+            - disctinct(intermediaria): retorna uma stream com elementos distintos;
+                EX: stream.distinct().filter(ln -> ln.getPrice() <= 4).count();
+        }
+    }
+
+
+    public class StreamTeste03{
+        private static List<LightNovel> lightNovels = List.of(
+            new LightNovel("Tensei Shittara", 8.99),
+            new LightNovel("Overlord", 3.99),
+            new LightNovel("Violet Evergarden", 5.99),
+            new LightNovel("No Game no Life", 2.99),
+            new LightNovel("Fullmetal Alchemist", 5.99),
+            new LightNovel("Kumo desuga", 1.99),
+            new LightNovel("Kumo desuga", 1.99),
+            new LightNovel("Monogatari", 4.00),
+            );
+        
+        public static void main(String[] args){
+            Stream<LightNovel> stream = 
+
+            stream.filter(ln -> ln.getPrice() <= 4).count();
+            stream.disctinct().filter(ln -> ln.getPrice() <= 4).count();
+
+            -> se isso fosse executado iria dar um erro IllegalStateException, quando estamos trabalhando com streams, estamos trabalhando com espaco de tempo, e quando voce fecha uma stream ela nao pode mais ser mais utilizada, porque ja fechamos o fluxo daqueles elementos em que estavamos trabalhando, e como se faz para que isso nao aconteca? precisa ir la na fonte e chamar lightNovels.stream() ai sim podera utilizar o mesmo stream novamente;
+
+            -> forma correta: 
+
+            stream.filter(ln -> ln.getPrice() <= 4).count();
+            lightNovels.stream(). disctinct().filter(ln -> ln.getPrice() <= 4).count();
+        }
+    }
+
+
+
+
+
+
+
+STREAMS FLATMAP 
+
+    -> o map extrai o que se passa dentro, ja o flatMap faz a mesma coisa que o map faz so que a diferenca e que o flatMap e utilizado quando tem propriedades aninhadas, ou seja, um dentro da outra: 
+
+    public class StreamTeste04{
+        public static void main(String[] args){
+            List<List<String>> kaypiraz = new ArrayList<>();
+            List<String> graphicDesigners = List.of("Kayque", "Allan", "Ribeiro");
+            List<String> developers = List.of("Willian", "David", "Harisson");
+            List<String> students = List.of("Edipo", "Gustavo Lima ", "Gustavo Lopes");
+
+            kaypiraz.add(graphicDesigners);
+            kaypiraz.add(developers);
+            kaypiraz.add(students);
+
+            // temos uma lista de listas, isso em array chamariamos de arrays-multidimensionais;
+
+            for(List<String> people : kaypiraz){
+                for(String person : people){
+                    System.out.println(person);
+                }
+            }
+
+            -> aqui estamos fazendo a iteracao para que printamos todos os elemtentos, mas como podemos fazer isso atraves de streams?
+
+            Stream<Stream<String>> stream = kaypiraz.stream()
+                .map(l -> l.stream());
+
+            -> se colocarmos isso dentro de uma variavel local veremos que ele esta criando um stream de stream de strings, sempre que objetivo final que queremos e Stream<String>, entao como podemos fazer isso?
+
+            -> quando temos um caso desse que temos que retirar um atributo que esta aninhado, ou seja achatando, quando trocamos de map para flatMap, estamos achatando, ou seja estamos retirando aquele atributo de dentro, e se atribuirmos a uma variavel local agora veremos que ele ira a variavel local de Stream<String>;
+
+            Stream<String> flatStream = kaypiraz.stream().flatMap(Collection::stream).foreach(System.out::println);
+
+        }
+    }
+
+        resumo: flatMap geralmente vamos utilizar quando precisarmos retirar uma collecao ou um atributo de dentro de outro lugar, quando ele estiver aninhado dentro de outro;
+
+
+
+
+
+
+
+STREAMS FIDING AND MATCHING 
+
+    -> quando estamos trabalhando com colecoes de alguma forma iremos ter que manipular essas colecoes, ja vimos varias coisa que podemos fazer com streams map, flatMap, podemos filtrar, contar e etc... agora podemos vamos apreder a dar fiding and matching;
+
+    public class StreamTeste{
+        private static List<LightNovel> lightNovels = List.of(
+            new LightNovel("Tensei Shittara", 8.99),
+            new LightNovel("Overlord", 3.99),
+            new LightNovel("Violet Evergarden", 5.99),
+            new LightNovel("No Game no Life", 2.99),
+            new LightNovel("Fullmetal Alchemist", 5.99),
+            new LightNovel("Kumo desuga", 1.99),
+            new LightNovel("Kumo desuga", 1.99),
+            new LightNovel("Monogatari", 4.00)
+            );
+    }
+        public static void main(String[] args){
+            lightNovels.stream().anyMatch(ln -> ln.getPrice() > 8);
+                -> anyMatch: basicamente ele ira fazer uma busca, ele aceita um predicate e ira retornar um boolean;
+
+
+            lightNovels.stream().allMatch(ln -> ln.getPrice() > 0);
+                -> allMatch: digamos que queremos ter certeza que todos os lightNovels tem o preco maior que zero, porque por exemplo nao podemos adicionar dentro do banco de dados um obj que tenha o valor zero, entao ele verifica se todos os elementos possui um valos acima de zero e retorna um boolean;
+
+
+            lightNovels.stream().noneMatch(ln -> ln.getPrice() > 0 );
+                -> noneMatch: ele ja o o contrario do de cima, ele ira retornar verdadeiro se nenhum deles form maior que zero, ou seja se todos forem menores que zero ele ira retornar verdadeiro, para que ele retorne a ordem verdadeira e o alteramos o < ;
+        }
+
+
+
+
+
+
+
+STREAMS REDUCE 
+
+    -> E uma operacao terminal dos streams que vai possibilitar voce obter um resultado unico a partir de uma sequencia de elementos, ele vai repetidamente aplicar a operacao aos elementos e no final voce ira ter um resultado.
+
+    public class StreamTeste{
+        public static void main(String[] args){
+            -> lista de numeros inteiros, a partir dessa lista de valores inteiros queremos obter a soma desses valores;
+
+            List<Integer> integers = List.of(1, 2, 3, 4, 5, 6); 
+
+            integers.stream().reduce((x,y) -> x + y)
+                .ifPresent(System.out::println);
+
+                -> se fizermos dessa forma acima ele ira retornar um Optional, porque pode ser que o valor seja vazio, e tambem colocamos a opercacao de some;
+
+
+            -> para que ele nao retorne um Optional poderiamos iniciar com um valor inicial, ele nao ira retornar um Optional e sim um valor final inteiro: 
+            
+            integers.stream().reduce(0, (x,y) -> x + y);
+        }
+    }
+
+    -> Reduce pode ser entendido como uma espécie de "acumulação" dos elementos da lista de forma similar a um loop for. O que acontece internamente no método reduce é que ele aplica uma operação de forma iterativa a cada elemento da coleção, acumulando um resultado.
+
+    -> temos ate um jeito melhor para que seja realizado essa soma: 
+
+    integers.stream()
+        .reduce(Integer::sum);
+
+            -> dentro da classe Integer temos o metodo chamado sum que realiza a soma dos elementos da lista de forma mais simples e mais legivel, ele tambem pode aceitar um valo inicial de zero;
+
+
+
+
+    --> podemos tambem realizar outra operacao para saber o numero maior ou menor da lita, podemos utilizar para fazer de uma forma feia ou de uma forma bem mais simplista: 
+
+    feia: -> podemos utilizar o operador ternario: 
+
+        - Operador de "ternário" (condicional): O operador : é usado no operador condicional ternário, que é uma forma compacta de um if-else. A sintaxe do operador ternário é:
+
+        sintaxe: condição ? valor_se_verdadeiro : valor_se_falso;
+
+
+    integers.stream()
+        .reduce((x , y) -> x > y ? x : y)
+            .ifPresent(System.out::println);
+
+            -> para que nao seja utilizado o ifPresent, pois assim ira retornar um Optional, podemos utilizar o zero antes das chaves "0, (x + y)", que ai sim teremos certeza que o valor ira se iniciar acima de zero e nao ira retornar um Optional;
+
+
+    -> forma mais simplista:
+
+        integers.stream()
+            .reduce(0, Integer::max);
+
+            -> dessa forma ele ira retornar o valor maximo da lista, e tambem podemos fazer o mesmo para o valor minimo:
+
+        integers.stream()
+            .reduce(0, Integer::min);
+
+
+
+
+
+
+
+STREAMS REDUCE 
+
+        1. filter(): Filtra os elementos do Stream de acordo com um predicado (condição). Ele pode ser usado para "filtrar" apenas os elementos que atendem a um critério.
+        2. map(): Aplica uma transformação aos elementos do Stream, gerando um novo Stream com os valores modificados.
+        3. reduce(): Realiza uma operação de redução, acumulando os elementos do Stream de acordo com uma função de acumulação. Geralmente, é usado para combinar os elementos em um único valor (como uma soma, produto, máximo, etc.).
+
+    ->  public class StreamTeste{
+            private static List<LightNovel> lightNovels = List.of(
+                new LightNovel("Tensei Shittara", 8.99),
+                new LightNovel("Overlord", 3.99),
+                new LightNovel("Violet Evergarden", 5.99),
+                new LightNovel("No Game no Life", 2.99),
+                new LightNovel("Fullmetal Alchemist", 5.99),
+                new LightNovel("Kumo desuga", 1.99),
+                new LightNovel("Kumo desuga", 1.99),
+                new LightNovel("Monogatari", 4.00)
+                );
+
+        public static void main(String[] args){
+            -> Problema a solucionar: quero que voce some todos os preco acima de 3.00, e retorne somente a soma desses precos;
+
+            lightNovel.stream()
+                .filter(ln -> ln.getPreco() < 3.00)
+                    .map(LightNovel::getPreco)
+                        .reduce(0.0, Double::sum)
+                            ifPresent(System.out::println);
+
+            
+
+            -> como na classe foi criado o preco utilizando valores primitivos (double), e ai o intellij tem que estar fazendo o boxing e o unboxing para que transforme ele em um wrappers, temos um metodo que faz isso e melhora a performace;
+
+            lightNovel.stream()
+                .mapToDouble(LightNovel::getPreco) 
+                    -->  ao inves de fazer o map para getPrice, queremos fazer o map para double, podemos utilizar o mapToDouble que nao ira retornar mais um stream e sim um DoubleStream, com o doubleStream estamos dizendo para o java para ele nao ficar fazendo o wrapper e o unwrapper, trabalhando agora com valores numeros libera novos metodos para nos; sendo ele o sum(); e dentre outros;
+
+
+            -> ficando assim 
+
+            double doubleStream = lightNovel.stream()
+                                    .mapToDouble(LightNovel::getPreco)
+                                        .filter(p -> p > 3.00)
+                                            .sum();
+
+                    -> agora ele ira retornar um tipo primitivo;
+    
+
+
+
+
+
+
+STREAMS GERANDO STREAMS 
+
+    -> Como nos podemos gerar streams de uma forma direta, nos estavamos trabalhando sempre a partir das listas, mas podemos gerar os streams atraves de uma forma direta;
+
+
+    public class StreamTeste{
+        public static void main(String[] args){
+            -> vamos imaginar que queremos criar uma stream de inteiros, podemos utilizar o intStream que e um daqueles streams que vai manter os valores primitivos que se voce estiver trabalhando com alta performace e bom utilizar;
+            
+            IntStream
+
+
+            --> temos dois tipos o range e o rangeClosed e qual a diferenca, todos eles tem o statInclusive e o endExclusive? 
+
+                - o range: ele nao ira considerar o valor final, ou seja se colocarmos 10 ele ira de 0 ate 9;
+                
+                - o rangeClosed: ele ira considerar o valor final, ou seja se colocarmos 10 ele ira de 0 ate 10;
+
+
+            exemplo: 
+
+                intStream.rangeClosed(1,50).filter(n -> n % 2 == 0).forEach(System.out::println);
+                    -> aqui ele ira imprimir todos os numeros pares de 1 ate 50;
+
+                intStream.range(1,50).filter(n -> n % 2 == 0).forEach(System.out::println);
+                    -> aqui ele ira imprimir todos os numeros pares de 1 ate 49;
+
+        }
+    }
+
+    --> Streams de Strings ou Objetos: 
+
+     public class StreamTeste{
+        public static void main(String[] args){
+            -> temos tambem outra possibilidade de criar o stream de palavras atraves do stream of, e o que ele faz? ele aceita um varArgs de <t>, ou seja, pode ser qualquer coisa (um objeto, uma string, um valor numero...);
+
+            Stream<String> nomes = Stream.of("Kayque", "Allan", "Ribeiro")
+                                            .map(String::toUpperCase)
+                                                .forEach(System.out::println);
+
+                --> criamos um Stream de Strings e transformamos todas as strings em maiusculas e imprimimos na tela;
+
+        }
+    }
+
+
+    --> Streams de Arrays:
+
+    
+     public class StreamTeste{
+        public static void main(String[] args){
+            int num[] = {1, 2, 3, 4, 5};
+
+            IntStream intStream = Arrays.stream(); 
+                --> podemos ver que ao criar ele retorna um intStream e nao um Stream, porque ele esta trabalhando com valores primitivos, nisso e liberado varios metodos uteis para trabalhar; 
+
+
+            Arrays.stream(num)
+                    .average()
+                        .ifPresent(System.out::println);
+
+                    -> temos o metodo onde ira retornar a media dos valores dos arrays;
+        }
+    }
+
+
+
+
+
+
+
+
+
+STREAMS GERANDO STREAMS PT2
+
+    -> vamos aprender a gerar streams infinitas;
+
+    public class StreamsTeste{
+        public static void main(String[] args){
+            -> temos duas formas de criar streams infinitas sendo o iterate e o generate, a diferenca e que o generete aceita um suplier, e o iterate aceita um unaryOperator;
+
+            Stream.iterate(0, n -> n + 2).foreach(System.out::println);
+                -> iterate e necessario voce dar um seed inicial, se estamos trabalhando com valores numericos podemos definir um numero de inicio, e o unaryOperator basicamente um metodo que retorna o que voce passou como argumento;
+
+                -> igual a operacao que criamos acima ele ira imprimir infinitamente todos os numeros pares infinitamente ate voce ter um estouro de memoria ou parar um programa de forma forcada;
+
+            Stream.iterate(0, n -> n + 2).foreach(System.out::println).limit(10);
+                -> para que ele nao imprima infinitamente podemos utilizar o limit, e assim ele ira imprimir somente 10 numeros pares;
+
+        }
+    }
+
+
+    -> vamos para outro exemplo, utilizando a serie de fibonacci, que e uma serie de valores numerios onde o numero seguinte e a soma dos dois numeros anteriores; 
+        // ex: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55...
+
+    public class StreamTeste{
+        public static void main(String[] args){
+            Stream.iterate(new int[]{0,1}, n -> new int[]{n[1] , n[0] + n[1]})
+                .limit(10)
+                        .forEach(a -> System.out.println(Arrays.toString(a)));
+
+            isso ira imprimir a sequencia de fibonacci limitando o loping em 10, assim: 
+
+            /*  [0, 1]
+                [1, 1]
+                [1, 2]
+                [2, 3]
+                [3, 5]
+                [5, 8]
+                [8, 13]
+                [13, 21]
+                [21, 34]
+                [34, 55]
+            */
+        }
+    }
+
+
+    --> vamos para outro exemplo, utilizando o generate que aceita um suplier:
+
+    public class StreamTeste{
+        public static void main(String[] args){
+            -> digamos que queiramos gerar uma sequencia de numeros aleatorios, para isso utilizamos a class ThreadLocalRandom que e uma classe que gera numeros aleatorios de forma mais performatica;{
+
+            ThreadLocalRandom random = ThreadLocalRandom.current();
+            Stream.generate(() -> random.nextInt(1, 500))
+                .limit(50)
+                    .forEach(System.out::println);
+
+            -> ele ira criar uma sequencia de numeros aleatorios, limitando em 50 numeros, e pode ser criado numeros entre 1 a 500;
+        }
+    }
+
+
+
+
+
+
+
+STEAMS COLLECTORS SUMMARIZING 
+
+    -> 
+
+
+
+
+            
+    
